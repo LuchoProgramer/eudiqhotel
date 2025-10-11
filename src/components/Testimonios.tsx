@@ -75,7 +75,7 @@ export default function Testimonios() {
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [sectionRef]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -195,7 +195,7 @@ export default function Testimonios() {
 
                 {/* Comment */}
                 <p className="text-gray-700 leading-relaxed mb-6 line-clamp-4">
-                  "{testimonio.comentario}"
+                  &quot;{testimonio.comentario}&quot;
                 </p>
 
                 {/* Author Info */}

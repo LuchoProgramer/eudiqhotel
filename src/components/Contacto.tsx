@@ -33,9 +33,9 @@ export default function Contacto() {
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [sectionRef]);
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,

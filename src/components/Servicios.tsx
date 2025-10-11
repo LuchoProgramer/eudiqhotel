@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import { Utensils, Wifi, Car, Dumbbell, Coffee, Sparkles, Clock, MapPin } from 'lucide-react';
 
 const servicios = [
@@ -74,7 +75,7 @@ export default function Servicios() {
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [sectionRef]);
 
   return (
     <section id="servicios" ref={sectionRef} className="relative py-24 md:py-32 bg-[#F2F2F2] overflow-hidden">
@@ -204,10 +205,14 @@ export default function Servicios() {
             </div>
 
             <div className="relative">
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80"
                 alt="Café Viviates"
+                width={800}
+                height={600}
                 className="rounded-2xl shadow-2xl"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
               />
               {/* Floating badge */}
               <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl">

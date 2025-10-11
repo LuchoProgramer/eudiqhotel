@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 
 export default function ExperienciaUnica() {
   const [isVisible, setIsVisible] = useState(false);
@@ -21,7 +22,7 @@ export default function ExperienciaUnica() {
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [sectionRef]);
 
   return (
     <section ref={sectionRef} className="relative py-24 md:py-32 overflow-hidden bg-[#F2F2F2]">
@@ -49,10 +50,14 @@ export default function ExperienciaUnica() {
           {/* Image Side */}
           <div className={`relative transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <div className="relative">
-              <img
+              <Image
                 src="https://lh3.googleusercontent.com/p/AF1QipMowjF_qXN1KyyrSTOCqjwJLM-8G-FtcOTu8sMq=s1360-w1360-h1020-rw"
                 alt="Interior del hotel"
+                width={1360}
+                height={1020}
                 className="rounded-3xl shadow-2xl w-full h-[400px] md:h-[500px] object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
               />
               {/* Floating card */}
               <div className="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-xl border-l-4 border-[#CBD95F]">
@@ -134,8 +139,8 @@ export default function ExperienciaUnica() {
             <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
           </svg>
           <blockquote className="text-2xl md:text-3xl font-light text-gray-700 italic leading-relaxed mb-6" style={{fontFamily: 'Playfair Display, serif'}}>
-            "Donde la hospitalidad lojana se encuentra con la elegancia contemporánea, 
-            creando experiencias que perduran en el corazón"
+            &quot;Donde la hospitalidad lojana se encuentra con la elegancia contemporánea, 
+            creando experiencias que perduran en el corazón&quot;
           </blockquote>
           <p className="text-lg text-[#038C7F] font-semibold">
             — Equipo Eudiq Hotel

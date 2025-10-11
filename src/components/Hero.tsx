@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 interface HeroProps {
   images?: string[];
@@ -25,7 +26,7 @@ export default function Hero({ images = defaultImages }: HeroProps) {
       setCurrent((prev) => (prev + 1) % total);
     }, 5000);
     return () => clearInterval(timer);
-  }, [total]);
+  }, [total, setCurrent]);
 
   const next = () => setCurrent((prev) => (prev + 1) % total);
   const prev = () => setCurrent((prev) => (prev - 1 + total) % total);
@@ -41,10 +42,13 @@ export default function Hero({ images = defaultImages }: HeroProps) {
               idx === current ? 'opacity-100' : 'opacity-0'
             }`}
           >
-            <img
+            <Image
               src={img}
               alt={`Hotel ${idx + 1}`}
+              fill
+              sizes="100vw"
               className="w-full h-full object-cover"
+              priority={idx === 0}
             />
             {/* Overlay gradient */}
             <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />

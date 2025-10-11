@@ -49,7 +49,7 @@ export default function Ubicacion() {
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [sectionRef]);
 
   return (
     <section id="ubicacion" ref={sectionRef} className="relative py-24 md:py-32 bg-[#F2F2F2] overflow-hidden">

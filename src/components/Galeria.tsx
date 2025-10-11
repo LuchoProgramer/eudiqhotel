@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
+import Image from 'next/image';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const categorias = ['Todas', 'Habitaciones', 'Café Viviates', 'Restaurante', 'Instalaciones'];
@@ -59,13 +60,13 @@ export default function Galeria() {
     document.body.style.overflow = 'unset';
   };
 
-  const siguiente = () => {
+  const siguiente = useCallback(() => {
     setImagenActual((prev) => (prev + 1) % fotosFiltradas.length);
-  };
+  }, [fotosFiltradas.length]);
 
-  const anterior = () => {
+  const anterior = useCallback(() => {
     setImagenActual((prev) => (prev - 1 + fotosFiltradas.length) % fotosFiltradas.length);
-  };
+  }, [fotosFiltradas.length]);
 
   useEffect(() => {
     const handleKeyPress = (e: KeyboardEvent) => {
@@ -77,7 +78,7 @@ export default function Galeria() {
 
     window.addEventListener('keydown', handleKeyPress);
     return () => window.removeEventListener('keydown', handleKeyPress);
-  }, [lightboxOpen]);
+  }, [lightboxOpen, siguiente, anterior]);
 
   return (
     <section id="galeria" ref={sectionRef} className="relative py-24 md:py-32 bg-white overflow-hidden">
@@ -131,10 +132,14 @@ export default function Galeria() {
               style={{ transitionDelay: `${idx * 50}ms` }}
             >
               <div className="relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300">
-                <img
+                <Image
                   src={foto.url}
                   alt={foto.alt}
+                  width={800}
+                  height={600}
                   className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  loading="lazy"
                 />
                 {/* Overlay on hover */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-6">
@@ -200,10 +205,14 @@ export default function Galeria() {
 
           {/* Image */}
           <div className="max-w-6xl max-h-[90vh] w-full" onClick={(e) => e.stopPropagation()}>
-            <img
+            <Image
               src={fotosFiltradas[imagenActual]?.url}
               alt={fotosFiltradas[imagenActual]?.alt}
+              width={1200}
+              height={900}
               className="w-full h-full object-contain rounded-lg"
+              sizes="(max-width: 768px) 100vw, 60vw"
+              loading="eager"
             />
             <div className="text-center mt-4">
               <p className="text-white text-lg font-semibold">{fotosFiltradas[imagenActual]?.categoria}</p>

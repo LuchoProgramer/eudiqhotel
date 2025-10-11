@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 
 const habitaciones = [
   {
@@ -139,13 +140,16 @@ export default function Habitaciones() {
                 {/* Image Gallery */}
                 <div className="relative h-72 overflow-hidden">
                   {hab.imagenes.map((img, imgIdx) => (
-                    <img
+                    <Image
                       key={imgIdx}
                       src={img}
                       alt={`${hab.nombre} ${imgIdx + 1}`}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
                       className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
                         imgIdx === currentImg ? 'opacity-100' : 'opacity-0'
                       }`}
+                      priority={idx === 0 && imgIdx === 0}
                     />
                   ))}
                   
