@@ -69,7 +69,7 @@ export default function Ubicacion() {
             Encuéntranos en <span className="text-[#038C7F]">Loja</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Estratégicamente ubicados en el corazón de la ciudad musical del Ecuador, 
+            Estratégicamente ubicados cerca de la terminal de la ciudad musical del Ecuador, 
             con acceso a los principales atractivos turísticos.
           </p>
         </div>
@@ -81,7 +81,7 @@ export default function Ubicacion() {
             <div className="relative rounded-3xl overflow-hidden shadow-2xl h-[400px] lg:h-[500px] group">
               {/* Aquí va el mapa de Google Maps - reemplaza con tu ubicación real */}
               <iframe
-                src="https://www.google.com/maps?q=-3.99313,-79.19953&hl=es&z=16&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.2170636793585!2d-79.2044375!3d-3.9756875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cb4874ecd19be9%3A0xed2fb9939f45f4db!2sEUDIQ%20HOTEL!5e0!3m2!1sen!2sec!4v1760161127420!5m2!1sen!2sec"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
