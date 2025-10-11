@@ -81,7 +81,7 @@ export default function Ubicacion() {
             <div className="relative rounded-3xl overflow-hidden shadow-2xl h-[400px] lg:h-[500px] group">
               {/* Aquí va el mapa de Google Maps - reemplaza con tu ubicación real */}
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.3584889537595!2d-79.19953!3d-3.99313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cb4a7f8e3a8b6f%3A0x7f8e3a8b6f7f8e3a!2sLoja%2C%20Ecuador!5e0!3m2!1ses!2sec!4v1234567890123!5m2!1ses!2sec"
+                src="https://www.google.com/maps?q=-3.99313,-79.19953&hl=es&z=16&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
