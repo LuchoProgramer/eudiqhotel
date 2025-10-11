@@ -20,8 +20,15 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
-        <link rel="icon" href="/window.svg" type="image/svg+xml" />
-        <link rel="alternate icon" href="/window.svg" type="image/svg+xml" />
+        {/* Favicons principales */}
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-16x16.svg" type="image/svg+xml" sizes="16x16" />
+  <link rel="icon" href="/favicon-32x32.svg" type="image/svg+xml" sizes="32x32" />
+  <link rel="icon" href="/favicon-48x48.svg" type="image/svg+xml" sizes="48x48" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.svg" sizes="180x180" />
+  <link rel="icon" href="/android-chrome-192x192.svg" type="image/svg+xml" sizes="192x192" />
+  <link rel="icon" href="/android-chrome-512x512.svg" type="image/svg+xml" sizes="512x512" />
+        {/* Puedes agregar PNGs o ICO si los tienes para compatibilidad extra */}
       </head>
       <body className={cn(inter.className, 'bg-neutral min-h-screen flex flex-col')}>
         <Navbar />

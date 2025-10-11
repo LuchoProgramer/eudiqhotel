@@ -1,5 +1,6 @@
 "use client";
 
+
 import Link from "next/link";
 import { useState } from "react";
 
@@ -18,8 +19,8 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full z-30 bg-[#F2F2F2]/80 backdrop-blur border-b border-[#CBD95F]/30 shadow-sm">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
         {/* Logo */}
-        <Link href="/" className="font-bold text-2xl text-[#038C7F] tracking-tight italic font-serif" style={{fontFamily: 'Playfair Display, serif'}}>
-          EUDIQ HOTEL
+        <Link href="/" className="flex items-center" aria-label="Inicio">
+          <img src="/Logo.svg" alt="Eudiq Hotel Logo" width={120} height={40} style={{display: 'block'}} />
         </Link>
         {/* Desktop nav */}
         <div className="hidden md:flex gap-8 items-center">
