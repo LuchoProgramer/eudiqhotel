@@ -78,7 +78,7 @@ export default function Ubicacion() {
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           {/* Map */}
           <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl h-[400px] lg:h-[500px] group">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl h-[400px] lg:h-[500px] group border border-[#038C7F]">
               {/* Aquí va el mapa de Google Maps - reemplaza con tu ubicación real */}
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.2170636793585!2d-79.2044375!3d-3.9756875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cb4874ecd19be9%3A0xed2fb9939f45f4db!2sEUDIQ%20HOTEL!5e0!3m2!1sen!2sec!4v1760161127420!5m2!1sen!2sec"
@@ -204,7 +204,7 @@ export default function Ubicacion() {
               href="https://maps.app.goo.gl/5dCMqMs8TNnuUAXU7"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-[#038C7F] to-[#A9BF04] text-white font-semibold rounded-full hover:shadow-xl hover:scale-105 transition-all"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#038C7F] text-white font-semibold rounded-full hover:bg-[#CBD95F] hover:text-[#222] hover:shadow-xl hover:scale-105 transition-all"
             >
               <Navigation size={20} />
               Ver en Google Maps

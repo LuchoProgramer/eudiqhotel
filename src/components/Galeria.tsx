@@ -7,18 +7,18 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 const categorias = ['Todas', 'Habitaciones', 'Café Viviates', 'Restaurante', 'Instalaciones'];
 
 const galeriaFotos = [
-  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204433/IMG_4194-HDR_xjuzwj.jpg', categoria: 'Sala', alt: 'Sala Recepcion' },
-  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1760205074/IMG_4179-HDR_rm62mk.webp', categoria: 'Café Viviates', alt: 'Café Viviates' },
-  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204999/IMG_4183-HDR_gs5who.webp', categoria: 'Habitaciones', alt: 'Suite premium' },
-  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204672/IMG_4453-HDR_sgomb0.webp', categoria: 'Eudiq Hotel', alt: 'Fachada' },
-  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204555/IMG_4600_q2teiy.jpg', categoria: 'Habitaciones', alt: 'Habitación ejecutiva' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1760204433/IMG_4194-HDR_xjuzwj.jpg', categoria: 'Sala', alt: 'Sala Recepcion' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1760205074/IMG_4179-HDR_rm62mk.webp', categoria: 'Café Viviates', alt: 'Café Viviates' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1760204999/IMG_4183-HDR_gs5who.webp', categoria: 'Habitaciones', alt: 'Suite premium' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1760204672/IMG_4453-HDR_sgomb0.webp', categoria: 'Eudiq Hotel', alt: 'Fachada' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1760204555/IMG_4600_q2teiy.jpg', categoria: 'Habitaciones', alt: 'Habitación ejecutiva' },
   { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/c_fill,g_center,z_0.8,h_900,w_506,q_auto,f_webp/v1760204829/IMG_4425-HDR_avmsry.webp', categoria: 'Instalaciones', alt: 'Recepción (formato móvil, centrado, zoom out)' },
-  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204509/IMG_4605_q6bvol.jpg', categoria: 'Instalaciones', alt: 'Lobby' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1760204509/IMG_4605_q6bvol.jpg', categoria: 'Instalaciones', alt: 'Lobby' },
   { url: 'https://images.unsplash.com/photo-1485808191679-5f86510681a2?auto=format&fit=crop&w=800&q=80', categoria: 'Café Viviates', alt: 'Preparación de café' },
-  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204466/IMG_4616_xg9lrj.jpg', categoria: 'Habitaciones', alt: 'Suite familiar' },
-  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204251/IMG_4163-HDR_ymaqov.webp', categoria: 'Restaurante', alt: 'Comedor elegante' },
-  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1760205152/IMG_4174-HDR_i429dy.webp', categoria: 'Instalaciones', alt: 'Zona común' },
-  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204753/IMG_4445-HDR_syndid.webp', categoria: 'Instalaciones', alt: 'Interior del hotel' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1760204466/IMG_4616_xg9lrj.jpg', categoria: 'Habitaciones', alt: 'Suite familiar' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1760204251/IMG_4163-HDR_ymaqov.webp', categoria: 'Restaurante', alt: 'Comedor elegante' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1760205152/IMG_4174-HDR_i429dy.webp', categoria: 'Instalaciones', alt: 'Zona común' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1760204753/IMG_4445-HDR_syndid.webp', categoria: 'Instalaciones', alt: 'Interior del hotel' },
 ];
 
 export default function Galeria() {
@@ -131,7 +131,7 @@ export default function Galeria() {
               }`}
               style={{ transitionDelay: `${idx * 50}ms` }}
             >
-              <div className="relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300">
+              <div className="relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl border border-[#038C7F] transition-all duration-300">
                 <Image
                   src={foto.url}
                   alt={foto.alt}
@@ -164,7 +164,7 @@ export default function Galeria() {
           <p className="text-gray-600 mb-6 text-lg">¿Te gustó lo que viste?</p>
           <a
             href="#habitaciones"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#038C7F] to-[#A9BF04] text-white font-semibold rounded-full hover:shadow-2xl hover:scale-105 transition-all"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-[#038C7F] text-white font-semibold rounded-full hover:bg-[#CBD95F] hover:text-[#222] hover:shadow-2xl hover:scale-105 transition-all"
           >
             Reserva Tu Estadía
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

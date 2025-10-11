@@ -50,15 +50,18 @@ export default function ExperienciaUnica() {
           {/* Image Side */}
           <div className={`relative transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <div className="relative">
-              <Image
-                src="https://res.cloudinary.com/dltfsttr7/image/upload/v1760204433/IMG_4194-HDR_xjuzwj.jpg"
-                alt="Interior del hotel"
-                width={1360}
-                height={1020}
-                className="rounded-3xl shadow-2xl w-full h-[400px] md:h-[500px] object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                priority
-              />
+              <div className="relative w-full h-[400px] md:h-[500px]">
+                <Image
+                  src="https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1760204433/IMG_4194-HDR_xjuzwj.jpg"
+                  alt="Interior del hotel"
+                  fill
+                  className="rounded-3xl shadow-2xl object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
+                />
+                {/* Overlay verde 15% */}
+                <div className="absolute inset-0 rounded-3xl bg-[#038C7F]/8 pointer-events-none" />
+              </div>
               {/* Floating card */}
               <div className="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-xl border-l-4 border-[#CBD95F]">
                 <div className="flex items-center gap-3">
@@ -115,7 +118,7 @@ export default function ExperienciaUnica() {
         </div>
 
         {/* Stats Section */}
-        <div className={`grid grid-cols-2 md:grid-cols-4 gap-8 py-12 px-6 md:px-12 bg-gradient-to-r from-[#038C7F] to-[#A9BF04] rounded-3xl shadow-2xl transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+  <div className={`grid grid-cols-2 md:grid-cols-4 gap-8 py-12 px-6 md:px-12 bg-[#CBD95F]/20 rounded-3xl shadow-2xl border border-[#038C7F]/60 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
           {[
             { number: '15+', label: 'Años de Experiencia' },
             { number: '50+', label: 'Habitaciones Premium' },
@@ -123,10 +126,10 @@ export default function ExperienciaUnica() {
             { number: '4.9★', label: 'Calificación Promedio' },
           ].map((stat, idx) => (
             <div key={idx} className="text-center">
-              <p className="text-4xl md:text-5xl font-bold text-white mb-2" style={{fontFamily: 'Playfair Display, serif'}}>
+              <p className="text-4xl md:text-5xl font-bold text-gray-900 mb-2" style={{fontFamily: 'Playfair Display, serif'}}>
                 {stat.number}
               </p>
-              <p className="text-sm md:text-base text-white/90 font-medium">
+              <p className="text-sm md:text-base text-gray-800 font-medium">
                 {stat.label}
               </p>
             </div>

@@ -132,7 +132,7 @@ export default function Habitaciones() {
             return (
               <div
                 key={hab.id}
-                className={`group bg-[#F2F2F2] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] ${
+                className={`group bg-[#F2F2F2] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl border border-[#CBD95F] transition-all duration-500 hover:scale-[1.02] ${
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
                 style={{ transitionDelay: `${idx * 150}ms` }}
@@ -241,7 +241,7 @@ export default function Habitaciones() {
                   </div>
 
                   {/* CTA Button */}
-                  <button className="w-full py-3 bg-gradient-to-r from-[#038C7F] to-[#A9BF04] text-white font-semibold rounded-xl hover:shadow-lg hover:scale-105 transition-all flex items-center justify-center gap-2 group">
+                  <button className="w-full py-3 bg-[#038C7F] text-white font-semibold rounded-xl hover:shadow-lg hover:scale-105 transition-all flex items-center justify-center gap-2 group">
                     Reservar Ahora
                     <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

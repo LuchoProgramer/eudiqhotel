@@ -8,10 +8,10 @@ interface HeroProps {
 }
 
 const defaultImages = [
-  'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204829/IMG_4425-HDR_avmsry.webp',
-  'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204433/IMG_4194-HDR_xjuzwj.jpg',
-  'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204999/IMG_4183-HDR_gs5who.webp',
-  'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204672/IMG_4453-HDR_sgomb0.webp',
+  'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1600/v1760204829/IMG_4425-HDR_avmsry.webp',
+  'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1600/v1760204433/IMG_4194-HDR_xjuzwj.jpg',
+  'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1600/v1760204999/IMG_4183-HDR_gs5who.webp',
+  'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1600/v1760204672/IMG_4453-HDR_sgomb0.webp',
 ];
 
 export default function Hero({ images = defaultImages }: HeroProps) {
@@ -49,7 +49,8 @@ export default function Hero({ images = defaultImages }: HeroProps) {
               className="w-full h-full object-cover"
               priority={idx === 0}
             />
-            {/* Overlay gradient */}
+            {/* Sutil overlay verde y gradiente */}
+            <div className="absolute inset-0 bg-[#038C7F]/15" />
             <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
           </div>
         ))}
