@@ -51,7 +51,7 @@ export default function ExperienciaUnica() {
           <div className={`relative transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <div className="relative">
               <Image
-                src="https://lh3.googleusercontent.com/p/AF1QipMowjF_qXN1KyyrSTOCqjwJLM-8G-FtcOTu8sMq=s1360-w1360-h1020-rw"
+                src="https://res.cloudinary.com/dltfsttr7/image/upload/v1760204433/IMG_4194-HDR_xjuzwj.jpg"
                 alt="Interior del hotel"
                 width={1360}
                 height={1020}
@@ -66,7 +66,7 @@ export default function ExperienciaUnica() {
                     <span className="text-white text-2xl">★</span>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-gray-900">4.9</p>
+                    <p className="text-2xl font-bold text-gray-900">4.2</p>
                     <p className="text-sm text-gray-600">Calificación</p>
                   </div>
                 </div>

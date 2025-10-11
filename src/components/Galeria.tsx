@@ -7,18 +7,18 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 const categorias = ['Todas', 'Habitaciones', 'Café Viviates', 'Restaurante', 'Instalaciones'];
 
 const galeriaFotos = [
-  { url: 'https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=800&q=80', categoria: 'Habitaciones', alt: 'Habitación elegante' },
-  { url: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80', categoria: 'Café Viviates', alt: 'Café Viviates' },
-  { url: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80', categoria: 'Habitaciones', alt: 'Suite premium' },
-  { url: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80', categoria: 'Restaurante', alt: 'Restaurante' },
-  { url: 'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=800&q=80', categoria: 'Habitaciones', alt: 'Habitación ejecutiva' },
-  { url: 'https://images.unsplash.com/photo-1559329007-40df8a9345d8?auto=format&fit=crop&w=800&q=80', categoria: 'Instalaciones', alt: 'Recepción' },
-  { url: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=80', categoria: 'Instalaciones', alt: 'Lobby' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204433/IMG_4194-HDR_xjuzwj.jpg', categoria: 'Sala', alt: 'Sala Recepcion' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1760205074/IMG_4179-HDR_rm62mk.webp', categoria: 'Café Viviates', alt: 'Café Viviates' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204999/IMG_4183-HDR_gs5who.webp', categoria: 'Habitaciones', alt: 'Suite premium' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204672/IMG_4453-HDR_sgomb0.webp', categoria: 'Eudiq Hotel', alt: 'Fachada' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204555/IMG_4600_q2teiy.jpg', categoria: 'Habitaciones', alt: 'Habitación ejecutiva' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/c_fill,g_center,z_0.8,h_900,w_506,q_auto,f_webp/v1760204829/IMG_4425-HDR_avmsry.webp', categoria: 'Instalaciones', alt: 'Recepción (formato móvil, centrado, zoom out)' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204509/IMG_4605_q6bvol.jpg', categoria: 'Instalaciones', alt: 'Lobby' },
   { url: 'https://images.unsplash.com/photo-1485808191679-5f86510681a2?auto=format&fit=crop&w=800&q=80', categoria: 'Café Viviates', alt: 'Preparación de café' },
-  { url: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80', categoria: 'Habitaciones', alt: 'Suite familiar' },
-  { url: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80', categoria: 'Restaurante', alt: 'Comedor elegante' },
-  { url: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=80', categoria: 'Instalaciones', alt: 'Zona común' },
-  { url: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=800&q=80', categoria: 'Instalaciones', alt: 'Interior del hotel' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204466/IMG_4616_xg9lrj.jpg', categoria: 'Habitaciones', alt: 'Suite familiar' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204251/IMG_4163-HDR_ymaqov.webp', categoria: 'Restaurante', alt: 'Comedor elegante' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1760205152/IMG_4174-HDR_i429dy.webp', categoria: 'Instalaciones', alt: 'Zona común' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204753/IMG_4445-HDR_syndid.webp', categoria: 'Instalaciones', alt: 'Interior del hotel' },
 ];
 
 export default function Galeria() {
