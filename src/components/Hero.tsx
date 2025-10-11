@@ -71,13 +71,8 @@ export default function Hero({ images = defaultImages }: HeroProps) {
           </div>
 
           {/* Main Title */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
-            <span className="block" style={{fontFamily: 'Playfair Display, serif'}}>
-              Bienvenido a
-            </span>
-            <span className="block bg-gradient-to-r from-[#CBD95F] via-[#A9BF04] to-[#038C7F] bg-clip-text text-transparent mt-2">
-              EUDIQ HOTEL
-            </span>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight" style={{fontFamily: 'Playfair Display, serif'}}>
+            Bienvenidos
           </h1>
 
           {/* Subtitle */}
