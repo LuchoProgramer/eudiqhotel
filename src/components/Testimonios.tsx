@@ -1,0 +1,257 @@
+'use client';
+
+import { useState, useEffect, useRef } from 'react';
+import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react';
+
+const testimonios = [
+  {
+    nombre: 'María González',
+    ubicacion: 'Quito, Ecuador',
+    calificacion: 5,
+    fecha: 'Hace 2 semanas',
+    comentario: 'Excelente hotel en el centro de Loja. Las habitaciones son muy cómodas y limpias. El desayuno es delicioso, especialmente el café Viviates que tienen. El personal es muy amable y atento. Definitivamente volveré.',
+    avatar: 'MG',
+  },
+  {
+    nombre: 'Carlos Ramírez',
+    ubicacion: 'Cuenca, Ecuador',
+    calificacion: 5,
+    fecha: 'Hace 1 mes',
+    comentario: 'Me hospedé por negocios y la experiencia fue perfecta. Excelente ubicación, Wi-Fi rápido, y las habitaciones muy bien equipadas. El Café Viviates es lo mejor, no había probado un café tan bueno en mucho tiempo.',
+    avatar: 'CR',
+  },
+  {
+    nombre: 'Ana Martínez',
+    ubicacion: 'Guayaquil, Ecuador',
+    calificacion: 5,
+    fecha: 'Hace 3 semanas',
+    comentario: 'Estuvimos de vacaciones familiares y fue una experiencia maravillosa. La suite familiar es espaciosa y cómoda. El personal nos ayudó a organizar tours por la ciudad. Muy recomendado para familias.',
+    avatar: 'AM',
+  },
+  {
+    nombre: 'Roberto Silva',
+    ubicacion: 'Lima, Perú',
+    calificacion: 5,
+    fecha: 'Hace 2 meses',
+    comentario: 'Hotel impecable en todos los aspectos. Limpieza excelente, atención de primera, y el desayuno buffet es espectacular. La ubicación es perfecta para conocer Loja. Sin duda el mejor hotel de la ciudad.',
+    avatar: 'RS',
+  },
+  {
+    nombre: 'Laura Jiménez',
+    ubicacion: 'Machala, Ecuador',
+    calificacion: 5,
+    fecha: 'Hace 1 semana',
+    comentario: 'Hermoso hotel, las fotos no le hacen justicia. Las habitaciones son elegantes y muy cómodas. El restaurante tiene comida deliciosa y el café es increíble. El personal siempre dispuesto a ayudar. 100% recomendado.',
+    avatar: 'LJ',
+  },
+  {
+    nombre: 'Diego Torres',
+    ubicacion: 'Loja, Ecuador',
+    calificacion: 5,
+    fecha: 'Hace 3 días',
+    comentario: 'Hospedé a mis familiares que vinieron de visita y quedaron encantados. Excelente relación calidad-precio. El estacionamiento gratuito es un plus. El Café Viviates ahora es mi favorito de la ciudad.',
+    avatar: 'DT',
+  },
+];
+
+export default function Testimonios() {
+  const [isVisible, setIsVisible] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [testimoniosVisible, setTestimoniosVisible] = useState(3);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setTestimoniosVisible(1);
+      } else if (window.innerWidth < 1024) {
+        setTestimoniosVisible(2);
+      } else {
+        setTestimoniosVisible(3);
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const siguiente = () => {
+    setCurrentIndex((prev) => 
+      prev + testimoniosVisible >= testimonios.length ? 0 : prev + 1
+    );
+  };
+
+  const anterior = () => {
+    setCurrentIndex((prev) => 
+      prev === 0 ? Math.max(0, testimonios.length - testimoniosVisible) : prev - 1
+    );
+  };
+
+  const testimoniosVisibles = testimonios.slice(currentIndex, currentIndex + testimoniosVisible);
+
+  return (
+    <section ref={sectionRef} className="relative py-24 md:py-32 bg-white overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-1/4 left-0 w-96 h-96 bg-[#CBD95F]/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-[#038C7F]/10 rounded-full blur-3xl" />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
+        {/* Header */}
+        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <span className="inline-block px-4 py-1 mb-4 text-sm font-semibold tracking-widest text-[#038C7F] bg-[#CBD95F]/20 rounded-full">
+            TESTIMONIOS
+          </span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6" style={{fontFamily: 'Playfair Display, serif'}}>
+            Lo Que Dicen <span className="text-[#038C7F]">Nuestros Huéspedes</span>
+          </h2>
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Miles de viajeros han confiado en nosotros. Lee sus experiencias y 
+            descubre por qué somos el hotel preferido en Loja.
+          </p>
+        </div>
+
+        {/* Stats Banner */}
+        <div className={`grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+          <div className="text-center p-6 bg-gradient-to-br from-[#038C7F]/10 to-[#CBD95F]/10 rounded-2xl">
+            <div className="flex justify-center mb-2">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="text-[#CBD95F] fill-[#CBD95F]" size={24} />
+              ))}
+            </div>
+            <p className="text-3xl font-bold text-gray-900">4.9</p>
+            <p className="text-sm text-gray-600">Calificación</p>
+          </div>
+          <div className="text-center p-6 bg-gradient-to-br from-[#038C7F]/10 to-[#CBD95F]/10 rounded-2xl">
+            <p className="text-3xl font-bold text-[#038C7F] mb-2">500+</p>
+            <p className="text-sm text-gray-600">Reseñas</p>
+          </div>
+          <div className="text-center p-6 bg-gradient-to-br from-[#038C7F]/10 to-[#CBD95F]/10 rounded-2xl">
+            <p className="text-3xl font-bold text-[#038C7F] mb-2">98%</p>
+            <p className="text-sm text-gray-600">Recomiendan</p>
+          </div>
+          <div className="text-center p-6 bg-gradient-to-br from-[#038C7F]/10 to-[#CBD95F]/10 rounded-2xl">
+            <p className="text-3xl font-bold text-[#038C7F] mb-2">10k+</p>
+            <p className="text-sm text-gray-600">Huéspedes</p>
+          </div>
+        </div>
+
+        {/* Testimonials Carousel */}
+        <div className="relative">
+          {/* Navigation Buttons */}
+          <button
+            onClick={anterior}
+            className="hidden md:flex absolute -left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white shadow-lg rounded-full items-center justify-center hover:bg-[#038C7F] hover:text-white transition-all group"
+            aria-label="Anterior"
+          >
+            <ChevronLeft className="group-hover:scale-110 transition-transform" size={24} />
+          </button>
+
+          <button
+            onClick={siguiente}
+            className="hidden md:flex absolute -right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white shadow-lg rounded-full items-center justify-center hover:bg-[#038C7F] hover:text-white transition-all group"
+            aria-label="Siguiente"
+          >
+            <ChevronRight className="group-hover:scale-110 transition-transform" size={24} />
+          </button>
+
+          {/* Cards Container */}
+          <div className={`grid md:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            {testimoniosVisibles.map((testimonio, idx) => (
+              <div
+                key={idx}
+                className="bg-[#F2F2F2] rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 group"
+              >
+                {/* Quote Icon */}
+                <div className="mb-4">
+                  <Quote className="text-[#CBD95F] opacity-50 group-hover:opacity-100 transition-opacity" size={32} />
+                </div>
+
+                {/* Stars */}
+                <div className="flex gap-1 mb-4">
+                  {[...Array(testimonio.calificacion)].map((_, i) => (
+                    <Star key={i} className="text-[#CBD95F] fill-[#CBD95F]" size={16} />
+                  ))}
+                </div>
+
+                {/* Comment */}
+                <p className="text-gray-700 leading-relaxed mb-6 line-clamp-4">
+                  "{testimonio.comentario}"
+                </p>
+
+                {/* Author Info */}
+                <div className="flex items-center gap-3 pt-4 border-t border-gray-300">
+                  <div className="w-12 h-12 bg-gradient-to-br from-[#038C7F] to-[#A9BF04] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">
+                    {testimonio.avatar}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="font-bold text-gray-900 truncate">{testimonio.nombre}</p>
+                    <p className="text-sm text-gray-600 truncate">{testimonio.ubicacion}</p>
+                  </div>
+                  <div className="text-xs text-gray-500 text-right">
+                    {testimonio.fecha}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile Navigation Dots */}
+          <div className="flex md:hidden justify-center gap-2 mt-8">
+            {Array.from({ length: Math.ceil(testimonios.length / testimoniosVisible) }).map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentIndex(idx * testimoniosVisible)}
+                className={`w-2 h-2 rounded-full transition-all ${
+                  Math.floor(currentIndex / testimoniosVisible) === idx
+                    ? 'bg-[#038C7F] w-6'
+                    : 'bg-gray-300'
+                }`}
+                aria-label={`Ir a página ${idx + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Google Reviews CTA */}
+        <div className={`mt-16 bg-gradient-to-r from-[#038C7F] to-[#A9BF04] rounded-3xl p-8 md:p-12 text-center shadow-2xl transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+            ¿Ya te hospedaste con nosotros?
+          </h3>
+          <p className="text-white/90 text-lg mb-6 max-w-2xl mx-auto">
+            Tu opinión es muy importante para nosotros. Comparte tu experiencia 
+            y ayuda a otros viajeros a descubrir Eudiq Hotel.
+          </p>
+          <a
+            href="https://maps.app.goo.gl/yZUqhkbKqHijRYVB8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#038C7F] font-semibold rounded-full hover:bg-[#CBD95F] hover:text-gray-900 transition-all shadow-lg hover:scale-105"
+          >
+            <Star className="fill-[#CBD95F] text-[#CBD95F]" size={20} />
+            Déjanos tu Reseña en Google
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
