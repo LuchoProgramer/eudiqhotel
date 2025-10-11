@@ -16,7 +16,7 @@ const navLinks = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
-    <nav className="fixed top-0 left-0 w-full z-30 bg-[#F2F2F2]/80 backdrop-blur border-b border-[#CBD95F]/30 shadow-sm">
+  <nav className="fixed top-0 left-0 w-full z-30 bg-white/40 backdrop-blur border-b border-[#CBD95F]/30 shadow-sm">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
         {/* Logo */}
         <Link href="/" className="flex items-center" aria-label="Inicio">
@@ -28,7 +28,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-[#038C7F] hover:text-[#A9BF04] font-medium transition"
+              className="text-[#038C7F] hover:text-[#A9BF04] font-medium font-sans transition"
             >
               {link.label}
             </a>
@@ -47,12 +47,12 @@ export default function Navbar() {
       </div>
       {/* Mobile nav */}
       {open && (
-        <div className="md:hidden bg-[#F2F2F2]/95 px-4 pb-4 pt-2 flex flex-col gap-4 border-b border-[#CBD95F]/30 shadow">
+  <div className="md:hidden bg-white/60 px-4 pb-4 pt-2 flex flex-col gap-4 border-b border-[#CBD95F]/30 shadow">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-[#038C7F] hover:text-[#A9BF04] font-medium text-lg transition"
+              className="text-[#038C7F] hover:text-[#A9BF04] font-medium font-sans text-lg transition"
               onClick={() => setOpen(false)}
             >
               {link.label}
