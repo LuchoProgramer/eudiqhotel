@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import { Trophy, MapPin, BedDouble, Handshake } from 'lucide-react';
 
 export default function ExperienciaUnica() {
   const [isVisible, setIsVisible] = useState(false);
@@ -99,16 +100,16 @@ export default function ExperienciaUnica() {
             {/* Features */}
             <div className="grid grid-cols-2 gap-4 pt-4">
               {[
-                { icon: '🏆', title: 'Excelencia', desc: 'Servicio premium' },
-                { icon: '📍', title: 'Ubicación', desc: 'Centro de Loja' },
-                { icon: '🛏️', title: 'Confort', desc: 'Habitaciones de lujo' },
-                { icon: '🤝', title: 'Atención', desc: 'Personalizada 24/7' },
+                { icon: <Trophy className="w-8 h-8 text-[#A9BF04]" />, title: 'Excelencia', desc: 'Servicio premium' },
+                { icon: <MapPin className="w-8 h-8 text-[#038C7F]" />, title: 'Ubicación', desc: 'Centro de Loja' },
+                { icon: <BedDouble className="w-8 h-8 text-[#A9BF04]" />, title: 'Confort', desc: 'Habitaciones de lujo' },
+                { icon: <Handshake className="w-8 h-8 text-[#038C7F]" />, title: 'Atención', desc: 'Personalizada 24/7' },
               ].map((item, idx) => (
                 <div
                   key={idx}
                   className="p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all hover:scale-105 border border-gray-100"
                 >
-                  <div className="text-3xl mb-2">{item.icon}</div>
+                  <div className="mb-2 flex items-center justify-center">{item.icon}</div>
                   <h4 className="font-bold text-gray-900 mb-1">{item.title}</h4>
                   <p className="text-sm text-gray-600">{item.desc}</p>
                 </div>
