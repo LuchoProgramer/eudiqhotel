@@ -107,7 +107,7 @@ export default function Hero({ images = defaultImages }: HeroProps) {
 
           {/* Features Pills */}
           <div className="flex flex-wrap gap-3 justify-center">
-            {['Wi-Fi Gratis', 'Desayuno Incluido', 'Estacionamiento', 'Centro de la Ciudad'].map((feature) => (
+            {['Wi-Fi Gratis', 'Desayuno Incluido', 'Estacionamiento', 'Cerca a la Terminal'].map((feature) => (
               <span
                 key={feature}
                 className="px-4 py-2 bg-white/5 backdrop-blur-sm text-white/80 text-sm rounded-full border border-white/10"

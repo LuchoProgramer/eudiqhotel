@@ -121,9 +121,9 @@ export default function ExperienciaUnica() {
   <div className={`grid grid-cols-2 md:grid-cols-4 gap-8 py-12 px-6 md:px-12 bg-[#CBD95F]/20 rounded-3xl shadow-2xl border border-[#038C7F]/60 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
           {[
             { number: '15+', label: 'Años de Experiencia' },
-            { number: '50+', label: 'Habitaciones Premium' },
+            { number: '25+', label: 'Habitaciones Premium' },
             { number: '10k+', label: 'Huéspedes Felices' },
-            { number: '4.9★', label: 'Calificación Promedio' },
+            { number: '4.2★', label: 'Calificación Promedio' },
           ].map((stat, idx) => (
             <div key={idx} className="text-center">
               <p className="text-4xl md:text-5xl font-bold text-gray-900 mb-2" style={{fontFamily: 'Playfair Display, serif'}}>
