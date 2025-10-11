@@ -241,7 +241,7 @@ export default function Habitaciones() {
                   </div>
 
                   {/* CTA Button */}
-                  <button className="w-full py-3 bg-[#038C7F] text-white font-semibold rounded-xl hover:shadow-lg hover:scale-105 transition-all flex items-center justify-center gap-2 group">
+                  <button className="w-full py-3 bg-[#038C7F] text-white font-semibold rounded-xl hover:bg-[#CBD95F] hover:text-[#222] hover:shadow-lg hover:scale-105 transition-all flex items-center justify-center gap-2 group">
                     Reservar Ahora
                     <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

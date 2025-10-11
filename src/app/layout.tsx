@@ -19,8 +19,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
+      <head>
+        <link rel="icon" href="/window.svg" type="image/svg+xml" />
+        <link rel="alternate icon" href="/window.svg" type="image/svg+xml" />
+      </head>
       <body className={cn(inter.className, 'bg-neutral min-h-screen flex flex-col')}>
-  <Navbar />
+        <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />
       </body>
