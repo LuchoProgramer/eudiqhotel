@@ -21,7 +21,7 @@ const comoLlegar = [
   {
     icon: Bus,
     titulo: 'Terminal Terrestre',
-    descripcion: 'A solo 3 km del centro. Taxis y buses urbanos disponibles las 24 horas.',
+    descripcion: 'A solo 3 minutos caminando de la terminal terrestre. Servicio de taxi disponible.',
   },
   {
     icon: Car,
@@ -94,7 +94,7 @@ export default function Ubicacion() {
               {/* Overlay badge */}
               <div className="absolute top-4 left-4 bg-white px-4 py-2 rounded-full shadow-lg flex items-center gap-2">
                 <MapPin className="text-[#038C7F]" size={20} />
-                <span className="font-semibold text-gray-900">Centro de Loja</span>
+                <span className="font-semibold text-gray-900">Cerca a la Terminal</span>
               </div>
             </div>
 
@@ -201,7 +201,7 @@ export default function Ubicacion() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://maps.google.com"
+              href="https://maps.app.goo.gl/5dCMqMs8TNnuUAXU7"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-[#038C7F] to-[#A9BF04] text-white font-semibold rounded-full hover:shadow-xl hover:scale-105 transition-all"
