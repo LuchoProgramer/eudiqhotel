@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { Utensils, Wifi, Car, Dumbbell, Coffee, Sparkles, Clock, MapPin } from 'lucide-react';
+import { Utensils, Wifi, Car, Coffee, Sparkles, Clock, MapPin } from 'lucide-react';
 
 const servicios = [
   {
@@ -94,18 +94,17 @@ export default function Servicios() {
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+  {/* Services Grid */}
+  <div className="flex flex-wrap justify-center gap-6 mb-16">
           {servicios.map((servicio, idx) => {
             const Icon = servicio.icon;
             const isHovered = hoveredIndex === idx;
-            
             return (
               <div
                 key={idx}
                 onMouseEnter={() => setHoveredIndex(idx)}
                 onMouseLeave={() => setHoveredIndex(null)}
-                className={`group relative bg-white rounded-2xl p-6 shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer ${
+                className={`group relative bg-white rounded-2xl p-6 shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(25%-1.5rem)] max-w-xs ${
                   servicio.destacado ? 'ring-2 ring-[#CBD95F]' : ''
                 } ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
                 style={{ 
@@ -212,7 +211,7 @@ export default function Servicios() {
               <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                    <img src="/Logocafe.svg" alt="Logo Café" className="h-8 w-auto" style={{height:32}} />
+                    <Image src="/Logocafe.svg" alt="Logo Café" width={32} height={32} className="h-8 w-auto" style={{height:32}} />
                   </div>
                   <div>
                     <p className="text-xl font-bold text-gray-900">100%</p>

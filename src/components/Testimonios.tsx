@@ -233,23 +233,23 @@ export default function Testimonios() {
         </div>
 
         {/* Google Reviews CTA */}
-        <div className={`mt-16 bg-gradient-to-r from-[#038C7F] to-[#A9BF04] rounded-3xl p-8 md:p-12 text-center shadow-2xl transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            ¿Ya te hospedaste con nosotros?
-          </h3>
-          <p className="text-white/90 text-lg mb-6 max-w-2xl mx-auto">
-            Tu opinión es muy importante para nosotros. Comparte tu experiencia 
-            y ayuda a otros viajeros a descubrir Eudiq Hotel.
-          </p>
-          <a
-            href="https://maps.app.goo.gl/yZUqhkbKqHijRYVB8"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#038C7F] font-semibold rounded-full hover:bg-[#CBD95F] hover:text-gray-900 transition-all shadow-lg hover:scale-105"
-          >
-            <Star className="fill-[#CBD95F] text-[#CBD95F]" size={20} />
-            Déjanos tu Reseña en Google
-          </a>
+        <div className={`mt-16 p-8 bg-gradient-to-r from-[#038C7F]/10 to-[#CBD95F]/10 rounded-3xl border border-[#038C7F]/20 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+          <div className="text-center max-w-3xl mx-auto">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">¿Necesitas ayuda para elegir?</h3>
+            <p className="text-gray-700 mb-6">
+              Nuestro equipo está disponible 24/7 para ayudarte a encontrar la habitación perfecta 
+              que se ajuste a tus necesidades y presupuesto.
+            </p>
+            <a
+              href="#contacto"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#038C7F] text-white font-semibold rounded-full hover:bg-[#A9BF04] transition-all"
+            >
+              Contáctanos
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </section>

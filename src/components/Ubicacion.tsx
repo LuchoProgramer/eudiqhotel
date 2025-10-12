@@ -168,19 +168,20 @@ export default function Ubicacion() {
             </div>
 
             {/* Directions */}
-            <div className="bg-gradient-to-br from-[#038C7F] to-[#A9BF04] rounded-3xl p-8 shadow-xl text-white">
-              <h3 className="text-2xl font-bold mb-6">¿Cómo Llegar?</h3>
+            <div className="p-8 bg-gradient-to-r from-[#038C7F]/10 to-[#CBD95F]/10 rounded-3xl border border-[#038C7F]/20 transition-all">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">¿Cómo Llegar?</h3>
               <div className="space-y-4">
                 {comoLlegar.map((metodo, idx) => {
                   const Icon = metodo.icon;
+                  const iconColor = idx % 2 === 0 ? '#038C7F' : '#A9BF04';
                   return (
                     <div key={idx} className="flex items-start gap-4 p-4 bg-white/10 backdrop-blur-sm rounded-xl">
                       <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Icon size={24} />
+                        <Icon size={24} style={{ color: iconColor }} />
                       </div>
                       <div>
-                        <h4 className="font-bold mb-1">{metodo.titulo}</h4>
-                        <p className="text-sm text-white/90 leading-relaxed">
+                        <h4 className="font-bold mb-1 text-gray-900">{metodo.titulo}</h4>
+                        <p className="text-sm text-gray-900 leading-relaxed">
                           {metodo.descripcion}
                         </p>
                       </div>

@@ -3,6 +3,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Inicio", href: "/" },
@@ -20,7 +21,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
         {/* Logo */}
         <Link href="/" className="flex items-center" aria-label="Inicio">
-          <img src="/Logo.svg" alt="Eudiq Hotel Logo" width={180} height={60} style={{display: 'block'}} />
+          <Image src="/Logo.svg" alt="Eudiq Hotel Logo" width={180} height={60} style={{display: 'block'}} />
         </Link>
         {/* Desktop nav */}
         <div className="hidden md:flex gap-8 items-center">

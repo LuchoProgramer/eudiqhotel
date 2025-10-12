@@ -65,7 +65,6 @@ const habitaciones = [
 
 export default function Habitaciones() {
   const [isVisible, setIsVisible] = useState(false);
-  const [activeImage, setActiveImage] = useState<{ [key: number]: number }>({});
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -85,19 +84,6 @@ export default function Habitaciones() {
     return () => observer.disconnect();
   }, []);
 
-  const nextImage = (roomId: number, totalImages: number) => {
-    setActiveImage(prev => ({
-      ...prev,
-      [roomId]: ((prev[roomId] || 0) + 1) % totalImages
-    }));
-  };
-
-  const prevImage = (roomId: number, totalImages: number) => {
-    setActiveImage(prev => ({
-      ...prev,
-      [roomId]: ((prev[roomId] || 0) - 1 + totalImages) % totalImages
-    }));
-  };
 
   return (
     <section id="habitaciones" ref={sectionRef} className="relative py-24 md:py-32 bg-white overflow-hidden">
@@ -125,7 +111,6 @@ export default function Habitaciones() {
         {/* Rooms Grid */}
         <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
           {habitaciones.map((hab, idx) => {
-            const currentImg = activeImage[hab.id] || 0;
             return (
               <div
                 key={hab.id}
