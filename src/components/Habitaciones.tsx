@@ -16,7 +16,6 @@ const habitaciones = [
     tamaño: '18 m²',
     imagenes: [
       'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204466/IMG_4616_xg9lrj.jpg',
-      'https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=80',
     ],
     amenidades: ['Wi-Fi gratis', 'TV cable', 'Baño privado', 'Escritorio', 'Caja fuerte'],
   },
@@ -31,7 +30,6 @@ const habitaciones = [
     tamaño: '25 m²',
     imagenes: [
       'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204509/IMG_4605_q6bvol.jpg',
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80',
     ],
     amenidades: ['Wi-Fi gratis', 'TV Smart', 'Baño privado', 'Mini bar', 'Aire acondicionado', 'Vista a la ciudad'],
   },
@@ -46,7 +44,6 @@ const habitaciones = [
     tamaño: '35 m²',
     imagenes: [
       'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204251/IMG_4163-HDR_ymaqov.webp',
-      'https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=800&q=80',
     ],
     amenidades: ['Wi-Fi premium', 'TV Smart 55"', 'Jacuzzi', 'Sala de estar', 'Desayuno incluido', 'Room service 24/7', 'Vista panorámica'],
   },
@@ -61,7 +58,6 @@ const habitaciones = [
     tamaño: '45 m²',
     imagenes: [
       'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204999/IMG_4183-HDR_gs5who.webp',
-      'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=80',
     ],
     amenidades: ['Wi-Fi gratis', '2 TV Smart', 'Cocina pequeña', 'Sala amplia', 'Desayuno incluido', 'Juegos para niños', 'Balcón privado'],
   },
@@ -140,58 +136,18 @@ export default function Habitaciones() {
               >
                 {/* Image Gallery */}
                 <div className="relative h-72 overflow-hidden">
-                  {hab.imagenes.map((img, imgIdx) => (
-                    <Image
-                      key={imgIdx}
-                      src={img}
-                      alt={`${hab.nombre} ${imgIdx + 1}`}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
-                        imgIdx === currentImg ? 'opacity-100' : 'opacity-0'
-                      }`}
-                      priority={idx === 0 && imgIdx === 0}
-                    />
-                  ))}
-                  
+                  <Image
+                    src={hab.imagenes[0]}
+                    alt={hab.nombre}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100"
+                    priority={idx === 0}
+                  />
                   {/* Category Badge */}
                   <div className="absolute top-4 left-4 px-3 py-1 bg-[#038C7F] text-white text-xs font-bold tracking-wider rounded-full">
                     {hab.categoria}
                   </div>
-
-                  {/* Gallery Navigation */}
-                  {hab.imagenes.length > 1 && (
-                    <>
-                      <button
-                        onClick={() => prevImage(hab.id, hab.imagenes.length)}
-                        className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/80 hover:bg-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all"
-                      >
-                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                        </svg>
-                      </button>
-                      <button
-                        onClick={() => nextImage(hab.id, hab.imagenes.length)}
-                        className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/80 hover:bg-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all"
-                      >
-                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </button>
-
-                      {/* Dots */}
-                      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
-                        {hab.imagenes.map((_, dotIdx) => (
-                          <div
-                            key={dotIdx}
-                            className={`w-1.5 h-1.5 rounded-full transition-all ${
-                              dotIdx === currentImg ? 'bg-white w-4' : 'bg-white/60'
-                            }`}
-                          />
-                        ))}
-                      </div>
-                    </>
-                  )}
                 </div>
 
                 {/* Content */}
