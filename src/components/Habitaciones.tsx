@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import { User, BedDouble, Ruler } from 'lucide-react';
 
 const habitaciones = [
   {
@@ -212,15 +213,15 @@ export default function Habitaciones() {
                   {/* Room Info */}
                   <div className="grid grid-cols-3 gap-3 mb-6 pb-6 border-b border-gray-300">
                     <div className="text-center">
-                      <div className="text-2xl mb-1">👤</div>
+                      <User className="w-6 h-6 mx-auto mb-1 text-[#038C7F]" />
                       <div className="text-xs text-gray-600">{hab.capacidad}</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl mb-1">🛏️</div>
+                      <BedDouble className="w-6 h-6 mx-auto mb-1 text-[#A9BF04]" />
                       <div className="text-xs text-gray-600">{hab.cama}</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl mb-1">📐</div>
+                      <Ruler className="w-6 h-6 mx-auto mb-1 text-[#038C7F]" />
                       <div className="text-xs text-gray-600">{hab.tamaño}</div>
                     </div>
                   </div>

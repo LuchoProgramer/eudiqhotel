@@ -109,7 +109,7 @@ export default function ExperienciaUnica() {
                   key={idx}
                   className="p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all hover:scale-105 border border-gray-100"
                 >
-                  <div className="mb-2 flex items-center justify-center">{item.icon}</div>
+                  <div className="mb-2 flex items-center justify-start">{item.icon}</div>
                   <h4 className="font-bold text-gray-900 mb-1">{item.title}</h4>
                   <p className="text-sm text-gray-600">{item.desc}</p>
                 </div>

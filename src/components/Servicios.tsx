@@ -217,8 +217,8 @@ export default function Servicios() {
               {/* Floating badge */}
               <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-[#CBD95F] rounded-full flex items-center justify-center">
-                    <Coffee className="text-gray-900" size={24} />
+                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                    <img src="/Logocafe.svg" alt="Logo Café" className="h-8 w-auto" style={{height:32}} />
                   </div>
                   <div>
                     <p className="text-xl font-bold text-gray-900">100%</p>
