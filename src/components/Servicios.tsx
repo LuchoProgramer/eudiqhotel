@@ -30,12 +30,6 @@ const servicios = [
     destacado: false,
   },
   {
-    icon: Dumbbell,
-    titulo: 'Gimnasio',
-    descripcion: 'Centro fitness equipado con máquinas modernas. Mantén tu rutina de ejercicio durante tu estadía.',
-    destacado: false,
-  },
-  {
     icon: Sparkles,
     titulo: 'Servicio de Limpieza',
     descripcion: 'Housekeeping diario con productos premium. Servicio de lavandería y planchado disponible.',
