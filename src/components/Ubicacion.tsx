@@ -3,13 +3,15 @@
 import { useState, useEffect, useRef } from 'react';
 import { MapPin, Navigation, Clock, Phone, Mail, Car, Plane, Bus } from 'lucide-react';
 
+import { Landmark, Church, Palette, TreePine, Castle, Mountain } from 'lucide-react';
+
 const puntosInteres = [
-  { nombre: 'Parque Central Jipiro', distancia: '2.5 km', tiempo: '5 min', icono: '🌳' },
-  { nombre: 'Catedral de Loja', distancia: '1.2 km', tiempo: '3 min', icono: '⛪' },
-  { nombre: 'Puerta de la Ciudad', distancia: '800 m', tiempo: '2 min', icono: '🏛️' },
-  { nombre: 'Plaza de la Independencia', distancia: '1.0 km', tiempo: '3 min', icono: '🏰' },
-  { nombre: 'Museo de la Cultura Lojana', distancia: '1.5 km', tiempo: '4 min', icono: '🎨' },
-  { nombre: 'Parque Nacional Podocarpus', distancia: '15 km', tiempo: '25 min', icono: '🏞️' },
+  { nombre: 'Parque Central Jipiro', distancia: '2.5 km', tiempo: '5 min', icono: <TreePine className="w-7 h-7 text-[#038C7F]" /> },
+  { nombre: 'Catedral de Loja', distancia: '1.2 km', tiempo: '3 min', icono: <Church className="w-7 h-7 text-[#A9BF04]" /> },
+  { nombre: 'Puerta de la Ciudad', distancia: '800 m', tiempo: '2 min', icono: <Landmark className="w-7 h-7 text-[#038C7F]" /> },
+  { nombre: 'Plaza de la Independencia', distancia: '1.0 km', tiempo: '3 min', icono: <Castle className="w-7 h-7 text-[#A9BF04]" /> },
+  { nombre: 'Museo de la Cultura Lojana', distancia: '1.5 km', tiempo: '4 min', icono: <Palette className="w-7 h-7 text-[#038C7F]" /> },
+  { nombre: 'Parque Nacional Podocarpus', distancia: '15 km', tiempo: '25 min', icono: <Mountain className="w-7 h-7 text-[#A9BF04]" /> },
 ];
 
 const comoLlegar = [
@@ -148,7 +150,7 @@ export default function Ubicacion() {
                     className="flex items-center justify-between p-4 bg-[#F2F2F2] rounded-xl hover:bg-[#038C7F]/10 transition-all cursor-pointer group"
                   >
                     <div className="flex items-center gap-4">
-                      <div className="text-3xl">{punto.icono}</div>
+                      <div>{punto.icono}</div>
                       <div>
                         <p className="font-semibold text-gray-900 group-hover:text-[#038C7F] transition-colors">
                           {punto.nombre}

@@ -138,11 +138,11 @@ export default function Testimonios() {
                 <Star key={i} className="text-[#CBD95F] fill-[#CBD95F]" size={24} />
               ))}
             </div>
-            <p className="text-3xl font-bold text-gray-900">4.9</p>
+            <p className="text-3xl font-bold text-gray-900">4.2</p>
             <p className="text-sm text-gray-600">Calificación</p>
           </div>
           <div className="text-center p-6 bg-gradient-to-br from-[#038C7F]/10 to-[#CBD95F]/10 rounded-2xl">
-            <p className="text-3xl font-bold text-[#038C7F] mb-2">500+</p>
+            <p className="text-3xl font-bold text-[#038C7F] mb-2">200+</p>
             <p className="text-sm text-gray-600">Reseñas</p>
           </div>
           <div className="text-center p-6 bg-gradient-to-br from-[#038C7F]/10 to-[#CBD95F]/10 rounded-2xl">
