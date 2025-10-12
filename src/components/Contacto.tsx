@@ -222,35 +222,35 @@ export default function Contacto() {
               })}
             </div>
 
-            <div className="bg-gradient-to-br from-green-500 to-green-600 rounded-2xl p-6 shadow-xl text-white">
+            <div className="bg-[#25D366]/90 rounded-2xl p-6 shadow-xl text-white">
               <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
                 <MessageCircle size={24} />¿Prefieres WhatsApp?
               </h3>
               <p className="text-white/90 mb-4">
                 Chatea con nosotros directamente y resuelve tus dudas al instante.
               </p>
-              <a href="https://wa.me/593987654321" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-white text-green-600 font-semibold rounded-full hover:bg-green-50 transition-all">
+              <a href="https://wa.me/593987654321" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#25D366] font-semibold rounded-full hover:bg-green-50 transition-all">
                 <MessageCircle size={20} />Abrir WhatsApp
               </a>
             </div>
 
-            <div className="bg-gradient-to-br from-[#038C7F] to-[#A9BF04] rounded-2xl p-6 shadow-xl text-white">
+            <div className="bg-[#038C7F]/90 rounded-2xl p-6 shadow-xl text-white">
               <h3 className="text-xl font-bold mb-3">Políticas de Reserva</h3>
               <ul className="space-y-2 text-sm text-white/90">
                 <li className="flex items-start gap-2">
-                  <span className="text-[#CBD95F] mt-1">✓</span>
+                  <span className="text-white mt-1">✓</span>
                   <span>Check-in: 14:00 hrs | Check-out: 12:00 hrs</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#CBD95F] mt-1">✓</span>
+                  <span className="text-white mt-1">✓</span>
                   <span>Cancelación gratuita hasta 24h antes</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#CBD95F] mt-1">✓</span>
+                  <span className="text-white mt-1">✓</span>
                   <span>Desayuno incluido en todas las habitaciones</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#CBD95F] mt-1">✓</span>
+                  <span className="text-white mt-1">✓</span>
                   <span>Wi-Fi y estacionamiento sin costo</span>
                 </li>
               </ul>
