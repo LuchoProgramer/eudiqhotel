@@ -42,8 +42,21 @@ export default function Contacto() {
     });
   };
 
-  const handleSubmit = () => {
-    console.log('Formulario enviado:', formData);
+  const handleSubmit = (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
+    // Construir mensaje para WhatsApp
+    const mensaje =
+      `Hola, quiero reservar en EUDIQ HOTEL.\n` +
+      `Nombre: ${formData.nombre}\n` +
+      `Email: ${formData.email}\n` +
+      `Teléfono: ${formData.telefono}\n` +
+      `Check-in: ${formData.fechaLlegada}\n` +
+      `Check-out: ${formData.fechaSalida}\n` +
+      `Huéspedes: ${formData.huespedes}\n` +
+      `Tipo de Habitación: ${formData.tipoHabitacion}\n` +
+      (formData.mensaje ? `Mensaje: ${formData.mensaje}\n` : '');
+    const url = `https://wa.me/593986681572?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, '_blank');
     setEnviado(true);
     setTimeout(() => {
       setEnviado(false);
@@ -121,7 +134,7 @@ export default function Contacto() {
                 </div>
               </div>
 
-              <div className="space-y-4">
+              <form className="space-y-4" onSubmit={handleSubmit}>
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">Nombre Completo *</label>
                   <input type="text" name="nombre" value={formData.nombre} onChange={handleChange} className="w-full px-4 py-3 bg-[#F2F2F2] border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#038C7F] transition-all" placeholder="Tu nombre" />
@@ -183,7 +196,7 @@ export default function Contacto() {
                   <textarea name="mensaje" value={formData.mensaje} onChange={handleChange} rows={4} className="w-full px-4 py-3 bg-[#F2F2F2] border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#038C7F] transition-all resize-none" placeholder="¿Algún requerimiento especial? (opcional)" />
                 </div>
 
-                <button onClick={handleSubmit} disabled={enviado} className={`w-full py-4 bg-gradient-to-r from-[#038C7F] to-[#A9BF04] text-white font-semibold rounded-xl flex items-center justify-center gap-2 transition-all ${enviado ? 'opacity-75' : 'hover:shadow-xl hover:scale-105'}`}>
+                <button type="submit" disabled={enviado} className={`w-full py-4 bg-gradient-to-r from-[#038C7F] to-[#A9BF04] text-white font-semibold rounded-xl flex items-center justify-center gap-2 transition-all ${enviado ? 'opacity-75' : 'hover:shadow-xl hover:scale-105'}`}>
                   {enviado ? 'Enviado ✓' : <><Send size={20} />Enviar Solicitud</>}
                 </button>
 
@@ -192,7 +205,7 @@ export default function Contacto() {
                     ✅ ¡Mensaje enviado! Te contactaremos pronto.
                   </div>
                 )}
-              </div>
+              </form>
             </div>
           </div>
 
