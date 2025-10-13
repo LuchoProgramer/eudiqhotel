@@ -64,8 +64,8 @@ export default function Contacto() {
     {
       icon: Phone,
       titulo: 'Teléfono',
-      info: '+593 9 8765 4321',
-      link: 'tel:+593987654321',
+  info: '+593 7 261-4151',
+  link: 'tel:+59372614151',
     },
     {
       icon: Mail,
@@ -229,7 +229,7 @@ export default function Contacto() {
               <p className="text-white/90 mb-4">
                 Chatea con nosotros directamente y resuelve tus dudas al instante.
               </p>
-              <a href="https://wa.me/593987654321" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#25D366] font-semibold rounded-full hover:bg-green-50 transition-all">
+              <a href="https://wa.me/593986681572" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#25D366] font-semibold rounded-full hover:bg-green-50 transition-all">
                 <MessageCircle size={20} />Abrir WhatsApp
               </a>
             </div>
