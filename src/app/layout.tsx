@@ -1,3 +1,4 @@
+  <meta property="fb:app_id" content="1327476752302916" />
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
