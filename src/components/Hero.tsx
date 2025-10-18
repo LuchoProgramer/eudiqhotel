@@ -78,7 +78,7 @@ export default function Hero({ images = defaultImages }: HeroProps) {
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
-            Un refugio de elegancia y confort en Av. Pablo Palacio, diagonal a la terminal terrestre, Loja 110105.
+            Un refugio de elegancia y confort en, Loja.
             Donde cada momento se convierte en un recuerdo inolvidable.
           </p>
 
