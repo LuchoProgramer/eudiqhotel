@@ -13,7 +13,6 @@ const defaultImages = [
   'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1600/v1760204829/IMG_4425-HDR_avmsry.webp',
   'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1600/v1760204433/IMG_4194-HDR_xjuzwj.jpg',
   'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1600/v1760204999/IMG_4183-HDR_gs5who.webp',
-  'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1600/v1760204672/IMG_4453-HDR_sgomb0.webp',
 ];
 
 export default function Hero({ images = defaultImages }: HeroProps) {
