@@ -81,7 +81,7 @@ export default function ExperienciaUnica() {
           {/* Content Side */}
           <div className={`space-y-6 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             <h3 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight" style={{fontFamily: 'Playfair Display, serif'}}>
-              Un refugio de confort en el corazón de Loja
+              Un refugio de confort en Av. Pablo Palacio, diagonal a la terminal terrestre, Loja 110105
             </h3>
             
             <p className="text-lg text-gray-700 leading-relaxed">
@@ -92,16 +92,14 @@ export default function ExperienciaUnica() {
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed">
-              Ubicados estratégicamente en Loja, te ofrecemos acceso inmediato a los 
-              principales atractivos de la ciudad, mientras disfrutas de un oasis de 
-              tranquilidad y sofisticación.
+              Ubicados estratégicamente en Av. Pablo Palacio, diagonal a la terminal terrestre, Loja 110105, te ofrecemos acceso inmediato a los principales atractivos de la ciudad, mientras disfrutas de un oasis de tranquilidad y sofisticación.
             </p>
 
             {/* Features */}
             <div className="grid grid-cols-2 gap-4 pt-4">
               {[
                 { icon: <Trophy className="w-8 h-8 text-[#A9BF04]" />, title: 'Excelencia', desc: 'Servicio premium' },
-                { icon: <MapPin className="w-8 h-8 text-[#038C7F]" />, title: 'Ubicación', desc: 'Centro de Loja' },
+                { icon: <MapPin className="w-8 h-8 text-[#038C7F]" />, title: 'Ubicación', desc: 'Av. Pablo Palacio, diagonal a la terminal terrestre, Loja 110105' },
                 { icon: <BedDouble className="w-8 h-8 text-[#A9BF04]" />, title: 'Confort', desc: 'Habitaciones de lujo' },
                 { icon: <Handshake className="w-8 h-8 text-[#038C7F]" />, title: 'Atención', desc: 'Personalizada 24/7' },
               ].map((item, idx) => (

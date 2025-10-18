@@ -68,10 +68,10 @@ export default function Ubicacion() {
             UBICACIÓN
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6" style={{fontFamily: 'Playfair Display, serif'}}>
-            Encuéntranos en <span className="text-[#038C7F]">Loja</span>
+            Encuéntranos en <span className="text-[#038C7F]">Av. Pablo Palacio, diagonal a la terminal terrestre, Loja 110105</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Estratégicamente ubicados cerca de la terminal de la ciudad musical del Ecuador, 
+            Estratégicamente ubicados en Av. Pablo Palacio, diagonal a la terminal terrestre, Loja 110105, 
             con acceso a los principales atractivos turísticos.
           </p>
         </div>
@@ -96,7 +96,7 @@ export default function Ubicacion() {
               {/* Overlay badge */}
               <div className="absolute top-4 left-4 bg-white px-4 py-2 rounded-full shadow-lg flex items-center gap-2">
                 <MapPin className="text-[#038C7F]" size={20} />
-                <span className="font-semibold text-gray-900">Cerca a la Terminal</span>
+                <span className="font-semibold text-gray-900">Diagonal a la Terminal Terrestre</span>
               </div>
             </div>
 
@@ -108,7 +108,7 @@ export default function Ubicacion() {
                   <MapPin className="flex-shrink-0 mt-1 text-[#038C7F]" size={20} />
                   <div>
                     <p className="font-medium">Dirección</p>
-                    <p className="text-sm text-gray-600">Calle Principal 123, Centro, Loja, Ecuador</p>
+                    <p className="text-sm text-gray-600">Av. Pablo Palacio, diagonal a la terminal terrestre, Loja 110105</p>
                   </div>
                 </a>
                 <a href="tel:+593987654321" className="flex items-start gap-3 text-gray-700 hover:text-[#038C7F] transition-colors group">

@@ -89,7 +89,7 @@ export default function Contacto() {
     {
       icon: MapPin,
       titulo: 'Dirección',
-  info: 'Av. Pablo Palacio, cerca a la terminal, Loja 110105',
+  info: 'Av. Pablo Palacio, diagonal a la terminal terrestre, Loja 110105',
       link: 'https://maps.app.goo.gl/yZUqhkbKqHijRYVB8',
     },
     {

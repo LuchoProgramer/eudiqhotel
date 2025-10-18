@@ -78,7 +78,7 @@ export default function Hero({ images = defaultImages }: HeroProps) {
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
-            Un refugio de elegancia y confort en el corazón de Loja. 
+            Un refugio de elegancia y confort en Av. Pablo Palacio, diagonal a la terminal terrestre, Loja 110105.
             Donde cada momento se convierte en un recuerdo inolvidable.
           </p>
 
@@ -109,7 +109,7 @@ export default function Hero({ images = defaultImages }: HeroProps) {
 
           {/* Features Pills */}
           <div className="flex flex-wrap gap-3 justify-center">
-            {['Wi-Fi Gratis', 'Desayuno Incluido', 'Estacionamiento', 'Cerca a la Terminal'].map((feature) => (
+            {['Wi-Fi Gratis', 'Desayuno Incluido', 'Estacionamiento', 'Diagonal a la Terminal Terrestre'].map((feature) => (
               <span
                 key={feature}
                 className="px-4 py-2 bg-white/5 backdrop-blur-sm text-white/80 text-sm rounded-full border border-white/10"
