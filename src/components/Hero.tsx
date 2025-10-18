@@ -98,7 +98,9 @@ export default function Hero({ images = defaultImages }: HeroProps) {
             </a>
             
             <a
-              href="#contacto"
+              href="https://wa.me/593961712106?text=Hola,%20quiero%20reservar%20en%20Eudiq%20Hotel"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-4 bg-white/10 backdrop-blur-md text-white font-semibold rounded-full border-2 border-white/30 transition-all hover:bg-white/20 hover:border-[#CBD95F] hover:scale-105"
             >
               Reservar Ahora

@@ -55,7 +55,7 @@ export default function Contacto() {
       `Huéspedes: ${formData.huespedes}\n` +
       `Tipo de Habitación: ${formData.tipoHabitacion}\n` +
       (formData.mensaje ? `Mensaje: ${formData.mensaje}\n` : '');
-    const url = `https://wa.me/593986681572?text=${encodeURIComponent(mensaje)}`;
+    const url = `https://wa.me/593961712106?text=${encodeURIComponent(mensaje)}`;
     window.open(url, '_blank');
     setEnviado(true);
     setTimeout(() => {
@@ -242,7 +242,7 @@ export default function Contacto() {
               <p className="text-white/90 mb-4">
                 Chatea con nosotros directamente y resuelve tus dudas al instante.
               </p>
-              <a href="https://wa.me/593986681572" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#25D366] font-semibold rounded-full hover:bg-green-50 transition-all">
+              <a href="https://wa.me/593961712106" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#25D366] font-semibold rounded-full hover:bg-green-50 transition-all">
                 <MessageCircle size={20} />Abrir WhatsApp
               </a>
             </div>

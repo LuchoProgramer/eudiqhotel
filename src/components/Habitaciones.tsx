@@ -7,57 +7,85 @@ import { User, BedDouble, Ruler } from 'lucide-react';
 const habitaciones = [
   {
     id: 1,
-    nombre: 'Habitación Individual',
+    nombre: 'Individual',
     categoria: 'CONFORT',
-    descripcion: 'Perfecta para viajeros solitarios que buscan comodidad y funcionalidad en un espacio acogedor.',
-    precio: 45,
+    descripcion: 'Perfecta para viajeros solitarios que buscan comodidad y funcionalidad en un espacio acogedor. Incluye desayuno.',
+    precio: 25,
     capacidad: '1 persona',
     cama: '1 cama individual',
     tamaño: '18 m²',
     imagenes: [
       'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204466/IMG_4616_xg9lrj.jpg',
     ],
-    amenidades: ['Wi-Fi gratis', 'TV cable', 'Baño privado', 'Escritorio', 'Caja fuerte'],
+    amenidades: ['Wi-Fi gratis', 'TV cable', 'Baño privado', 'Escritorio', 'Caja fuerte', 'Desayuno incluido'],
   },
   {
     id: 2,
-    nombre: 'Habitación Doble',
+    nombre: 'Matrimonial',
     categoria: 'POPULAR',
-    descripcion: 'Espacio amplio y elegante diseñado para parejas o amigos que buscan una estancia confortable.',
-    precio: 65,
+    descripcion: 'Espacio elegante para parejas. Incluye desayuno.',
+    precio: 41,
     capacidad: '2 personas',
     cama: '1 cama matrimonial',
     tamaño: '25 m²',
     imagenes: [
       'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204509/IMG_4605_q6bvol.jpg',
     ],
-    amenidades: ['Wi-Fi gratis', 'TV Smart', 'Baño privado', 'Mini bar', 'Aire acondicionado', 'Vista a la ciudad'],
+    amenidades: ['Wi-Fi gratis', 'TV Smart', 'Baño privado', 'Mini bar', 'Aire acondicionado', 'Vista a la ciudad', 'Desayuno incluido'],
   },
   {
     id: 3,
-    nombre: 'Suite Ejecutiva',
-    categoria: 'PREMIUM',
-    descripcion: 'Lujo y sofisticación en cada detalle. Ideal para ejecutivos y viajeros que aprecian lo excepcional.',
-    precio: 95,
-    capacidad: '2-3 personas',
-    cama: '1 cama king size',
-    tamaño: '35 m²',
+    nombre: 'Doble cama',
+    categoria: 'DOBLE',
+    descripcion: 'Habitación con dos camas. Incluye desayuno.',
+    precio: 45,
+    capacidad: '2 personas',
+    cama: '2 camas individuales',
+    tamaño: '25 m²',
     imagenes: [
-      'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204251/IMG_4163-HDR_ymaqov.webp',
+      'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204555/IMG_4600_q2teiy.jpg',
     ],
-    amenidades: ['Wi-Fi premium', 'TV Smart 55"', 'Jacuzzi', 'Sala de estar', 'Desayuno incluido', 'Room service 24/7', 'Vista panorámica'],
+    amenidades: ['Wi-Fi gratis', 'TV Smart', 'Baño privado', 'Mini bar', 'Aire acondicionado', 'Vista a la ciudad', 'Desayuno incluido'],
   },
   {
     id: 4,
-    nombre: 'Suite Familiar',
-    categoria: 'FAMILIA',
-    descripcion: 'Diseñada para familias que buscan espacio, comodidad y momentos inolvidables juntos.',
-    precio: 120,
-    capacidad: '4-5 personas',
-    cama: '2 camas matrimoniales',
-    tamaño: '45 m²',
+    nombre: 'Triple',
+    categoria: 'TRIPLE',
+    descripcion: 'Habitación para tres personas. Incluye desayuno.',
+    precio: 50,
+    capacidad: '3 personas',
+    cama: '3 camas individuales',
+    tamaño: '30 m²',
     imagenes: [
       'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204999/IMG_4183-HDR_gs5who.webp',
+    ],
+    amenidades: ['Wi-Fi gratis', 'TV Smart', 'Baño privado', 'Mini bar', 'Aire acondicionado', 'Desayuno incluido'],
+  },
+  {
+    id: 5,
+    nombre: 'Cuádruple',
+    categoria: 'CUÁDRUPLE',
+    descripcion: 'Habitación para cuatro personas. Incluye desayuno.',
+    precio: 60,
+    capacidad: '4 personas',
+    cama: '4 camas individuales',
+    tamaño: '35 m²',
+    imagenes: [
+      'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204999/IMG_4183-HDR_gs5who.webp',
+    ],
+    amenidades: ['Wi-Fi gratis', 'TV Smart', 'Baño privado', 'Mini bar', 'Aire acondicionado', 'Desayuno incluido'],
+  },
+  {
+    id: 6,
+    nombre: 'Familiar',
+    categoria: 'FAMILIA',
+    descripcion: 'Habitación familiar. El precio es por persona ($15). Incluye desayuno.',
+    precio: 15,
+    capacidad: 'por persona',
+    cama: 'Camas múltiples',
+    tamaño: '45 m²',
+    imagenes: [
+      'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204251/IMG_4163-HDR_ymaqov.webp',
     ],
     amenidades: ['Wi-Fi gratis', '2 TV Smart', 'Cocina pequeña', 'Sala amplia', 'Desayuno incluido', 'Juegos para niños', 'Balcón privado'],
   },
@@ -142,8 +170,17 @@ export default function Habitaciones() {
                       {hab.nombre}
                     </h3>
                     <div className="text-right">
-                      <div className="text-3xl font-bold text-[#038C7F]">${hab.precio}</div>
-                      <div className="text-sm text-gray-500">por noche</div>
+                      {hab.nombre === 'Familiar' ? (
+                        <div>
+                          <div className="text-3xl font-bold text-[#038C7F]">${hab.precio} <span className="text-base text-gray-500 font-normal">por persona</span></div>
+                          <div className="text-sm text-gray-500">Incluye desayuno</div>
+                        </div>
+                      ) : (
+                        <>
+                          <div className="text-3xl font-bold text-[#038C7F]">${hab.precio}</div>
+                          <div className="text-sm text-gray-500">por noche</div>
+                        </>
+                      )}
                     </div>
                   </div>
 
@@ -184,7 +221,7 @@ export default function Habitaciones() {
 
                   {/* CTA Button - WhatsApp */}
                   <a
-                    href={`https://wa.me/593986681572?text=${encodeURIComponent(`Hola, quiero consultar la disponibilidad de la ${hab.nombre}`)}`}
+                    href={`https://wa.me/593961712106?text=${encodeURIComponent(`Hola, quiero consultar la disponibilidad de la ${hab.nombre}`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full py-3 bg-[#038C7F] text-white font-semibold rounded-xl hover:bg-[#CBD95F] hover:text-[#222] hover:shadow-lg hover:scale-105 transition-all flex items-center justify-center gap-2 group text-center"
