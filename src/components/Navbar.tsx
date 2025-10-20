@@ -7,11 +7,12 @@ import Image from "next/image";
 
 const navLinks = [
   { label: "Inicio", href: "/" },
-  { label: "Habitaciones", href: "#habitaciones" },
-  { label: "Servicios", href: "#servicios" },
-  { label: "Galería", href: "#galeria" },
-  { label: "Ubicación", href: "#ubicacion" },
-  { label: "Contacto", href: "#contacto" },
+  { label: "Habitaciones", href: "/#habitaciones" },
+  { label: "Servicios", href: "/#servicios" },
+  { label: "Galería", href: "/#galeria" },
+  { label: "Ubicación", href: "/#ubicacion" },
+  { label: "Contacto", href: "/#contacto" },
+  { label: "Blog", href: "/blog" },
 ];
 
 export default function Navbar() {
