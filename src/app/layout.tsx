@@ -21,14 +21,14 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
-        {/* Favicons principales */}
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="icon" href="/favicon-16x16.svg" type="image/svg+xml" sizes="16x16" />
-        <link rel="icon" href="/favicon-32x32.svg" type="image/svg+xml" sizes="32x32" />
-        <link rel="icon" href="/favicon-48x48.svg" type="image/svg+xml" sizes="48x48" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.svg" sizes="180x180" />
-        <link rel="icon" href="/android-chrome-192x192.svg" type="image/svg+xml" sizes="192x192" />
-        <link rel="icon" href="/android-chrome-512x512.svg" type="image/svg+xml" sizes="512x512" />
+  {/* Favicons principales y compatibilidad máxima */}
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-16x16.svg" type="image/svg+xml" sizes="16x16" />
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="/favicon-48x48.svg" type="image/svg+xml" sizes="48x48" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+  <link rel="icon" href="/android-chrome-192x192.svg" type="image/svg+xml" sizes="192x192" />
+  <link rel="icon" href="/android-chrome-512x512.svg" type="image/svg+xml" sizes="512x512" />
         {/* Open Graph & Twitter Card para compartir en redes */}
   <meta property="og:title" content="Eudiq Hotel Loja | Hotel de Lujo Cerca de la Terminal Terrestre" />
   <meta property="og:description" content="Descubre Eudiq Hotel en Loja, Ecuador. Habitaciones de lujo, Wi-Fi premium, desayuno incluido y Café Viviates. Reserva tu estadía cerca de la terminal terrestre." />
