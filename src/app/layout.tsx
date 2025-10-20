@@ -47,6 +47,7 @@ export default function RootLayout({
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Hotel",
+            "identifier": "eudiqhotel-loja-ec",
             "name": "Eudiq Hotel Loja",
             "description": "Hotel de lujo en Loja, Ecuador, cerca de la terminal terrestre. Habitaciones premium, Wi-Fi, desayuno incluido y Café Viviates.",
             "image": "https://eudiqhotel.com/Eudiq.png",
@@ -54,8 +55,12 @@ export default function RootLayout({
               "@type": "PostalAddress",
               "streetAddress": "Av. Pablo Palacio, diagonal a la terminal terrestre",
               "addressLocality": "Loja",
+              "addressRegion": "Loja",
               "postalCode": "110105",
-              "addressCountry": "EC"
+              "addressCountry": {
+                "@type": "Country",
+                "name": "Ecuador"
+              }
             },
             "telephone": "+593 7 261-4151",
             "priceRange": "$25 - $60",
@@ -76,45 +81,99 @@ export default function RootLayout({
             "makesOffer": [
               {
                 "@type": "Offer",
+                "identifier": "habitacion-individual",
                 "name": "Habitación Individual",
-                "price": "25",
+                "description": "Perfecta para viajeros solitarios. Incluye desayuno.",
+                "checkinTime": "14:00:00",
+                "checkoutTime": "12:00:00",
                 "priceCurrency": "USD",
-                "description": "Perfecta para viajeros solitarios. Incluye desayuno."
+                "priceSpecification": [
+                  {
+                    "@type": "UnitPriceSpecification",
+                    "price": "25",
+                    "priceCurrency": "USD"
+                  }
+                ]
               },
               {
                 "@type": "Offer",
+                "identifier": "habitacion-matrimonial",
                 "name": "Habitación Matrimonial",
-                "price": "41",
+                "description": "Espacio elegante para parejas. Incluye desayuno.",
+                "checkinTime": "14:00:00",
+                "checkoutTime": "12:00:00",
                 "priceCurrency": "USD",
-                "description": "Espacio elegante para parejas. Incluye desayuno."
+                "priceSpecification": [
+                  {
+                    "@type": "UnitPriceSpecification",
+                    "price": "41",
+                    "priceCurrency": "USD"
+                  }
+                ]
               },
               {
                 "@type": "Offer",
+                "identifier": "habitacion-doble-cama",
                 "name": "Habitación Doble Cama",
-                "price": "45",
+                "description": "Habitación con dos camas. Incluye desayuno.",
+                "checkinTime": "14:00:00",
+                "checkoutTime": "12:00:00",
                 "priceCurrency": "USD",
-                "description": "Habitación con dos camas. Incluye desayuno."
+                "priceSpecification": [
+                  {
+                    "@type": "UnitPriceSpecification",
+                    "price": "45",
+                    "priceCurrency": "USD"
+                  }
+                ]
               },
               {
                 "@type": "Offer",
+                "identifier": "habitacion-triple",
                 "name": "Habitación Triple",
-                "price": "50",
+                "description": "Habitación para tres personas. Incluye desayuno.",
+                "checkinTime": "14:00:00",
+                "checkoutTime": "12:00:00",
                 "priceCurrency": "USD",
-                "description": "Habitación para tres personas. Incluye desayuno."
+                "priceSpecification": [
+                  {
+                    "@type": "UnitPriceSpecification",
+                    "price": "50",
+                    "priceCurrency": "USD"
+                  }
+                ]
               },
               {
                 "@type": "Offer",
+                "identifier": "habitacion-cuadruple",
                 "name": "Habitación Cuádruple",
-                "price": "60",
+                "description": "Habitación para cuatro personas. Incluye desayuno.",
+                "checkinTime": "14:00:00",
+                "checkoutTime": "12:00:00",
                 "priceCurrency": "USD",
-                "description": "Habitación para cuatro personas. Incluye desayuno."
+                "priceSpecification": [
+                  {
+                    "@type": "UnitPriceSpecification",
+                    "price": "60",
+                    "priceCurrency": "USD"
+                  }
+                ]
               },
               {
                 "@type": "Offer",
+                "identifier": "habitacion-familiar",
                 "name": "Habitación Familiar",
-                "price": "15",
+                "description": "Precio por persona. Espaciosa y perfecta para familias. Incluye desayuno.",
+                "checkinTime": "14:00:00",
+                "checkoutTime": "12:00:00",
                 "priceCurrency": "USD",
-                "description": "Precio por persona. Espaciosa y perfecta para familias. Incluye desayuno."
+                "priceSpecification": [
+                  {
+                    "@type": "UnitPriceSpecification",
+                    "price": "15",
+                    "priceCurrency": "USD"
+                  }
+                ]
               }
             ],
             "url": "https://eudiqhotel.com/",

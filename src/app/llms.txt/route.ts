@@ -1,0 +1,36 @@
+import { NextResponse } from 'next/server';
+import { BLOG_POSTS } from '@/data/blog-posts';
+
+const SITE_URL = 'https://eudiqhotel.com';
+
+export async function GET() {
+  // Datos principales
+  const nombre = 'Eudiq Hotel Loja';
+  const descripcion = 'Hotel de lujo en Loja, Ecuador, cerca de la terminal terrestre. Habitaciones premium, Wi-Fi, desayuno incluido y Café Viviates.';
+  const publico = 'Viajeros, turistas, familias y ejecutivos que buscan comodidad y servicios premium en Loja.';
+  const whatsapp = '[+593 961 712 106](https://wa.me/593961712106)';
+  const direccion = '[Av. Pablo Palacio, diagonal a la terminal terrestre, Loja 110105, Ecuador](https://maps.app.goo.gl/5dCMqMs8TNnuUAXU7)';
+  const email = '[info@eudiqhotel.com](mailto:info@eudiqhotel.com)';
+
+  // Servicios principales
+  const servicios = [
+    { nombre: 'Habitaciones', url: `${SITE_URL}/#habitaciones`, desc: 'Alojamiento premium y familiar.' },
+    { nombre: 'Café Viviates', url: `${SITE_URL}/#servicios`, desc: 'Café de especialidad propio.' },
+    { nombre: 'Wi-Fi Premium', url: `${SITE_URL}/#servicios`, desc: 'Internet de alta velocidad.' },
+    { nombre: 'Desayuno incluido', url: `${SITE_URL}/#servicios`, desc: 'Desayuno buffet todos los días.' },
+    { nombre: 'Estacionamiento', url: `${SITE_URL}/#servicios`, desc: 'Parqueadero privado y seguro.' },
+    { nombre: 'Ubicación', url: `${SITE_URL}/#ubicacion`, desc: 'Diagonal a la terminal terrestre.' },
+    { nombre: 'Contacto', url: `${SITE_URL}/#contacto`, desc: 'Formulario y datos de contacto.' },
+  ];
+
+  // Blog
+  const blog = BLOG_POSTS.map(post => `- [${post.title}](${SITE_URL}/blog/${post.slug}): Borrador de artículo.`).join('\n');
+
+  // Markdown generado
+  const markdown = `# ${nombre}\n# Nota: Las URLs enlazadas son páginas HTML.\n\n> ${descripcion}\n\n${publico}\n\n**WhatsApp:** ${whatsapp}\n**Dirección:** ${direccion}\n**Email:** ${email}\n\n## Servicios\n${servicios.map(s => `- [${s.nombre}](${s.url}): ${s.desc}`).join('\n')}\n\n## Blog\n${blog}\n\n## Opcional\n- [Ubicación](${SITE_URL}/#ubicacion): Mapa y puntos de interés cercanos.\n- [Contacto](${SITE_URL}/#contacto): Formulario y datos de contacto.\n`;
+
+  return new NextResponse(markdown, {
+    status: 200,
+    headers: { 'Content-Type': 'text/markdown' },
+  });
+}
