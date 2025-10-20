@@ -2,57 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react';
-
-const testimonios = [
-  {
-    nombre: 'María González',
-    ubicacion: 'Quito, Ecuador',
-    calificacion: 5,
-    fecha: 'Hace 2 semanas',
-    comentario: 'Excelente hotel en el centro de Loja. Las habitaciones son muy cómodas y limpias. El desayuno es delicioso, especialmente el café Viviates que tienen. El personal es muy amable y atento. Definitivamente volveré.',
-    avatar: 'MG',
-  },
-  {
-    nombre: 'Carlos Ramírez',
-    ubicacion: 'Cuenca, Ecuador',
-    calificacion: 5,
-    fecha: 'Hace 1 mes',
-    comentario: 'Me hospedé por negocios y la experiencia fue perfecta. Excelente ubicación, Wi-Fi rápido, y las habitaciones muy bien equipadas. El Café Viviates es lo mejor, no había probado un café tan bueno en mucho tiempo.',
-    avatar: 'CR',
-  },
-  {
-    nombre: 'Ana Martínez',
-    ubicacion: 'Guayaquil, Ecuador',
-    calificacion: 5,
-    fecha: 'Hace 3 semanas',
-    comentario: 'Estuvimos de vacaciones familiares y fue una experiencia maravillosa. La suite familiar es espaciosa y cómoda. El personal nos ayudó a organizar tours por la ciudad. Muy recomendado para familias.',
-    avatar: 'AM',
-  },
-  {
-    nombre: 'Roberto Silva',
-    ubicacion: 'Lima, Perú',
-    calificacion: 5,
-    fecha: 'Hace 2 meses',
-    comentario: 'Hotel impecable en todos los aspectos. Limpieza excelente, atención de primera, y el desayuno buffet es espectacular. La ubicación es perfecta para conocer Loja. Sin duda el mejor hotel de la ciudad.',
-    avatar: 'RS',
-  },
-  {
-    nombre: 'Laura Jiménez',
-    ubicacion: 'Machala, Ecuador',
-    calificacion: 5,
-    fecha: 'Hace 1 semana',
-    comentario: 'Hermoso hotel, las fotos no le hacen justicia. Las habitaciones son elegantes y muy cómodas. El restaurante tiene comida deliciosa y el café es increíble. El personal siempre dispuesto a ayudar. 100% recomendado.',
-    avatar: 'LJ',
-  },
-  {
-    nombre: 'Diego Torres',
-    ubicacion: 'Loja, Ecuador',
-    calificacion: 5,
-    fecha: 'Hace 3 días',
-    comentario: 'Hospedé a mis familiares que vinieron de visita y quedaron encantados. Excelente relación calidad-precio. El estacionamiento gratuito es un plus. El Café Viviates ahora es mi favorito de la ciudad.',
-    avatar: 'DT',
-  },
-];
+import { testimonios } from '@/lib/data';
 
 export default function Testimonios() {
   const [isVisible, setIsVisible] = useState(false);
@@ -200,9 +150,6 @@ export default function Testimonios() {
 
                 {/* Author Info */}
                 <div className="flex items-center gap-3 pt-4 border-t border-gray-300">
-                  <div className="w-12 h-12 bg-gradient-to-br from-[#038C7F] to-[#A9BF04] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">
-                    {testimonio.avatar}
-                  </div>
                   <div className="flex-1 min-w-0">
                     <p className="font-bold text-gray-900 truncate">{testimonio.nombre}</p>
                     <p className="text-sm text-gray-600 truncate">{testimonio.ubicacion}</p>

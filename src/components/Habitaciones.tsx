@@ -2,94 +2,8 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { User, BedDouble, Ruler } from 'lucide-react';
-
-const habitaciones = [
-  {
-    id: 1,
-    nombre: 'Individual',
-    categoria: 'CONFORT',
-    descripcion: 'Perfecta para viajeros solitarios que buscan comodidad y funcionalidad en un espacio acogedor. Incluye desayuno.',
-    precio: 25,
-    capacidad: '1 persona',
-    cama: '1 cama individual',
-    tamaño: '18 m²',
-    imagenes: [
-      'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204466/IMG_4616_xg9lrj.jpg',
-    ],
-    amenidades: ['Wi-Fi gratis', 'TV cable', 'Baño privado', 'Escritorio', 'Caja fuerte', 'Desayuno incluido'],
-  },
-  {
-    id: 2,
-    nombre: 'Matrimonial',
-    categoria: 'POPULAR',
-    descripcion: 'Espacio elegante para parejas. Incluye desayuno.',
-    precio: 41,
-    capacidad: '2 personas',
-    cama: '1 cama matrimonial',
-    tamaño: '25 m²',
-    imagenes: [
-      'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204509/IMG_4605_q6bvol.jpg',
-    ],
-    amenidades: ['Wi-Fi gratis', 'TV Smart', 'Baño privado', 'Mini bar', 'Aire acondicionado', 'Vista a la ciudad', 'Desayuno incluido'],
-  },
-  {
-    id: 3,
-    nombre: 'Doble cama',
-    categoria: 'DOBLE',
-    descripcion: 'Habitación con dos camas. Incluye desayuno.',
-    precio: 45,
-    capacidad: '2 personas',
-    cama: '2 camas individuales',
-    tamaño: '25 m²',
-    imagenes: [
-      'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204555/IMG_4600_q2teiy.jpg',
-    ],
-    amenidades: ['Wi-Fi gratis', 'TV Smart', 'Baño privado', 'Mini bar', 'Aire acondicionado', 'Vista a la ciudad', 'Desayuno incluido'],
-  },
-  {
-    id: 4,
-    nombre: 'Triple',
-    categoria: 'TRIPLE',
-    descripcion: 'Habitación para tres personas. Incluye desayuno.',
-    precio: 50,
-    capacidad: '3 personas',
-    cama: '3 camas individuales',
-    tamaño: '30 m²',
-    imagenes: [
-      'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204999/IMG_4183-HDR_gs5who.webp',
-    ],
-    amenidades: ['Wi-Fi gratis', 'TV Smart', 'Baño privado', 'Mini bar', 'Aire acondicionado', 'Desayuno incluido'],
-  },
-  {
-    id: 5,
-    nombre: 'Cuádruple',
-    categoria: 'CUÁDRUPLE',
-    descripcion: 'Habitación para cuatro personas. Incluye desayuno.',
-    precio: 60,
-    capacidad: '4 personas',
-    cama: '4 camas individuales',
-    tamaño: '35 m²',
-    imagenes: [
-      'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204999/IMG_4183-HDR_gs5who.webp',
-    ],
-    amenidades: ['Wi-Fi gratis', 'TV Smart', 'Baño privado', 'Mini bar', 'Aire acondicionado', 'Desayuno incluido'],
-  },
-  {
-    id: 6,
-    nombre: 'Familiar',
-    categoria: 'FAMILIA',
-    descripcion: 'Habitación familiar. El precio es por persona ($15). Incluye desayuno.',
-    precio: 15,
-    capacidad: 'por persona',
-    cama: 'Camas múltiples',
-    tamaño: '45 m²',
-    imagenes: [
-      'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204251/IMG_4163-HDR_ymaqov.webp',
-    ],
-    amenidades: ['Wi-Fi gratis', '2 TV Smart', 'Cocina pequeña', 'Sala amplia', 'Desayuno incluido', 'Juegos para niños', 'Balcón privado'],
-  },
-];
+import { User, BedDouble, Ruler } from 'lucide-react'
+import { habitaciones } from '@/lib/data';
 
 export default function Habitaciones() {
   const [isVisible, setIsVisible] = useState(false);
@@ -150,8 +64,8 @@ export default function Habitaciones() {
                 {/* Image Gallery */}
                 <div className="relative h-72 overflow-hidden">
                   <Image
-                    src={hab.imagenes[0]}
-                    alt={hab.nombre}
+                    src={hab.imagenes[0].url}
+                    alt={hab.imagenes[0].alt}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100"
