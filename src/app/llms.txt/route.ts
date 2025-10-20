@@ -27,10 +27,32 @@ export async function GET() {
   const blog = BLOG_POSTS.map(post => `- [${post.title}](${SITE_URL}/blog/${post.slug}): Borrador de artículo.`).join('\n');
 
   // Markdown generado
-  const markdown = `# ${nombre}\n# Nota: Las URLs enlazadas son páginas HTML.\n\n> ${descripcion}\n\n${publico}\n\n**WhatsApp:** ${whatsapp}\n**Dirección:** ${direccion}\n**Email:** ${email}\n\n## Servicios\n${servicios.map(s => `- [${s.nombre}](${s.url}): ${s.desc}`).join('\n')}\n\n## Blog\n${blog}\n\n## Opcional\n- [Ubicación](${SITE_URL}/#ubicacion): Mapa y puntos de interés cercanos.\n- [Contacto](${SITE_URL}/#contacto): Formulario y datos de contacto.\n`;
+  const markdown = `# ${nombre}
+# Nota: Las URLs enlazadas son páginas HTML.
+
+> ${descripcion}
+
+${publico}
+
+**WhatsApp:** ${whatsapp}
+**Dirección:** ${direccion}
+**Email:** ${email}
+
+## Servicios
+${servicios.map(s => `- [${s.nombre}](${s.url}): ${s.desc}`).join('\n')}
+
+## Blog
+${blog}
+
+## Opcional
+- [Ubicación](${SITE_URL}/#ubicacion): Mapa y puntos de interés cercanos.
+- [Contacto](${SITE_URL}/#contacto): Formulario y datos de contacto.
+`;
 
   return new NextResponse(markdown, {
     status: 200,
-    headers: { 'Content-Type': 'text/markdown' },
+    headers: { 
+      'Content-Type': 'text/markdown; charset=utf-8',  // ✅ Agregado charset=utf-8
+    },
   });
 }
