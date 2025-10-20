@@ -10,8 +10,8 @@ const servicios = [
     icono: '📶',
   },
   {
-    nombre: 'Desayuno Buffet',
-    descripcion: 'Incluido en tu estadía. Variedad de opciones frescas y café de especialidad cada mañana.',
+  nombre: 'Desayuno tipo buffet',
+  descripcion: 'Incluido en tu estadía. Variedad de opciones frescas y café de especialidad cada mañana.',
     icono: '🥐',
   },
   {

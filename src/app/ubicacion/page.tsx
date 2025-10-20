@@ -1,6 +1,6 @@
 export const metadata = {
   title: 'Ubicación | Eudiq Hotel Loja',
-  description: 'Descubre la ubicación estratégica de Eudiq Hotel Loja, cerca de la terminal terrestre y los principales puntos turísticos de Loja. Mapa, rutas y recomendaciones.',
+  description: 'Descubre la ubicación estratégica de Eudiq Hotel Loja, cerca de la Terminal Terrestre y los principales puntos turísticos de Loja. Mapa, rutas y recomendaciones.',
 };
 
 const puntosInteres = [
