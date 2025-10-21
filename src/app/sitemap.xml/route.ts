@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 
 import { BLOG_POSTS } from '@/data/blog-posts';
 
-const SITE_URL = 'https://eudiqhotel.com';
+const SITE_URL = 'https://hoteleudiq.com';
 
 export async function GET() {
   // Rutas estáticas principales
