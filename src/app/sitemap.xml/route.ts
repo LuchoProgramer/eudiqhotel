@@ -8,18 +8,18 @@ export async function GET() {
   // Rutas estáticas principales
   const staticPages = [
     '',
-    '/#habitaciones',
-    '/#servicios',
-    '/#galeria',
-    '/#ubicacion',
-    '/#testimonios',
-    '/#contacto',
+    '/habitaciones',
+    '/servicios',
+    '/galeria',
+    '/ubicacion',
+    '/testimonios',
+    '/contacto',
     // Agrega aquí más rutas si tienes
   ].map(route => ({
     url: `${SITE_URL}${route}`,
     lastModified: new Date().toISOString(),
     changeFrequency: 'monthly',
-    priority: route === '' ? 1.0 : route === '/#contacto' ? 0.9 : 0.7,
+    priority: route === '' ? 1.0 : route === '/contacto' ? 0.9 : 0.7,
   }));
 
   // Rutas de blog dinámicas (ejemplo con borradores)
