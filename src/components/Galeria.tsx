@@ -163,8 +163,15 @@ export default function Galeria() {
         <div className={`mt-16 text-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <p className="text-gray-600 mb-6 text-lg">¿Te gustó lo que viste?</p>
           <a
-            href="#habitaciones"
+            href="https://wa.me/593961712106?text=Hola,%20quiero%20reservar%20en%20EUDIQ%20HOTEL.%20Vi%20la%20galería%20y%20me%20interesa%20reservar."
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 bg-[#038C7F] text-white font-semibold rounded-full hover:bg-[#CBD95F] hover:text-[#222] hover:shadow-2xl hover:scale-105 transition-all"
+            onClick={() => {
+              if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+                window.gtag('event', 'click_reserva_galeria', { section: 'galeria', method: 'whatsapp_estadia' });
+              }
+            }}
           >
             Reserva Tu Estadía
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

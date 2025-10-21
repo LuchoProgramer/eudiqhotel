@@ -1,12 +1,13 @@
+'use client'
 
 import { habitaciones } from '@/lib/data';
 import Image from 'next/image';
 
 // Función para enviar eventos a GA4
-type GAEventParams = Record<string, any>;
+type GAEventParams = Record<string, unknown>;
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
+    gtag?: (...args: unknown[]) => void;
   }
 }
 function sendGAEvent(eventName: string, eventParams: GAEventParams = {}) {
@@ -15,16 +16,11 @@ function sendGAEvent(eventName: string, eventParams: GAEventParams = {}) {
   }
 }
 
-export const metadata = {
-  title: 'Habitaciones | Eudiq Hotel Loja',
-  description: 'Descubre nuestras habitaciones de lujo, familiares y ejecutivas en Eudiq Hotel Loja. Wi-Fi premium, desayuno incluido y comodidad total cerca de la terminal terrestre.',
-};
-
 export default function HabitacionesPage() {
   return (
     <main className="max-w-5xl mx-auto py-16 px-4">
       <h1 className="text-4xl font-bold mb-6 text-center">Habitaciones</h1>
-  <p className="mb-8 text-center text-lg text-gray-600">Elige la habitación perfecta para tu estadía en Loja. Todas incluyen Wi-Fi premium, desayuno tipo buffet y acceso a Café Viviates.</p>
+      <p className="mb-8 text-center text-lg text-gray-600">Elige la habitación perfecta para tu estadía en Loja. Todas incluyen Wi-Fi premium, desayuno tipo buffet y acceso a Café Viviates.</p>
       <div className="grid md:grid-cols-2 gap-8">
         {habitaciones.map((hab) => (
           <div key={hab.nombre} className="rounded-lg shadow-lg bg-white p-6 flex flex-col items-center">

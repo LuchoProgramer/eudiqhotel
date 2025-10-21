@@ -1,15 +1,10 @@
-// Función para enviar eventos a GA4
-type GAEventParams = Record<string, any>;
-declare global {
-  interface Window {
-    gtag?: (...args: any[]) => void;
-  }
-}
-function sendGAEvent(eventName: string, eventParams: GAEventParams = {}) {
-  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
-    window.gtag('event', eventName, eventParams);
-  }
-}
+
+// --- Importar Client Component para el botón WhatsApp ---
+import React from 'react';
+
+import WhatsAppReservaCafe from '../../components/WhatsAppReservaCafe';
+import Image from 'next/image';
+
 
 const galeria = [
   {
@@ -41,18 +36,9 @@ export default function CafeViviatesLanding() {
         </p>
         <div className="flex justify-center gap-4 mb-6">
           {galeria.map((img) => (
-            <img key={img.url} src={img.url} alt={img.alt} width={220} height={140} className="rounded-lg shadow-md object-cover" />
+            <Image key={img.url} src={img.url} alt={img.alt} width={220} height={140} className="rounded-lg shadow-md object-cover" />
           ))}
         </div>
-          <a
-            href="https://wa.me/593961712106?text=Hola,%20quiero%20consultar%20el%20menú%20de%20Cafetería%20Café%20Viviates"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-700 transition mb-4"
-            onClick={() => sendGAEvent('click_reserva_cafe', { section: 'cafe-viviates', method: 'whatsapp' })}
-          >
-            Reservar desayuno por WhatsApp
-          </a>
       </section>
 
       <section className="mb-10">
@@ -105,7 +91,7 @@ export default function CafeViviatesLanding() {
             <span className="font-bold">Sánduches y opciones saludables</span>
           </div>
         </div>
-        <img
+        <Image
           src="/menu-cafe-viviates.jpg"
           alt="Menú de Cafetería Café Viviates en Eudiq Hotel Loja"
           width={800}
@@ -144,14 +130,8 @@ export default function CafeViviatesLanding() {
       </section>
 
       <section className="text-center mb-8">
-        <a
-          href="https://wa.me/593961712106?text=Hola,%20quiero%20consultar%20el%20menú%20de%20Cafetería%20Café%20Viviates"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-700 transition"
-        >
-          Reservar desayuno por WhatsApp
-        </a>
+        <WhatsAppReservaCafe />
+        <WhatsAppReservaCafe />
       </section>
     </main>
   );

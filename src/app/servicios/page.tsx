@@ -1,7 +1,4 @@
-export const metadata = {
-  title: 'Servicios | Eudiq Hotel Loja',
-  description: 'Conoce todos los servicios premium de Eudiq Hotel Loja: Wi-Fi, desayuno buffet, estacionamiento, Café Viviates, lavandería y más.',
-};
+'use client'
 
 const servicios = [
   {
@@ -10,8 +7,8 @@ const servicios = [
     icono: '📶',
   },
   {
-  nombre: 'Desayuno tipo buffet',
-  descripcion: 'Incluido en tu estadía. Variedad de opciones frescas y café de especialidad cada mañana.',
+    nombre: 'Desayuno tipo buffet',
+    descripcion: 'Incluido en tu estadía. Variedad de opciones frescas y café de especialidad cada mañana.',
     icono: '🥐',
   },
   {
@@ -47,10 +44,10 @@ const servicios = [
 ];
 
 // Función para enviar eventos a GA4
-type GAEventParams = Record<string, any>;
+type GAEventParams = Record<string, unknown>;
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
+    gtag?: (...args: unknown[]) => void;
   }
 }
 function sendGAEvent(eventName: string, eventParams: GAEventParams = {}) {

@@ -1,21 +1,20 @@
-'use client';
+"use client";
+
+
+// Función para enviar eventos a GA4
+type GAEventParams = Record<string, unknown>;
+function sendGAEvent(eventName: string, eventParams: GAEventParams = {}) {
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    window.gtag('event', eventName, eventParams);
+  }
+}
+
 
 import { useState, useEffect, useRef } from 'react';
-import { Send, MapPin, Phone, Mail, Clock, MessageCircle, Calendar, Users } from 'lucide-react';
+import { Send, MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
 
 export default function Contacto() {
   const [isVisible, setIsVisible] = useState(false);
-  const [formData, setFormData] = useState({
-    nombre: '',
-    email: '',
-    telefono: '',
-    fechaLlegada: '',
-    fechaSalida: '',
-    huespedes: '1',
-    tipoHabitacion: '',
-    mensaje: '',
-  });
-  const [enviado, setEnviado] = useState(false);
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -35,43 +34,6 @@ export default function Contacto() {
     return () => observer.disconnect();
   }, [sectionRef]);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e?: React.FormEvent) => {
-    if (e) e.preventDefault();
-    // Construir mensaje para WhatsApp
-    const mensaje =
-      `Hola, quiero reservar en EUDIQ HOTEL.\n` +
-      `Nombre: ${formData.nombre}\n` +
-      `Email: ${formData.email}\n` +
-      `Teléfono: ${formData.telefono}\n` +
-      `Check-in: ${formData.fechaLlegada}\n` +
-      `Check-out: ${formData.fechaSalida}\n` +
-      `Huéspedes: ${formData.huespedes}\n` +
-      `Tipo de Habitación: ${formData.tipoHabitacion}\n` +
-      (formData.mensaje ? `Mensaje: ${formData.mensaje}\n` : '');
-    const url = `https://wa.me/593961712106?text=${encodeURIComponent(mensaje)}`;
-    window.open(url, '_blank');
-    setEnviado(true);
-    setTimeout(() => {
-      setEnviado(false);
-      setFormData({
-        nombre: '',
-        email: '',
-        telefono: '',
-        fechaLlegada: '',
-        fechaSalida: '',
-        huespedes: '1',
-        tipoHabitacion: '',
-        mensaje: '',
-      });
-    }, 3000);
-  };
 
   const contactInfo = [
     {
@@ -134,78 +96,16 @@ export default function Contacto() {
                 </div>
               </div>
 
-              <form className="space-y-4" onSubmit={handleSubmit}>
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">Nombre Completo *</label>
-                  <input type="text" name="nombre" value={formData.nombre} onChange={handleChange} className="w-full px-4 py-3 bg-[#F2F2F2] border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#038C7F] transition-all" placeholder="Tu nombre" />
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">Email *</label>
-                    <input type="email" name="email" value={formData.email} onChange={handleChange} className="w-full px-4 py-3 bg-[#F2F2F2] border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#038C7F] transition-all" placeholder="tu@email.com" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">Teléfono</label>
-                    <input type="tel" name="telefono" value={formData.telefono} onChange={handleChange} className="w-full px-4 py-3 bg-[#F2F2F2] border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#038C7F] transition-all" placeholder="+593 9 ..." />
-                  </div>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2 flex items-center gap-2">
-                      <Calendar size={16} />Check-in *
-                    </label>
-                    <input type="date" name="fechaLlegada" value={formData.fechaLlegada} onChange={handleChange} className="w-full px-4 py-3 bg-[#F2F2F2] border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#038C7F] transition-all" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2 flex items-center gap-2">
-                      <Calendar size={16} />Check-out *
-                    </label>
-                    <input type="date" name="fechaSalida" value={formData.fechaSalida} onChange={handleChange} className="w-full px-4 py-3 bg-[#F2F2F2] border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#038C7F] transition-all" />
-                  </div>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2 flex items-center gap-2">
-                      <Users size={16} />Huéspedes
-                    </label>
-                    <select name="huespedes" value={formData.huespedes} onChange={handleChange} className="w-full px-4 py-3 bg-[#F2F2F2] border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#038C7F] transition-all">
-                      <option value="1">1 persona</option>
-                      <option value="2">2 personas</option>
-                      <option value="3">3 personas</option>
-                      <option value="4">4 personas</option>
-                      <option value="5+">5+ personas</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">Tipo de Habitación</label>
-                    <select name="tipoHabitacion" value={formData.tipoHabitacion} onChange={handleChange} className="w-full px-4 py-3 bg-[#F2F2F2] border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#038C7F] transition-all">
-                      <option value="">Seleccionar...</option>
-                      <option value="individual">Individual</option>
-                      <option value="doble">Doble</option>
-                      <option value="ejecutiva">Suite Ejecutiva</option>
-                      <option value="familiar">Suite Familiar</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">Mensaje o Solicitud Especial</label>
-                  <textarea name="mensaje" value={formData.mensaje} onChange={handleChange} rows={4} className="w-full px-4 py-3 bg-[#F2F2F2] border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#038C7F] transition-all resize-none" placeholder="¿Algún requerimiento especial? (opcional)" />
-                </div>
-
-                <button type="submit" disabled={enviado} className={`w-full py-4 bg-gradient-to-r from-[#038C7F] to-[#A9BF04] text-white font-semibold rounded-xl flex items-center justify-center gap-2 transition-all ${enviado ? 'opacity-75' : 'hover:shadow-xl hover:scale-105'}`}>
-                  {enviado ? 'Enviado ✓' : <><Send size={20} />Enviar Solicitud</>}
-                </button>
-
-                {enviado && (
-                  <div className="text-center p-4 bg-green-100 text-green-800 rounded-xl">
-                    ✅ ¡Mensaje enviado! Te contactaremos pronto.
-                  </div>
-                )}
-              </form>
+              {/* Botón directo a WhatsApp para reservar */}
+              <a
+                href="https://wa.me/593961712106?text=Hola,%20quiero%20reservar%20en%20EUDIQ%20HOTEL.%20Por%20favor%20ayúdame%20con%20la%20reserva."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full block py-4 bg-gradient-to-r from-[#038C7F] to-[#A9BF04] text-white font-semibold rounded-xl flex items-center justify-center gap-2 transition-all hover:shadow-xl hover:scale-105"
+                onClick={() => sendGAEvent('click_reserva_contacto', { section: 'contacto', method: 'whatsapp_estadia' })}
+              >
+                <Send size={20} />Reserva tu estadía por WhatsApp
+              </a>
             </div>
           </div>
 
@@ -213,6 +113,11 @@ export default function Contacto() {
             <div className="space-y-4">
               {contactInfo.map((item, idx) => {
                 const Icon = item.icon;
+                const eventMap: Record<string, { event: string; method: string }> = {
+                  'Teléfono': { event: 'click_telefono_contacto', method: 'telefono' },
+                  'Email': { event: 'click_email_contacto', method: 'email' },
+                  'Dirección': { event: 'click_direccion_contacto', method: 'direccion' },
+                };
                 const content = (
                   <div className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition-all group cursor-pointer">
                     <div className="w-12 h-12 bg-gradient-to-br from-[#038C7F] to-[#A9BF04] rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
@@ -226,7 +131,18 @@ export default function Contacto() {
                 );
 
                 return item.link ? (
-                  <a key={idx} href={item.link} target={item.link.startsWith('http') ? '_blank' : undefined} rel={item.link.startsWith('http') ? 'noopener noreferrer' : undefined}>
+                  <a
+                    key={idx}
+                    href={item.link}
+                    target={item.link.startsWith('http') ? '_blank' : undefined}
+                    rel={item.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    onClick={() => {
+                      const event = eventMap[item.titulo];
+                      if (event && typeof window !== 'undefined' && typeof window.gtag === 'function') {
+                        window.gtag('event', event.event, { section: 'contacto', method: event.method });
+                      }
+                    }}
+                  >
                     {content}
                   </a>
                 ) : (
@@ -242,7 +158,13 @@ export default function Contacto() {
               <p className="text-white/90 mb-4">
                 Chatea con nosotros directamente y resuelve tus dudas al instante.
               </p>
-              <a href="https://wa.me/593961712106" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#25D366] font-semibold rounded-full hover:bg-green-50 transition-all">
+              <a
+                href="https://wa.me/593961712106"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#25D366] font-semibold rounded-full hover:bg-green-50 transition-all"
+                onClick={() => sendGAEvent('click_whatsapp_contacto', { section: 'contacto', method: 'whatsapp_secundario' })}
+              >
                 <MessageCircle size={20} />Abrir WhatsApp
               </a>
             </div>

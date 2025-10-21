@@ -129,7 +129,12 @@ export default function Testimonios() {
             {testimoniosVisibles.map((testimonio, idx) => (
               <div
                 key={idx}
-                className="bg-[#F2F2F2] rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 group"
+                className="bg-[#F2F2F2] rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 group cursor-pointer"
+                onClick={() => {
+                  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+                    window.gtag('event', 'click_testimonio', { section: 'testimonios', nombre: testimonio.nombre, ubicacion: testimonio.ubicacion });
+                  }
+                }}
               >
                 {/* Quote Icon */}
                 <div className="mb-4">
@@ -190,6 +195,11 @@ export default function Testimonios() {
             <a
               href="#contacto"
               className="inline-flex items-center gap-2 px-6 py-3 bg-[#038C7F] text-white font-semibold rounded-full hover:bg-[#A9BF04] transition-all"
+              onClick={() => {
+                if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+                  window.gtag('event', 'click_contacto_testimonios', { section: 'testimonios', method: 'contacto' });
+                }
+              }}
             >
               Contáctanos
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

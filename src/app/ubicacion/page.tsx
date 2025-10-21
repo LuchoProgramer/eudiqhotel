@@ -1,7 +1,4 @@
-export const metadata = {
-  title: 'Ubicación | Eudiq Hotel Loja',
-  description: 'Descubre la ubicación estratégica de Eudiq Hotel Loja, cerca de la Terminal Terrestre y los principales puntos turísticos de Loja. Mapa, rutas y recomendaciones.',
-};
+'use client'
 
 const puntosInteres = [
   {
@@ -32,10 +29,10 @@ const puntosInteres = [
 ];
 
 // Función para enviar eventos a GA4
-type GAEventParams = Record<string, any>;
+type GAEventParams = Record<string, unknown>;
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
+  gtag?: (...args: unknown[]) => void;
   }
 }
 function sendGAEvent(eventName: string, eventParams: GAEventParams = {}) {
@@ -50,20 +47,36 @@ export default function UbicacionPage() {
       <h1 className="text-4xl font-bold mb-6 text-center">Ubicación</h1>
       <p className="mb-8 text-center text-lg text-gray-600">Estamos diagonal a la terminal terrestre de Loja, con acceso rápido a los principales atractivos turísticos y servicios de la ciudad.</p>
       <div className="mb-10 flex justify-center">
-        <iframe
-          title="Mapa Eudiq Hotel Loja"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.726964073019!2d-79.205123!3d-3.993123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cd131b2e2e2e2b%3A0x123456789abcdef!2sEudiq%20Hotel!5e0!3m2!1ses-419!2sec!4v1697840000000!5m2!1ses-419!2sec"
-          width="100%"
-          height="350"
-          style={{ border: 0, borderRadius: '12px' }}
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
+        <div
+          style={{ width: '100%' }}
+          onClick={() => sendGAEvent('click_mapa_ubicacion', { section: 'ubicacion', method: 'mapa_google' })}
+        >
+          <iframe
+            title="Mapa Eudiq Hotel Loja"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.726964073019!2d-79.205123!3d-3.993123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cd131b2e2e2e2b%3A0x123456789abcdef!2sEudiq%20Hotel!5e0!3m2!1ses-419!2sec!4v1697840000000!5m2!1ses-419!2sec"
+            width="100%"
+            height="350"
+            style={{ border: 0, borderRadius: '12px' }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
       </div>
       <section className="mb-10">
         <h2 className="text-2xl font-semibold mb-2">Puntos de interés cercanos</h2>
         <ul className="list-disc pl-6 text-gray-700 space-y-2">
+          <li>
+            <strong>Teléfono</strong>:{' '}
+            <a
+              href="tel:+59372614151"
+              className="text-primary underline hover:text-primary-dark"
+              onClick={() => sendGAEvent('click_telefono_ubicacion', { section: 'ubicacion', method: 'telefono' })}
+            >
+              +593 7 261-4151
+            </a>
+            {' '} (Llama para reservas o información)
+          </li>
           {puntosInteres.map((p) => (
             <li key={p.nombre}>
               <strong>{p.nombre}</strong> ({p.distancia}): {p.descripcion}
@@ -71,7 +84,7 @@ export default function UbicacionPage() {
           ))}
         </ul>
       </section>
-      <div className="text-center mt-8">
+      <div className="text-center mt-8 flex flex-col gap-4 items-center">
         <a
           href="https://wa.me/593961712106"
           target="_blank"
@@ -80,6 +93,13 @@ export default function UbicacionPage() {
           onClick={() => sendGAEvent('click_reserva_ubicacion', { section: 'ubicacion', method: 'whatsapp' })}
         >
           Solicita tu reserva por WhatsApp
+        </a>
+        <a
+          href="tel:+59372614151"
+          className="bg-[#038C7F] text-white px-6 py-3 rounded text-lg font-bold hover:bg-[#CBD95F] hover:text-[#222] transition"
+          onClick={() => sendGAEvent('click_transporte_ubicacion', { section: 'ubicacion', method: 'telefono_transporte' })}
+        >
+          Solicitar transporte (llamar)
         </a>
       </div>
     </main>

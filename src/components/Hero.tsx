@@ -1,4 +1,12 @@
+
 'use client';
+// Función para enviar eventos a GA4
+type GAEventParams = Record<string, unknown>;
+function sendGAEvent(eventName: string, eventParams: GAEventParams = {}) {
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    window.gtag('event', eventName, eventParams);
+  }
+}
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
@@ -103,6 +111,7 @@ export default function Hero({ images = defaultImages }: HeroProps) {
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-white/10 backdrop-blur-md text-white font-semibold rounded-full border-2 border-white/30 transition-all hover:bg-white/20 hover:border-[#CBD95F] hover:scale-105"
+              onClick={() => sendGAEvent('click_reserva_hero', { section: 'hero', method: 'whatsapp' })}
             >
               Reservar Ahora
             </a>

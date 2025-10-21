@@ -1,8 +1,10 @@
+'use client'
+
 // Función para enviar eventos a GA4
-type GAEventParams = Record<string, any>;
+type GAEventParams = Record<string, unknown>;
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
+    gtag?: (...args: unknown[]) => void;
   }
 }
 function sendGAEvent(eventName: string, eventParams: GAEventParams = {}) {
@@ -10,6 +12,8 @@ function sendGAEvent(eventName: string, eventParams: GAEventParams = {}) {
     window.gtag('event', eventName, eventParams);
   }
 }
+
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -51,7 +55,7 @@ export default function Footer() {
             <li><a href="/servicios" className="hover:underline hover:text-green-300">Servicios</a></li>
             <li><a href="/cafe-viviates" className="hover:underline hover:text-green-300">Café Viviates</a></li>
             <li><a href="/ubicacion" className="hover:underline hover:text-green-300">Ubicación</a></li>
-            <li><a href="/blog" className="hover:underline hover:text-green-300">Blog</a></li>
+            <li><Link href="/blog" className="hover:underline hover:text-green-300">Blog</Link></li>
           </ul>
         </div>
         <div>

@@ -9,31 +9,6 @@ export default function BlogPage({ params }: BlogPageProps) {
   const post = BLOG_POSTS.find(p => p.slug === params.slug);
   if (!post) return notFound();
 
-  // Datos para el schema BlogPosting
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": post.title,
-    "datePublished": post.updatedAt,
-    "dateModified": post.updatedAt,
-    "author": {
-      "@type": "Organization",
-      "name": "Eudiq Hotel Loja"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Eudiq Hotel Loja",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://eudiqhotel.com/Eudiq.png"
-      }
-    },
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": `https://eudiqhotel.com/blog/${post.slug}`
-    },
-    "description": `Artículo del blog de Eudiq Hotel Loja: ${post.title}`
-  };
 
   return (
     <>

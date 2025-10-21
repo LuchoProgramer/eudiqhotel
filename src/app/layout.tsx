@@ -1,9 +1,11 @@
+
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { cn } from '@/lib/utils'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,18 +22,29 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
-        {/* Google Analytics 4 */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BETH1DLM8W"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-BETH1DLM8W');
-            `,
-          }}
+  {/* Google Analytics 4 */}
+        {/* Microsoft Clarity (mapas de calor) */}
+        <Script id="ms-clarity" strategy="afterInteractive">
+          {`
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "tturln616r");
+          `}
+        </Script>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-BETH1DLM8W"
+          strategy="afterInteractive"
         />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-BETH1DLM8W');
+          `}
+        </Script>
   <meta property="fb:app_id" content="1327476752302916" />
   <meta name="keywords" content="hotel, Loja, Ecuador, lujo, habitaciones, desayuno, Wi-Fi, estacionamiento, Café Viviates, turismo, hospedaje, familiar, ejecutivo" />
   <meta name="author" content="Eudiq Hotel Loja" />
