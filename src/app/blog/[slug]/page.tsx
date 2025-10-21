@@ -37,12 +37,35 @@ export default function BlogPage({ params }: BlogPageProps) {
 
   return (
     <>
-      <head>
-        <script type="application/ld+json">
-          {JSON.stringify(schema)}
-        </script>
-      </head>
       <main className="max-w-3xl mx-auto py-16 px-4">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": post.title,
+            "datePublished": post.updatedAt,
+            "dateModified": post.updatedAt,
+            "author": {
+              "@type": "Organization",
+              "name": "Eudiq Hotel Loja"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Eudiq Hotel Loja",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://eudiqhotel.com/Eudiq.png"
+              }
+            },
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": `https://eudiqhotel.com/blog/${post.slug}`
+            },
+            "description": post.summary || `Artículo del blog de Eudiq Hotel Loja: ${post.title}`,
+            "image": post.image || undefined
+          }) }}
+        />
         <h1 className="text-4xl font-bold mb-6">{post.title}</h1>
         <p className="text-gray-500 mb-4">Última actualización: {post.updatedAt}</p>
         <div className="prose prose-lg">

@@ -46,6 +46,19 @@ const servicios = [
   },
 ];
 
+// Función para enviar eventos a GA4
+type GAEventParams = Record<string, any>;
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
+function sendGAEvent(eventName: string, eventParams: GAEventParams = {}) {
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    window.gtag('event', eventName, eventParams);
+  }
+}
+
 export default function ServiciosPage() {
   return (
     <main className="max-w-4xl mx-auto py-16 px-4">
@@ -61,7 +74,15 @@ export default function ServiciosPage() {
         ))}
       </div>
       <div className="mt-12 text-center">
-        <a href="https://wa.me/593961712106" target="_blank" rel="noopener" className="bg-primary text-white px-6 py-3 rounded text-lg font-bold hover:bg-primary-dark transition">Solicita tu reserva por WhatsApp</a>
+        <a
+          href="https://wa.me/593961712106"
+          target="_blank"
+          rel="noopener"
+          className="bg-primary text-white px-6 py-3 rounded text-lg font-bold hover:bg-primary-dark transition"
+          onClick={() => sendGAEvent('click_reserva_servicios', { section: 'servicios', method: 'whatsapp' })}
+        >
+          Solicita tu reserva por WhatsApp
+        </a>
       </div>
     </main>
   );

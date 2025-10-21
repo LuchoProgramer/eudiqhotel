@@ -1,3 +1,15 @@
+// Función para enviar eventos a GA4
+type GAEventParams = Record<string, any>;
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
+function sendGAEvent(eventName: string, eventParams: GAEventParams = {}) {
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    window.gtag('event', eventName, eventParams);
+  }
+}
 
 const galeria = [
   {
@@ -32,14 +44,15 @@ export default function CafeViviatesLanding() {
             <img key={img.url} src={img.url} alt={img.alt} width={220} height={140} className="rounded-lg shadow-md object-cover" />
           ))}
         </div>
-        <a
-          href="https://wa.me/593961712106?text=Hola,%20quiero%20consultar%20el%20menú%20de%20Cafetería%20Café%20Viviates"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-700 transition mb-4"
-        >
-          Reservar desayuno por WhatsApp
-        </a>
+          <a
+            href="https://wa.me/593961712106?text=Hola,%20quiero%20consultar%20el%20menú%20de%20Cafetería%20Café%20Viviates"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-700 transition mb-4"
+            onClick={() => sendGAEvent('click_reserva_cafe', { section: 'cafe-viviates', method: 'whatsapp' })}
+          >
+            Reservar desayuno por WhatsApp
+          </a>
       </section>
 
       <section className="mb-10">
