@@ -1,5 +1,9 @@
+
 import { BLOG_POSTS } from '@/data/blog-posts';
 import { notFound } from 'next/navigation';
+import dynamic from 'next/dynamic';
+
+const WhatsAppFloatButton = dynamic(() => import('@/components/WhatsAppFloatButton'), { ssr: false });
 
 interface BlogPageProps {
   params: { slug: string };
@@ -47,6 +51,7 @@ export default function BlogPage({ params }: BlogPageProps) {
           <p>Este es un borrador de blog. Aquí irá el contenido real del post <strong>{post.title}</strong>.</p>
           <p>Puedes editar <code>src/data/blog-posts.ts</code> para agregar más información y contenido.</p>
         </div>
+        <WhatsAppFloatButton section="blog" />
       </main>
     </>
   );
