@@ -10,10 +10,8 @@ export async function GET() {
     '',
     '/habitaciones',
     '/servicios',
-    '/galeria',
     '/ubicacion',
-    '/testimonios',
-    '/contacto',
+    '/cafe-viviates',
     // Agrega aquí más rutas si tienes
   ].map(route => ({
     url: `${SITE_URL}${route}`,
