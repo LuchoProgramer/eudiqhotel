@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Eudiq Hotel Loja | Hotel de Lujo Cerca de la Terminal Terrestre',
-  description: 'Descubre Eudiq Hotel en Loja, Ecuador. Ofrecemos habitaciones de lujo, Wi-Fi premium, desayuno incluido y nuestro exclusivo Café Viviates. Reserva tu estadía cerca de la terminal terrestre.',
+  description: 'Hotel moderno en Loja, Ecuador. Habitaciones cómodas, desayuno incluido y Wi-Fi premium cerca de la terminal terrestre.',
 }
 
 export default function RootLayout({
