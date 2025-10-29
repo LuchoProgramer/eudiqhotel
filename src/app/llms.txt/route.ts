@@ -6,17 +6,17 @@ const SITE_URL = 'https://eudiqhotel.com';
 export async function GET() {
   // Datos principales
   const nombre = 'Eudiq Hotel Loja';
-  const descripcion = 'Hotel de lujo en Loja, Ecuador, cerca de la terminal terrestre. Habitaciones premium, Wi-Fi, desayuno incluido y Café Viviates.';
-  const publico = 'Viajeros, turistas, familias y ejecutivos que buscan comodidad y servicios premium en Loja.';
+  const descripcion = 'Hotel en Loja, Ecuador, cerca de la terminal terrestre. Habitaciones confortables, Wi-Fi rápido, desayuno incluido y Café Viviates.';
+  const publico = 'Viajeros, turistas, familias y ejecutivos que buscan comodidad y servicios completos en Loja.';
   const whatsapp = '[+593 961 712 106](https://wa.me/593961712106)';
   const direccion = '[Av. Pablo Palacio, diagonal a la terminal terrestre, Loja 110105, Ecuador](https://maps.app.goo.gl/5dCMqMs8TNnuUAXU7)';
   const email = '[info@eudiqhotel.com](mailto:info@eudiqhotel.com)';
 
   // Servicios principales
   const servicios = [
-    { nombre: 'Habitaciones', url: `${SITE_URL}/#habitaciones`, desc: 'Alojamiento premium y familiar.' },
+  { nombre: 'Habitaciones', url: `${SITE_URL}/#habitaciones`, desc: 'Alojamiento cómodo y familiar.' },
     { nombre: 'Café Viviates', url: `${SITE_URL}/#servicios`, desc: 'Café de especialidad propio.' },
-    { nombre: 'Wi-Fi Premium', url: `${SITE_URL}/#servicios`, desc: 'Internet de alta velocidad.' },
+  { nombre: 'Wi-Fi', url: `${SITE_URL}/#servicios`, desc: 'Internet de alta velocidad.' },
     { nombre: 'Desayuno incluido', url: `${SITE_URL}/#servicios`, desc: 'Desayuno buffet todos los días.' },
     { nombre: 'Estacionamiento', url: `${SITE_URL}/#servicios`, desc: 'Parqueadero privado y seguro.' },
     { nombre: 'Ubicación', url: `${SITE_URL}/#ubicacion`, desc: 'Diagonal a la terminal terrestre.' },

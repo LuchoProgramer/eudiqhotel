@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Eudiq Hotel Loja | Hotel de Lujo Cerca de la Terminal Terrestre',
-  description: 'Hotel moderno en Loja, Ecuador. Habitaciones cómodas, desayuno incluido y Wi-Fi premium cerca de la terminal terrestre.',
+  description: 'Hotel en Loja, Ecuador. Habitaciones cómodas, desayuno incluido y Wi-Fi cerca de la terminal terrestre.',
 }
 
 export default function RootLayout({
@@ -46,7 +46,7 @@ export default function RootLayout({
           `}
         </Script>
   <meta property="fb:app_id" content="1327476752302916" />
-  <meta name="keywords" content="hotel, Loja, Ecuador, lujo, habitaciones, desayuno, Wi-Fi, estacionamiento, Café Viviates, turismo, hospedaje, familiar, ejecutivo" />
+  <meta name="keywords" content="hotel, Loja, Ecuador, habitaciones, desayuno, Wi-Fi, estacionamiento, Café Viviates, turismo, hospedaje, familiar, ejecutivo" />
   <meta name="author" content="Eudiq Hotel Loja" />
   <meta name="publisher" content="Eudiq Hotel Loja" />
   <meta name="robots" content="index, follow" />
@@ -59,8 +59,8 @@ export default function RootLayout({
         <link rel="icon" href="/android-chrome-192x192.svg" type="image/svg+xml" sizes="192x192" />
         <link rel="icon" href="/android-chrome-512x512.svg" type="image/svg+xml" sizes="512x512" />
         {/* Open Graph & Twitter Card para compartir en redes */}
-  <meta property="og:title" content="Eudiq Hotel Loja | Hotel de Lujo Cerca de la Terminal Terrestre" />
-  <meta property="og:description" content="Descubre Eudiq Hotel en Loja, Ecuador. Habitaciones de lujo, Wi-Fi premium, desayuno incluido y Café Viviates. Reserva tu estadía cerca de la terminal terrestre." />
+  <meta property="og:title" content="Eudiq Hotel Loja | Hotel Cerca de la Terminal Terrestre" />
+  <meta property="og:description" content="Descubre Eudiq Hotel en Loja, Ecuador. Habitaciones confortables, Wi-Fi premium, desayuno incluido y Café Viviates. Reserva tu estadía cerca de la terminal terrestre." />
   <meta property="og:image" content="https://eudiqhotel.com/Eudiq.png" />
   <meta property="og:image:alt" content="Fachada y habitaciones de Eudiq Hotel Loja, hotel de lujo en Loja, Ecuador" />
   <meta property="og:image:width" content="1200" />
@@ -69,8 +69,8 @@ export default function RootLayout({
   <meta property="og:url" content="https://eudiqhotel.com/" />
   <meta property="og:site_name" content="Eudiq Hotel" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Eudiq Hotel Loja | Hotel de Lujo Cerca de la Terminal Terrestre" />
-  <meta name="twitter:description" content="Descubre Eudiq Hotel en Loja, Ecuador. Habitaciones de lujo, Wi-Fi premium, desayuno incluido y Café Viviates. Reserva tu estadía cerca de la terminal terrestre." />
+  <meta name="twitter:title" content="Eudiq Hotel Loja | Hotel Cerca de la Terminal Terrestre" />
+  <meta name="twitter:description" content="Descubre Eudiq Hotel en Loja, Ecuador. Habitaciones de lujo, Wi-Fi, desayuno incluido y Café Viviates. Reserva tu estadía cerca de la terminal terrestre." />
   <meta name="twitter:image" content="https://eudiqhotel.com/Eudiq.png" />
   <meta name="twitter:image:alt" content="Fachada y habitaciones de Eudiq Hotel Loja, hotel de lujo en Loja, Ecuador" />
         {/* Datos estructurados Schema.org para Hotel */}
@@ -79,7 +79,7 @@ export default function RootLayout({
             "@context": "https://schema.org",
             "@type": "Hotel",
             "name": "Eudiq Hotel Loja",
-            "description": "Hotel de lujo en Loja, Ecuador, cerca de la terminal terrestre. Habitaciones premium, Wi-Fi, desayuno incluido y Café Viviates.",
+            "description": "Hotel en Loja, Ecuador, cerca de la terminal terrestre. Habitaciones premium, Wi-Fi, desayuno incluido y Café Viviates.",
             "image": "https://eudiqhotel.com/Eudiq.png",
             "address": {
               "@type": "PostalAddress",
