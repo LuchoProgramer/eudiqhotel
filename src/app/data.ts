@@ -25,7 +25,7 @@ export const habitaciones = [
     imagenes: [
       'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204509/IMG_4605_q6bvol.jpg',
     ],
-    amenidades: ['Wi-Fi gratis', 'TV Smart', 'Baño privado', 'Mini bar', 'Aire acondicionado', 'Vista a la ciudad', 'Desayuno incluido'],
+  amenidades: ['Wi-Fi gratis', 'TV Smart', 'Baño privado', 'Aire acondicionado', 'Vista a la ciudad', 'Desayuno incluido'],
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ export const habitaciones = [
     imagenes: [
       'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204555/IMG_4600_q2teiy.jpg',
     ],
-    amenidades: ['Wi-Fi gratis', 'TV Smart', 'Baño privado', 'Mini bar', 'Aire acondicionado', 'Vista a la ciudad', 'Desayuno incluido'],
+  amenidades: ['Wi-Fi gratis', 'TV Smart', 'Baño privado', 'Aire acondicionado', 'Vista a la ciudad', 'Desayuno incluido'],
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ export const habitaciones = [
     imagenes: [
       'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204999/IMG_4183-HDR_gs5who.webp',
     ],
-    amenidades: ['Wi-Fi gratis', 'TV Smart', 'Baño privado', 'Mini bar', 'Aire acondicionado', 'Desayuno incluido'],
+  amenidades: ['Wi-Fi gratis', 'TV Smart', 'Baño privado', 'Aire acondicionado', 'Desayuno incluido'],
   },
   {
     id: 5,
@@ -67,7 +67,7 @@ export const habitaciones = [
     imagenes: [
       'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204999/IMG_4183-HDR_gs5who.webp',
     ],
-    amenidades: ['Wi-Fi gratis', 'TV Smart', 'Baño privado', 'Mini bar', 'Aire acondicionado', 'Desayuno incluido'],
+  amenidades: ['Wi-Fi gratis', 'TV Smart', 'Baño privado', 'Aire acondicionado', 'Desayuno incluido'],
   },
   {
     id: 6,

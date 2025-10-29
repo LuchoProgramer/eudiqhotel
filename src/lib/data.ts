@@ -78,7 +78,7 @@ export const habitaciones = [
         alt: 'Habitación Matrimonial en Eudiq Hotel Loja, cama matrimonial, decoración elegante',
       },
     ],
-    amenidades: ['Wi-Fi gratis', 'TV Smart', 'Baño privado', 'Mini bar', 'Aire acondicionado', 'Vista a la ciudad', 'Desayuno incluido'],
+  amenidades: ['Wi-Fi gratis', 'TV Smart', 'Baño privado', 'Aire acondicionado', 'Vista a la ciudad', 'Desayuno incluido'],
   },
   {
     id: 3,
@@ -95,7 +95,7 @@ export const habitaciones = [
         alt: 'Habitación Doble en Eudiq Hotel Loja, dos camas individuales, ideal para amigos o familia',
       },
     ],
-    amenidades: ['Wi-Fi gratis', 'TV Smart', 'Baño privado', 'Mini bar', 'Aire acondicionado', 'Vista a la ciudad', 'Desayuno incluido'],
+  amenidades: ['Wi-Fi gratis', 'TV Smart', 'Baño privado', 'Aire acondicionado', 'Vista a la ciudad', 'Desayuno incluido'],
   },
   {
     id: 4,
@@ -112,7 +112,7 @@ export const habitaciones = [
         alt: 'Habitación Triple en Eudiq Hotel Loja, tres camas individuales, espacio amplio',
       },
     ],
-    amenidades: ['Wi-Fi gratis', 'TV Smart', 'Baño privado', 'Mini bar', 'Aire acondicionado', 'Desayuno incluido'],
+  amenidades: ['Wi-Fi gratis', 'TV Smart', 'Baño privado', 'Aire acondicionado', 'Desayuno incluido'],
   },
   {
     id: 5,
@@ -129,7 +129,7 @@ export const habitaciones = [
         alt: 'Habitación Cuádruple en Eudiq Hotel Loja, cuatro camas individuales, ideal para grupos',
       },
     ],
-    amenidades: ['Wi-Fi gratis', 'TV Smart', 'Baño privado', 'Mini bar', 'Aire acondicionado', 'Desayuno incluido'],
+  amenidades: ['Wi-Fi gratis', 'TV Smart', 'Baño privado', 'Aire acondicionado', 'Desayuno incluido'],
   },
   {
     id: 6,
