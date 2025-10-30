@@ -2,7 +2,7 @@
 
 const servicios = [
   {
-    nombre: 'Wi-Fi Premium',
+  nombre: 'Wi-Fi',
     descripcion: 'Internet de alta velocidad en todas las áreas del hotel, ideal para trabajo y entretenimiento.',
     icono: '📶',
   },

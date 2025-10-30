@@ -23,7 +23,7 @@ const galeria = [
 
 export const metadata = {
   title: 'Cafetería Café Viviates | Desayuno cerca de la Terminal Terrestre Loja',
-  description: 'Cafetería Café Viviates en Eudiq Hotel Loja: desayuno desde las 6:00 AM, café lojano, bocaditos típicos y WiFi premium diagonal a la terminal terrestre.',
+  description: 'Cafetería Café Viviates en Eudiq Hotel Loja: desayuno desde las 6:00 AM, café lojano, bocaditos típicos y WiFi diagonal a la terminal terrestre.',
 };
 
 export default function CafeViviatesLanding() {
@@ -32,7 +32,7 @@ export default function CafeViviatesLanding() {
       <section className="text-center mb-10">
         <h1 className="text-4xl font-bold mb-4 text-primary">Cafetería Café Viviates</h1>
         <p className="mb-6 text-lg text-gray-700">
-          Desayuno cerca de la Terminal Terrestre Loja. Café lojano, bocaditos típicos y WiFi premium en un ambiente moderno y acogedor dentro de Eudiq Hotel.
+          Desayuno cerca de la Terminal Terrestre Loja. Café lojano, bocaditos típicos y WiFi en un ambiente moderno y acogedor dentro de Eudiq Hotel.
         </p>
         <div className="flex justify-center gap-4 mb-6">
           {galeria.map((img) => (
@@ -58,7 +58,7 @@ export default function CafeViviatesLanding() {
           </div>
           <div className="flex items-center gap-3">
             <span className="text-3xl">💻</span>
-            <span>WiFi premium y ambiente moderno</span>
+            <span>WiFi y ambiente moderno</span>
           </div>
           <div className="flex items-center gap-3">
             <span className="text-3xl">🍽️</span>

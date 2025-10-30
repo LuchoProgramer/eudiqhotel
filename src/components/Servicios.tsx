@@ -19,7 +19,7 @@ const servicios = [
   },
   {
     icon: Wifi,
-    titulo: 'Wi-Fi Premium',
+  titulo: 'Wi-Fi',
     descripcion: 'Internet de alta velocidad en todas las áreas. Ideal para trabajo remoto y streaming sin interrupciones.',
     destacado: false,
   },

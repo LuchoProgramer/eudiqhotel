@@ -16,8 +16,8 @@ interface HeroProps {
 }
 
 const defaultImages = [
-  // Imagen destacada optimizada (Firebase Storage, con parámetros de calidad y tamaño si es posible)
-  'https://firebasestorage.googleapis.com/v0/b/softpymes-webshop.appspot.com/o/expohostal%2FurlLogo_sobre_nosotros_grupos%2FhistoriaGenerallqddd?alt=media',
+  // Imagen principal Cloudinary
+  'https://res.cloudinary.com/dltfsttr7/image/upload/v1761845419/EudiqHero_i4cxtc.webp',
   'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1600/v1760204829/IMG_4425-HDR_avmsry.webp',
   'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1600/v1760204433/IMG_4194-HDR_xjuzwj.jpg',
   'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1600/v1760204999/IMG_4183-HDR_gs5who.webp',

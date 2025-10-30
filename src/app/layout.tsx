@@ -60,7 +60,7 @@ export default function RootLayout({
         <link rel="icon" href="/android-chrome-512x512.svg" type="image/svg+xml" sizes="512x512" />
         {/* Open Graph & Twitter Card para compartir en redes */}
   <meta property="og:title" content="Eudiq Hotel Loja | Hotel Cerca de la Terminal Terrestre" />
-  <meta property="og:description" content="Descubre Eudiq Hotel en Loja, Ecuador. Habitaciones confortables, Wi-Fi premium, desayuno incluido y Café Viviates. Reserva tu estadía cerca de la terminal terrestre." />
+  <meta property="og:description" content="Descubre Eudiq Hotel en Loja, Ecuador. Habitaciones confortables, Wi-Fi, desayuno incluido y Café Viviates. Reserva tu estadía cerca de la terminal terrestre." />
   <meta property="og:image" content="https://eudiqhotel.com/Eudiq.png" />
   <meta property="og:image:alt" content="Fachada y habitaciones de Eudiq Hotel Loja, hotel de lujo en Loja, Ecuador" />
   <meta property="og:image:width" content="1200" />

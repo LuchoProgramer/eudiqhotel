@@ -74,7 +74,7 @@ export const habitaciones = [
     tamaño: '25 m²',
     imagenes: [
       {
-        url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204509/IMG_4605_q6bvol.jpg',
+        url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761843578/Imagen_de_WhatsApp_2025-10-29_a_las_19.43.21_82a0d440_qmyzam.jpg',
         alt: 'Habitación Matrimonial en Eudiq Hotel Loja, cama matrimonial, decoración elegante',
       },
     ],
@@ -91,7 +91,7 @@ export const habitaciones = [
     tamaño: '25 m²',
     imagenes: [
       {
-        url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204509/IMG_4605_q6bvol.jpg',
+        url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761843579/Imagen_de_WhatsApp_2025-10-29_a_las_19.43.22_2904e769_vhu9hl.jpg',
         alt: 'Habitación Doble en Eudiq Hotel Loja, dos camas individuales, ideal para amigos o familia',
       },
     ],
@@ -108,7 +108,7 @@ export const habitaciones = [
     tamaño: '30 m²',
     imagenes: [
       {
-        url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204999/IMG_4183-HDR_gs5who.webp',
+        url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204555/IMG_4600_q2teiy.jpg',
         alt: 'Habitación Triple en Eudiq Hotel Loja, tres camas individuales, espacio amplio',
       },
     ],
@@ -142,7 +142,7 @@ export const habitaciones = [
     tamaño: '45 m²',
     imagenes: [
       {
-        url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204999/IMG_4183-HDR_gs5who.webp',
+        url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761843579/Imagen_de_WhatsApp_2025-10-29_a_las_19.43.18_70f5dd4a_pnpxgy.jpg',
         alt: 'Habitación Familiar en Eudiq Hotel Loja, espacio para familias, cocina y sala amplia',
       },
     ],
