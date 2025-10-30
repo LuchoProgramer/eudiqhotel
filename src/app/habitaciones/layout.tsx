@@ -1,6 +1,24 @@
 import { ReactNode } from 'react';
 import { habitaciones } from '@/lib/data';
 
+type HabitacionImagen = {
+  url: string;
+  alt: string;
+};
+
+type Habitacion = {
+  id: number;
+  nombre: string;
+  categoria: string;
+  descripcion: string;
+  precio: number;
+  capacidad: string;
+  cama: string;
+  tamaño: string;
+  imagenes: HabitacionImagen[];
+  amenidades?: string[];
+};
+
 export const metadata = {
   title: 'Habitaciones | Eudiq Hotel Loja',
   description: 'Descubre nuestras habitaciones familiares y ejecutivas en Eudiq Hotel Loja. Wi-Fi rápido, desayuno incluido y comodidad total cerca de la terminal terrestre.',
@@ -26,7 +44,7 @@ export default function HabitacionesLayout({
   // Generar datos estructurados para habitaciones
   const roomsJsonLd = {
     '@context': 'https://schema.org',
-  '@graph': habitaciones.map((hab: any) => ({
+  '@graph': (habitaciones as Habitacion[]).map((hab) => ({
       '@type': 'HotelRoom',
       'name': hab.nombre,
       'description': hab.descripcion,
@@ -40,14 +58,14 @@ export default function HabitacionesLayout({
         'unitText': 'personas',
       },
       ...(hab.amenidades && hab.amenidades.length > 0 && {
-        'amenityFeature': hab.amenidades.map((a: any) => ({
+        'amenityFeature': hab.amenidades.map((a) => ({
           '@type': 'LocationFeatureSpecification',
           'name': a,
           'value': true,
         })),
       }),
       ...(hab.imagenes && hab.imagenes.length > 0 && {
-        'image': hab.imagenes.map((img: any) => img.url),
+        'image': hab.imagenes.map((img) => img.url),
       }),
       'offers': {
         '@type': 'Offer',
