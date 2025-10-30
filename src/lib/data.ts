@@ -43,6 +43,42 @@ export const testimonios = [
     calificacion: 5,
     fecha: '2023-03-12',
   },
+
+];
+
+export const galeriaCafeViviates = [
+  {
+    url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847748/WhatsApp_Image_2025-10-29_at_19.40.30_1_qshs8i.jpg',
+    alt: 'Café Viviates - barra y ambiente moderno',
+  },
+  {
+    url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847734/WhatsApp_Image_2025-10-29_at_19.40.30_2_vyyw9k.jpg',
+    alt: 'Café Viviates - vista de la cafetería',
+  },
+  {
+    url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847761/WhatsApp_Image_2025-10-29_at_19.40.29_1_hywgib.jpg',
+    alt: 'Café Viviates - café y postres',
+  },
+  {
+    url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847772/WhatsApp_Image_2025-10-29_at_19.40.28_2_vo2mtv.jpg',
+    alt: 'Café Viviates - decoración y detalles',
+  },
+  {
+    url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847772/WhatsApp_Image_2025-10-29_at_19.40.28_2_vo2mtv.jpg',
+    alt: 'Café Viviates - decoración y detalles',
+  },
+  {
+    url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847767/WhatsApp_Image_2025-10-29_at_19.40.29_dadbdl.jpg',
+    alt: 'Café Viviates - café servido',
+  },
+  {
+    url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847783/WhatsApp_Image_2025-10-29_at_19.40.28_hf3ysb.jpg',
+    alt: 'Café Viviates - barra y mesas',
+  },
+  {
+    url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847778/WhatsApp_Image_2025-10-29_at_19.40.28_1_c3j7xm.jpg',
+    alt: 'Café Viviates - ambiente general',
+  },
 ];
 
 export const habitaciones = [

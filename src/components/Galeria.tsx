@@ -7,14 +7,19 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 const categorias = ['Todas', 'Habitaciones', 'Café Viviates', 'Restaurante', 'Instalaciones'];
 
 const galeriaFotos = [
+  // Fotos reales de Café Viviates
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847748/WhatsApp_Image_2025-10-29_at_19.40.30_1_qshs8i.jpg', categoria: 'Café Viviates', alt: 'Café Viviates - barra y ambiente moderno' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847734/WhatsApp_Image_2025-10-29_at_19.40.30_2_vyyw9k.jpg', categoria: 'Café Viviates', alt: 'Café Viviates - vista de la cafetería' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847772/WhatsApp_Image_2025-10-29_at_19.40.28_2_vo2mtv.jpg', categoria: 'Café Viviates', alt: 'Café Viviates - decoración y detalles' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847761/WhatsApp_Image_2025-10-29_at_19.40.29_1_hywgib.jpg', categoria: 'Café Viviates', alt: 'Café Viviates - café y postres' },
   { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1760204433/IMG_4194-HDR_xjuzwj.jpg', categoria: 'Sala', alt: 'Sala Recepcion' },
-  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1760205074/IMG_4179-HDR_rm62mk.webp', categoria: 'Café Viviates', alt: 'Café Viviates' },
-  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1760204999/IMG_4183-HDR_gs5who.webp', categoria: 'Habitaciones', alt: 'Suite premium' },
-  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1760204672/IMG_4453-HDR_sgomb0.webp', categoria: 'Eudiq Hotel', alt: 'Fachada' },
+  // Foto de Café Viviates eliminada (no es real)
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847767/WhatsApp_Image_2025-10-29_at_19.40.29_dadbdl.jpg', categoria: 'Café Viviates', alt: 'Café Viviates - café servido' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761843579/Imagen_de_WhatsApp_2025-10-29_a_las_19.43.22_2904e769_vhu9hl.jpg', categoria: 'Eudiq Hotel', alt: 'Fachada - vista desde habitación doble' },
   { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1760204555/IMG_4600_q2teiy.jpg', categoria: 'Habitaciones', alt: 'Habitación ejecutiva' },
   { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/c_fill,g_center,z_0.8,h_900,w_506,q_auto,f_webp/v1760204829/IMG_4425-HDR_avmsry.webp', categoria: 'Instalaciones', alt: 'Recepción (formato móvil, centrado, zoom out)' },
   { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1760204509/IMG_4605_q6bvol.jpg', categoria: 'Instalaciones', alt: 'Lobby' },
-  { url: 'https://images.unsplash.com/photo-1485808191679-5f86510681a2?auto=format&fit=crop&w=800&q=80', categoria: 'Café Viviates', alt: 'Preparación de café' },
+  // Foto de Café Viviates eliminada (no es real)
   { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1760204466/IMG_4616_xg9lrj.jpg', categoria: 'Habitaciones', alt: 'Suite familiar' },
   { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1760204251/IMG_4163-HDR_ymaqov.webp', categoria: 'Restaurante', alt: 'Comedor elegante' },
   { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1760205152/IMG_4174-HDR_i429dy.webp', categoria: 'Instalaciones', alt: 'Zona común' },
@@ -137,7 +142,7 @@ export default function Galeria() {
                   alt={foto.alt}
                   width={800}
                   height={600}
-                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full min-h-[220px] object-contain transition-transform duration-500 group-hover:scale-110 bg-white"
                   sizes="(max-width: 768px) 100vw, 33vw"
                   loading="lazy"
                 />

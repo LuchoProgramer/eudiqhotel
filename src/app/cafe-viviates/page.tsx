@@ -4,22 +4,7 @@ import React from 'react';
 
 import WhatsAppReservaCafe from '../../components/WhatsAppReservaCafe';
 import Image from 'next/image';
-
-
-const galeria = [
-  {
-    url: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80',
-    alt: 'Barista sirviendo café de especialidad en Café Viviates',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=80',
-    alt: 'Taza de café latte arte en Café Viviates',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80',
-    alt: 'Ambiente acogedor de la cafetería Café Viviates',
-  },
-];
+import { galeriaCafeViviates } from '@/lib/data';
 
 export const metadata = {
   title: 'Cafetería Café Viviates | Desayuno cerca de la Terminal Terrestre Loja',
@@ -34,8 +19,13 @@ export default function CafeViviatesLanding() {
         <p className="mb-6 text-lg text-gray-700">
           Desayuno cerca de la Terminal Terrestre Loja. Café lojano, bocaditos típicos y WiFi en un ambiente moderno y acogedor dentro de Eudiq Hotel.
         </p>
-        <div className="flex justify-center gap-4 mb-6">
-          {galeria.map((img) => (
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+          {[
+            galeriaCafeViviates[0],
+            galeriaCafeViviates[1],
+            galeriaCafeViviates[2],
+            galeriaCafeViviates[4], // Usar la quinta imagen en vez de la cuarta para evitar repetición
+          ].map((img) => (
             <Image key={img.url} src={img.url} alt={img.alt} width={220} height={140} className="rounded-lg shadow-md object-cover" />
           ))}
         </div>

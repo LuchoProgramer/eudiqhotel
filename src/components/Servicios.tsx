@@ -199,8 +199,8 @@ export default function Servicios() {
 
             <div className="relative">
               <Image
-                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80"
-                alt="Café Viviates"
+                src="https://res.cloudinary.com/dltfsttr7/image/upload/v1761847761/WhatsApp_Image_2025-10-29_at_19.40.29_1_hywgib.jpg"
+                alt="Café Viviates - café y postres"
                 width={800}
                 height={600}
                 className="rounded-2xl shadow-2xl"
