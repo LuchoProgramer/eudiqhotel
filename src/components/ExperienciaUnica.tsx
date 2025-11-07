@@ -79,7 +79,7 @@ export default function ExperienciaUnica() {
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed">
-              Ubicados estratégicamente en Avenida 8 de diciembre y Juan José Flores diagonal a la Terminal Terrestre. Estamos cerca del parque recreacional Jipiro, Complejo ferial Simón Bolívar, teatro Benjamín Carrión, Terminal Terrestre y zonas comerciales.
+              Ubicados estratégicamente en Avenida 8 de diciembre y Juan José Flores diagonal a la Terminal Terrestre. Estamos a solo 200 metros del parque recreacional Jipiro y cerca del Complejo ferial Simón Bolívar, teatro Benjamín Carrión, Terminal Terrestre y zonas comerciales.
             </p>
 
             {/* Features */}
