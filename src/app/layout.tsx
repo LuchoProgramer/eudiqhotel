@@ -83,7 +83,7 @@ export default function RootLayout({
             "image": "https://eudiqhotel.com/Eudiq.png",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "Av. Pablo Palacio, diagonal a la terminal terrestre",
+              "streetAddress": "Avenida 8 de diciembre y Juan José Flores diagonal a la Terminal Terrestre",
               "addressLocality": "Loja",
               "addressRegion": "Loja",
               "postalCode": "110105",

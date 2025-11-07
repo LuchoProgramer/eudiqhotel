@@ -76,8 +76,7 @@ export default function Hero({ images = defaultImages }: HeroProps) {
         <div className={`max-w-5xl transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
-            <span className="text-[#CBD95F] text-2xl">★</span>
-            <span className="text-white/90 text-sm font-medium tracking-wider">EXPERIENCIA PREMIUM EN LOJA</span>
+            <span className="text-white/90 text-sm font-medium tracking-wider">TU DESCANSO ES NUESTRA PRIORIDAD</span>
           </div>
 
           {/* Main Title */}
@@ -87,8 +86,7 @@ export default function Hero({ images = defaultImages }: HeroProps) {
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
-            Un refugio de elegancia y confort en, Loja.
-            Donde cada momento se convierte en un recuerdo inolvidable.
+            Comodidad, ubicación estratégica y ambiente acogedor.
           </p>
 
           {/* CTA Buttons */}

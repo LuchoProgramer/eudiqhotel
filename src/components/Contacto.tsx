@@ -51,7 +51,7 @@ export default function Contacto() {
     {
       icon: MapPin,
       titulo: 'Dirección',
-  info: 'Av. Pablo Palacio, diagonal a la terminal terrestre, Loja 110105',
+  info: 'Avenida 8 de diciembre y Juan José Flores diagonal a la Terminal Terrestre',
       link: 'https://maps.app.goo.gl/yZUqhkbKqHijRYVB8',
     },
     {

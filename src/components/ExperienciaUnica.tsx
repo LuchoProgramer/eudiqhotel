@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { Trophy, MapPin, BedDouble, Handshake } from 'lucide-react';
+import { Coffee, MapPin, BedDouble, Handshake } from 'lucide-react';
 
 export default function ExperienciaUnica() {
   const [isVisible, setIsVisible] = useState(false);
@@ -41,8 +41,7 @@ export default function ExperienciaUnica() {
             Descubre <span className="text-[#038C7F]">Eudiq</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Más que un hotel, somos el punto de encuentro entre la elegancia moderna 
-            y la calidez tradicional de Loja
+            Más que un hotel somos el punto de encuentro entre comodidad, descanso, calidez y buen gusto
           </p>
         </div>
 
@@ -63,25 +62,13 @@ export default function ExperienciaUnica() {
                 {/* Overlay verde 15% */}
                 <div className="absolute inset-0 rounded-3xl bg-[#038C7F]/8 pointer-events-none" />
               </div>
-              {/* Floating card */}
-              <div className="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-xl border-l-4 border-[#CBD95F]">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-[#038C7F] to-[#A9BF04] rounded-full flex items-center justify-center">
-                    <span className="text-white text-2xl">★</span>
-                  </div>
-                  <div>
-                    <p className="text-2xl font-bold text-gray-900">4.2</p>
-                    <p className="text-sm text-gray-600">Calificación</p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
 
           {/* Content Side */}
           <div className={`space-y-6 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             <h3 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight" style={{fontFamily: 'Playfair Display, serif'}}>
-              Un refugio de confort en Av. Pablo Palacio, diagonal a la terminal terrestre, Loja 110105
+              Te esperamos en la encantadora ciudad de Loja en la Av. 8 de diciembre y Juan José Flores, diagonal a la Terminal Terrestre de Loja
             </h3>
             
             <p className="text-lg text-gray-700 leading-relaxed">
@@ -92,15 +79,15 @@ export default function ExperienciaUnica() {
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed">
-              Ubicados estratégicamente en Av. Pablo Palacio, diagonal a la terminal terrestre, Loja 110105, te ofrecemos acceso inmediato a los principales atractivos de la ciudad, mientras disfrutas de un oasis de tranquilidad y sofisticación.
+              Ubicados estratégicamente en Avenida 8 de diciembre y Juan José Flores diagonal a la Terminal Terrestre. Estamos cerca del parque recreacional Jipiro, Complejo ferial Simón Bolívar, teatro Benjamín Carrión, Terminal Terrestre y zonas comerciales.
             </p>
 
             {/* Features */}
             <div className="grid grid-cols-2 gap-4 pt-4">
               {[
-                { icon: <Trophy className="w-8 h-8 text-[#A9BF04]" />, title: 'Excelencia', desc: 'Servicio premium' },
-                { icon: <MapPin className="w-8 h-8 text-[#038C7F]" />, title: 'Ubicación', desc: 'Av. Pablo Palacio, diagonal a la terminal terrestre, Loja 110105' },
-                { icon: <BedDouble className="w-8 h-8 text-[#A9BF04]" />, title: 'Confort', desc: 'Habitaciones de lujo' },
+                { icon: <Coffee className="w-8 h-8 text-[#A9BF04]" />, title: 'Cafetería', desc: 'De especialidad' },
+                { icon: <MapPin className="w-8 h-8 text-[#038C7F]" />, title: 'Ubicación', desc: 'Avenida 8 de diciembre y Juan José Flores diagonal a la Terminal Terrestre' },
+                { icon: <BedDouble className="w-8 h-8 text-[#A9BF04]" />, title: 'Confort', desc: 'Habitaciones confortables' },
                 { icon: <Handshake className="w-8 h-8 text-[#038C7F]" />, title: 'Atención', desc: 'Personalizada 24/7' },
               ].map((item, idx) => (
                 <div
@@ -117,22 +104,15 @@ export default function ExperienciaUnica() {
         </div>
 
         {/* Stats Section */}
-  <div className={`grid grid-cols-2 md:grid-cols-4 gap-8 py-12 px-6 md:px-12 bg-[#CBD95F]/20 rounded-3xl shadow-2xl border border-[#038C7F]/60 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-          {[
-            { number: '15+', label: 'Años de Experiencia' },
-            { number: '25+', label: 'Habitaciones Premium' },
-            { number: '10k+', label: 'Huéspedes Felices' },
-            { number: '4.2★', label: 'Calificación Promedio' },
-          ].map((stat, idx) => (
-            <div key={idx} className="text-center">
-              <p className="text-4xl md:text-5xl font-bold text-gray-900 mb-2" style={{fontFamily: 'Playfair Display, serif'}}>
-                {stat.number}
-              </p>
-              <p className="text-sm md:text-base text-gray-800 font-medium">
-                {stat.label}
-              </p>
-            </div>
-          ))}
+        <div className={`flex justify-center py-12 px-6 md:px-12 bg-[#CBD95F]/20 rounded-3xl shadow-2xl border border-[#038C7F]/60 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+          <div className="text-center">
+            <p className="text-4xl md:text-5xl font-bold text-gray-900 mb-2" style={{fontFamily: 'Playfair Display, serif'}}>
+              15+
+            </p>
+            <p className="text-sm md:text-base text-gray-800 font-medium">
+              Años de Experiencia
+            </p>
+          </div>
         </div>
 
         {/* Quote Section */}
@@ -141,7 +121,7 @@ export default function ExperienciaUnica() {
             <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
           </svg>
           <blockquote className="text-2xl md:text-3xl font-light text-gray-700 italic leading-relaxed mb-6" style={{fontFamily: 'Playfair Display, serif'}}>
-            &quot;Donde la hospitalidad lojana se encuentra con la elegancia contemporánea, 
+            &quot;Donde la hospitalidad lojana se encuentra con la calidez, 
             creando experiencias que perduran en el corazón&quot;
           </blockquote>
           <p className="text-lg text-[#038C7F] font-semibold">

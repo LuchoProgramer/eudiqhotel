@@ -227,7 +227,7 @@ export default function Servicios() {
         <div className={`mt-16 text-center transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <p className="text-gray-600 mb-6">También incluimos</p>
           <div className="flex flex-wrap justify-center gap-4">
-            {['Caja de seguridad', 'Servicio a la habitación', 'Almacenamiento de equipaje', 'Servicio de taxi', 'Información turística'].map((extra, i) => (
+            {['Servicio a la habitación', 'Almacenamiento de equipaje', 'Servicio de taxi', 'Información turística'].map((extra, i) => (
               <span
                 key={i}
                 className="px-4 py-2 bg-white text-gray-700 text-sm font-medium rounded-full shadow-sm border border-gray-200"

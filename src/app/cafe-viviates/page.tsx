@@ -107,7 +107,7 @@ export default function CafeViviatesLanding() {
       <section className="mb-10">
         <h2 className="text-2xl font-semibold mb-2 text-primary">Ubicación</h2>
         <p className="mb-4 text-gray-700">
-          Av. Pablo Palacio, diagonal a la Terminal Terrestre, Loja 110105
+          Avenida 8 de diciembre y Juan José Flores diagonal a la Terminal Terrestre
         </p>
         <iframe
           src="https://www.google.com/maps?q=Eudiq+Hotel+Loja&output=embed"

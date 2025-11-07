@@ -68,10 +68,10 @@ export default function Ubicacion() {
             UBICACIÓN
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6" style={{fontFamily: 'Playfair Display, serif'}}>
-            Encuéntranos en <span className="text-[#038C7F]">Av. Pablo Palacio, diagonal a la terminal terrestre, Loja 110105</span>
+            Encuéntranos en <span className="text-[#038C7F]">Avenida 8 de diciembre y Juan José Flores diagonal a la Terminal Terrestre</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Estratégicamente ubicados en Av. Pablo Palacio, diagonal a la terminal terrestre, Loja 110105, 
+            Estratégicamente ubicados en Avenida 8 de diciembre y Juan José Flores diagonal a la Terminal Terrestre, 
             con acceso a los principales atractivos turísticos.
           </p>
         </div>
@@ -108,7 +108,7 @@ export default function Ubicacion() {
                   <MapPin className="flex-shrink-0 mt-1 text-[#038C7F]" size={20} />
                   <div>
                     <p className="font-medium">Dirección</p>
-                    <p className="text-sm text-gray-600">Av. Pablo Palacio, diagonal a la terminal terrestre, Loja 110105</p>
+                    <p className="text-sm text-gray-600">Avenida 8 de diciembre y Juan José Flores diagonal a la Terminal Terrestre</p>
                   </div>
                 </a>
                 <a href="tel:+593987654321" className="flex items-start gap-3 text-gray-700 hover:text-[#038C7F] transition-colors group">

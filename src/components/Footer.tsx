@@ -26,7 +26,7 @@ export default function Footer() {
               className="cursor-pointer hover:text-green-300"
               onClick={() => sendGAEvent('click_direccion_hotel', { section: 'footer', action: 'direccion' })}
             >
-              Av. Pablo Palacio, diagonal a la terminal terrestre, Loja, Ecuador
+              Avenida 8 de diciembre y Juan José Flores diagonal a la Terminal Terrestre, Loja, Ecuador
             </span>
           </p>
           <p>

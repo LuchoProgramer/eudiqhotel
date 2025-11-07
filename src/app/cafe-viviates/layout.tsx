@@ -18,7 +18,7 @@ export default function CafeViviatesLayout({ children }: { children: React.React
               "servesCuisine": ["Desayuno lojano", "Café de especialidad", "Bocaditos típicos"],
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Av. Pablo Palacio, diagonal a la Terminal Terrestre",
+                "streetAddress": "Avenida 8 de diciembre y Juan José Flores diagonal a la Terminal Terrestre",
                 "addressLocality": "Loja",
                 "postalCode": "110105",
                 "addressCountry": "EC"

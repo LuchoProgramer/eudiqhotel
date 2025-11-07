@@ -9,7 +9,7 @@ export async function GET() {
   const descripcion = 'Hotel en Loja, Ecuador, cerca de la terminal terrestre. Habitaciones confortables, Wi-Fi rápido, desayuno incluido y Café Viviates.';
   const publico = 'Viajeros, turistas, familias y ejecutivos que buscan comodidad y servicios completos en Loja.';
   const whatsapp = '[+593 961 712 106](https://wa.me/593961712106)';
-  const direccion = '[Av. Pablo Palacio, diagonal a la terminal terrestre, Loja 110105, Ecuador](https://maps.app.goo.gl/5dCMqMs8TNnuUAXU7)';
+  const direccion = '[Avenida 8 de diciembre y Juan José Flores diagonal a la Terminal Terrestre, Loja, Ecuador](https://maps.app.goo.gl/5dCMqMs8TNnuUAXU7)';
   const email = '[info@eudiqhotel.com](mailto:info@eudiqhotel.com)';
 
   // Servicios principales
