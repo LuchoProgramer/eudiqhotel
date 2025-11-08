@@ -7,11 +7,13 @@
 
 import { useState, useEffect } from 'react';
 import { trackConversion } from './ConversionOptimizer';
+import { useBottomNavigation } from '@/hooks/useBottomNavigation';
 
 export default function FloatingCTAs() {
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const { isBottomNavActive, bottomNavHeight } = useBottomNavigation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -65,7 +67,12 @@ export default function FloatingCTAs() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 z-50 flex flex-col gap-3">
+    <div 
+      className="fixed right-4 z-50 flex flex-col gap-3"
+      style={{
+        bottom: isBottomNavActive ? `${bottomNavHeight + 16}px` : '16px'
+      }}
+    >
       {/* WhatsApp Button */}
       <div className="relative group">
         <a

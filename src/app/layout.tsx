@@ -9,6 +9,7 @@ import ConversionOptimizer, { TopContactBar } from '@/components/ConversionOptim
 import FloatingCTAs from '@/components/FloatingCTAs';
 import ConversionNotifications from '@/components/ConversionNotifications';
 import { ABTestDashboard } from '@/components/ABTesting';
+import BottomNavigation from '@/components/BottomNavigation';
 import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'] })
@@ -179,6 +180,7 @@ export default function RootLayout({
           <FloatingCTAs />
           <ConversionNotifications />
           <ABTestDashboard />
+          <BottomNavigation />
         </ConversionOptimizer>
       </body>
     </html>

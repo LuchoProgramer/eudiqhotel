@@ -6,6 +6,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import { useBottomNavigation } from '@/hooks/useBottomNavigation';
 
 interface ConversionNotification {
   id: string;
@@ -93,6 +94,7 @@ export default function ConversionNotifications() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [notifications, setNotifications] = useState<ConversionNotification[]>([]);
   const [currentNotification, setCurrentNotification] = useState<ConversionNotification | null>(null);
+  const { isBottomNavActive, bottomNavHeight } = useBottomNavigation();
 
   useEffect(() => {
     // Mostrar primera notificación después de 10 segundos
@@ -129,7 +131,12 @@ export default function ConversionNotifications() {
   if (!currentNotification) return null;
 
   return (
-    <div className="fixed bottom-4 left-4 z-50 max-w-sm">
+    <div 
+      className="fixed left-4 z-50 max-w-sm"
+      style={{
+        bottom: isBottomNavActive ? `${bottomNavHeight + 16}px` : '16px'
+      }}
+    >
       <div
         className={`bg-gradient-to-r ${getNotificationColor(currentNotification.type)} text-white rounded-lg shadow-2xl p-4 transform transition-all duration-500 ease-out animate-slide-in`}
         style={{
