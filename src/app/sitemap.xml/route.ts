@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 
 import { BLOG_POSTS } from '@/data/blog-posts';
 
-const SITE_URL = 'https://hoteleudiq.com';
+const SITE_URL = 'https://www.hoteleudiq.com';
 
 export async function GET() {
   // Rutas estáticas principales
@@ -12,12 +12,12 @@ export async function GET() {
     '/servicios',
     '/ubicacion',
     '/cafe-viviates',
-    // Agrega aquí más rutas si tienes
+    '/blog',
   ].map(route => ({
     url: `${SITE_URL}${route}`,
     lastModified: new Date().toISOString(),
-    changeFrequency: 'monthly',
-    priority: route === '' ? 1.0 : route === '/contacto' ? 0.9 : 0.7,
+    changeFrequency: route === '/blog' ? 'weekly' : 'monthly',
+    priority: route === '' ? 1.0 : route === '/habitaciones' ? 0.9 : 0.7,
   }));
 
   // Rutas de blog dinámicas (ejemplo con borradores)

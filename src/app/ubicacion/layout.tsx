@@ -1,8 +1,11 @@
 import { ReactNode } from 'react';
 
 export const metadata = {
-  title: 'Ubicación | Eudiq Hotel Loja',
-  description: 'Descubre la ubicación estratégica de Eudiq Hotel Loja, cerca de la Terminal Terrestre y los principales puntos turísticos de Loja. Mapa, rutas y recomendaciones.',
+  title: 'Ubicación Hotel Loja Terminal Terrestre | Eudiq Hotel Mapa y Rutas',
+  description: 'Hotel en Loja ubicado estratégicamente junto al Terminal Terrestre. Cerca de UTPL, Parque Jipiro, centro histórico. Mapa, rutas y puntos turísticos.',
+  alternates: {
+    canonical: 'https://www.hoteleudiq.com/ubicacion',
+  },
 };
 
 export default function UbicacionLayout({

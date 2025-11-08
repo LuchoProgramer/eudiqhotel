@@ -5,13 +5,17 @@ import './globals.css'
 import { cn } from '@/lib/utils'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import ConversionOptimizer, { TopContactBar } from '@/components/ConversionOptimizer';
+import FloatingCTAs from '@/components/FloatingCTAs';
+import ConversionNotifications from '@/components/ConversionNotifications';
+import { ABTestDashboard } from '@/components/ABTesting';
 import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Eudiq Hotel Loja | Hotel de Lujo Cerca de la Terminal Terrestre',
-  description: 'Hotel en Loja, Ecuador. Habitaciones cómodas, desayuno incluido y Wi-Fi cerca de la terminal terrestre.',
+  title: 'Eudiq Hotel Loja | Hotel Cerca del Terminal Terrestre | Desayuno Incluido',
+  description: 'Hotel en Loja cerca del Terminal Terrestre. Habitaciones confortables, desayuno incluido, WiFi gratis, estacionamiento. Ideal para graduaciones UTPL y turismo en Loja.',
 }
 
 export default function RootLayout({
@@ -46,10 +50,12 @@ export default function RootLayout({
           `}
         </Script>
   <meta property="fb:app_id" content="1327476752302916" />
-  <meta name="keywords" content="hotel, Loja, Ecuador, habitaciones, desayuno, Wi-Fi, estacionamiento, Café Viviates, turismo, hospedaje, familiar, ejecutivo" />
+  <meta name="keywords" content="hotel loja, hotel terminal terrestre loja, hospedaje loja ecuador, graduacion utpl, hotel economico loja, desayuno incluido, wifi gratis, estacionamiento gratuito, cafe viviates, turismo loja, hotel cerca terminal" />
   <meta name="author" content="Eudiq Hotel Loja" />
   <meta name="publisher" content="Eudiq Hotel Loja" />
   <meta name="robots" content="index, follow" />
+        {/* Canonical URL para evitar duplicados */}
+        <link rel="canonical" href="https://www.hoteleudiq.com/" />
         {/* Favicons principales y compatibilidad máxima */}
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="icon" href="/favicon-16x16.svg" type="image/svg+xml" sizes="16x16" />
@@ -59,28 +65,31 @@ export default function RootLayout({
         <link rel="icon" href="/android-chrome-192x192.svg" type="image/svg+xml" sizes="192x192" />
         <link rel="icon" href="/android-chrome-512x512.svg" type="image/svg+xml" sizes="512x512" />
         {/* Open Graph & Twitter Card para compartir en redes */}
-  <meta property="og:title" content="Eudiq Hotel Loja | Hotel Cerca de la Terminal Terrestre" />
-  <meta property="og:description" content="Descubre Eudiq Hotel en Loja, Ecuador. Habitaciones confortables, Wi-Fi, desayuno incluido y Café Viviates. Reserva tu estadía cerca de la terminal terrestre." />
-  <meta property="og:image" content="https://eudiqhotel.com/Eudiq.png" />
-  <meta property="og:image:alt" content="Fachada y habitaciones de Eudiq Hotel Loja, hotel de lujo en Loja, Ecuador" />
+  <meta property="og:title" content="Eudiq Hotel Loja | Hotel Cerca del Terminal Terrestre" />
+  <meta property="og:description" content="Hotel en Loja cerca del Terminal Terrestre. Habitaciones confortables, desayuno incluido, WiFi gratis, estacionamiento. Ideal para graduaciones UTPL y turismo." />
+  <meta property="og:image" content="https://www.hoteleudiq.com/Eudiq.png" />
+  <meta property="og:image:alt" content="Fachada y habitaciones de Eudiq Hotel Loja, hotel cerca del terminal terrestre" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://eudiqhotel.com/" />
+  <meta property="og:url" content="https://www.hoteleudiq.com/" />
   <meta property="og:site_name" content="Eudiq Hotel" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Eudiq Hotel Loja | Hotel Cerca de la Terminal Terrestre" />
-  <meta name="twitter:description" content="Descubre Eudiq Hotel en Loja, Ecuador. Habitaciones de lujo, Wi-Fi, desayuno incluido y Café Viviates. Reserva tu estadía cerca de la terminal terrestre." />
-  <meta name="twitter:image" content="https://eudiqhotel.com/Eudiq.png" />
-  <meta name="twitter:image:alt" content="Fachada y habitaciones de Eudiq Hotel Loja, hotel de lujo en Loja, Ecuador" />
+  <meta name="twitter:title" content="Eudiq Hotel Loja | Hotel Cerca del Terminal Terrestre" />
+  <meta name="twitter:description" content="Hotel en Loja cerca del Terminal Terrestre. Habitaciones confortables, desayuno incluido, WiFi gratis, estacionamiento. Ideal para graduaciones UTPL." />
+  <meta name="twitter:image" content="https://www.hoteleudiq.com/Eudiq.png" />
+  <meta name="twitter:image:alt" content="Fachada y habitaciones de Eudiq Hotel Loja, hotel cerca del terminal terrestre" />
         {/* Datos estructurados Schema.org para Hotel */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Hotel",
             "name": "Eudiq Hotel Loja",
-            "description": "Hotel en Loja, Ecuador, cerca de la terminal terrestre. Habitaciones premium, Wi-Fi, desayuno incluido y Café Viviates.",
-            "image": "https://eudiqhotel.com/Eudiq.png",
+            "description": "Hotel en Loja cerca del Terminal Terrestre. Habitaciones confortables, desayuno incluido, WiFi gratis, estacionamiento, Café Viviates. Ideal para graduaciones UTPL y turismo.",
+            "image": [
+              "https://www.hoteleudiq.com/Eudiq.png",
+              "https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1761845419/EudiqHero_i4cxtc.webp"
+            ],
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "Avenida 8 de diciembre y Juan José Flores diagonal a la Terminal Terrestre",
@@ -89,12 +98,21 @@ export default function RootLayout({
               "postalCode": "110105",
               "addressCountry": "EC"
             },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": -4.0039,
+              "longitude": -79.2089
+            },
             "telephone": "+593726141151",
+            "email": "info@hoteleudiq.com",
+            "url": "https://www.hoteleudiq.com/",
             "priceRange": "$$",
             "starRating": {
               "@type": "Rating",
               "ratingValue": "4"
             },
+            "checkinTime": "12:00",
+            "checkoutTime": "12:00",
             "amenityFeature": [
               {
                 "@type": "LocationFeatureSpecification",
@@ -103,33 +121,65 @@ export default function RootLayout({
               },
               {
                 "@type": "LocationFeatureSpecification",
-                "name": "Breakfast",
+                "name": "Breakfast Included",
                 "value": true
               },
               {
                 "@type": "LocationFeatureSpecification",
-                "name": "Parking",
+                "name": "Free Parking",
                 "value": true
               },
               {
                 "@type": "LocationFeatureSpecification",
-                "name": "Cafe",
+                "name": "Coffee Shop",
+                "value": true
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "24-hour Reception",
+                "value": true
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Room Service",
+                "value": true
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Luggage Storage",
+                "value": true
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Taxi Service",
                 "value": true
               }
             ],
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.2",
-              "reviewCount": "200"
+              "reviewCount": "218",
+              "bestRating": "5",
+              "worstRating": "1"
             },
-            "url": "https://eudiqhotel.com/"
+            "sameAs": [
+              "https://wa.me/593726141151"
+            ]
           })}
         </script>
       </head>
       <body className={cn(inter.className, 'bg-neutral min-h-screen flex flex-col')}>
-        <Navbar />
-        <main className="flex-grow">{children}</main>
-        <Footer />
+        <ConversionOptimizer>
+          <TopContactBar />
+          <div className="pt-10">
+            <Navbar />
+            <main className="flex-grow pt-16 sm:pt-18 md:pt-20">{children}</main>
+            <Footer />
+          </div>
+          <FloatingCTAs />
+          <ConversionNotifications />
+          <ABTestDashboard />
+        </ConversionOptimizer>
       </body>
     </html>
   )

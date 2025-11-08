@@ -1,32 +1,32 @@
 
 'use client';
-// Función para enviar eventos a GA4
-type GAEventParams = Record<string, unknown>;
-function sendGAEvent(eventName: string, eventParams: GAEventParams = {}) {
-  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
-    window.gtag('event', eventName, eventParams);
-  }
-}
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { CTAButton, SocialProof } from '@/components/ConversionOptimizer';
+import { useABTestContent, ABTestComponent } from '@/components/ABTesting';
 
 interface HeroProps {
   images?: string[];
 }
 
 const defaultImages = [
-  // Imagen principal Cloudinary
-  'https://res.cloudinary.com/dltfsttr7/image/upload/v1761845419/EudiqHero_i4cxtc.webp',
-  'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1600/v1760204829/IMG_4425-HDR_avmsry.webp',
-  'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1600/v1760204433/IMG_4194-HDR_xjuzwj.jpg',
-  'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1600/v1760204999/IMG_4183-HDR_gs5who.webp',
+  // Imagen principal optimizada para LCP
+  'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1920,c_fill,g_center,ar_16:9/v1761845419/EudiqHero_i4cxtc.webp',
+  'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1920,c_fill,g_center,ar_16:9/v1760204829/IMG_4425-HDR_avmsry.webp',
+  'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1920,c_fill,g_center,ar_16:9/v1760204433/IMG_4194-HDR_xjuzwj.jpg',
+  'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1920,c_fill,g_center,ar_16:9/v1760204999/IMG_4183-HDR_gs5who.webp',
 ];
 
 export default function Hero({ images = defaultImages }: HeroProps) {
   const [current, setCurrent] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
   const total = images.length;
+  
+  // A/B Test content
+  const heroSubtitle = useABTestContent('hero_subtitle');
+  const ctaButtonText = useABTestContent('cta_button_text');
+  const whatsappCTAText = useABTestContent('whatsapp_cta_text');
 
   useEffect(() => {
     setIsLoaded(true);
@@ -52,11 +52,13 @@ export default function Hero({ images = defaultImages }: HeroProps) {
           >
             <Image
               src={img}
-              alt={`Hotel ${idx + 1}`}
+              alt={`Eudiq Hotel Loja - Vista ${idx + 1}`}
               fill
               sizes="100vw"
               className="w-full h-full object-cover"
               priority={idx === 0}
+              loading={idx === 0 ? 'eager' : 'lazy'}
+              fetchPriority={idx === 0 ? 'high' : 'low'}
             />
             {/* Sutil overlay verde y gradiente */}
             <div className="absolute inset-0 bg-[#038C7F]/15" />
@@ -84,35 +86,45 @@ export default function Hero({ images = defaultImages }: HeroProps) {
             Bienvenidos
           </h1>
 
-          {/* Subtitle */}
+          {/* Subtitle con A/B Testing */}
           <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
-            Comodidad, ubicación estratégica y ambiente acogedor.
+            {heroSubtitle}
           </p>
 
-          {/* CTA Buttons */}
+          {/* Social Proof */}
+          <div className="mb-8">
+            <SocialProof />
+          </div>
+
+          {/* CTA Buttons Optimizados */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <a
-              href="#habitaciones"
-              className="group relative px-8 py-4 bg-[#038C7F] text-white font-semibold rounded-full overflow-hidden transition-all hover:scale-105 hover:shadow-2xl hover:shadow-[#038C7F]/50"
+            <CTAButton
+              variant="primary"
+              size="large"
+              href="/habitaciones"
+              section="hero"
+              className="group relative overflow-hidden shadow-2xl"
             >
-              <span className="relative z-10 flex items-center gap-2">
-                Explorar Habitaciones
+              <span className="flex items-center gap-2">
+                {ctaButtonText}
                 <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#038C7F] to-[#A9BF04] opacity-0 group-hover:opacity-100 transition-opacity" />
-            </a>
+            </CTAButton>
             
-            <a
+            <CTAButton
+              variant="whatsapp"
+              size="large"
               href="https://wa.me/593961712106?text=Hola,%20quiero%20reservar%20en%20Eudiq%20Hotel"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 bg-white/10 backdrop-blur-md text-white font-semibold rounded-full border-2 border-white/30 transition-all hover:bg-white/20 hover:border-[#CBD95F] hover:scale-105"
-              onClick={() => sendGAEvent('click_reserva_hero', { section: 'hero', method: 'whatsapp' })}
+              section="hero"
+              className="flex items-center gap-2"
             >
-              Reservar Ahora
-            </a>
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.787"/>
+              </svg>
+              {whatsappCTAText}
+            </CTAButton>
           </div>
 
           {/* Features Pills */}

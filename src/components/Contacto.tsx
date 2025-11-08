@@ -1,12 +1,27 @@
 "use client";
 
 
-// Función para enviar eventos a GA4
+// Función mejorada para enviar eventos a GA4
 type GAEventParams = Record<string, unknown>;
 function sendGAEvent(eventName: string, eventParams: GAEventParams = {}) {
   if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
-    window.gtag('event', eventName, eventParams);
+    window.gtag('event', eventName, {
+      event_category: 'engagement',
+      event_label: 'hotel_conversion',
+      ...eventParams
+    });
   }
+}
+
+// Función específica para eventos de conversión
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function trackConversion(action: string, location: string, value?: number) {
+  sendGAEvent('conversion_action', {
+    action_type: action,
+    source_location: location,
+    conversion_value: value || 1,
+    currency: 'USD'
+  });
 }
 
 

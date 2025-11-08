@@ -6,6 +6,7 @@ import Servicios from '@/components/Servicios';
 import Galeria from '@/components/Galeria';
 import Ubicacion from '@/components/Ubicacion';
 import Testimonios from '@/components/Testimonios';
+import FAQ from '@/components/FAQ';
 import Contacto from '@/components/Contacto';
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <Galeria />
       <Ubicacion />
       <Testimonios />
+      <FAQ />
       <Contacto />
     </main>
   );

@@ -6,7 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "gmb:generate": "node scripts/generar-posts-gmb.js",
+    "gmb:help": "echo 'Comandos GMB disponibles:' && echo '• npm run gmb:generate - Genera posts para 30 días' && echo '• npm run gmb:test - Prueba generación (5 posts)'"
   },
   "dependencies": {
     "clsx": "^2.1.1",

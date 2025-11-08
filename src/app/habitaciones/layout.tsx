@@ -20,18 +20,21 @@ type Habitacion = {
 };
 
 export const metadata = {
-  title: 'Habitaciones | Eudiq Hotel Loja',
-  description: 'Descubre nuestras habitaciones familiares y ejecutivas en Eudiq Hotel Loja. Wi-Fi rápido, desayuno incluido y comodidad total cerca de la terminal terrestre.',
+  title: 'Habitaciones Hotel Loja | Eudiq Hotel Terminal Terrestre',
+  description: 'Habitaciones confortables en Loja cerca del Terminal Terrestre. Familiares, dobles y ejecutivas con desayuno incluido, WiFi gratis. Reservas para graduación UTPL.',
+  alternates: {
+    canonical: 'https://www.hoteleudiq.com/habitaciones',
+  },
   openGraph: {
-    title: 'Habitaciones | Eudiq Hotel Loja',
-    description: 'Elige entre habitaciones familiares, dobles y ejecutivas en Eudiq Hotel Loja. Wi-Fi, desayuno y comodidad total cerca de la terminal terrestre.',
-    url: 'https://eudiqhotel.com/habitaciones',
+    title: 'Habitaciones Hotel Loja | Eudiq Hotel Terminal Terrestre',
+    description: 'Habitaciones confortables cerca del Terminal Terrestre Loja. Familiares, dobles y ejecutivas con desayuno incluido, WiFi gratis.',
+    url: 'https://www.hoteleudiq.com/habitaciones',
     images: ['https://res.cloudinary.com/dltfsttr7/image/upload/v1761845419/EudiqHero_i4cxtc.webp'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Habitaciones | Eudiq Hotel Loja',
-    description: 'Descubre nuestras habitaciones familiares y ejecutivas en Eudiq Hotel Loja. Wi-Fi rápido, desayuno incluido y comodidad total cerca de la terminal terrestre.',
+    title: 'Habitaciones Hotel Loja | Eudiq Hotel Terminal Terrestre',
+    description: 'Habitaciones confortables en Loja cerca del Terminal Terrestre. Desayuno incluido, WiFi gratis. Ideal para graduación UTPL.',
     images: ['https://res.cloudinary.com/dltfsttr7/image/upload/v1761845419/EudiqHero_i4cxtc.webp'],
   },
 };
@@ -72,7 +75,7 @@ export default function HabitacionesLayout({
         'price': String(hab.precio),
         'priceCurrency': 'USD',
         'availability': 'https://schema.org/InStock',
-        'url': `https://eudiqhotel.com/habitaciones#${hab.nombre.toLowerCase().replace(/\s+/g, '-')}`,
+        'url': `https://www.hoteleudiq.com/habitaciones#${hab.nombre.toLowerCase().replace(/\s+/g, '-')}`,
       },
     })),
   };

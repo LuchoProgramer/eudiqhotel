@@ -52,12 +52,12 @@ export default function ExperienciaUnica() {
             <div className="relative">
               <div className="relative w-full h-[400px] md:h-[500px]">
                 <Image
-                  src="https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1760204433/IMG_4194-HDR_xjuzwj.jpg"
-                  alt="Interior del hotel"
+                  src="https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_800,c_fill,g_center/v1760204433/IMG_4194-HDR_xjuzwj.jpg"
+                  alt="Interior confortable de Eudiq Hotel Loja"
                   fill
                   className="rounded-3xl shadow-2xl object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  priority
+                  loading="lazy"
                 />
                 {/* Overlay verde 15% */}
                 <div className="absolute inset-0 rounded-3xl bg-[#038C7F]/8 pointer-events-none" />
@@ -73,13 +73,12 @@ export default function ExperienciaUnica() {
             
             <p className="text-lg text-gray-700 leading-relaxed">
               En Eudiq Hotel, cada detalle ha sido cuidadosamente pensado para ofrecerte 
-              una experiencia inolvidable. Desde nuestras habitaciones elegantemente 
-              diseñadas hasta nuestro servicio personalizado, todo está creado para que 
+              una experiencia inolvidable. Desde nuestras <a href="/habitaciones" className="text-[#038C7F] hover:underline font-medium" title="Ver habitaciones del hotel">habitaciones confortables</a> hasta nuestro <a href="/servicios" className="text-[#038C7F] hover:underline font-medium" title="Conocer servicios del hotel">servicio personalizado</a>, todo está creado para que 
               te sientas como en casa.
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed">
-              Ubicados estratégicamente en Avenida 8 de diciembre y Juan José Flores diagonal a la Terminal Terrestre. Estamos a solo 200 metros del parque recreacional Jipiro y cerca del Complejo ferial Simón Bolívar, teatro Benjamín Carrión, Terminal Terrestre y zonas comerciales.
+              Ubicados estratégicamente en <a href="/ubicacion" className="text-[#038C7F] hover:underline font-medium" title="Ver ubicación del hotel">Avenida 8 de diciembre y Juan José Flores diagonal a la Terminal Terrestre</a>. Estamos a solo 200 metros del parque recreacional Jipiro y cerca del Complejo ferial Simón Bolívar, teatro Benjamín Carrión, Terminal Terrestre y zonas comerciales. Perfecto para <a href="/blog/graduacion-utpl-donde-hospedarse-loja" className="text-[#038C7F] hover:underline font-medium" title="Guía graduación UTPL">graduaciones UTPL</a>.
             </p>
 
             {/* Features */}

@@ -4,7 +4,7 @@ import type { NextRequest } from 'next/server';
 export function middleware(request: NextRequest) {
   const host = request.headers.get('host');
   // Cambia esto por tu dominio principal
-  const primaryDomain = 'hoteleudiq.com';
+  const primaryDomain = 'www.hoteleudiq.com';
 
   if (host && host.endsWith('.vercel.app')) {
     // Redirige a .com manteniendo el path y query
