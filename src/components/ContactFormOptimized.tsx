@@ -246,7 +246,6 @@ ${formData.mensaje || 'Sin mensaje adicional'}
       {/* Header con progreso */}
       <div className="bg-gradient-to-r from-[#038C7F] to-[#CBD95F] p-6 text-white">
         <h3 className="text-xl font-bold mb-2">Reserva Directa</h3>
-        <p className="text-white/90 text-sm">Sin comisiones • Mejor precio garantizado</p>
         
         {/* Barra de progreso */}
         <div className="mt-4 flex justify-between items-center">

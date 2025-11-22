@@ -254,7 +254,7 @@ export function SocialProof() {
       recent: true
     },
     {
-      text: "El café Viviates es increíble. La mejor atención en Loja.",
+      text: "La cafetería Viviates es increíble. La mejor atención en Loja.",
       author: "Carlos M.",
       rating: 5,
       recent: true
@@ -397,8 +397,7 @@ function ConversionOptimizer({ children }: { children: React.ReactNode }) {
   return (
     <>
       {children}
-      <UrgencyBanner />
-      <ExitIntentModal />
+      {/* UrgencyBanner removido según feedback cliente */}
     </>
   );
 }
@@ -414,7 +413,7 @@ export function TopContactBar() {
           </span>
           <span className="hidden sm:inline">•</span>
           <span className="hidden md:flex items-center gap-1">
-            📧 info@hoteleudiq.com
+            📧 eudiqhotel@gmail.com
           </span>
           <span className="hidden sm:inline md:inline">•</span>
           <span className="flex items-center gap-1">

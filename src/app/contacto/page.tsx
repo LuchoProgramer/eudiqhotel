@@ -34,22 +34,6 @@ export default function ContactoPage() {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Contacto directo con Eudiq Hotel. Mejor precio garantizado, respuesta inmediata y atención personalizada.
           </p>
-
-          {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto mb-12">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-[#038C7F]">&lt; 5min</div>
-              <div className="text-sm text-gray-600">Respuesta promedio</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-[#038C7F]">24/7</div>
-              <div className="text-sm text-gray-600">Atención WhatsApp</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-[#038C7F]">0%</div>
-              <div className="text-sm text-gray-600">Comisiones extra</div>
-            </div>
-          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -94,33 +78,6 @@ export default function ContactoPage() {
                   💬 Chatear por WhatsApp
                 </CTAButton>
               </div>
-
-              {/* Teléfono */}
-              <div className="bg-gradient-to-r from-[#4285F4]/10 to-[#4285F4]/5 rounded-xl p-6 mb-6">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-[#4285F4] rounded-full flex items-center justify-center">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-gray-900">Llamada Directa</h3>
-                    <p className="text-sm text-gray-600">+593 96 171 2106</p>
-                  </div>
-                </div>
-                <p className="text-gray-700 mb-4">
-                  Horario de atención: 7:00 AM - 10:00 PM todos los días. Fuera de horario, puedes dejar mensaje por WhatsApp.
-                </p>
-                <CTAButton
-                  variant="phone"
-                  size="large"
-                  href="tel:+593961712106"
-                  section="contact_page"
-                  className="w-full"
-                >
-                  📞 Llamar Ahora
-                </CTAButton>
-              </div>
             </div>
 
             {/* Información Adicional */}
@@ -137,8 +94,8 @@ export default function ContactoPage() {
                   </div>
                   <div>
                     <div className="font-medium text-gray-900">Ubicación</div>
+                    <div className="text-gray-600 text-sm">Av. 8 de Diciembre y Juan José Flores</div>
                     <div className="text-gray-600 text-sm">Diagonal al Terminal Terrestre de Loja</div>
-                    <div className="text-gray-600 text-sm">200 metros del Parque Jipiro</div>
                   </div>
                 </div>
 
@@ -150,8 +107,8 @@ export default function ContactoPage() {
                   </div>
                   <div>
                     <div className="font-medium text-gray-900">Check-in / Check-out</div>
-                    <div className="text-gray-600 text-sm">Check-in: 14:00 hrs</div>
-                    <div className="text-gray-600 text-sm">Check-out: 12:00 hrs</div>
+                    <div className="text-gray-600 text-sm">Check-in y check-out: 12:00 PM</div>
+                    <div className="text-gray-600 text-sm">(a la hora que ingresan)</div>
                   </div>
                 </div>
 
@@ -165,33 +122,6 @@ export default function ContactoPage() {
                     <div className="font-medium text-gray-900">Servicios Incluidos</div>
                     <div className="text-gray-600 text-sm">WiFi gratis • Desayuno • Estacionamiento</div>
                   </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Testimonios */}
-            <div className="bg-gradient-to-r from-[#CBD95F]/10 to-[#038C7F]/10 rounded-xl p-6">
-              <h3 className="font-bold text-gray-900 mb-4">Lo que dicen nuestros huéspedes</h3>
-              
-              <div className="space-y-4">
-                <div className="bg-white/50 rounded-lg p-4">
-                  <div className="flex text-yellow-400 mb-2">
-                    ⭐⭐⭐⭐⭐
-                  </div>
-                  <p className="text-gray-700 text-sm italic mb-2">
-                    &ldquo;Excelente ubicación, muy cerca del terminal. Personal súper amable y las habitaciones muy limpias.&rdquo;
-                  </p>
-                  <p className="text-gray-600 text-xs">- María González</p>
-                </div>
-                
-                <div className="bg-white/50 rounded-lg p-4">
-                  <div className="flex text-yellow-400 mb-2">
-                    ⭐⭐⭐⭐⭐
-                  </div>
-                  <p className="text-gray-700 text-sm italic mb-2">
-                    &ldquo;El café Viviates es increíble. Perfecto para graduaciones UTPL, está súper cerca de todo.&rdquo;
-                  </p>
-                  <p className="text-gray-600 text-xs">- Carlos Mendoza</p>
                 </div>
               </div>
             </div>

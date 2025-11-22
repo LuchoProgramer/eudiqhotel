@@ -60,8 +60,8 @@ export default function Contacto() {
     {
       icon: Mail,
       titulo: 'Email',
-      info: 'info@eudiqhotel.com',
-      link: 'mailto:info@eudiqhotel.com',
+      info: 'eudiqhotel@gmail.com',
+      link: 'mailto:eudiqhotel@gmail.com',
     },
     {
       icon: MapPin,
@@ -193,7 +193,7 @@ export default function Contacto() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-white mt-1">✓</span>
-                  <span>Cancelación gratuita hasta 24h antes</span>
+                  <span>Cancelación gratuita hasta 48h antes</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-white mt-1">✓</span>

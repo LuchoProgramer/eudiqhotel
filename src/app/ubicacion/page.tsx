@@ -7,13 +7,13 @@ const puntosInteres = [
     descripcion: 'Ideal para viajeros, a solo unos pasos del hotel.',
   },
   {
-    nombre: 'Parque Central de Loja',
+    nombre: 'Parque Jipiro',
     distancia: '10 min en taxi',
-    descripcion: 'El corazón de la ciudad, rodeado de historia y cultura.',
+    descripcion: 'Hermoso parque recreacional con actividades para toda la familia.',
   },
   {
     nombre: 'Puerta de la Ciudad',
-    distancia: '8 min en taxi',
+    distancia: '5 min en taxi',
     descripcion: 'Icono arquitectónico y punto turístico imperdible.',
   },
   {
@@ -22,7 +22,7 @@ const puntosInteres = [
     descripcion: 'Centro académico de referencia en la región.',
   },
   {
-    nombre: 'Café Viviates',
+    nombre: 'Cafetería Viviates',
     distancia: 'Dentro del hotel',
     descripcion: 'Disfruta del mejor café lojano sin salir del hotel.',
   },
@@ -69,11 +69,11 @@ export default function UbicacionPage() {
           <li>
             <strong>Teléfono</strong>:{' '}
             <a
-              href="tel:+59372614151"
+              href="tel:+593961712106"
               className="text-primary underline hover:text-primary-dark"
               onClick={() => sendGAEvent('click_telefono_ubicacion', { section: 'ubicacion', method: 'telefono' })}
             >
-              +593 7 261-4151
+              +593 96 171 2106
             </a>
             {' '} (Llama para reservas o información)
           </li>
@@ -93,13 +93,6 @@ export default function UbicacionPage() {
           onClick={() => sendGAEvent('click_reserva_ubicacion', { section: 'ubicacion', method: 'whatsapp' })}
         >
           Solicita tu reserva por WhatsApp
-        </a>
-        <a
-          href="tel:+59372614151"
-          className="bg-[#038C7F] text-white px-6 py-3 rounded text-lg font-bold hover:bg-[#CBD95F] hover:text-[#222] transition"
-          onClick={() => sendGAEvent('click_transporte_ubicacion', { section: 'ubicacion', method: 'telefono_transporte' })}
-        >
-          Solicitar transporte (llamar)
         </a>
       </div>
     </main>

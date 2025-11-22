@@ -134,7 +134,7 @@ export const GMB_DATA = {
   social: {
     facebook: 'https://facebook.com/eudiqhotel',
     instagram: 'https://instagram.com/eudiqhotel',
-    whatsapp: 'https://wa.me/593726141151'
+    whatsapp: 'https://wa.me/593961712106'
   }
 };
 

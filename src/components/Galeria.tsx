@@ -4,17 +4,17 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import Image from 'next/image';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
-const categorias = ['Todas', 'Habitaciones', 'Café Viviates', 'Restaurante', 'Instalaciones'];
+const categorias = ['Todas', 'Habitaciones', 'Cafetería Viviates', 'Instalaciones'];
 
 const galeriaFotos = [
-  // Fotos reales de Café Viviates
-  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847748/WhatsApp_Image_2025-10-29_at_19.40.30_1_qshs8i.jpg', categoria: 'Café Viviates', alt: 'Café Viviates - barra y ambiente moderno' },
-  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847734/WhatsApp_Image_2025-10-29_at_19.40.30_2_vyyw9k.jpg', categoria: 'Café Viviates', alt: 'Café Viviates - vista de la cafetería' },
-  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847772/WhatsApp_Image_2025-10-29_at_19.40.28_2_vo2mtv.jpg', categoria: 'Café Viviates', alt: 'Café Viviates - decoración y detalles' },
-  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847761/WhatsApp_Image_2025-10-29_at_19.40.29_1_hywgib.jpg', categoria: 'Café Viviates', alt: 'Café Viviates - café y postres' },
+  // Fotos reales de Cafetería Viviates
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847748/WhatsApp_Image_2025-10-29_at_19.40.30_1_qshs8i.jpg', categoria: 'Cafetería Viviates', alt: 'Cafetería Viviates - barra y ambiente moderno' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847734/WhatsApp_Image_2025-10-29_at_19.40.30_2_vyyw9k.jpg', categoria: 'Cafetería Viviates', alt: 'Cafetería Viviates - vista de la cafetería' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847772/WhatsApp_Image_2025-10-29_at_19.40.28_2_vo2mtv.jpg', categoria: 'Cafetería Viviates', alt: 'Cafetería Viviates - decoración y detalles' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847761/WhatsApp_Image_2025-10-29_at_19.40.29_1_hywgib.jpg', categoria: 'Cafetería Viviates', alt: 'Cafetería Viviates - café y postres' },
   { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1760204433/IMG_4194-HDR_xjuzwj.jpg', categoria: 'Sala', alt: 'Sala Recepcion' },
-  // Foto de Café Viviates eliminada (no es real)
-  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847767/WhatsApp_Image_2025-10-29_at_19.40.29_dadbdl.jpg', categoria: 'Café Viviates', alt: 'Café Viviates - café servido' },
+  // Foto de Cafetería Viviates eliminada (no es real)
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847767/WhatsApp_Image_2025-10-29_at_19.40.29_dadbdl.jpg', categoria: 'Cafetería Viviates', alt: 'Cafetería Viviates - café servido' },
   { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761843579/Imagen_de_WhatsApp_2025-10-29_a_las_19.43.22_2904e769_vhu9hl.jpg', categoria: 'Eudiq Hotel', alt: 'Fachada - vista desde habitación doble' },
   { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1760204555/IMG_4600_q2teiy.jpg', categoria: 'Habitaciones', alt: 'Habitación ejecutiva' },
   { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/c_fill,g_center,z_0.8,h_900,w_506,q_auto,f_webp/v1760204829/IMG_4425-HDR_avmsry.webp', categoria: 'Instalaciones', alt: 'Recepción (formato móvil, centrado, zoom out)' },

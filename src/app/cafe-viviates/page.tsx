@@ -6,9 +6,9 @@ import ConversionOptimizer, { CTAButton } from '@/components/ConversionOptimizer
 import { DynamicOffersSection } from '@/components/CafeDynamicOffers';
 
 export const metadata = {
-  title: 'Café Viviates Loja | Abierto 5:30 AM | El Mejor Café de Especialidad',
-  description: 'Café Viviates en Eudiq Hotel: abierto desde 5:30 AM, café lojano premium, desayunos express para viajeros, WiFi premium y ambiente profesional. Centro de Loja.',
-  keywords: 'café loja, desayuno temprano, café especialidad, wifi loja, café viajeros, desayuno terminal terrestre'
+  title: 'Cafetería Viviates Loja | Abierto 7:00 AM | El Mejor Café de Especialidad',
+  description: 'Cafetería Viviates en Eudiq Hotel: abierto desde 7:00 AM, café lojano premium, desayunos y cafetería especializada. Lunes a Sábado. Centro de Loja.',
+  keywords: 'cafetería loja, desayuno, café especialidad, wifi loja, café viajeros, desayuno terminal terrestre'
 };
 
 
@@ -16,76 +16,55 @@ export const metadata = {
 export default function CafeViviatesLanding() {
   return (
     <ConversionOptimizer>
-      <div className="min-h-screen bg-gradient-to-b from-amber-50 to-orange-50">
+      <div className="min-h-screen bg-[#F2F2F2]">
         
         {/* Hero Section - Optimizado para conversión */}
-        <section className="relative py-16 bg-gradient-to-r from-amber-600 to-orange-600 text-white overflow-hidden">
-          <div className="absolute inset-0 bg-black/20"></div>
+        <section className="relative py-16 bg-[#038C7F] text-white overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#A9BF04]/30"></div>
           <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 {/* Badge urgencia */}
-                <div className="inline-flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                <div className="inline-flex items-center gap-2 bg-[#CBD95F] text-gray-900 px-4 py-2 rounded-full text-sm font-semibold mb-6 mt-2">
                   <Clock className="h-4 w-4" />
-                  ABIERTO AHORA • 5:30 AM - 10:00 PM
+                  ABIERTO • L-S: 7AM-11AM y 4PM-9PM
                 </div>
                 
                 <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-                  ☕ <span className="text-yellow-300">Café Viviates</span><br/>
+                  ☕ <span className="text-[#CBD95F]">Cafetería Viviates</span><br/>
                   El Mejor Café de Loja
                 </h1>
                 
-                <p className="text-xl mb-8 text-amber-100">
-                  <strong>¡Desayuno desde las 5:30 AM!</strong> Café lojano premium, ambiente profesional y la mejor ubicación del centro. Perfecto para viajeros, trabajadores y amantes del café.
+                <p className="text-xl mb-8 text-white/90">
+                  <strong>¡Desayuno desde las 7:00 AM!</strong> Café lojano premium, ambiente acogedor y la mejor ubicación del centro. Perfecto para viajeros, trabajadores y amantes del café.
                 </p>
 
                 {/* Beneficios clave */}
                 <div className="grid md:grid-cols-2 gap-4 mb-8">
-                  <div className="flex items-center gap-3 text-amber-100">
-                    <CheckCircle className="h-5 w-5 text-yellow-300" />
-                    <span className="font-medium">Abierto desde 5:30 AM</span>
+                  <div className="flex items-center gap-3 text-white/90">
+                    <CheckCircle className="h-5 w-5 text-[#CBD95F]" />
+                    <span className="font-medium">Abierto desde 7:00 AM</span>
                   </div>
-                  <div className="flex items-center gap-3 text-amber-100">
-                    <CheckCircle className="h-5 w-5 text-yellow-300" />
+                  <div className="flex items-center gap-3 text-white/90">
+                    <CheckCircle className="h-5 w-5 text-[#CBD95F]" />
                     <span className="font-medium">WiFi Premium Gratuito</span>
                   </div>
-                  <div className="flex items-center gap-3 text-amber-100">
-                    <CheckCircle className="h-5 w-5 text-yellow-300" />
+                  <div className="flex items-center gap-3 text-white/90">
+                    <CheckCircle className="h-5 w-5 text-[#CBD95F]" />
                     <span className="font-medium">Centro Histórico</span>
                   </div>
-                  <div className="flex items-center gap-3 text-amber-100">
-                    <CheckCircle className="h-5 w-5 text-yellow-300" />
+                  <div className="flex items-center gap-3 text-white/90">
+                    <CheckCircle className="h-5 w-5 text-[#CBD95F]" />
                     <span className="font-medium">Café Lojano 100%</span>
                   </div>
                 </div>
 
-                {/* CTAs principales */}
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <CTAButton
-                    variant="whatsapp"
-                    size="large"
-                    href="https://wa.me/593961712106?text=Hola,%20quiero%20información%20del%20menú%20de%20Café%20Viviates%20-%20desayuno%20temprano"
-                    section="cafe_hero"
-                    className="flex items-center gap-2"
-                  >
-                    📱 Ver Menú por WhatsApp
-                  </CTAButton>
-                  
-                  <CTAButton
-                    variant="phone"
-                    size="large" 
-                    href="tel:+593961712106"
-                    section="cafe_hero"
-                    className="flex items-center gap-2"
-                  >
-                    📞 Llamar Ahora
-                  </CTAButton>
-                </div>
-
-                {/* Social proof */}
-                <div className="flex items-center gap-4 mt-6 text-amber-100">
-                  <div className="flex text-yellow-300">⭐⭐⭐⭐⭐</div>
-                  <span className="text-sm">Más de 200 reseñas positivas</span>
+                {/* Horarios destacados */}
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-white/90">
+                  <p className="font-semibold mb-2">📅 Horarios:</p>
+                  <p>🌅 Mañana: 7:00 AM - 11:00 AM</p>
+                  <p>🌆 Tarde: 4:00 PM - 9:00 PM</p>
+                  <p className="text-sm mt-2">Lunes a Sábado • Domingos cerrado</p>
                 </div>
               </div>
 
@@ -107,11 +86,10 @@ export default function CafeViviatesLanding() {
           </div>
         </section>
 
-        {/* Ofertas dinámicas por horario - Estrategia del 1% */}
-        <DynamicOffersSection />
+        {/* Ofertas dinámicas removidas según feedback cliente */}
 
         {/* Menú Premium - Visual mejorado */}
-        <section className="py-16 bg-gradient-to-r from-amber-50 to-orange-50">
+        <section className="py-16 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -133,174 +111,39 @@ export default function CafeViviatesLanding() {
                 { emoji: '🥐', name: 'Panadería Fresh', price: '$1.00', desc: 'Horneado cada mañana' },
                 { emoji: '🍵', name: 'Té e Infusiones', price: '$2.00', desc: 'Hierbas medicinales locales' }
               ].map((item, index) => (
-                <div key={index} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow border border-amber-200">
+                <div key={index} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow border border-[#038C7F]/20">
                   <div className="text-4xl mb-3 text-center">{item.emoji}</div>
                   <h3 className="font-bold text-gray-900 mb-1 text-center">{item.name}</h3>
-                  <p className="text-2xl font-bold text-orange-600 mb-2 text-center">{item.price}</p>
+                  <p className="text-2xl font-bold text-[#038C7F] mb-2 text-center">{item.price}</p>
                   <p className="text-xs text-gray-600 text-center">{item.desc}</p>
                 </div>
               ))}
             </div>
 
             <div className="text-center">
-              <CTAButton
-                variant="whatsapp"
-                size="large"
-                href="https://wa.me/593961712106?text=Hola,%20quiero%20ver%20el%20menú%20completo%20de%20Café%20Viviates%20con%20precios"
-                section="cafe_menu"
-                className="mb-4"
-              >
-                📋 Ver Menú Completo por WhatsApp
-              </CTAButton>
-              <p className="text-sm text-gray-600">Menú actualizado diariamente • Precios incluyen IVA</p>
+              <p className="text-gray-600">Menú actualizado diariamente • Precios incluyen IVA</p>
             </div>
           </div>
         </section>
 
-        {/* Testimonios de clientes reales */}
-        <section className="py-16 bg-white">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                💬 Lo que dicen nuestros clientes
-              </h2>
-            </div>
+        {/* Testimonios removidos según feedback cliente - esperar reseñas reales */}
 
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-gradient-to-br from-orange-50 to-amber-50 p-6 rounded-xl shadow-sm">
-                <div className="flex text-yellow-500 mb-3">⭐⭐⭐⭐⭐</div>
-                <p className="text-gray-700 mb-4 italic">
-                  "Perfecto para trabajar temprano. El WiFi es súper rápido y el café lojano es el mejor que he probado. ¡Volveré todas las mañanas!"
-                </p>
-                <p className="font-semibold text-orange-600">- María Elena, Profesional</p>
-                <p className="text-sm text-gray-500">Cliente habitual • 6:30 AM</p>
-              </div>
-              
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl shadow-sm">
-                <div className="flex text-yellow-500 mb-3">⭐⭐⭐⭐⭐</div>
-                <p className="text-gray-700 mb-4 italic">
-                  "Llegué a las 5:45 AM antes de mi bus y me atendieron perfecto. El desayuno express me salvó el viaje. Súper recomendado."
-                </p>
-                <p className="font-semibold text-blue-600">- Carlos Mendoza, Viajero</p>
-                <p className="text-sm text-gray-500">Guayaquil • Madrugador</p>
-              </div>
-              
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl shadow-sm">
-                <div className="flex text-yellow-500 mb-3">⭐⭐⭐⭐⭐</div>
-                <p className="text-gray-700 mb-4 italic">
-                  "Ambiente perfecto para el Festival de Artes. Los postres artesanales y el café cultural son una experiencia única en Loja."
-                </p>
-                <p className="font-semibold text-purple-600">- Ana Torres, Artista</p>
-                <p className="text-sm text-gray-500">Cuenca • Experiencia Cultural</p>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Ubicación removida - no necesaria en sección de cafetería según cliente */}
 
-        {/* Ubicación estratégica */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                  📍 Ubicación Privilegiada
-                </h2>
-                
-                <div className="space-y-4 mb-8">
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
-                      <MapPin className="h-4 w-4 text-orange-600" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-gray-900">Centro Histórico de Loja</p>
-                      <p className="text-sm text-gray-600">Av. 8 de Diciembre y Juan José Flores</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                      <Clock className="h-4 w-4 text-blue-600" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-gray-900">Horarios Extendidos</p>
-                      <p className="text-sm text-gray-600">Lunes a Domingo: 5:30 AM - 10:00 PM</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                      <Wifi className="h-4 w-4 text-green-600" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-gray-900">WiFi Ultra Rápido</p>
-                      <p className="text-sm text-gray-600">Perfecto para trabajo remoto y videollamadas</p>
-                    </div>
-                  </div>
-                </div>
-
-                <CTAButton
-                  variant="secondary"
-                  size="large"
-                  href="https://maps.app.goo.gl/eudiqhotel"
-                  section="cafe_ubicacion"
-                  className="mb-4"
-                >
-                  🗺️ Ver en Google Maps
-                </CTAButton>
-              </div>
-
-              <div className="relative">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8174!2d-79.2!3d-4.0!2z!5e0!3m2!1ses!2sec!4v1699999999999!5m2!1ses!2sec"
-                  width="100%"
-                  height="400"
-                  className="rounded-xl shadow-lg"
-                  loading="lazy"
-                  title="Ubicación Café Viviates - Eudiq Hotel Loja"
-                />
-                
-                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-sm">
-                  <p className="text-sm font-semibold text-gray-900">🚶‍♂️ 2 min de la Terminal</p>
-                  <p className="text-xs text-gray-600">🏛️ Centro histórico</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Final - Urgencia */}
-        <section className="py-16 bg-gradient-to-r from-orange-600 to-amber-600 text-white">
+        {/* CTA Final removido - no necesario apartado de reservas según cliente */}
+        <section className="py-16 bg-gradient-to-r from-[#038C7F]/10 to-[#CBD95F]/10">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              ☕ ¿Listo para la mejor experiencia de café en Loja?
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+              ☕ Visítanos en Cafetería Viviates
             </h2>
-            <p className="text-xl text-orange-100 mb-8">
-              <strong>Abierto desde las 5:30 AM</strong> • WiFi Premium • Ambiente profesional • Centro de Loja
+            <p className="text-xl text-gray-700 mb-4">
+              <strong>Lunes a Sábado</strong> • 7AM-11AM y 4PM-9PM
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <CTAButton
-                variant="whatsapp"
-                size="large"
-                href="https://wa.me/593961712106?text=Hola,%20quiero%20reservar%20mesa%20en%20Café%20Viviates%20-%20horario%20y%20ofertas%20disponibles"
-                section="cafe_final"
-                className="flex items-center justify-center gap-2"
-              >
-                💬 Reservar Mesa por WhatsApp
-              </CTAButton>
-              
-              <CTAButton
-                variant="phone"
-                size="large"
-                href="tel:+593961712106"
-                section="cafe_final"
-                className="flex items-center justify-center gap-2"
-              >
-                📞 +593 96 171 2106
-              </CTAButton>
-            </div>
+            <p className="text-gray-600 mb-4">
+              Av. 8 de Diciembre y Juan José Flores • Diagonal a la Terminal Terrestre
+            </p>
 
-            <p className="text-sm text-orange-200">
+            <p className="text-sm text-[#038C7F]">
               ☕ Café lojano premium • 🥐 Comida casera • 💻 WiFi ultra rápido • 🎨 Ambiente único
             </p>
           </div>

@@ -104,8 +104,8 @@ export default function RootLayout({
               "latitude": -4.0039,
               "longitude": -79.2089
             },
-            "telephone": "+593726141151",
-            "email": "info@hoteleudiq.com",
+            "telephone": "+593961712106",
+            "email": "eudiqhotel@gmail.com",
             "url": "https://www.hoteleudiq.com/",
             "priceRange": "$$",
             "starRating": {
@@ -164,22 +164,21 @@ export default function RootLayout({
               "worstRating": "1"
             },
             "sameAs": [
-              "https://wa.me/593726141151"
+              "https://wa.me/593961712106"
             ]
           })}
         </script>
       </head>
       <body className={cn(inter.className, 'bg-neutral min-h-screen flex flex-col')}>
         <ConversionOptimizer>
-          <TopContactBar />
-          <div className="pt-10">
+          {/* TopContactBar quitado - entorpece visualización según feedback cliente */}
+          <div>
             <Navbar />
-            <main className="flex-grow pt-16 sm:pt-18 md:pt-20">{children}</main>
+            <main className="flex-grow">{children}</main>
             <Footer />
           </div>
-          <FloatingCTAs />
-          <ConversionNotifications />
-          <ABTestDashboard />
+          {/* FloatingCTAs, ConversionNotifications quitados - molestos para usuario */}
+          {/* BottomNavigation mantener solo para móvil */}
           <BottomNavigation />
         </ConversionOptimizer>
       </body>

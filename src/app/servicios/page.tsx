@@ -17,12 +17,7 @@ const servicios = [
     icono: '🚗',
   },
   {
-    nombre: 'Aire Acondicionado',
-    descripcion: 'Ambientes climatizados para tu máximo confort en cualquier época del año.',
-    icono: '❄️',
-  },
-  {
-    nombre: 'Café Viviates',
+    nombre: 'Cafetería Viviates',
     descripcion: 'Disfruta de nuestro café de especialidad 100% lojano en el lobby o en tu habitación.',
     icono: '☕',
   },
@@ -30,11 +25,6 @@ const servicios = [
     nombre: 'Lavandería',
     descripcion: 'Servicio de lavado y planchado disponible para estancias largas o viajes de negocios.',
     icono: '🧺',
-  },
-  {
-    nombre: 'Seguridad 24h',
-    descripcion: 'Personal y sistemas de seguridad activos las 24 horas para tu tranquilidad.',
-    icono: '🛡️',
   },
   {
     nombre: 'Atención personalizada',

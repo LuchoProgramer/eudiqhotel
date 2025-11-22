@@ -10,7 +10,7 @@ export async function GET() {
   const publico = 'Viajeros, turistas, familias y ejecutivos que buscan comodidad y servicios completos en Loja.';
   const whatsapp = '[+593 961 712 106](https://wa.me/593961712106)';
   const direccion = '[Avenida 8 de diciembre y Juan José Flores diagonal a la Terminal Terrestre, Loja, Ecuador](https://maps.app.goo.gl/5dCMqMs8TNnuUAXU7)';
-  const email = '[info@eudiqhotel.com](mailto:info@eudiqhotel.com)';
+  const email = '[eudiqhotel@gmail.com](mailto:eudiqhotel@gmail.com)';
 
   // Servicios principales
   const servicios = [

@@ -18,7 +18,7 @@ const navLinks = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
-  <nav className="fixed top-10 left-0 w-full z-40 bg-white/95 backdrop-blur-md border-b border-[#CBD95F]/30 shadow-lg">
+  <nav className="fixed top-0 left-0 w-full z-40 bg-white/95 backdrop-blur-md border-b border-[#CBD95F]/30 shadow-lg">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-3 md:py-4">
         {/* Logo */}
         <Link href="/" className="flex items-center flex-shrink-0" aria-label="Inicio">

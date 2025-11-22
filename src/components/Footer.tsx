@@ -31,20 +31,20 @@ export default function Footer() {
           </p>
           <p>
             Tel: <a
-              href="tel:+593726141151"
+              href="tel:+593961712106"
               className="underline hover:text-green-300"
               onClick={() => sendGAEvent('click_llamar_hotel', { section: 'footer', action: 'telefono' })}
             >
-              +593 7 261 4115
+              +593 96 171 2106
             </a>
           </p>
           <p>
             Email: <a
-              href="mailto:info@eudiqhotel.com"
+              href="mailto:eudiqhotel@gmail.com"
               className="underline hover:text-green-300"
               onClick={() => sendGAEvent('click_email_hotel', { section: 'footer', action: 'email' })}
             >
-              info@eudiqhotel.com
+              eudiqhotel@gmail.com
             </a>
           </p>
         </div>
@@ -53,7 +53,7 @@ export default function Footer() {
           <ul className="space-y-1">
             <li><a href="/habitaciones" className="hover:underline hover:text-green-300">Habitaciones</a></li>
             <li><a href="/servicios" className="hover:underline hover:text-green-300">Servicios</a></li>
-            <li><a href="/cafe-viviates" className="hover:underline hover:text-green-300">Café Viviates</a></li>
+            <li><a href="/cafe-viviates" className="hover:underline hover:text-green-300">Cafetería Viviates</a></li>
             <li><a href="/ubicacion" className="hover:underline hover:text-green-300">Ubicación</a></li>
             <li><Link href="/blog" className="hover:underline hover:text-green-300">Blog</Link></li>
           </ul>
@@ -81,7 +81,7 @@ export default function Footer() {
               <svg width="24" height="24" fill="currentColor"><path d="M22 12c0-5.522-4.477-10-10-10S2 6.478 2 12c0 4.991 3.657 9.128 8.438 9.877v-6.987h-2.54v-2.89h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.242 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.987C18.343 21.128 22 16.991 22 12"/></svg>
             </a>
             <a
-              href="https://www.instagram.com/eudiqhotel"
+              href="https://www.instagram.com/hoteleudiq"
               target="_blank"
               rel="noopener"
               aria-label="Instagram"

@@ -5,7 +5,6 @@ import Habitaciones from '@/components/Habitaciones';
 import Servicios from '@/components/Servicios';
 import Galeria from '@/components/Galeria';
 import Ubicacion from '@/components/Ubicacion';
-import Testimonios from '@/components/Testimonios';
 import FAQ from '@/components/FAQ';
 import Contacto from '@/components/Contacto';
 
@@ -18,7 +17,7 @@ export default function Home() {
       <Servicios />
       <Galeria />
       <Ubicacion />
-      <Testimonios />
+      {/* Testimonios removido - todos 5 estrellas parecen sospechosos según feedback cliente */}
       <FAQ />
       <Contacto />
     </main>

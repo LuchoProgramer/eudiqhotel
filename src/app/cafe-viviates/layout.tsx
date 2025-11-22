@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 
 export const metadata = {
-  title: 'Café Viviates Loja | Desayuno Lojano y Café de Especialidad',
-  description: 'Café Viviates en Loja: desayuno tradicional lojano, café de especialidad, bocaditos típicos. Ubicado en Eudiq Hotel cerca del Terminal Terrestre.',
+  title: 'Cafetería Viviates Loja | Desayuno Lojano y Café de Especialidad',
+  description: 'Cafetería Viviates en Loja: desayuno tradicional lojano, café de especialidad, bocaditos típicos. Ubicado en Eudiq Hotel cerca del Terminal Terrestre.',
   alternates: {
     canonical: 'https://www.hoteleudiq.com/cafe-viviates',
   },
@@ -17,7 +17,7 @@ export default function CafeViviatesLayout({ children }: { children: ReactNode }
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CafeOrCoffeeShop",
-            "name": "Cafetería Café Viviates",
+            "name": "Cafetería Viviates",
             "image": [
               "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80",
               "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=80"
@@ -32,13 +32,8 @@ export default function CafeViviatesLayout({ children }: { children: ReactNode }
             },
             "telephone": "+593961712106",
             "url": "https://www.hoteleudiq.com/cafe-viviates",
-            "openingHours": "Mo-Su 06:00-12:00",
-            "priceRange": "$",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "reviewCount": "37"
-            }
+            "openingHours": ["Mo-Sa 07:00-11:00", "Mo-Sa 16:00-21:00"],
+            "priceRange": "$"
           })
         }}
       />

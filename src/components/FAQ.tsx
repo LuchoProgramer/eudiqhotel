@@ -12,17 +12,17 @@ type FAQItem = {
 const FAQ_DATA: FAQItem[] = [
   {
     question: "¿Está incluido el desayuno en todas las habitaciones?",
-    answer: "Sí, todas nuestras habitaciones incluyen desayuno tradicional lojano sin costo adicional. Se sirve de 6:00 AM a 10:00 AM.",
+    answer: "Sí, todas nuestras habitaciones incluyen desayuno tradicional lojano sin costo adicional. Se sirve de 7:00 AM a 9:00 AM.",
     category: "servicios"
   },
   {
     question: "¿Cuánto cuesta el estacionamiento?",
-    answer: "El estacionamiento es completamente gratuito para todos nuestros huéspedes. Contamos con espacios seguros y vigilados las 24 horas.",
+    answer: "El estacionamiento está incluido para todos nuestros huéspedes sin costo adicional.",
     category: "servicios"
   },
   {
     question: "¿A qué distancia está el Terminal Terrestre?",
-    answer: "Estamos ubicados diagonal al Terminal Terrestre de Loja, a solo 1 minuto caminando. Es la ubicación más conveniente para viajeros.",
+    answer: "Estamos ubicados diagonal al Terminal Terrestre de Loja, a solo 3 minutos caminando. Es la ubicación más conveniente para viajeros.",
     category: "ubicacion"
   },
   {
@@ -32,32 +32,32 @@ const FAQ_DATA: FAQItem[] = [
   },
   {
     question: "¿Cuál es el horario de check-in y check-out?",
-    answer: "Check-in: 12:00 PM | Check-out: 12:00 PM. Ofrecemos flexibilidad en horarios especiales para graduaciones UTPL y eventos.",
+    answer: "Check-in y check-out: 12:00 PM (a la hora que ingresan). Ofrecemos flexibilidad en horarios especiales para graduaciones UTPL y eventos.",
     category: "politicas"
   },
   {
-    question: "¿Está abierto Café Viviates todos los días?",
-    answer: "Sí, Café Viviates está abierto todos los días de 6:00 AM a 12:00 PM, sirviendo el mejor café de especialidad de Loja y desayunos tradicionales.",
+    question: "¿Está abierta Cafetería Viviates todos los días?",
+    answer: "Cafetería Viviates está abierta de lunes a sábado. Horarios: Mañana 7:00 AM - 11:00 AM | Tarde 4:00 PM - 9:00 PM. Domingos cerrado.",
     category: "cafe"
   },
   {
     question: "¿Cómo puedo hacer una reserva?",
-    answer: "Puedes reservar por WhatsApp al +593 7 261-4151 o llamando directamente. Te confirmamos disponibilidad inmediatamente.",
+    answer: "Puedes reservar por WhatsApp al +593 96 171 2106 o llamando directamente. Te confirmamos disponibilidad inmediatamente.",
     category: "reservas"
   },
   {
-    question: "¿Ofrecen descuentos para graduaciones UTPL?",
-    answer: "Sí, tenemos tarifas especiales para familias que vienen a graduaciones UTPL. Consulta disponibilidad y precios especiales por WhatsApp.",
+    question: "¿Ofrecen promociones para graduaciones UTPL?",
+    answer: "Sí, tenemos promociones especiales para familias que vienen a graduaciones UTPL. Consulta disponibilidad y precios especiales por WhatsApp.",
     category: "reservas"
   },
   {
     question: "¿Qué tan lejos está la UTPL del hotel?",
-    answer: "La Universidad Técnica Particular de Loja (UTPL) está a 15 minutos en taxi desde el hotel. Coordinamos transporte para graduaciones.",
+    answer: "La Universidad Técnica Particular de Loja (UTPL) está a 5 minutos en taxi desde el hotel. Coordinamos transporte para graduaciones.",
     category: "ubicacion"
   },
   {
     question: "¿Tienen habitaciones familiares?",
-    answer: "Sí, contamos con habitaciones familiares espaciosas para hasta 4 personas, perfectas para familias que vienen a graduaciones o turismo.",
+    answer: "Sí, contamos con habitaciones familiares.",
     category: "habitaciones"
   }
 ];
@@ -129,7 +129,7 @@ export default function FAQ() {
             ¿No encuentras la respuesta que buscas?
           </p>
           <a
-            href="https://wa.me/593726141151?text=Hola,%20tengo%20una%20pregunta%20sobre%20el%20hotel"
+            href="https://wa.me/593961712106?text=Hola,%20tengo%20una%20pregunta%20sobre%20el%20hotel"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-[#038C7F] text-white font-semibold rounded-full hover:bg-[#038C7F]/90 transition-colors"

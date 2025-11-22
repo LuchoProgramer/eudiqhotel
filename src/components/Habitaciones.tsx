@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { User, BedDouble, Ruler } from 'lucide-react'
+import { User, BedDouble } from 'lucide-react'
 import { habitaciones } from '@/lib/data';
 
 export default function Habitaciones() {
@@ -79,23 +79,10 @@ export default function Habitaciones() {
 
                 {/* Content */}
                 <div className="p-6 lg:p-8">
-                  <div className="flex justify-between items-start mb-4">
+                  <div className="mb-4">
                     <h3 className="text-2xl lg:text-3xl font-bold text-gray-900" style={{fontFamily: 'Playfair Display, serif'}}>
                       {hab.nombre}
                     </h3>
-                    <div className="text-right">
-                      {hab.nombre === 'Familiar' ? (
-                        <div>
-                          <div className="text-3xl font-bold text-[#038C7F]">${hab.precio} <span className="text-base text-gray-500 font-normal">por persona</span></div>
-                          <div className="text-sm text-gray-500">Incluye desayuno</div>
-                        </div>
-                      ) : (
-                        <>
-                          <div className="text-3xl font-bold text-[#038C7F]">${hab.precio}</div>
-                          <div className="text-sm text-gray-500">por noche</div>
-                        </>
-                      )}
-                    </div>
                   </div>
 
                   <p className="text-gray-600 mb-6 leading-relaxed">
@@ -103,7 +90,7 @@ export default function Habitaciones() {
                   </p>
 
                   {/* Room Info */}
-                  <div className="grid grid-cols-3 gap-3 mb-6 pb-6 border-b border-gray-300">
+                  <div className="grid grid-cols-2 gap-3 mb-6 pb-6 border-b border-gray-300">
                     <div className="text-center">
                       <User className="w-6 h-6 mx-auto mb-1 text-[#038C7F]" />
                       <div className="text-xs text-gray-600">{hab.capacidad}</div>
@@ -111,10 +98,6 @@ export default function Habitaciones() {
                     <div className="text-center">
                       <BedDouble className="w-6 h-6 mx-auto mb-1 text-[#A9BF04]" />
                       <div className="text-xs text-gray-600">{hab.cama}</div>
-                    </div>
-                    <div className="text-center">
-                      <Ruler className="w-6 h-6 mx-auto mb-1 text-[#038C7F]" />
-                      <div className="text-xs text-gray-600">{hab.tamaño}</div>
                     </div>
                   </div>
 

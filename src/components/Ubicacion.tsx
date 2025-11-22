@@ -112,18 +112,18 @@ export default function Ubicacion() {
                     <p className="text-sm text-gray-600">Avenida 8 de diciembre y Juan José Flores diagonal a la Terminal Terrestre</p>
                   </div>
                 </a>
-                <a href="tel:+593987654321" className="flex items-start gap-3 text-gray-700 hover:text-[#038C7F] transition-colors group">
+                <a href="tel:+593961712106" className="flex items-start gap-3 text-gray-700 hover:text-[#038C7F] transition-colors group">
                   <Phone className="flex-shrink-0 mt-1 text-[#038C7F]" size={20} />
                   <div>
                     <p className="font-medium">Teléfono</p>
-                    <p className="text-sm text-gray-600">+593 9 8765 4321</p>
+                    <p className="text-sm text-gray-600">+593 96 171 2106</p>
                   </div>
                 </a>
-                <a href="mailto:info@eudiqhotel.com" className="flex items-start gap-3 text-gray-700 hover:text-[#038C7F] transition-colors group">
+                <a href="mailto:eudiqhotel@gmail.com" className="flex items-start gap-3 text-gray-700 hover:text-[#038C7F] transition-colors group">
                   <Mail className="flex-shrink-0 mt-1 text-[#038C7F]" size={20} />
                   <div>
                     <p className="font-medium">Email</p>
-                    <p className="text-sm text-gray-600">info@eudiqhotel.com</p>
+                    <p className="text-sm text-gray-600">eudiqhotel@gmail.com</p>
                   </div>
                 </a>
                 <div className="flex items-start gap-3 text-gray-700">

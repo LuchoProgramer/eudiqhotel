@@ -7,14 +7,8 @@ import { Utensils, Wifi, Car, Coffee, Sparkles, Clock, MapPin } from 'lucide-rea
 const servicios = [
   {
     icon: Coffee,
-    titulo: 'Café Viviates',
+    titulo: 'Cafetería Viviates',
     descripcion: 'Nuestra marca propia de café premium. Disfruta de los mejores granos de la región en cada taza.',
-    destacado: true,
-  },
-  {
-    icon: Utensils,
-    titulo: 'Restaurante',
-    descripcion: 'Disfruta de auténtica gastronomía lojana y platos internacionales preparados con ingredientes frescos.',
     destacado: true,
   },
   {
@@ -164,10 +158,10 @@ export default function Servicios() {
                 <span className="text-white font-semibold text-sm">NUESTRA MARCA PROPIA</span>
               </div>
               <h3 className="text-3xl md:text-4xl font-bold text-white mb-4" style={{fontFamily: 'Playfair Display, serif'}}>
-                Café Viviates
+                Cafetería Viviates
               </h3>
               <p className="text-white/90 text-lg leading-relaxed mb-6">
-                Nos enorgullece presentar nuestra marca propia de café premium. <strong>Café Viviates</strong> es el 
+                Nos enorgullece presentar nuestra cafetería. <strong>Cafetería Viviates</strong> es el 
                 resultado de años de pasión por el café de altura ecuatoriano, seleccionando los mejores granos 
                 de la región para ofrecerte una experiencia única en cada taza.
               </p>
@@ -187,7 +181,7 @@ export default function Servicios() {
                 ))}
               </ul>
               <a
-                href="#contacto"
+                href="/cafe-viviates"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#038C7F] font-semibold rounded-full hover:bg-[#CBD95F] hover:text-gray-900 transition-all shadow-lg"
               >
                 Pruébalo Ahora
