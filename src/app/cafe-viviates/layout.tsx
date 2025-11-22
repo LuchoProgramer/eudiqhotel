@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 
 export const metadata = {
-  title: 'Cafetería Viviates Loja | Desayuno Lojano y Café de Especialidad',
-  description: 'Cafetería Viviates en Loja: desayuno tradicional lojano, café de especialidad, bocaditos típicos. Ubicado en Eudiq Hotel cerca del Terminal Terrestre.',
+  title: 'Cafetería Viviates Loja | Desayuno y Café de Especialidad',
+  description: 'Cafetería Viviates en Loja: desayuno, café de especialidad, bocaditos típicos. Ubicado en Eudiq Hotel cerca del Terminal Terrestre.',
   alternates: {
     canonical: 'https://www.hoteleudiq.com/cafe-viviates',
   },
@@ -22,7 +22,7 @@ export default function CafeViviatesLayout({ children }: { children: ReactNode }
               "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80",
               "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=80"
             ],
-            "servesCuisine": ["Desayuno lojano", "Café de especialidad", "Bocaditos típicos"],
+            "servesCuisine": ["Desayuno", "Café de especialidad", "Bocaditos típicos"],
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "Avenida 8 de diciembre y Juan José Flores diagonal a la Terminal Terrestre",

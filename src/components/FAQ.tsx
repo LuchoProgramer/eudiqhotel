@@ -12,7 +12,7 @@ type FAQItem = {
 const FAQ_DATA: FAQItem[] = [
   {
     question: "¿Está incluido el desayuno en todas las habitaciones?",
-    answer: "Sí, todas nuestras habitaciones incluyen desayuno tradicional lojano sin costo adicional. Se sirve de 7:00 AM a 9:00 AM.",
+    answer: "Sí, todas nuestras habitaciones incluyen desayuno sin costo adicional. Se sirve de 7:00 AM a 9:00 AM.",
     category: "servicios"
   },
   {

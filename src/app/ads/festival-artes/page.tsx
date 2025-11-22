@@ -9,6 +9,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { CTAButton } from '@/components/ConversionOptimizer';
+import { MapPin, Coffee, Wifi, Music, Car, Theater, Palette, Phone, CheckCircle2, PersonStanding } from 'lucide-react';
 
 export default function FestivalArtesPage() {
   const [eventDay, setEventDay] = useState(0);
@@ -39,7 +40,8 @@ export default function FestivalArtesPage() {
             <div className="text-center lg:text-left">
               {/* Badge del evento */}
               <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-full">
-                <span className="text-purple-600 text-sm font-semibold">🎨 FESTIVAL INT. ARTES VIVAS • 13-23 NOV</span>
+                <Palette className="h-4 w-4 text-purple-600" />
+                <span className="text-purple-600 text-sm font-semibold">FESTIVAL INT. ARTES VIVAS • 13-23 NOV</span>
               </div>
 
               {/* Headline principal */}
@@ -58,11 +60,11 @@ export default function FestivalArtesPage() {
               {/* Countdown del festival */}
               {eventDay > 0 && (
                 <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-lg mb-8 text-center">
-                  <p className="text-sm font-medium">🇨🇱 Festival Internacional Artes Vivas (Chile país invitado) comienza en:</p>
+                  <p className="text-sm font-medium">Festival Internacional Artes Vivas (Chile país invitado) comienza en:</p>
                   <p className="text-3xl font-bold">{eventDay} días</p>
                   <p className="text-sm">13-23 Noviembre • +300 actividades culturales</p>
                 </div>
-              )}
+              )})
               
               {/* Stats del festival */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
@@ -93,7 +95,8 @@ export default function FestivalArtesPage() {
                   section="festival_hero"
                   className="flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600"
                 >
-                  🎨 Reservar para el Festival
+                  <Palette className="h-5 w-5" />
+                  Reservar para el Festival
                 </CTAButton>
                 
                 <CTAButton
@@ -103,7 +106,8 @@ export default function FestivalArtesPage() {
                   section="festival_hero"
                   className="flex items-center gap-2"
                 >
-                  📞 Llamar Ahora
+                  <Phone className="h-5 w-5" />
+                  Llamar Ahora
                 </CTAButton>
               </div>
 
@@ -152,42 +156,49 @@ export default function FestivalArtesPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: '🎭',
+                Icon: Theater,
                 title: 'Centro de Todo',
                 description: 'En el corazón del centro histórico. Acceso inmediato a Teatro Benjamín Carrión y Parque Jipiro.'
               },
               {
-                icon: '🚶‍♂️',
+                Icon: MapPin,
                 title: 'Caminable',
                 description: 'Puedes caminar a teatros, galerías y espacios culturales. Sin necesidad de transporte.'
               },
               {
-                icon: '☕',
+                Icon: Coffee,
                 title: 'Café Viviates',
                 description: 'El mejor café artesanal de Loja en nuestro hotel. Punto de encuentro de artistas.'
               },
               {
-                icon: '📶',
+                Icon: Wifi,
                 title: 'WiFi Premium',
                 description: 'Internet de alta velocidad para compartir tu experiencia y trabajar en proyectos.'
               },
               {
-                icon: '🎵',
+                Icon: Music,
                 title: 'Información Diaria',
                 description: 'Actualizaciones diarias de la programación y eventos especiales del festival.'
               },
               {
-                icon: '🚗',
+                Icon: Car,
                 title: 'Base Perfecta',
                 description: 'Fácil acceso a todos los venues del festival y estacionamiento seguro.'
               }
-            ].map((benefit, index) => (
-              <div key={index} className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border hover:shadow-lg transition-all hover:scale-105">
-                <div className="text-4xl mb-4">{benefit.icon}</div>
-                <h3 className="font-bold text-gray-900 mb-2">{benefit.title}</h3>
-                <p className="text-gray-600 text-sm">{benefit.description}</p>
-              </div>
-            ))}
+            ].map((benefit, index) => {
+              const IconComponent = benefit.Icon;
+              return ( 
+                <div key={index} className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border hover:shadow-lg transition-all hover:scale-105">
+                  {typeof IconComponent === 'string' ? (
+                    <span className="text-4xl mb-4 block">{IconComponent}</span>
+                  ) : (
+                    <IconComponent className="h-10 w-10 text-[#038C7F] mb-4" />
+                  )}
+                  <h3 className="font-bold text-gray-900 mb-2">{benefit.title}</h3>
+                  <p className="text-gray-600 text-sm">{benefit.description}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -231,8 +242,9 @@ export default function FestivalArtesPage() {
             ].map((venue, index) => (
               <div key={index} className="bg-white p-4 rounded-lg shadow-sm border-l-4 border-purple-400">
                 <h3 className="font-bold text-gray-900 mb-2">{venue.venue}</h3>
-                <p className={`text-sm font-medium mb-1 ${venue.color.split(' ')[1]}`}>
-                  🚶‍♂️ {venue.distance} caminando
+                <p className={`text-sm font-medium mb-1 ${venue.color.split(' ')[1]} flex items-center gap-1`}>
+                  <PersonStanding className="h-4 w-4" />
+                  {venue.distance} caminando
                 </p>
                 <p className="text-xs text-gray-600">{venue.events}</p>
               </div>
@@ -277,39 +289,30 @@ export default function FestivalArtesPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-6">
-                🎨 Paquete Festival Internacional de Artes Vivas
+              <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
+                <Palette className="h-8 w-8" />
+                Paquete Festival Internacional de Artes Vivas
               </h2>
               
               <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
-                    <span className="text-yellow-300 text-sm">✓</span>
-                  </div>
+                  <CheckCircle2 className="h-6 w-6 text-yellow-300" />
                   <span>Habitación con vista al centro histórico</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
-                    <span className="text-yellow-300 text-sm">✓</span>
-                  </div>
+                  <CheckCircle2 className="h-6 w-6 text-yellow-300" />
                   <span>Desayuno artístico con café premium</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
-                    <span className="text-yellow-300 text-sm">✓</span>
-                  </div>
+                  <CheckCircle2 className="h-6 w-6 text-yellow-300" />
                   <span>Mapa personalizado de eventos</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
-                    <span className="text-yellow-300 text-sm">✓</span>
-                  </div>
+                  <CheckCircle2 className="h-6 w-6 text-yellow-300" />
                   <span>WiFi premium para artistas</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
-                    <span className="text-yellow-300 text-sm">✓</span>
-                  </div>
+                  <CheckCircle2 className="h-6 w-6 text-yellow-300" />
                   <span>Late check-out gratuito</span>
                 </div>
               </div>
@@ -333,11 +336,12 @@ export default function FestivalArtesPage() {
                 <CTAButton
                   variant="secondary"
                   size="large"
-                  href="https://wa.me/593961712106?text=Hola,%20quiero%20información%20del%20Paquete%20Festival%20Internacional%20de%20Artes%20Vivas%202025"
+                  href="https://wa.me/593961712106?text=Hola,%20quiero%20informaci%C3%B3n%20del%20Paquete%20Festival%20Internacional%20de%20Artes%20Vivas%202025"
                   section="festival_package"
                   className="w-full justify-center mb-4 bg-white text-purple-600 hover:bg-gray-100"
                 >
-                  📱 Reservar Paquete Festival
+                  <Phone className="h-5 w-5" />
+                  Reservar Paquete Festival
                 </CTAButton>
                 
                 <p className="text-sm opacity-75">
@@ -377,12 +381,24 @@ export default function FestivalArtesPage() {
               section="festival_final"
               className="flex items-center justify-center gap-2"
             >
-              📞 +593 96 171 2106
+              <Phone className="h-5 w-5" />
+              +593 96 171 2106
             </CTAButton>
           </div>
 
-          <p className="text-sm text-gray-400">
-            🎨 Experiencia cultural garantizada • ☕ El mejor café de Loja • 🚶‍♂️ Todo a pasos del hotel
+          <p className="text-sm text-gray-400 flex items-center justify-center gap-4 flex-wrap">
+            <span className="flex items-center gap-1">
+              <Palette className="h-4 w-4" />
+              Experiencia cultural garantizada
+            </span>
+            <span className="flex items-center gap-1">
+              <Coffee className="h-4 w-4" />
+              El mejor café de Loja
+            </span>
+            <span className="flex items-center gap-1">
+              <PersonStanding className="h-4 w-4" />
+              Todo a pasos del hotel
+            </span>
           </p>
         </div>
       </section>

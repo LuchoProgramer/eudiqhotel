@@ -75,7 +75,7 @@ export default function TerminalTerrestreLandingPage() {
               <div className="space-y-3 mb-8">
                 {[
                   '✅ A 1 minuto caminando del Terminal Terrestre',
-                  '✅ Desayuno tradicional lojano incluido',
+                  '✅ Desayuno incluido',
                   '✅ WiFi de alta velocidad gratuito',
                   '✅ Estacionamiento sin costo adicional',
                   '✅ Recepción 24 horas para tu comodidad',
@@ -143,7 +143,7 @@ export default function TerminalTerrestreLandingPage() {
               {
                 icon: <Coffee className="w-8 h-8 text-[#A9BF04]" />,
                 title: 'Desayuno Incluido',
-                desc: 'Desayuno tradicional lojano sin costo extra'
+                desc: 'Desayuno sin costo extra'
               },
               {
                 icon: <Wifi className="w-8 h-8 text-[#038C7F]" />,

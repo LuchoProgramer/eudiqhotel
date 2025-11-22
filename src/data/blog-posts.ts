@@ -12,7 +12,7 @@ export const BLOG_POSTS = [
       <p>Muchas familias se preguntan dónde hospedarse durante la graduación. La ubicación estratégica cerca del Terminal Terrestre ofrece ventajas únicas:</p>
       <ul>
         <li><strong>Fácil llegada:</strong> La mayoría de familias llegan en bus desde otras provincias</li>
-        <li><strong>Acceso rápido a UTPL:</strong> 15 minutos al campus universitario</li>
+        <li><strong>Acceso rápido a UTPL:</strong> 5 minutos al campus universitario</li>
         <li><strong>Servicios completos:</strong> Cerca de bancos, restaurantes y farmacias</li>
         <li><strong>Transporte:</strong> Taxis y buses disponibles las 24 horas</li>
         <li><strong>Estacionamiento:</strong> Para familias que llegan en vehículo propio</li>
@@ -199,7 +199,7 @@ export const BLOG_POSTS = [
       
       <h3>¿Qué incluye tu estadía?</h3>
       <ul>
-        <li>✅ <strong>Desayuno incluido:</strong> Desayuno tradicional lojano</li>
+        <li>✅ <strong>Desayuno incluido</strong></li>
         <li>✅ <strong>WiFi gratuito:</strong> Internet de alta velocidad</li>
         <li>✅ <strong>Estacionamiento gratis:</strong> Seguridad para tu vehículo</li>
         <li>✅ <strong>Café Viviates:</strong> Cafetería especializada en el mismo hotel</li>
@@ -219,7 +219,7 @@ export const BLOG_POSTS = [
       <ul>
         <li><strong>Parque Jipiro (200m):</strong> 3 minutos caminando al parque recreacional más famoso</li>
         <li><strong>Centro histórico:</strong> 5 minutos en taxi al corazón de Loja</li>
-        <li><strong>UTPL:</strong> 15 minutos al campus universitario</li>
+        <li><strong>UTPL:</strong> 5 minutos al campus universitario</li>
         <li><strong>Aeropuerto Catamayo:</strong> 35 minutos, con servicio de taxi disponible</li>
       </ul>
 
@@ -795,16 +795,19 @@ export const BLOG_POSTS = [
     slug: 'mejores-cafes-en-loja',
     title: 'Los mejores cafés para visitar en Loja',
     updatedAt: '2025-10-10',
+    draft: true,
   },
   {
     slug: 'guia-turistica-loja',
     title: 'Guía turística: Qué hacer en Loja cerca del hotel',
     updatedAt: '2025-10-15',
+    draft: true,
   },
   {
     slug: 'historia-del-cafe-en-loja',
     title: 'La historia del café en Loja y su impacto cultural',
     updatedAt: '2025-10-20',
+    draft: true,
     summary: 'Descubre cómo el café ha moldeado la cultura y economía de Loja a lo largo de los años.',
     content: `
       <p>El café en Loja no es solo una bebida, es parte de la identidad local. Desde el siglo XIX, las fincas cafetaleras han impulsado la economía y la vida social de la región.</p>

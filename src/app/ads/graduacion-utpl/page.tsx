@@ -9,6 +9,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { CTAButton } from '@/components/ConversionOptimizer';
+import { Users, Car, Coffee as Cafe, Camera, GraduationCap, DollarSign, Clock, MapPin, Utensils } from 'lucide-react';
 
 export default function GraduacionUTPLPage() {
   const [timeLeft, setTimeLeft] = useState('');
@@ -117,7 +118,7 @@ export default function GraduacionUTPLPage() {
               
               {/* Badge flotante */}
               <div className="absolute -bottom-4 -right-4 bg-white rounded-lg shadow-xl p-4 border-l-4 border-green-500">
-                <p className="text-sm font-semibold text-gray-900">A solo 15 min</p>
+                <p className="text-sm font-semibold text-gray-900">A solo 5 min</p>
                 <p className="text-xs text-gray-600">del Campus UTPL</p>
               </div>
             </div>
@@ -140,42 +141,45 @@ export default function GraduacionUTPLPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: '👨‍👩‍👧‍👦',
+                Icon: Users,
                 title: 'Habitaciones Familiares',
                 description: 'Espacios amplios para toda la familia. Camas extra sin costo adicional para abuelos y familiares.'
               },
               {
-                icon: '🚗',
+                Icon: Car,
                 title: 'Fácil Acceso UTPL',
-                description: 'A 15 minutos del campus. Transporte público directo y estacionamiento gratuito disponible.'
+                description: 'A 5 minutos del campus. Transporte público directo y estacionamiento gratuito disponible.'
               },
               {
-                icon: '🍳',
+                Icon: Cafe,
                 title: 'Desayuno Energizante',
-                description: 'Desayuno tradicional lojano incluido. Perfecto para empezar el día especial con energía.'
+                description: 'Desayuno incluido. Perfecto para empezar el día especial con energía.'
               },
               {
-                icon: '📸',
+                Icon: Camera,
                 title: 'Espacios para Fotos',
                 description: 'Áreas comunes perfectas para fotos familiares. Jardín interno ideal para recuerdos.'
               },
               {
-                icon: '🎓',
+                Icon: GraduationCap,
                 title: 'Experiencia en Graduaciones',
                 description: 'Personal capacitado en eventos de graduación. Conocemos las necesidades de las familias.'
               },
               {
-                icon: '💰',
+                Icon: DollarSign,
                 title: 'Tarifas Especiales',
                 description: 'Descuentos para grupos familiares. Mejor precio garantizado reservando directo.'
               }
-            ].map((benefit, index) => (
-              <div key={index} className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border hover:shadow-lg transition-shadow">
-                <div className="text-4xl mb-4">{benefit.icon}</div>
-                <h3 className="font-bold text-gray-900 mb-2">{benefit.title}</h3>
-                <p className="text-gray-600 text-sm">{benefit.description}</p>
-              </div>
-            ))}
+            ].map((benefit, index) => {
+              const IconComponent = benefit.Icon;
+              return (
+                <div key={index} className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border hover:shadow-lg transition-shadow">
+                  <IconComponent className="h-10 w-10 text-[#038C7F] mb-4" />
+                  <h3 className="font-bold text-gray-900 mb-2">{benefit.title}</h3>
+                  <p className="text-gray-600 text-sm">{benefit.description}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -222,28 +226,28 @@ export default function GraduacionUTPLPage() {
               
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-blue-600">🚗</span>
+                  <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Car className="h-5 w-5 text-blue-600" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Cómo llegar desde el Hotel a UTPL</h3>
-                    <p className="text-gray-600 text-sm">15 minutos en auto, bus directo cada 20 min, taxi $3-4 USD</p>
+                    <p className="text-gray-600 text-sm">5 minutos en auto, bus directo cada 20 min, taxi $3-4 USD</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-green-600">🕐</span>
+                  <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Clock className="h-5 w-5 text-green-600" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Horarios recomendados</h3>
-                    <p className="text-gray-600 text-sm">Check-in temprano disponible, desayuno desde 6:30 AM</p>
+                    <p className="text-gray-600 text-sm">Check-in temprano disponible, desayuno desde 7:00 AM</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-purple-600">👨‍👩‍👧‍👦</span>
+                  <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Users className="h-5 w-5 text-purple-600" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Capacidad familiar</h3>
@@ -254,7 +258,9 @@ export default function GraduacionUTPLPage() {
             </div>
 
             <div className="bg-gradient-to-br from-blue-600 to-green-600 p-8 rounded-2xl text-white">
-              <h3 className="text-2xl font-bold mb-4">🎓 Oferta Especial Graduación</h3>
+              <h3 className="text-2xl font-bold mb-4 flex items-center gap-3">
+                <GraduationCap className="h-8 w-8" /> Oferta Especial Graduación
+              </h3>
               <div className="space-y-3 mb-6">
                 <p className="flex items-center gap-2">
                   <span className="text-yellow-300">✓</span>

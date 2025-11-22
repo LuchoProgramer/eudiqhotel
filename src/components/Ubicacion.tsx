@@ -200,10 +200,9 @@ export default function Ubicacion() {
             ¿Necesitas Ayuda con Direcciones?
           </h3>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Nuestro equipo está disponible para guiarte desde tu punto de partida. 
-            También ofrecemos servicio de transporte desde el aeropuerto.
+            Nuestro equipo está disponible para guiarte desde tu punto de partida.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <a
               href="https://maps.app.goo.gl/5dCMqMs8TNnuUAXU7"
               target="_blank"
@@ -212,13 +211,6 @@ export default function Ubicacion() {
             >
               <Navigation size={20} />
               Ver en Google Maps
-            </a>
-            <a
-              href="#contacto"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gray-100 text-gray-900 font-semibold rounded-full hover:bg-gray-200 transition-all"
-            >
-              <Phone size={20} />
-              Solicitar Transporte
             </a>
           </div>
         </div>

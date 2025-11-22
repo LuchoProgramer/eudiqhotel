@@ -1,35 +1,37 @@
 'use client'
 
+import { Wifi, UtensilsCrossed, Car, Coffee, Shirt, Handshake } from 'lucide-react';
+
 const servicios = [
   {
-  nombre: 'Wi-Fi',
+    nombre: 'Wi-Fi',
     descripcion: 'Internet de alta velocidad en todas las áreas del hotel, ideal para trabajo y entretenimiento.',
-    icono: '📶',
+    Icono: Wifi,
   },
   {
     nombre: 'Desayuno tipo buffet',
     descripcion: 'Incluido en tu estadía. Variedad de opciones frescas y café de especialidad cada mañana.',
-    icono: '🥐',
+    Icono: UtensilsCrossed,
   },
   {
     nombre: 'Estacionamiento Privado',
     descripcion: 'Parqueadero seguro y gratuito para huéspedes, con acceso directo al hotel.',
-    icono: '🚗',
+    Icono: Car,
   },
   {
     nombre: 'Cafetería Viviates',
     descripcion: 'Disfruta de nuestro café de especialidad 100% lojano en el lobby o en tu habitación.',
-    icono: '☕',
+    Icono: Coffee,
   },
   {
     nombre: 'Lavandería',
     descripcion: 'Servicio de lavado y planchado disponible para estancias largas o viajes de negocios.',
-    icono: '🧺',
+    Icono: Shirt,
   },
   {
     nombre: 'Atención personalizada',
     descripcion: 'Nuestro equipo está siempre disponible para ayudarte y hacer tu estadía inolvidable.',
-    icono: '🤝',
+    Icono: Handshake,
   },
 ];
 
@@ -48,24 +50,26 @@ function sendGAEvent(eventName: string, eventParams: GAEventParams = {}) {
 
 export default function ServiciosPage() {
   return (
-    <main className="max-w-4xl mx-auto py-16 px-4">
+    <main className="max-w-4xl mx-auto py-16 px-4 mt-10">
       <h1 className="text-4xl font-bold mb-6 text-center">Servicios</h1>
       <p className="mb-8 text-center text-lg text-gray-600">Descubre todos los servicios que hacen de Eudiq Hotel Loja la mejor opción para tu viaje.</p>
       <div className="grid md:grid-cols-2 gap-8">
-        {servicios.map((serv) => (
-          <div key={serv.nombre} className="rounded-lg shadow-lg bg-white p-6 flex flex-col items-center">
-            <span className="text-5xl mb-4">{serv.icono}</span>
+        {servicios.map((serv) => {
+          const IconoComponent = serv.Icono;
+          return (
+          <div key={serv.nombre} className="rounded-lg shadow-lg bg-white p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300">
+            <IconoComponent className="w-12 h-12 mb-4 text-[#038C7F]" strokeWidth={1.5} />
             <h2 className="text-2xl font-semibold mb-2">{serv.nombre}</h2>
             <p className="text-gray-700 mb-2 text-center">{serv.descripcion}</p>
           </div>
-        ))}
+        )})}
       </div>
       <div className="mt-12 text-center">
         <a
           href="https://wa.me/593961712106"
           target="_blank"
           rel="noopener"
-          className="bg-primary text-white px-6 py-3 rounded text-lg font-bold hover:bg-primary-dark transition"
+          className="bg-[#038C7F] text-white px-6 py-3 rounded-lg text-lg font-bold hover:bg-[#027368] transition-colors"
           onClick={() => sendGAEvent('click_reserva_servicios', { section: 'servicios', method: 'whatsapp' })}
         >
           Solicita tu reserva por WhatsApp

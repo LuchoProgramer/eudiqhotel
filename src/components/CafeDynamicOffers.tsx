@@ -1,13 +1,13 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Clock, Users } from 'lucide-react';
+import { Clock, Users, Sunrise, Briefcase, Palette, Coffee as CoffeeIcon, type LucideIcon, CheckCircle2, Flame } from 'lucide-react';
 import { CTAButton } from '@/components/ConversionOptimizer';
 
 interface TimeBasedOffer {
   id: string;
   name: string;
-  emoji: string;
+  Icon: LucideIcon;
   startHour: number;
   endHour: number;
   price: string;
@@ -23,7 +23,7 @@ const TIME_BASED_OFFERS: TimeBasedOffer[] = [
   {
     id: 'madrugadores',
     name: 'Madrugadores VIP',
-    emoji: '🌅',
+    Icon: Sunrise,
     startHour: 5.5, // 5:30 AM
     endHour: 7,
     price: '$3.50',
@@ -36,7 +36,7 @@ const TIME_BASED_OFFERS: TimeBasedOffer[] = [
   {
     id: 'profesional',
     name: 'Combo Profesional',
-    emoji: '💼',
+    Icon: Briefcase,
     startHour: 7,
     endHour: 10,
     price: '$6.00',
@@ -49,7 +49,7 @@ const TIME_BASED_OFFERS: TimeBasedOffer[] = [
   {
     id: 'cultural',
     name: 'Experiencia Cultural',
-    emoji: '🎨',
+    Icon: Palette,
     startHour: 8,
     endHour: 22,
     price: '$4.50',
@@ -61,7 +61,7 @@ const TIME_BASED_OFFERS: TimeBasedOffer[] = [
   {
     id: 'tarde',
     name: 'Café de Tarde',
-    emoji: '☕',
+    Icon: CoffeeIcon,
     startHour: 14,
     endHour: 18,
     price: '$3.00',
@@ -111,7 +111,7 @@ export function ActiveOfferBanner() {
   return (
     <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white p-4 text-center animate-pulse">
       <div className="max-w-4xl mx-auto flex items-center justify-center gap-4">
-        <span className="text-2xl">{currentOffer.emoji}</span>
+        <currentOffer.Icon className="h-8 w-8" />
         <div>
           <span className="font-bold">¡{currentOffer.name} ACTIVA AHORA!</span>
           <span className="ml-2">{currentOffer.description}</span>
@@ -183,10 +183,10 @@ export function NextOfferCountdown() {
         <Clock className="h-5 w-5 text-amber-600" />
         <span className="font-semibold text-amber-800">Próxima oferta especial</span>
       </div>
-      <div className="text-sm text-gray-600 mb-2">
-        <span className="text-2xl">{nextOffer.emoji}</span>
-        <span className="ml-2 font-medium">{nextOffer.name}</span>
-        <span className="ml-2">en {timeRemaining}</span>
+      <div className="text-sm text-gray-600 mb-2 flex items-center justify-center gap-2">
+        <nextOffer.Icon className="h-6 w-6 text-amber-600" />
+        <span className="font-medium">{nextOffer.name}</span>
+        <span>en {timeRemaining}</span>
       </div>
       <CTAButton
         variant="secondary"
@@ -213,8 +213,9 @@ export function DynamicOffersSection() {
         <ActiveOfferBanner />
         
         <div className="text-center mb-12 mt-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            🕐 Ofertas Especiales por Horario
+          <h2 className="text-3xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-3">
+            <Clock className="h-8 w-8 text-[#038C7F]" />
+            Ofertas Especiales por Horario
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto mb-6">
             Aprovecha nuestras promociones según tu horario de visita
@@ -251,7 +252,9 @@ export function DynamicOffersSection() {
                 )}
                 
                 <div className="text-center mb-4 mt-2">
-                  <div className="text-4xl mb-2">{offer.emoji}</div>
+                  <div className="flex justify-center mb-2">
+                    <offer.Icon className="h-10 w-10 text-[#038C7F]" />
+                  </div>
                   <h3 className={`text-xl font-bold mb-2 ${isActive ? 'text-orange-600' : 'text-gray-800'}`}>
                     {offer.name}
                   </h3>
@@ -273,7 +276,7 @@ export function DynamicOffersSection() {
                 <div className="space-y-2 mb-6">
                   {offer.benefits.map((benefit, idx) => (
                     <div key={idx} className="flex items-center gap-2 text-sm">
-                      <span className="text-green-500">✓</span>
+                      <CheckCircle2 className="h-4 w-4 text-green-500" />
                       <span className="text-gray-600">{benefit}</span>
                     </div>
                   ))}
@@ -284,9 +287,19 @@ export function DynamicOffersSection() {
                   size="small"
                   href={`https://wa.me/593961712106?text=${encodeURIComponent(offer.whatsappMessage)}`}
                   section={`cafe_${offer.id}`}
-                  className={`w-full justify-center ${isActive ? 'animate-pulse' : ''}`}
+                  className={`w-full justify-center flex items-center gap-2 ${isActive ? 'animate-pulse' : ''}`}
                 >
-                  {isActive ? '🔥 ¡Aprovechar AHORA!' : `${offer.emoji} Reservar ${offer.name}`}
+                  {isActive ? (
+                    <>
+                      <Flame className="h-4 w-4" />
+                      ¡Aprovechar AHORA!
+                    </>
+                  ) : (
+                    <>
+                      <offer.Icon className="h-4 w-4" />
+                      Reservar {offer.name}
+                    </>
+                  )}
                 </CTAButton>
               </div>
             );

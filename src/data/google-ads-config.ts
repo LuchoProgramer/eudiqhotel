@@ -87,7 +87,7 @@ export const GOOGLE_ADS_CONFIG = {
       subheadline: 'Desayuno incluido • WiFi gratis • Estacionamiento',
       benefits: [
         '✅ A 1 minuto caminando del Terminal Terrestre',
-        '✅ Desayuno tradicional lojano incluido',
+        '✅ Desayuno incluido',
         '✅ WiFi de alta velocidad gratuito',
         '✅ Estacionamiento sin costo adicional',
         '✅ Recepción 24 horas para tu comodidad',
@@ -103,7 +103,7 @@ export const GOOGLE_ADS_CONFIG = {
       subheadline: 'Habitaciones familiares • Ubicación ideal • Precios justos',
       benefits: [
         '✅ Habitaciones espaciosas para toda la familia',
-        '✅ A 15 minutos del campus UTPL',
+        '✅ A 5 minutos del campus UTPL',
         '✅ Desayuno incluido para energizar el día especial',
         '✅ Fácil acceso desde cualquier ciudad del Ecuador',
         '✅ Personal experto en eventos de graduación',

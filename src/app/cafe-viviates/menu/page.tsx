@@ -1,0 +1,406 @@
+'use client'
+
+import React, { useState } from 'react';
+import { Coffee, Croissant, IceCream, Wine, Beer, Martini, ChefHat, Clock, Phone, MapPin, UtensilsCrossed, Search, Filter } from 'lucide-react';
+import { CTAButton } from '@/components/ConversionOptimizer';
+import Link from 'next/link';
+
+interface MenuItem {
+  name: string;
+  description?: string;
+  price: string;
+}
+
+interface MenuCategory {
+  id: string;
+  name: string;
+  Icon: React.ComponentType<{ className?: string }>;
+  items: MenuItem[];
+  color: string;
+}
+
+const MENU_DATA: MenuCategory[] = [
+  {
+    id: 'desayunos',
+    name: 'Desayunos',
+    Icon: Croissant,
+    color: 'from-[#038C7F] to-[#026B61]',
+    items: [
+      { name: 'Desayuno Americano', description: 'Huevos revueltos, tostadas con mantequilla y mermelada, tocino, bebida caliente y jugo', price: '$4.50' },
+      { name: 'Desayuno Continental', description: 'Huevos revueltos, prensado de queso, bebida caliente y jugo', price: '$3.75' },
+      { name: 'Desayuno Ligero', description: 'Ensalada de frutas, tostada con mermelada y bebida caliente', price: '$3.75' },
+      { name: 'Desayuno Tradicional', description: 'Ensalada de frutas, Tamal o Humita, jugo y bebida caliente', price: '$4.50' },
+    ]
+  },
+  {
+    id: 'tradicional',
+    name: 'Tradicional Lojano',
+    Icon: ChefHat,
+    color: 'from-[#A9BF04] to-[#8A9C03]',
+    items: [
+      { name: 'Tamal', description: 'Envuelto de masa de maíz aliñado con relleno de pollo (cocido al vapor)', price: '$1.75' },
+      { name: 'Humita', description: 'Envuelto de masa de maíz choclo relleno de queso (cocido al vapor)', price: '$1.75' },
+      { name: 'Quimbolito', description: 'Envuelto dulce a base de harina tipo pastelito (cocido al vapor)', price: '$1.75' },
+      { name: 'Mote Pillo', description: 'Mote aliñado revuelto con huevo y queso', price: '$2.75' },
+      { name: 'Mote Sucio', description: 'Mote aliñado con manteca negra y chicharrón', price: '$3.00' },
+      { name: 'Tigrillo', description: 'Plátano verde majado y revuelto con queso y huevo', price: '$3.75' },
+      { name: 'Tigrillo Mixto', description: 'Plátano verde majado revuelto con queso, chicharrón y huevo', price: '$4.00' },
+      { name: 'Bolón de Verde o Maduro', description: 'Bolitas de plátano cocido y machacado', price: '$2.75' },
+      { name: 'Bolón con Queso', price: '$3.00' },
+      { name: 'Bolón con Chicharrón', price: '$3.00' },
+      { name: 'Bolón Mixto', price: '$3.25' },
+      { name: 'Empanada de Verde', description: 'Masa de plátano verde con relleno de pollo (fritas)', price: '$2.00' },
+      { name: 'Empanada de Viento', description: 'Masa de harina con relleno de queso (fritas)', price: '$1.25' },
+      { name: 'Sango', description: 'Plato cremoso a base de maíz tostado y queso, con huevo frito', price: '$3.50' },
+      { name: 'Tortilla de Maduro y Mozarella', description: 'Tortilla de plátano maduro frito rellena de queso mozarella, con huevo frito', price: '$3.00' },
+      { name: 'Ensalada de Pollo', description: 'Pollo a la plancha, maíz, lechuga, tomate, aguacate y salsa', price: '$5.00' },
+      { name: 'Papas Fritas', price: '$1.00' },
+    ]
+  },
+  {
+    id: 'especial',
+    name: 'Especiales',
+    Icon: UtensilsCrossed,
+    color: 'from-[#038C7F] to-[#026B61]',
+    items: [
+      { name: 'Wafle Clásico', description: 'Acompañado de frutas y miel de maple', price: '$3.75' },
+      { name: 'Wrap de Pollo', description: 'Tortilla de trigo, pechuga a la plancha, lechuga, tomate, aguacate, salsa mayonesa y papas chips', price: '$4.00' },
+      { name: 'Hamburguesa', description: 'Pan, carne, queso, tocino, tomate, lechuga y papas fritas', price: '$4.00' },
+      { name: 'Sándwich de Pollo', description: 'Pan, pechuga de pollo, lechuga, tomate y salsa', price: '$3.75' },
+      { name: 'Sándwich Vegetal', description: 'Pan, atún, huevo cocido, lechuga, tomate y salsa', price: '$3.75' },
+      { name: 'Prensado de Queso', description: 'Queso y pan laminado', price: '$2.00' },
+      { name: 'Prensado Mixto', description: 'Jamón y queso', price: '$2.50' },
+    ]
+  },
+  {
+    id: 'postres',
+    name: 'Postres',
+    Icon: IceCream,
+    color: 'from-[#A9BF04] to-[#8A9C03]',
+    items: [
+      { name: 'Cheesecake Capuchino', description: 'Postre frío de queso, crema y café', price: '$3.00' },
+      { name: 'Cheesecake', description: 'Postre frío de queso con sirope de frutas', price: '$2.75' },
+      { name: 'Bizcocho de la Casa', price: '$2.50' },
+      { name: 'Tiramisu', description: 'Postre frío con biscotela, crema de leche y café', price: '$3.00' },
+    ]
+  },
+  {
+    id: 'calientes',
+    name: 'Bebidas Calientes',
+    Icon: Coffee,
+    color: 'from-[#038C7F] to-[#026B61]',
+    items: [
+      { name: 'Café Filtrado', price: '$2.50' },
+      { name: 'Americano', price: '$2.00' },
+      { name: 'Americano Amaretto', price: '$2.50' },
+      { name: 'Espresso', price: '$2.00' },
+      { name: 'Capuchino', description: 'Café más leche con espuma', price: '$2.50' },
+      { name: 'Capuchino Amaretto', description: 'Con licor de avellana', price: '$2.75' },
+      { name: 'Mocachino', description: 'Café más leche más chocolate', price: '$2.75' },
+      { name: 'Latte', description: 'Café más leche', price: '$2.25' },
+      { name: 'Macchiato', description: 'Espresso doble con toque de leche', price: '$2.50' },
+      { name: 'Chocolate', description: 'Chocolate con leche', price: '$2.25' },
+      { name: 'Agua Aromática', description: 'Hierba luisa, cedrón, horchata, flor de jamaica', price: '$1.75' },
+      { name: 'Té Natural de Frutos Rojos', price: '$2.00' },
+      { name: 'V60 (Brew)', description: 'Método de extracción especial', price: '$3.00' },
+      { name: 'Chemex (Brew)', description: 'Método de extracción especial', price: '$3.00' },
+      { name: 'Aeropress (Brew)', description: 'Método de extracción especial', price: '$3.00' },
+      { name: 'Prensa Francesa (Brew)', description: 'Método de extracción especial', price: '$3.00' },
+    ]
+  },
+  {
+    id: 'frias',
+    name: 'Bebidas Frías',
+    Icon: Coffee,
+    color: 'from-[#A9BF04] to-[#8A9C03]',
+    items: [
+      { name: 'Ice Coffee', description: 'Café con hielo', price: '$2.00' },
+      { name: 'Ice Latte', description: 'Café frío más leche fría', price: '$2.50' },
+      { name: 'Ice Cream Coffee', description: 'Café frío, leche y helado de vainilla', price: '$3.25' },
+      { name: 'Frappé Clásico', description: 'Café, leche, chocolate batido con hielo y crema chantilly', price: '$3.25' },
+      { name: 'Frappé Amaretto', description: 'Frappé clásico con licor amaretto', price: '$3.50' },
+      { name: 'Frappé de Fresa', description: 'Fresas, leche, sirope batido con hielo y crema chantilly', price: '$3.25' },
+      { name: 'Frappé de Oreo', description: 'Galletas oreo, leche, helado de vainilla y crema chantilly', price: '$4.00' },
+      { name: 'Limonada Natural', price: '$1.75' },
+      { name: 'Limonada de Frutos Rojos', price: '$2.00' },
+      { name: 'Limonada Imperial', price: '$2.00' },
+      { name: 'Jugos Naturales', price: '$2.00' },
+      { name: 'Batidos', price: '$2.50' },
+      { name: 'Botella de Agua', price: '$1.00' },
+      { name: 'Agua Mineral con Gas', price: '$1.50' },
+    ]
+  },
+  {
+    id: 'cocteles',
+    name: 'Cocteles',
+    Icon: Martini,
+    color: 'from-[#038C7F] to-[#026B61]',
+    items: [
+      { name: 'Cuba Libre', description: 'Ron, coca cola, limón', price: '$6.00' },
+      { name: 'Coctel de la Casa', description: 'Café frío, licor amaretto y gaseosa', price: '$6.00' },
+      { name: 'Margarita', description: 'Tequila, jugo de limón, triple seco, sirope', price: '$6.00' },
+      { name: 'Mojito', description: 'Ron, menta, sirope, limón, soda', price: '$6.00' },
+      { name: 'Piña Colada', description: 'Piña, leche condensada, ron', price: '$6.50' },
+    ]
+  },
+  {
+    id: 'vinos',
+    name: 'Vinos',
+    Icon: Wine,
+    color: 'from-[#A9BF04] to-[#8A9C03]',
+    items: [
+      { name: 'Copa de Vino', price: '$3.00' },
+      { name: 'Sangría (Jarra)', price: '$17.00' },
+      { name: 'Sangría (1/2 Jarra)', price: '$9.00' },
+      { name: 'Vino Hervido (Jarra)', price: '$17.00' },
+      { name: 'Vino Hervido (1/2 Jarra)', price: '$9.00' },
+      { name: 'Vino Hervido (Copa)', price: '$3.00' },
+    ]
+  },
+  {
+    id: 'cervezas',
+    name: 'Cervezas',
+    Icon: Beer,
+    color: 'from-[#038C7F] to-[#026B61]',
+    items: [
+      { name: 'Heineken', price: '$2.50' },
+      { name: 'Club', price: '$2.50' },
+      { name: 'Corona', price: '$3.00' },
+    ]
+  },
+];
+
+export default function MenuPage() {
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const filteredCategories = MENU_DATA.filter(category => {
+    if (selectedCategory !== 'all' && category.id !== selectedCategory) return false;
+    if (searchTerm) {
+      return category.items.some(item => 
+        item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.description?.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    }
+    return true;
+  });
+
+  return (
+    <main className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-orange-50">
+      {/* Hero Header */}
+      <section className="bg-gradient-to-r from-[#038C7F] to-[#026B61] text-white py-12 md:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <Coffee className="h-10 w-10 md:h-12 md:w-12" />
+              <h1 className="text-3xl md:text-5xl font-bold">
+                Menú Café Viviates
+              </h1>
+            </div>
+            <p className="text-lg md:text-xl text-white/90 mb-6 max-w-2xl mx-auto">
+              Café de especialidad, comida tradicional lojana y sabores internacionales
+            </p>
+            
+            {/* Información de contacto */}
+            <div className="flex flex-wrap items-center justify-center gap-4 text-sm md:text-base">
+              <div className="flex items-center gap-2">
+                <MapPin className="h-4 w-4" />
+                <span>Av. 8 de Diciembre, diagonal al Terminal Terrestre</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="h-4 w-4" />
+                <a href="tel:+593992354992" className="hover:underline">0992354992</a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Clock className="h-4 w-4" />
+                <span>Lun-Dom 5:30 AM - 10:00 PM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Filtros y búsqueda */}
+      <section className="sticky top-0 z-40 bg-white shadow-md border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4">
+          <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
+            {/* Búsqueda */}
+            <div className="relative w-full md:w-96">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+              <input
+                type="text"
+                placeholder="Buscar en el menú..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#038C7F] focus:border-transparent"
+              />
+            </div>
+
+            {/* Filtro de categorías */}
+            <div className="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 w-full md:w-auto">
+              <Filter className="h-5 w-5 text-gray-500 flex-shrink-0 hidden md:block" />
+              <button
+                onClick={() => setSelectedCategory('all')}
+                className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
+                  selectedCategory === 'all'
+                    ? 'bg-[#038C7F] text-white'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }`}
+              >
+                Todo
+              </button>
+              {MENU_DATA.map(category => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all flex items-center gap-2 ${
+                    selectedCategory === category.id
+                      ? 'bg-[#038C7F] text-white'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  }`}
+                >
+                  <category.Icon className="h-4 w-4" />
+                  {category.name}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Menú por categorías */}
+      <section className="py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          {filteredCategories.length === 0 ? (
+            <div className="text-center py-16">
+              <Coffee className="h-16 w-16 text-gray-400 mx-auto mb-4" />
+              <p className="text-gray-500 text-lg">No se encontraron resultados para "{searchTerm}"</p>
+            </div>
+          ) : (
+            <div className="space-y-12">
+              {filteredCategories.map((category) => (
+                <div key={category.id} id={category.id} className="scroll-mt-24">
+                  {/* Título de categoría */}
+                  <div className={`bg-gradient-to-r ${category.color} text-white rounded-xl p-6 mb-6 shadow-lg`}>
+                    <div className="flex items-center gap-3">
+                      <category.Icon className="h-8 w-8" />
+                      <h2 className="text-2xl md:text-3xl font-bold">{category.name}</h2>
+                    </div>
+                  </div>
+
+                  {/* Items de la categoría */}
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {category.items
+                      .filter(item => 
+                        !searchTerm || 
+                        item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                        item.description?.toLowerCase().includes(searchTerm.toLowerCase())
+                      )
+                      .map((item, index) => (
+                        <div
+                          key={index}
+                          className="bg-white rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow border border-gray-100"
+                        >
+                          <div className="flex justify-between items-start gap-3">
+                            <div className="flex-1">
+                              <h3 className="font-bold text-gray-900 mb-1 text-lg">{item.name}</h3>
+                              {item.description && (
+                                <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
+                              )}
+                            </div>
+                            <span className="text-[#038C7F] font-bold text-xl flex-shrink-0">{item.price}</span>
+                          </div>
+                        </div>
+                      ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Extras Info */}
+      <section className="bg-amber-50 py-8 border-t border-amber-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Extras Disponibles</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
+            <div className="bg-white rounded-lg p-4 text-center shadow-sm">
+              <p className="font-medium text-gray-900">Huevo frito</p>
+              <p className="text-[#038C7F] font-bold">$1.00</p>
+            </div>
+            <div className="bg-white rounded-lg p-4 text-center shadow-sm">
+              <p className="font-medium text-gray-900">Tocino</p>
+              <p className="text-[#038C7F] font-bold">$0.75</p>
+            </div>
+            <div className="bg-white rounded-lg p-4 text-center shadow-sm">
+              <p className="font-medium text-gray-900">Queso</p>
+              <p className="text-[#038C7F] font-bold">$0.75</p>
+            </div>
+            <div className="bg-white rounded-lg p-4 text-center shadow-sm">
+              <p className="font-medium text-gray-900">Papas fritas</p>
+              <p className="text-[#038C7F] font-bold">$1.00</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTAs */}
+      <section className="py-12 bg-gradient-to-r from-[#038C7F] to-[#026B61] text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            ¿Listo para disfrutar?
+          </h2>
+          <p className="text-lg mb-8 text-white/90">
+            Haz tu pedido o reserva tu mesa ahora
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <CTAButton
+              variant="secondary"
+              size="large"
+              href="https://wa.me/593961712106?text=Hola, quiero hacer un pedido en Café Viviates"
+              section="menu_order"
+              className="bg-white text-[#038C7F] hover:bg-gray-100 flex items-center gap-2"
+            >
+              <Phone className="h-5 w-5" />
+              Ordenar por WhatsApp
+            </CTAButton>
+            
+            <CTAButton
+              variant="phone"
+              size="large"
+              href="tel:+593992354992"
+              section="menu_call"
+              className="flex items-center gap-2"
+            >
+              <Phone className="h-5 w-5" />
+              Llamar: 0992354992
+            </CTAButton>
+            
+            <Link
+              href="/cafe-viviates"
+              className="text-white hover:text-white/80 underline text-lg font-medium transition-colors"
+            >
+              Volver al Café
+            </Link>
+          </div>
+
+          <div className="mt-8 text-sm text-white/80">
+            <p className="mb-2">📱 También disponible en tu delivery favorito</p>
+            <p>Síguenos: @viviatescoffeeshop • @cafeviviates</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Nota precios */}
+      <section className="py-6 bg-gray-50 border-t border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+          <p className="text-sm text-gray-600">
+            * Todos los precios incluyen IVA. El menú puede variar según disponibilidad de productos.
+          </p>
+        </div>
+      </section>
+    </main>
+  );
+}

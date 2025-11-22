@@ -8,6 +8,7 @@
 import { useState, useEffect } from 'react';
 import { trackConversion } from './ConversionOptimizer';
 import { useBottomNavigation } from '@/hooks/useBottomNavigation';
+import { Sparkles, MapPin, X } from 'lucide-react';
 
 export default function FloatingCTAs() {
   const [isVisible, setIsVisible] = useState(false);
@@ -187,21 +188,23 @@ export function TopContactBar() {
             WhatsApp
           </a>
           
-          <span className="text-white/80 text-xs">
-            📍 Diagonal al Terminal Terrestre
+          <span className="text-white/80 text-xs flex items-center gap-1">
+            <MapPin className="h-3 w-3" />
+            Diagonal al Terminal Terrestre
           </span>
         </div>
 
         <div className="flex items-center gap-4">
-          <span className="text-xs bg-white/20 px-2 py-1 rounded">
-            ✨ Reserva directa, mejor precio
+          <span className="text-xs bg-white/20 px-2 py-1 rounded flex items-center gap-1">
+            <Sparkles className="h-3 w-3" />
+            Reserva directa, mejor precio
           </span>
           <button
             onClick={handleClose}
             className="text-white/80 hover:text-white transition-colors"
             aria-label="Cerrar barra"
           >
-            ✕
+            <X className="h-4 w-4" />
           </button>
         </div>
       </div>

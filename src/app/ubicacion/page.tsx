@@ -43,7 +43,7 @@ function sendGAEvent(eventName: string, eventParams: GAEventParams = {}) {
 
 export default function UbicacionPage() {
   return (
-    <main className="max-w-3xl mx-auto py-16 px-4">
+    <main className="max-w-3xl mx-auto py-16 px-4 mt-10">
       <h1 className="text-4xl font-bold mb-6 text-center">Ubicación</h1>
       <p className="mb-8 text-center text-lg text-gray-600">Estamos diagonal a la terminal terrestre de Loja, con acceso rápido a los principales atractivos turísticos y servicios de la ciudad.</p>
       <div className="mb-10 flex justify-center">

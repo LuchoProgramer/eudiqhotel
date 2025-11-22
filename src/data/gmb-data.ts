@@ -143,13 +143,13 @@ export const GMB_POSTS_SUGGESTIONS = [
   {
     type: 'offer',
     title: 'Desayuno Incluido Gratis',
-    description: 'Todas nuestras habitaciones incluyen desayuno tradicional lojano. ¡Reserva ahora!',
+    description: 'Todas nuestras habitaciones incluyen desayuno. ¡Reserva ahora!',
     cta: 'Reservar por WhatsApp'
   },
   {
     type: 'event',
     title: 'Graduaciones UTPL 2025',
-    description: 'Hotel ideal para familias. A 15 minutos del campus UTPL. Reservas anticipadas disponibles.',
+    description: 'Hotel ideal para familias. A 5 minutos del campus UTPL. Reservas anticipadas disponibles.',
     cta: 'Información'
   },
   {
