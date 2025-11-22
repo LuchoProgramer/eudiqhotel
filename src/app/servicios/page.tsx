@@ -66,7 +66,7 @@ export default function ServiciosPage() {
       </div>
       <div className="mt-12 text-center">
         <a
-          href="https://wa.me/593961712106"
+          href="https://api.whatsapp.com/send?phone=593961712106"
           target="_blank"
           rel="noopener"
           className="bg-[#038C7F] text-white px-6 py-3 rounded-lg text-lg font-bold hover:bg-[#027368] transition-colors"

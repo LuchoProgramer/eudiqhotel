@@ -11,7 +11,7 @@ function sendGAEvent(eventName: string, eventParams: Record<string, unknown> = {
 export default function WhatsAppFloatButton({ section = "blog" }: { section?: string }) {
   return (
     <a
-      href="https://wa.me/593961712106?text=Hola,%20quiero%20información%20de%20Eudiq%20Hotel%20Loja"
+      href="https://api.whatsapp.com/send?phone=593961712106&text=Hola,%20quiero%20información%20de%20Eudiq%20Hotel%20Loja"
       target="_blank"
       rel="noopener noreferrer"
       className="fixed z-50 bottom-6 right-6 bg-green-600 text-white px-5 py-3 rounded-full shadow-lg flex items-center gap-2 font-bold hover:bg-green-700 transition"

@@ -74,7 +74,7 @@ const AB_TESTS: ABTestConfig[] = [
     },
     isActive: true // ✅ A/B Test Activo
   },
-  // Tests específicos para Café Viviates
+  // Tests específicos para Cafetería Viviates
   {
     testId: 'cafe_hero_message',
     name: 'Mensaje principal café',
@@ -224,7 +224,7 @@ export const AB_TEST_CONTENT = {
     A: 'La mejor ubicación de Loja, diagonal al Terminal Terrestre',
     B: 'Tu casa lejos de casa en el corazón de Loja'
   },
-  // Contenido específico para Café Viviates
+  // Contenido específico para Cafetería Viviates
   cafe_hero_message: {
     A: '¡Desayuno desde las 5:30 AM!',
     B: 'El mejor café de Loja desde las 5:30 AM'

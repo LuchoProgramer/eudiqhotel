@@ -49,7 +49,7 @@ const NAV_ITEMS: NavItem[] = [
   {
     id: 'whatsapp',
     label: 'WhatsApp',
-    href: 'https://wa.me/593961712106?text=Hola,%20quiero%20información%20de%20Eudiq%20Hotel',
+    href: 'https://api.whatsapp.com/send?phone=593961712106&text=Hola,%20quiero%20información%20de%20Eudiq%20Hotel',
     icon: MessageCircle,
     activeColor: 'text-green-600',
     bgColor: 'bg-green-50',

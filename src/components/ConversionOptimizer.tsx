@@ -219,7 +219,7 @@ export function UrgencyBanner() {
               <CTAButton
                 variant="whatsapp"
                 size="small"
-                href="https://wa.me/593961712106?text=Hola,%20quiero%20reservar%20directamente"
+                href="https://api.whatsapp.com/send?phone=593961712106&text=Hola,%20quiero%20reservar%20directamente"
                 section="urgency_banner"
                 className="text-xs"
               >
@@ -345,7 +345,7 @@ export function ExitIntentModal() {
             <CTAButton
               variant="whatsapp"
               size="large"
-              href="https://wa.me/593961712106?text=Hola,%20vi%20la%20oferta%20especial%20de%20descuento"
+              href="https://api.whatsapp.com/send?phone=593961712106&text=Hola,%20vi%20la%20oferta%20especial%20de%20descuento"
               section="exit_intent"
               className="w-full"
             >

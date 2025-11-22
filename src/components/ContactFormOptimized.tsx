@@ -183,7 +183,7 @@ ${formData.mensaje || 'Sin mensaje adicional'}
 
       // Enviar por WhatsApp
       const encodedMessage = encodeURIComponent(whatsappMessage);
-      const whatsappUrl = `https://wa.me/593961712106?text=${encodedMessage}`;
+      const whatsappUrl = `https://api.whatsapp.com/send?phone=593961712106&text=${encodedMessage}`;
       
       // Abrir WhatsApp en nueva pestaña
       window.open(whatsappUrl, '_blank');

@@ -36,7 +36,7 @@ export default function TerminalTerrestreLandingPage() {
 
   const handleWhatsAppClick = () => {
     trackConversion('whatsapp_click_ads');
-    window.open('https://wa.me/593726141151?text=Hola,%20vi%20su%20anuncio.%20Quiero%20reservar%20habitación%20cerca%20del%20Terminal%20Terrestre', '_blank');
+    window.open('https://api.whatsapp.com/send?phone=593726141151&text=Hola,%20vi%20su%20anuncio.%20Quiero%20reservar%20habitación%20cerca%20del%20Terminal%20Terrestre', '_blank');
   };
 
   const handlePhoneClick = () => {

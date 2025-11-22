@@ -4,7 +4,7 @@ export const testimonios = [
   {
     nombre: 'María González',
     ubicacion: 'Quito, Ecuador',
-    comentario: 'Excelente hotel en el centro de Loja. Las habitaciones son muy cómodas y limpias. El desayuno es delicioso, especialmente el café Viviates que tienen. El personal es muy amable y atento. Definitivamente volveré.',
+    comentario: 'Excelente hotel en el centro de Loja. Las habitaciones son muy cómodas y limpias. El desayuno es delicioso, especialmente en la Cafetería Viviates. El personal es muy amable y atento. Definitivamente volveré.',
     calificacion: 5,
     fecha: '2023-08-15',
   },
@@ -49,35 +49,35 @@ export const testimonios = [
 export const galeriaCafeViviates = [
   {
     url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847748/WhatsApp_Image_2025-10-29_at_19.40.30_1_qshs8i.jpg',
-    alt: 'Café Viviates - barra y ambiente moderno',
+    alt: 'Cafetería Viviates - barra y ambiente moderno',
   },
   {
     url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847734/WhatsApp_Image_2025-10-29_at_19.40.30_2_vyyw9k.jpg',
-    alt: 'Café Viviates - vista de la cafetería',
+    alt: 'Cafetería Viviates - vista de la cafetería',
   },
   {
     url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847761/WhatsApp_Image_2025-10-29_at_19.40.29_1_hywgib.jpg',
-    alt: 'Café Viviates - café y postres',
+    alt: 'Cafetería Viviates - café y postres',
   },
   {
     url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847772/WhatsApp_Image_2025-10-29_at_19.40.28_2_vo2mtv.jpg',
-    alt: 'Café Viviates - decoración y detalles',
+    alt: 'Cafetería Viviates - decoración y detalles',
   },
   {
     url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847772/WhatsApp_Image_2025-10-29_at_19.40.28_2_vo2mtv.jpg',
-    alt: 'Café Viviates - decoración y detalles',
+    alt: 'Cafetería Viviates - decoración y detalles',
   },
   {
     url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847767/WhatsApp_Image_2025-10-29_at_19.40.29_dadbdl.jpg',
-    alt: 'Café Viviates - café servido',
+    alt: 'Cafetería Viviates - café servido',
   },
   {
     url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847783/WhatsApp_Image_2025-10-29_at_19.40.28_hf3ysb.jpg',
-    alt: 'Café Viviates - barra y mesas',
+    alt: 'Cafetería Viviates - barra y mesas',
   },
   {
     url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847778/WhatsApp_Image_2025-10-29_at_19.40.28_1_c3j7xm.jpg',
-    alt: 'Café Viviates - ambiente general',
+    alt: 'Cafetería Viviates - ambiente general',
   },
 ];
 

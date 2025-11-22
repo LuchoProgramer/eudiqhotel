@@ -6,10 +6,10 @@ import { MapPin, Navigation, Clock, Phone, Mail, Car, Plane, Bus } from 'lucide-
 import { Landmark, Church, Palette, TreePine, Castle, Mountain } from 'lucide-react';
 
 const puntosInteres = [
-  { nombre: 'Parque Central Jipiro', distancia: '300 m', tiempo: '4 min', tipo: 'caminando', icono: <TreePine className="w-7 h-7 text-[#038C7F]" /> },
+  { nombre: 'Parque Jipiro', distancia: '300 m', tiempo: '4 min', tipo: 'caminando', icono: <TreePine className="w-7 h-7 text-[#038C7F]" /> },
   { nombre: 'Teatro De Loja "Benjamín Carrión"', distancia: '800 m', tiempo: '8 min', tipo: 'caminando', icono: <Landmark className="w-7 h-7 text-[#A9BF04]" /> },
   { nombre: 'Catedral de Loja', distancia: '3.5 km', tiempo: '13 min', tipo: 'en auto', icono: <Church className="w-7 h-7 text-[#A9BF04]" /> },
-  { nombre: 'Puerta de la Ciudad', distancia: '3.0 km', tiempo: '7 min', tipo: 'en auto', icono: <Landmark className="w-7 h-7 text-[#038C7F]" /> },
+  { nombre: 'Puerta de la Ciudad', distancia: '3.0 km', tiempo: '5 min', tipo: 'en auto', icono: <Landmark className="w-7 h-7 text-[#038C7F]" /> },
   { nombre: 'Plaza de la Independencia', distancia: '4.0 km', tiempo: '14 min', tipo: 'en auto', icono: <Castle className="w-7 h-7 text-[#A9BF04]" /> },
   { nombre: 'Universidad Tecnica Particular de Loja', distancia: '3.0 km', tiempo: '8 min', tipo: 'en auto', icono: <Landmark className="w-7 h-7 text-[#038C7F]" /> },
   { nombre: 'Parque Nacional Podocarpus', distancia: '15 km', tiempo: '25 min', tipo: 'en auto', icono: <Mountain className="w-7 h-7 text-[#A9BF04]" /> },

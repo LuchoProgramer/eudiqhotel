@@ -38,8 +38,8 @@ export const templatesSemana = {
     cta: 'Reserva tu habitación'
   },
   martes: {
-    tema: 'Café Viviates - Producto estrella',
-    template: '☕ Los martes saben mejor con café de especialidad. Café Viviates ofrece los mejores granos de altura de Loja, tostado artesanal y vista al Parque Jipiro. {cta}',
+    tema: 'Cafetería Viviates - Producto estrella',
+    template: '☕ Los martes saben mejor con café de especialidad. Cafetería Viviates ofrece los mejores granos de altura de Loja, tostado artesanal y vista al Parque Jipiro. {cta}',
     hashtags: ['#MartesCafetero', '#CafeViviates', '#CafeEspecialidad', '#TostadoArtesanal'],
     cta: 'Ven y prueba'
   },
@@ -57,7 +57,7 @@ export const templatesSemana = {
   },
   viernes: {
     tema: 'Fin de semana y relajación',
-    template: '🎉 ¡Viernes de relax! Termina la semana en Café Viviates con la mejor vista al atardecer. El lugar perfecto para desconectar y disfrutar Loja. {cta}',
+    template: '🎉 ¡Viernes de relax! Termina la semana en Cafetería Viviates con la mejor vista al atardecer. El lugar perfecto para desconectar y disfrutar Loja. {cta}',
     hashtags: ['#ViernesRelax', '#AtardecerLoja', '#CafeViviates', '#FinDeSemana'],
     cta: 'Reserva tu mesa'
   },
@@ -69,7 +69,7 @@ export const templatesSemana = {
   },
   domingo: {
     tema: 'Descanso y gastronomía',
-    template: '🍽️ Domingos de sabor lojano. Disfruta el desayuno tradicional: repe, cecina, quesillo y por supuesto, el mejor café de la región en Café Viviates. {cta}',
+    template: '🍽️ Domingos de sabor lojano. Disfruta el desayuno tradicional: repe, cecina, quesillo y por supuesto, el mejor café de la región en Cafetería Viviates. {cta}',
     hashtags: ['#DomingoGastronomico', '#DesayunoLojano', '#SaborTradicional', '#RepeLojan'],
     cta: 'Prueba nuestro desayuno'
   }
@@ -168,10 +168,10 @@ export class GMBAutomation {
 
   static getCTARotativo(): string {
     const ctas = [
-      'Reserva ahora: https://wa.me/593999999999',
+      'Reserva ahora: https://api.whatsapp.com/send?phone=593999999999',
       'Llámanos: +593 99 999 9999',
       'Más info: hoteleudiq.com',
-      'WhatsApp: https://wa.me/593999999999',
+      'WhatsApp: https://api.whatsapp.com/send?phone=593999999999',
       'Consulta disponibilidad'
     ];
     

@@ -61,7 +61,7 @@ export default function Footer() {
         <div>
           <h3 className="font-semibold mb-2">Contáctanos</h3>
           <a
-            href="https://wa.me/593961712106"
+            href="https://api.whatsapp.com/send?phone=593961712106"
             target="_blank"
             rel="noopener"
             className="inline-block bg-green-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-green-700 transition mb-2"

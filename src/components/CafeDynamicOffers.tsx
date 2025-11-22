@@ -125,7 +125,7 @@ export function ActiveOfferBanner() {
         <CTAButton
           variant="secondary"
           size="small"
-          href={`https://wa.me/593961712106?text=${encodeURIComponent(currentOffer.whatsappMessage)}`}
+          href={`https://api.whatsapp.com/send?phone=593961712106&text=${encodeURIComponent(currentOffer.whatsappMessage)}`}
           section={`cafe_offer_${currentOffer.id}`}
           className="bg-white text-orange-600 hover:bg-gray-100 flex-shrink-0"
         >
@@ -191,7 +191,7 @@ export function NextOfferCountdown() {
       <CTAButton
         variant="secondary"
         size="small"
-        href={`https://wa.me/593961712106?text=Hola, quiero información sobre ${nextOffer.name} que inicia en ${timeRemaining}`}
+        href={`https://api.whatsapp.com/send?phone=593961712106&text=Hola, quiero información sobre ${nextOffer.name} que inicia en ${timeRemaining}`}
         section={`cafe_upcoming_${nextOffer.id}`}
         className="text-xs"
       >
@@ -285,7 +285,7 @@ export function DynamicOffersSection() {
                 <CTAButton
                   variant={isActive ? "whatsapp" : "secondary"}
                   size="small"
-                  href={`https://wa.me/593961712106?text=${encodeURIComponent(offer.whatsappMessage)}`}
+                  href={`https://api.whatsapp.com/send?phone=593961712106&text=${encodeURIComponent(offer.whatsappMessage)}`}
                   section={`cafe_${offer.id}`}
                   className={`w-full justify-center flex items-center gap-2 ${isActive ? 'animate-pulse' : ''}`}
                 >

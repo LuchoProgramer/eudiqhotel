@@ -91,7 +91,7 @@ export default function FestivalArtesPage() {
                 <CTAButton
                   variant="primary"
                   size="large"
-                  href="https://wa.me/593961712106?text=Hola,%20quiero%20reservar%20para%20el%20Festival%20de%20Artes%20en%20Eudiq%20Hotel"
+                  href="https://api.whatsapp.com/send?phone=593961712106&text=Hola,%20quiero%20reservar%20para%20el%20Festival%20de%20Artes%20en%20Eudiq%20Hotel"
                   section="festival_hero"
                   className="flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600"
                 >
@@ -167,7 +167,7 @@ export default function FestivalArtesPage() {
               },
               {
                 Icon: Coffee,
-                title: 'Café Viviates',
+                title: 'Cafetería Viviates',
                 description: 'El mejor café artesanal de Loja en nuestro hotel. Punto de encuentro de artistas.'
               },
               {
@@ -336,7 +336,7 @@ export default function FestivalArtesPage() {
                 <CTAButton
                   variant="secondary"
                   size="large"
-                  href="https://wa.me/593961712106?text=Hola,%20quiero%20informaci%C3%B3n%20del%20Paquete%20Festival%20Internacional%20de%20Artes%20Vivas%202025"
+                  href="https://api.whatsapp.com/send?phone=593961712106&text=Hola,%20quiero%20informaci%C3%B3n%20del%20Paquete%20Festival%20Internacional%20de%20Artes%20Vivas%202025"
                   section="festival_package"
                   className="w-full justify-center mb-4 bg-white text-purple-600 hover:bg-gray-100"
                 >
@@ -367,7 +367,7 @@ export default function FestivalArtesPage() {
             <CTAButton
               variant="whatsapp"
               size="large"
-              href="https://wa.me/593961712106?text=Hola,%20quiero%20reservar%20para%20el%20Festival%20Internacional%20de%20Artes%20Vivas%202025%20-%20centro%20de%20Loja"
+              href="https://api.whatsapp.com/send?phone=593961712106&text=Hola,%20quiero%20reservar%20para%20el%20Festival%20Internacional%20de%20Artes%20Vivas%202025%20-%20centro%20de%20Loja"
               section="festival_final"
               className="flex items-center justify-center gap-2"
             >

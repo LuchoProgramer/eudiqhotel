@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 
 export const metadata = {
   title: 'Servicios Hotel Loja | WiFi Gratis, Desayuno Incluido | Eudiq Hotel',
-  description: 'Servicios del hotel en Loja: WiFi gratis, desayuno incluido, estacionamiento gratuito, Café Viviates, lavandería. Hotel cerca Terminal Terrestre.',
+  description: 'Servicios del hotel en Loja: WiFi gratis, desayuno incluido, estacionamiento gratuito, Cafetería Viviates, lavandería. Hotel cerca Terminal Terrestre.',
   alternates: {
     canonical: 'https://www.hoteleudiq.com/servicios',
   },

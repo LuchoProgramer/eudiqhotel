@@ -341,7 +341,7 @@ Soy [Nombre] de Eudiq Hotel, ubicado diagonal al Terminal Terrestre de Loja.
 
 Nos hemos convertido en un punto de referencia para visitantes que llegan a nuestra ciudad, especialmente durante las graduaciones de UTPL y el Festival de las Artes. 
 
-Me gustaría compartir la historia de cómo nuestro Café Viviates está revitalizando la cultura cafetera lojana, sirviendo café de altura de productores locales.
+Me gustaría compartir la historia de cómo nuestra Cafetería Viviates está revitalizando la cultura cafetera lojana, sirviendo café de altura de productores locales.
 
 ¿Estarían interesados en una historia sobre turismo gastronómico local?
 

@@ -46,7 +46,7 @@ export default function Navbar() {
           
           {/* Botón de reserva destacado */}
           <Link
-            href="https://wa.me/593961712106?text=Hola,%20quiero%20reservar%20en%20Eudiq%20Hotel"
+            href="https://api.whatsapp.com/send?phone=593961712106&text=Hola,%20quiero%20reservar%20en%20Eudiq%20Hotel"
             className="bg-[#038C7F] hover:bg-[#A9BF04] text-white px-3 lg:px-4 py-2 rounded-full text-xs lg:text-sm font-semibold transition-all duration-200 hover:scale-105 hover:shadow-lg flex items-center gap-1 lg:gap-2 whitespace-nowrap flex-shrink-0"
           >
             <Phone className="h-4 w-4 hidden sm:inline" />
@@ -82,7 +82,7 @@ export default function Navbar() {
             
             {/* Botón de reserva en móvil */}
             <Link
-              href="https://wa.me/593961712106?text=Hola,%20quiero%20reservar%20en%20Eudiq%20Hotel"
+              href="https://api.whatsapp.com/send?phone=593961712106&text=Hola,%20quiero%20reservar%20en%20Eudiq%20Hotel"
               className="bg-[#038C7F] hover:bg-[#A9BF04] text-white px-4 py-3 rounded-lg text-center font-semibold transition-all duration-200 mt-2 flex items-center justify-center gap-2"
               onClick={() => setOpen(false)}
             >

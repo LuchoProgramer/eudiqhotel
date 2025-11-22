@@ -116,7 +116,7 @@ export default function Hero({ images = defaultImages }: HeroProps) {
             <CTAButton
               variant="whatsapp"
               size="large"
-              href="https://wa.me/593961712106?text=Hola,%20quiero%20reservar%20en%20Eudiq%20Hotel"
+              href="https://api.whatsapp.com/send?phone=593961712106&text=Hola,%20quiero%20reservar%20en%20Eudiq%20Hotel"
               section="hero"
               className="flex items-center gap-2"
             >

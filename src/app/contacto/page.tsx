@@ -71,7 +71,7 @@ export default function ContactoPage() {
                 <CTAButton
                   variant="whatsapp"
                   size="large"
-                  href="https://wa.me/593961712106?text=Hola,%20quiero%20hacer%20una%20reserva%20en%20Eudiq%20Hotel"
+                  href="https://api.whatsapp.com/send?phone=593961712106&text=Hola,%20quiero%20hacer%20una%20reserva%20en%20Eudiq%20Hotel"
                   section="contact_page"
                   className="w-full"
                 >

@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Coffee, Croissant, IceCream, Wine, Beer, Martini, ChefHat, Clock, Phone, MapPin, UtensilsCrossed, Search, Filter, Instagram, Facebook, MessageCircle } from 'lucide-react';
 import { CTAButton } from '@/components/ConversionOptimizer';
 import Link from 'next/link';
+import { useCafeAnalytics } from '@/hooks/useCafeAnalytics';
 
 interface MenuItem {
   name: string;
@@ -173,6 +174,22 @@ const MENU_DATA: MenuCategory[] = [
 export default function MenuPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
+  
+  // Analytics hook
+  const {
+    trackWhatsAppClick,
+    trackPhoneClick,
+    trackSocialClick,
+    trackMenuInteraction,
+    trackCafeEvent,
+  } = useCafeAnalytics();
+  
+  // Track menu view on mount
+  React.useEffect(() => {
+    trackCafeEvent('cafe_menu_view', {
+      cafe_section: 'menu_page',
+    });
+  }, [trackCafeEvent]);
 
   const filteredCategories = MENU_DATA.filter(category => {
     if (selectedCategory !== 'all' && category.id !== selectedCategory) return false;
@@ -194,7 +211,7 @@ export default function MenuPage() {
             <div className="flex items-center justify-center gap-3 mb-4">
               <Coffee className="h-10 w-10 md:h-12 md:w-12" />
               <h1 className="text-3xl md:text-5xl font-bold">
-                Menú Café Viviates
+                Menú Cafetería Viviates
               </h1>
             </div>
             <p className="text-lg md:text-xl text-white/90 mb-6 max-w-2xl mx-auto">
@@ -231,7 +248,13 @@ export default function MenuPage() {
                 type="text"
                 placeholder="Buscar en el menú..."
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={(e) => {
+                  setSearchTerm(e.target.value);
+                  // Track search
+                  if (e.target.value.length >= 3) {
+                    trackMenuInteraction('search', { searchQuery: e.target.value });
+                  }
+                }}
                 className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#038C7F] focus:border-transparent"
               />
             </div>
@@ -252,7 +275,13 @@ export default function MenuPage() {
               {MENU_DATA.map(category => (
                 <button
                   key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
+                  onClick={() => {
+                    setSelectedCategory(category.id);
+                    trackMenuInteraction('filter', { 
+                      category: category.name,
+                      filter: category.id 
+                    });
+                  }}
                   className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all flex items-center gap-2 ${
                     selectedCategory === category.id
                       ? 'bg-[#038C7F] text-white'
@@ -362,9 +391,10 @@ export default function MenuPage() {
             <CTAButton
               variant="secondary"
               size="large"
-              href="https://wa.me/593961712106?text=Hola, quiero hacer un pedido en Café Viviates"
+              href="https://api.whatsapp.com/send?phone=593961712106&text=Hola, quiero hacer un pedido en Cafeter%C3%ADa Viviates"
               section="menu_order_whatsapp"
               className="bg-white text-[#038C7F] hover:bg-gray-100 flex items-center gap-2 font-bold"
+              onClick={() => trackWhatsAppClick('order', 'menu_cta_primary', 'Pedido desde menú')}
             >
               <MessageCircle className="h-5 w-5" />
               Pedir por WhatsApp
@@ -376,6 +406,7 @@ export default function MenuPage() {
               href="tel:+593992354992"
               section="menu_call_primary"
               className="flex items-center gap-2 bg-[#A9BF04] hover:bg-[#8A9C03] border-0 font-bold"
+              onClick={() => trackPhoneClick('menu_cta_primary')}
             >
               <Phone className="h-5 w-5" />
               Llamar: 0992354992
@@ -384,7 +415,8 @@ export default function MenuPage() {
             <CTAButton
               variant="secondary"
               size="large"
-              href="https://wa.me/593961712106?text=Hola, quiero reservar una mesa en Café Viviates"
+              href="https://api.whatsapp.com/send?phone=593961712106&text=Hola, quiero reservar una mesa en Cafeter%C3%ADa Viviates"
+              onClick={() => trackWhatsAppClick('reservation', 'menu_cta_primary', 'Reserva desde menú')}
               section="menu_reserve_whatsapp"
               className="bg-white/10 hover:bg-white/20 text-white border-2 border-white flex items-center gap-2 font-bold"
             >
@@ -405,10 +437,18 @@ export default function MenuPage() {
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
               <Phone className="h-6 w-6 mx-auto mb-2" />
               <p className="text-sm font-medium mb-2">Contacto</p>
-              <a href="tel:+593992354992" className="text-xs hover:underline block">
+              <a 
+                href="tel:+593992354992" 
+                className="text-xs hover:underline block"
+                onClick={() => trackPhoneClick('menu_contact_card')}
+              >
                 📞 0992354992
               </a>
-              <a href="https://wa.me/593961712106" className="text-xs hover:underline block mt-1">
+              <a 
+                href="https://api.whatsapp.com/send?phone=593961712106" 
+                className="text-xs hover:underline block mt-1"
+                onClick={() => trackWhatsAppClick('info', 'menu_contact_card')}
+              >
                 💬 WhatsApp: 0961712106
               </a>
             </div>
@@ -430,6 +470,7 @@ export default function MenuPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-all"
+                onClick={() => trackSocialClick('instagram', '@viviatescoffeeshop', 'menu_footer')}
               >
                 <Instagram className="h-5 w-5" />
                 <span className="text-sm">@viviatescoffeeshop</span>
@@ -440,6 +481,7 @@ export default function MenuPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-all"
+                onClick={() => trackSocialClick('instagram', '@cafeviviates', 'menu_footer')}
               >
                 <Instagram className="h-5 w-5" />
                 <span className="text-sm">@cafeviviates</span>
@@ -450,6 +492,7 @@ export default function MenuPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-all"
+                onClick={() => trackSocialClick('instagram', '@hoteleudiq', 'menu_footer')}
               >
                 <Instagram className="h-5 w-5" />
                 <span className="text-sm">@hoteleudiq</span>
@@ -466,7 +509,7 @@ export default function MenuPage() {
               href="/cafe-viviates"
               className="inline-flex items-center gap-2 text-white hover:text-white/80 underline text-sm font-medium transition-colors"
             >
-              ← Volver a Café Viviates
+              ← Volver a Cafetería Viviates
             </Link>
           </div>
         </div>

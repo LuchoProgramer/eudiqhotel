@@ -129,7 +129,7 @@ export default function FAQ() {
             ¿No encuentras la respuesta que buscas?
           </p>
           <a
-            href="https://wa.me/593961712106?text=Hola,%20tengo%20una%20pregunta%20sobre%20el%20hotel"
+            href="https://api.whatsapp.com/send?phone=593961712106&text=Hola,%20tengo%20una%20pregunta%20sobre%20el%20hotel"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-[#038C7F] text-white font-semibold rounded-full hover:bg-[#038C7F]/90 transition-colors"

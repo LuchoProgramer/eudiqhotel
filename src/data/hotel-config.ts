@@ -134,7 +134,7 @@ export const HOTEL_CONFIG = {
   // Nombre de la cafetería (CORREGIDO)
   cafeteria: {
     name: 'Cafetería Viviates',
-    oldName: 'Café Viviates' // Para referencia de lo que hay que cambiar
+    oldName: 'Cafetería Viviates' // Para referencia de lo que hay que cambiar
   }
 };
 

@@ -113,7 +113,7 @@ export default function Contacto() {
 
               {/* Botón directo a WhatsApp para reservar */}
               <a
-                href="https://wa.me/593961712106?text=Hola,%20quiero%20reservar%20en%20EUDIQ%20HOTEL.%20Por%20favor%20ayúdame%20con%20la%20reserva."
+                href="https://api.whatsapp.com/send?phone=593961712106&text=Hola,%20quiero%20reservar%20en%20EUDIQ%20HOTEL.%20Por%20favor%20ayúdame%20con%20la%20reserva."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full block py-4 bg-gradient-to-r from-[#038C7F] to-[#A9BF04] text-white font-semibold rounded-xl flex items-center justify-center gap-2 transition-all hover:shadow-xl hover:scale-105"
@@ -174,7 +174,7 @@ export default function Contacto() {
                 Chatea con nosotros directamente y resuelve tus dudas al instante.
               </p>
               <a
-                href="https://wa.me/593961712106"
+                href="https://api.whatsapp.com/send?phone=593961712106"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#25D366] font-semibold rounded-full hover:bg-green-50 transition-all"

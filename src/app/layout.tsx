@@ -51,7 +51,7 @@ export default function RootLayout({
           `}
         </Script>
   <meta property="fb:app_id" content="1327476752302916" />
-  <meta name="keywords" content="hotel loja, hotel terminal terrestre loja, hospedaje loja ecuador, graduacion utpl, hotel economico loja, desayuno incluido, wifi gratis, estacionamiento gratuito, cafe viviates, turismo loja, hotel cerca terminal" />
+  <meta name="keywords" content="hotel loja, hotel terminal terrestre loja, hospedaje loja ecuador, graduacion utpl, hotel economico loja, desayuno incluido, wifi gratis, estacionamiento gratuito, cafeteria viviates, turismo loja, hotel cerca terminal" />
   <meta name="author" content="Eudiq Hotel Loja" />
   <meta name="publisher" content="Eudiq Hotel Loja" />
   <meta name="robots" content="index, follow" />
@@ -86,7 +86,7 @@ export default function RootLayout({
             "@context": "https://schema.org",
             "@type": "Hotel",
             "name": "Eudiq Hotel Loja",
-            "description": "Hotel en Loja cerca del Terminal Terrestre. Habitaciones confortables, desayuno incluido, WiFi gratis, estacionamiento, Café Viviates. Ideal para graduaciones UTPL y turismo.",
+            "description": "Hotel en Loja cerca del Terminal Terrestre. Habitaciones confortables, desayuno incluido, WiFi gratis, estacionamiento, Cafetería Viviates. Ideal para graduaciones UTPL y turismo.",
             "image": [
               "https://www.hoteleudiq.com/Eudiq.png",
               "https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1761845419/EudiqHero_i4cxtc.webp"
@@ -164,7 +164,7 @@ export default function RootLayout({
               "worstRating": "1"
             },
             "sameAs": [
-              "https://wa.me/593961712106"
+              "https://api.whatsapp.com/send?phone=593961712106"
             ]
           })}
         </script>

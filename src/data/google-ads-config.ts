@@ -122,7 +122,7 @@ export const GOOGLE_ADS_CONFIG = {
         '✅ Información diaria de programación del festival',
         '✅ Transporte coordinado a venues principales',
         '✅ WiFi premium para compartir experiencias',
-        '✅ Café Viviates: el mejor café para artistas',
+        '✅ Cafetería Viviates: el mejor café para artistas',
         '✅ Ambiente acogedor para creativos y visitantes'
       ],
       cta: 'Reservar para el Festival',

@@ -11,7 +11,7 @@ function sendGAEvent(eventName: string, eventParams: GAEventParams = {}) {
 export default function WhatsAppReservaCafe() {
   return (
     <a
-      href="https://wa.me/593961712106?text=Hola,%20quiero%20consultar%20el%20menú%20de%20Cafetería%20Café%20Viviates"
+      href="https://api.whatsapp.com/send?phone=593961712106&text=Hola,%20quiero%20consultar%20el%20menú%20de%20Cafetería%20Café%20Viviates"
       target="_blank"
       rel="noopener noreferrer"
       className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-700 transition mb-4"

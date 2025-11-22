@@ -77,7 +77,7 @@ export default function FloatingCTAs() {
       {/* WhatsApp Button */}
       <div className="relative group">
         <a
-          href="https://wa.me/593961712106?text=Hola,%20quiero%20información%20sobre%20Eudiq%20Hotel"
+          href="https://api.whatsapp.com/send?phone=593961712106&text=Hola,%20quiero%20información%20sobre%20Eudiq%20Hotel"
           target="_blank"
           rel="noopener noreferrer"
           onClick={handleWhatsAppClick}
@@ -176,7 +176,7 @@ export function TopContactBar() {
           </a>
           
           <a
-            href="https://wa.me/593961712106?text=Hola,%20quiero%20información%20sobre%20Eudiq%20Hotel"
+            href="https://api.whatsapp.com/send?phone=593961712106&text=Hola,%20quiero%20información%20sobre%20Eudiq%20Hotel"
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleWhatsAppClick}

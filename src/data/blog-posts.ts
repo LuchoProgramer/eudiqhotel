@@ -28,7 +28,7 @@ export const BLOG_POSTS = [
         <li>✅ <strong>WiFi de alta velocidad:</strong> Para compartir los momentos en redes sociales</li>
         <li>✅ <strong>Estacionamiento gratuito:</strong> Seguridad para tu vehículo</li>
         <li>✅ <strong>Recepción 24 horas:</strong> Atención cuando la necesites</li>
-        <li>✅ <strong>Café Viviates:</strong> El mejor café de Loja en el mismo hotel</li>
+        <li>✅ <strong>Cafetería Viviates:</strong> El mejor café de Loja en el mismo hotel</li>
       </ul>
 
       <h2>Fechas importantes UTPL 2025</h2>
@@ -135,7 +135,7 @@ export const BLOG_POSTS = [
       <ul>
         <li><strong>Desayuna temprano:</strong> Las ceremonias suelen ser matutinas</li>
         <li><strong>Usa el WiFi gratuito:</strong> Para compartir momentos en vivo</li>
-        <li><strong>Aprovecha el café:</strong> Café Viviates para energizarte</li>
+        <li><strong>Aprovecha el café:</strong> Cafetería Viviates para energizarte</li>
         <li><strong>Pide recomendaciones:</strong> El personal conoce los mejores restaurantes</li>
       </ul>
 
@@ -202,7 +202,7 @@ export const BLOG_POSTS = [
         <li>✅ <strong>Desayuno incluido</strong></li>
         <li>✅ <strong>WiFi gratuito:</strong> Internet de alta velocidad</li>
         <li>✅ <strong>Estacionamiento gratis:</strong> Seguridad para tu vehículo</li>
-        <li>✅ <strong>Café Viviates:</strong> Cafetería especializada en el mismo hotel</li>
+        <li>✅ <strong>Cafetería Viviates:</strong> Cafetería especializada en el mismo hotel</li>
       </ul>
 
       <h2>Graduaciones UTPL: Tu hospedaje ideal</h2>
@@ -243,7 +243,7 @@ export const BLOG_POSTS = [
       <ul>
         <li><strong>Reserva con anticipación:</strong> Especialmente para graduaciones UTPL</li>
         <li><strong>Pregunta por descuentos:</strong> Ofertas especiales para estadías largas</li>
-        <li><strong>Aprovecha el café:</strong> Café Viviates es reconocido por su calidad</li>
+        <li><strong>Aprovecha el café:</strong> Cafetería Viviates es reconocido por su calidad</li>
         <li><strong>Explora caminando:</strong> Parque Jipiro está a solo 200 metros</li>
       </ul>
 
@@ -291,7 +291,7 @@ export const BLOG_POSTS = [
         <li>✅ <strong>WiFi de alta velocidad:</strong> Para streaming y redes sociales</li>
         <li>✅ <strong>Información actualizada:</strong> Programación diaria del festival</li>
         <li>✅ <strong>Coordinación de transporte:</strong> Taxis confiables al centro</li>
-        <li>✅ <strong>Café Viviates extendido:</strong> Servicio hasta medianoche</li>
+        <li>✅ <strong>Cafetería Viviates extendido:</strong> Servicio hasta medianoche</li>
       </ul>
 
       <h2>Eventos principales del Festival de las Artes 2025</h2>
@@ -397,7 +397,7 @@ export const BLOG_POSTS = [
       
       <h3>En el hotel:</h3>
       <ul>
-        <li><strong>Café Viviates:</strong> Desayunos y café de especialidad</li>
+        <li><strong>Cafetería Viviates:</strong> Desayunos y café de especialidad</li>
         <li><strong>Horario extendido:</strong> Durante el festival hasta medianoche</li>
       </ul>
 
@@ -612,7 +612,7 @@ export const BLOG_POSTS = [
         <li><strong>El Tamal Lojano:</strong> Comida tradicional auténtica</li>
         <li><strong>Zarza Brewing Company:</strong> Gastronomía moderna con cerveza artesanal</li>
         <li><strong>La Casona:</strong> Ambiente colonial, platos gourmet</li>
-        <li><strong>Café Viviates (Eudiq Hotel):</strong> Mejor café de especialidad</li>
+        <li><strong>Cafetería Viviates (Eudiq Hotel):</strong> Mejor café de especialidad</li>
       </ul>
 
       <h2>Cultura y tradiciones lojanas</h2>
@@ -647,7 +647,7 @@ export const BLOG_POSTS = [
 
       <h3>Cafeterías y espacios culturales</h3>
       <ul>
-        <li><strong>Café Viviates:</strong> Mejor café de Loja (en Eudiq Hotel)</li>
+        <li><strong>Cafetería Viviates:</strong> Mejor café de Loja (en Eudiq Hotel)</li>
         <li><strong>Café Central:</strong> Ambiente bohemio en el centro</li>
         <li><strong>Casa Tinku:</strong> Espacio cultural con eventos</li>
       </ul>
@@ -814,7 +814,7 @@ export const BLOG_POSTS = [
       <h2>Orígenes y tradición</h2>
       <p>Las primeras plantaciones surgieron en las zonas rurales, donde el clima y la altitud favorecen un grano de alta calidad. Hoy, Loja es reconocida internacionalmente por su café de especialidad.</p>
       <h2>Impacto cultural</h2>
-      <p>El café está presente en las celebraciones, en la vida cotidiana y en la hospitalidad lojanas. Cafeterías como Café Viviates mantienen viva la tradición y la innovación.</p>
+      <p>El café está presente en las celebraciones, en la vida cotidiana y en la hospitalidad lojanas. Cafeterías como Cafetería Viviates mantienen viva la tradición y la innovación.</p>
       <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Café de Loja en taza" />
       <p>Visita nuestro hotel y disfruta de una experiencia cafetera única en Loja.</p>
     `,

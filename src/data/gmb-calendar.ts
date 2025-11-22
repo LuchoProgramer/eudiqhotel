@@ -41,15 +41,15 @@ export const calendarioGMB2025: CalendarioMensual[] = [
         content: '🎉 Empezamos el 2025 con la mejor ubicación de Loja. A solo pasos del Terminal Terrestre y frente al Parque Jipiro. ¡Tu estadía perfecta comienza aquí!',
         type: 'actualización',
         cta: 'Reservar ahora',
-        ctaUrl: 'https://wa.me/593999999999',
+        ctaUrl: 'https://api.whatsapp.com/send?phone=593999999999',
         hashtags: ['#EudiqHotel', '#Loja2025', '#TerminalTerrestre', '#PerfectaUbicacion'],
         fechaPublicacion: new Date('2025-01-02T08:00:00'),
         prioridad: 'media'
       },
       {
         id: 'enero-02',
-        title: 'Café Viviates: Despierta tus sentidos',
-        content: '☕ Descubre el mejor café de especialidad de Loja en nuestro Café Viviates. Granos de altura, tostado artesanal y la vista perfecta al Parque Jipiro. ¡Ven y prueba la diferencia!',
+        title: 'Cafetería Viviates: Despierta tus sentidos',
+        content: '☕ Descubre el mejor café de especialidad de Loja en nuestra Cafetería Viviates. Granos de altura, tostado artesanal y la vista perfecta al Parque Jipiro. ¡Ven y prueba la diferencia!',
         type: 'producto',
         cta: 'Ver menú',
         hashtags: ['#CafeViviates', '#CafeEspecialidad', '#LojaEcuador', '#MejorCafe'],
@@ -81,11 +81,11 @@ export const calendarioGMB2025: CalendarioMensual[] = [
     publicaciones: [
       {
         id: 'febrero-01',
-        title: 'San Valentín en Café Viviates',
-        content: '💕 Este 14 de febrero, sorprende a tu pareja con una cita especial en Café Viviates. Ambiente romántico, el mejor café de Loja y vista al Parque Jipiro. ¡Reserva tu mesa!',
+        title: 'San Valentín en Cafetería Viviates',
+        content: '💕 Este 14 de febrero, sorprende a tu pareja con una cita especial en Cafetería Viviates. Ambiente romántico, el mejor café de Loja y vista al Parque Jipiro. ¡Reserva tu mesa!',
         type: 'evento',
         cta: 'Reservar mesa',
-        ctaUrl: 'https://wa.me/593999999999',
+        ctaUrl: 'https://api.whatsapp.com/send?phone=593999999999',
         hashtags: ['#SanValentin', '#CitaRomantica', '#CafeViviates', '#LojaTurismo'],
         fechaPublicacion: new Date('2025-02-01T10:00:00'),
         prioridad: 'alta'
@@ -128,7 +128,7 @@ export const calendarioGMB2025: CalendarioMensual[] = [
         content: '🎓 ¡Temporada de graduaciones! Familias de todo Ecuador nos eligen por nuestra ubicación estratégica y servicio personalizado. Fácil acceso desde el Terminal y cerca de todos los servicios.',
         type: 'evento',
         cta: 'Reservar para familia',
-        ctaUrl: 'https://wa.me/593999999999',
+        ctaUrl: 'https://api.whatsapp.com/send?phone=593999999999',
         hashtags: ['#GraduacionesUTPL', '#HospedajeFamiliar', '#Loja2025', '#EudiqHotel'],
         fechaPublicacion: new Date('2025-03-01T08:00:00'),
         prioridad: 'alta'
@@ -136,7 +136,7 @@ export const calendarioGMB2025: CalendarioMensual[] = [
       {
         id: 'marzo-02',
         title: 'Celebra el logro con el mejor café',
-        content: '☕ Después de la graduación, celebren en Café Viviates. El lugar perfecto para brindar por el éxito de su graduado. ¡Café excepcional para momentos especiales!',
+        content: '☕ Después de la graduación, celebren en Cafetería Viviates. El lugar perfecto para brindar por el éxito de su graduado. ¡Café excepcional para momentos especiales!',
         type: 'producto',
         cta: 'Ver menú especial',
         hashtags: ['#CelebracionGraduacion', '#CafeViviates', '#MomentoEspecial', '#FamiliaReunida'],
@@ -171,7 +171,7 @@ export const calendarioGMB2025: CalendarioMensual[] = [
         content: '🌄 Aprovecha los feriados para conocer Loja. Eudiq Hotel es tu base perfecta: cerca del centro histórico, Parque Nacional Podocarpus y todos los atractivos. ¡Reserva ya!',
         type: 'oferta',
         cta: 'Reservar feriado',
-        ctaUrl: 'https://wa.me/593999999999',
+        ctaUrl: 'https://api.whatsapp.com/send?phone=593999999999',
         hashtags: ['#FeriadosAbril', '#TurismoLoja', '#BaseExploracion', '#LojaEcuador'],
         fechaPublicacion: new Date('2025-04-01T09:00:00'),
         prioridad: 'alta'
@@ -209,7 +209,7 @@ export const templatesGMB = {
   
   cafe: {
     estructura: '☕ [Descripción del café] [Ambiente/Vista] [Diferenciador] [CTA]',
-    ejemplo: '☕ Café de altura en Café Viviates. Tostado artesanal con vista al Parque Jipiro. ¡Ven y prueba!'
+    ejemplo: '☕ Café de altura en Cafetería Viviates. Tostado artesanal con vista al Parque Jipiro. ¡Ven y prueba!'
   },
   
   ubicacion: {

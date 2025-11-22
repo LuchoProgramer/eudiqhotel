@@ -118,7 +118,7 @@ export default function Habitaciones() {
 
                   {/* CTA Button - WhatsApp */}
                   <a
-                    href={`https://wa.me/593961712106?text=${encodeURIComponent(`Hola, quiero consultar la disponibilidad de la ${hab.nombre}`)}`}
+                    href={`https://api.whatsapp.com/send?phone=593961712106&text=${encodeURIComponent(`Hola, quiero consultar la disponibilidad de la ${hab.nombre}`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full py-3 bg-[#038C7F] text-white font-semibold rounded-xl hover:bg-[#CBD95F] hover:text-[#222] hover:shadow-lg hover:scale-105 transition-all flex items-center justify-center gap-2 group text-center"

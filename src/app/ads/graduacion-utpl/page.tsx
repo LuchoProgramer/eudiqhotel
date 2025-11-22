@@ -78,7 +78,7 @@ export default function GraduacionUTPLPage() {
                 <CTAButton
                   variant="primary"
                   size="large"
-                  href="https://wa.me/593961712106?text=Hola,%20quiero%20reservar%20para%20graduación%20UTPL%20en%20Eudiq%20Hotel"
+                  href="https://api.whatsapp.com/send?phone=593961712106&text=Hola,%20quiero%20reservar%20para%20graduación%20UTPL%20en%20Eudiq%20Hotel"
                   section="graduacion_hero"
                   className="flex items-center gap-2"
                 >
@@ -283,7 +283,7 @@ export default function GraduacionUTPLPage() {
               <CTAButton
                 variant="secondary"
                 size="large"
-                href="https://wa.me/593961712106?text=Hola,%20quiero%20información%20sobre%20la%20oferta%20especial%20graduación%20UTPL"
+                href="https://api.whatsapp.com/send?phone=593961712106&text=Hola,%20quiero%20información%20sobre%20la%20oferta%20especial%20graduación%20UTPL"
                 section="graduacion_offer"
                 className="w-full justify-center bg-white text-blue-600 hover:bg-gray-100"
               >
@@ -308,7 +308,7 @@ export default function GraduacionUTPLPage() {
             <CTAButton
               variant="primary"
               size="large"
-              href="https://wa.me/593961712106?text=Hola,%20quiero%20reservar%20para%20graduación%20UTPL%20-%20familia%20completa"
+              href="https://api.whatsapp.com/send?phone=593961712106&text=Hola,%20quiero%20reservar%20para%20graduación%20UTPL%20-%20familia%20completa"
               section="graduacion_final"
               className="flex items-center justify-center gap-2"
             >

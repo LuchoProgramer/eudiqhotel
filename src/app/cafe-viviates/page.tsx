@@ -7,10 +7,19 @@ import { Clock, MapPin, Wifi, Coffee, Users, Star, Timer, CheckCircle, X, Chevro
 import { galeriaCafeViviates } from '@/lib/data';
 import ConversionOptimizer, { CTAButton } from '@/components/ConversionOptimizer';
 import { DynamicOffersSection } from '@/components/CafeDynamicOffers';
+import { useCafeAnalytics } from '@/hooks/useCafeAnalytics';
 
 export default function CafeViviatesLanding() {
   const [lightboxOpen, setLightboxOpen] = React.useState(false);
   const [imagenActual, setImagenActual] = React.useState(0);
+  
+  // Analytics hook
+  const {
+    trackWhatsAppClick,
+    trackPhoneClick,
+    trackSocialClick,
+    trackGalleryInteraction,
+  } = useCafeAnalytics();
 
   const fotosCafeteria = [
     { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847748/WhatsApp_Image_2025-10-29_at_19.40.30_1_qshs8i.jpg', alt: 'Cafetería Viviates - barra y ambiente moderno' },
@@ -24,6 +33,9 @@ export default function CafeViviatesLanding() {
     setImagenActual(index);
     setLightboxOpen(true);
     document.body.style.overflow = 'hidden';
+    
+    // Track gallery interaction
+    trackGalleryInteraction('lightbox', index, fotosCafeteria[index].alt);
   };
 
   const cerrarLightbox = () => {
@@ -249,9 +261,10 @@ export default function CafeViviatesLanding() {
                 <CTAButton
                   variant="secondary"
                   size="large"
-                  href="https://wa.me/593961712106?text=Hola, quiero hacer un pedido en Café Viviates"
+                  href="https://api.whatsapp.com/send?phone=593961712106&text=Hola, quiero hacer un pedido en Cafeter%C3%ADa Viviates"
                   section="cafe_order_whatsapp"
                   className="bg-white text-[#038C7F] hover:bg-gray-100 flex items-center gap-2 font-bold"
+                  onClick={() => trackWhatsAppClick('order', 'cta_section', 'Pedido Cafetería Viviates')}
                 >
                   <MessageCircle className="h-5 w-5" />
                   Pedir por WhatsApp
@@ -261,6 +274,7 @@ export default function CafeViviatesLanding() {
                   variant="phone"
                   size="large"
                   href="tel:+593992354992"
+                  onClick={() => trackPhoneClick('cta_section')}
                   section="cafe_call_primary"
                   className="flex items-center gap-2 bg-[#A9BF04] hover:bg-[#8A9C03] border-0 font-bold"
                 >
@@ -288,10 +302,18 @@ export default function CafeViviatesLanding() {
                     Contacto
                   </h3>
                   <div className="space-y-2 text-sm">
-                    <a href="tel:+593992354992" className="block hover:underline">
+                    <a 
+                      href="tel:+593992354992" 
+                      className="block hover:underline"
+                      onClick={() => trackPhoneClick('contact_card')}
+                    >
                       📞 Reservas: 0992354992
                     </a>
-                    <a href="https://wa.me/593961712106" className="block hover:underline">
+                    <a 
+                      href="https://api.whatsapp.com/send?phone=593961712106" 
+                      className="block hover:underline"
+                      onClick={() => trackWhatsAppClick('info', 'contact_card')}
+                    >
                       💬 WhatsApp: 0961712106
                     </a>
                   </div>
@@ -353,6 +375,7 @@ export default function CafeViviatesLanding() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-all"
+                  onClick={() => trackSocialClick('instagram', '@viviatescoffeeshop', 'footer_social')}
                 >
                   <Instagram className="h-5 w-5" />
                   <span className="text-sm">@viviatescoffeeshop</span>
@@ -363,6 +386,7 @@ export default function CafeViviatesLanding() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-all"
+                  onClick={() => trackSocialClick('instagram', '@cafeviviates', 'footer_social')}
                 >
                   <Instagram className="h-5 w-5" />
                   <span className="text-sm">@cafeviviates</span>
@@ -373,6 +397,7 @@ export default function CafeViviatesLanding() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-all"
+                  onClick={() => trackSocialClick('instagram', '@hoteleudiq', 'footer_social')}
                 >
                   <Instagram className="h-5 w-5" />
                   <span className="text-sm">@hoteleudiq</span>

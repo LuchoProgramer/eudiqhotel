@@ -149,7 +149,7 @@ export default function Servicios() {
           })}
         </div>
 
-        {/* Featured: Café Viviates */}
+        {/* Featured: Cafetería Viviates */}
         <div className={`bg-gradient-to-r from-[#038C7F] to-[#A9BF04] rounded-3xl p-8 md:p-12 shadow-2xl transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
@@ -194,7 +194,7 @@ export default function Servicios() {
             <div className="relative">
               <Image
                 src="https://res.cloudinary.com/dltfsttr7/image/upload/v1761847761/WhatsApp_Image_2025-10-29_at_19.40.29_1_hywgib.jpg"
-                alt="Café Viviates - café y postres"
+                alt="Cafetería Viviates - café y postres"
                 width={800}
                 height={600}
                 className="rounded-2xl shadow-2xl"

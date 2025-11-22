@@ -3,12 +3,12 @@
 const puntosInteres = [
   {
     nombre: 'Terminal Terrestre Loja',
-    distancia: '1 min a pie',
+    distancia: '3 min a pie',
     descripcion: 'Ideal para viajeros, a solo unos pasos del hotel.',
   },
   {
     nombre: 'Parque Jipiro',
-    distancia: '10 min en taxi',
+    distancia: '4 min caminando',
     descripcion: 'Hermoso parque recreacional con actividades para toda la familia.',
   },
   {
@@ -86,7 +86,7 @@ export default function UbicacionPage() {
       </section>
       <div className="text-center mt-8 flex flex-col gap-4 items-center">
         <a
-          href="https://wa.me/593961712106"
+          href="https://api.whatsapp.com/send?phone=593961712106"
           target="_blank"
           rel="noopener"
           className="bg-primary text-white px-6 py-3 rounded text-lg font-bold hover:bg-primary-dark transition"
