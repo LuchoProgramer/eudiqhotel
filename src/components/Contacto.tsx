@@ -189,7 +189,7 @@ export default function Contacto() {
               <ul className="space-y-2 text-sm text-white/90">
                 <li className="flex items-start gap-2">
                   <span className="text-white mt-1">✓</span>
-                  <span>Check-in: 14:00 hrs | Check-out: 12:00 hrs</span>
+                  <span>Check-in: 12:00 PM | Check-out: 12:00 PM</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-white mt-1">✓</span>

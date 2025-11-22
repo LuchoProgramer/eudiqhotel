@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Clock, MapPin, Wifi, Coffee, Users, Star, Timer, CheckCircle, X, ChevronLeft, ChevronRight, Calendar, Sunrise, Sunset, Croissant, Laptop, Palette, Utensils, Cookie, Sandwich, Cake, Wine } from 'lucide-react';
+import { Clock, MapPin, Wifi, Coffee, Users, Star, Timer, CheckCircle, X, ChevronLeft, ChevronRight, Calendar, Sunrise, Sunset, Croissant, Laptop, Palette, Utensils, Cookie, Sandwich, Cake, Wine, Phone, MessageCircle, Instagram } from 'lucide-react';
 import { galeriaCafeViviates } from '@/lib/data';
 import ConversionOptimizer, { CTAButton } from '@/components/ConversionOptimizer';
 import { DynamicOffersSection } from '@/components/CafeDynamicOffers';
@@ -230,24 +230,158 @@ export default function CafeViviatesLanding() {
 
         {/* Ubicación removida - no necesaria en sección de cafetería según cliente */}
 
-        {/* CTA Final removido - no necesario apartado de reservas según cliente */}
-        <section className="py-16 bg-gradient-to-r from-[#038C7F]/10 to-[#CBD95F]/10">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 flex items-center justify-center gap-3">
-              <Coffee className="h-8 w-8 text-[#038C7F]" /> Visítanos en Cafetería Viviates
-            </h2>
-            <p className="text-xl text-gray-700 mb-4">
-              <strong>Lunes a Sábado</strong> • 7AM-11AM y 4PM-9PM
-            </p>
-            <p className="text-gray-600 mb-4">
-              Av. 8 de Diciembre y Juan José Flores • Diagonal a la Terminal Terrestre
-            </p>
+        {/* CTA Final y Contacto */}
+        <section className="py-16 bg-gradient-to-r from-[#038C7F] to-[#026B61] text-white">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 flex items-center justify-center gap-3">
+                <Coffee className="h-8 w-8" /> Visítanos en Cafetería Viviates
+              </h2>
+              <p className="text-xl text-white/90 mb-2">
+                <strong>Lunes a Domingo</strong> • 5:30 AM - 10:00 PM
+              </p>
+              <p className="text-white/80 mb-6">
+                Av. 8 de Diciembre • Diagonal al Terminal Terrestre • En el bajo de Hotel Eudiq
+              </p>
 
-            <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-[#038C7F]">
-              <span className="flex items-center gap-2"><Coffee className="h-4 w-4" /> Café lojano premium</span>
-              <span className="flex items-center gap-2"><Croissant className="h-4 w-4" /> Comida casera</span>
-              <span className="flex items-center gap-2"><Laptop className="h-4 w-4" /> WiFi ultra rápido</span>
-              <span className="flex items-center gap-2"><Palette className="h-4 w-4" /> Ambiente único</span>
+              {/* Botones CTA */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                <CTAButton
+                  variant="secondary"
+                  size="large"
+                  href="https://wa.me/593961712106?text=Hola, quiero hacer un pedido en Café Viviates"
+                  section="cafe_order_whatsapp"
+                  className="bg-white text-[#038C7F] hover:bg-gray-100 flex items-center gap-2 font-bold"
+                >
+                  <MessageCircle className="h-5 w-5" />
+                  Pedir por WhatsApp
+                </CTAButton>
+                
+                <CTAButton
+                  variant="phone"
+                  size="large"
+                  href="tel:+593992354992"
+                  section="cafe_call_primary"
+                  className="flex items-center gap-2 bg-[#A9BF04] hover:bg-[#8A9C03] border-0 font-bold"
+                >
+                  <Phone className="h-5 w-5" />
+                  Llamar: 0992354992
+                </CTAButton>
+
+                <Link
+                  href="/cafe-viviates/menu"
+                  className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white border-2 border-white px-6 py-3 rounded-lg font-bold transition-all"
+                >
+                  <Coffee className="h-5 w-5" />
+                  Ver Menú Completo
+                </Link>
+              </div>
+            </div>
+
+            {/* Grid de información */}
+            <div className="grid md:grid-cols-2 gap-8 mb-10">
+              {/* Información de contacto */}
+              <div className="space-y-4">
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                  <h3 className="font-bold text-lg mb-4 flex items-center gap-2">
+                    <Phone className="h-5 w-5" />
+                    Contacto
+                  </h3>
+                  <div className="space-y-2 text-sm">
+                    <a href="tel:+593992354992" className="block hover:underline">
+                      📞 Reservas: 0992354992
+                    </a>
+                    <a href="https://wa.me/593961712106" className="block hover:underline">
+                      💬 WhatsApp: 0961712106
+                    </a>
+                  </div>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                  <h3 className="font-bold text-lg mb-4 flex items-center gap-2">
+                    <Coffee className="h-5 w-5" />
+                    Características
+                  </h3>
+                  <div className="grid grid-cols-2 gap-3 text-sm">
+                    <div className="flex items-center gap-2">
+                      <Coffee className="h-4 w-4" />
+                      Café premium
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Croissant className="h-4 w-4" />
+                      Comida casera
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Laptop className="h-4 w-4" />
+                      WiFi ultra rápido
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Palette className="h-4 w-4" />
+                      Ambiente único
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Mapa de Google */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="font-bold text-lg mb-4 flex items-center gap-2">
+                  <MapPin className="h-5 w-5" />
+                  Encuéntranos
+                </h3>
+                <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden">
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.2175373243026!2d-79.20703762477585!3d-3.9755893959981683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cb479d7e88d4cf%3A0x462ba8b8785c5d1!2sCafeter%C3%ADa%20Caf%C3%A9%20Viviates%3A%20Caf%C3%A9%20Lojano%20(Hotel%20EUDIQ)!5e0!3m2!1sen!2sec!4v1763848213974!5m2!1sen!2sec"
+                    width="100%" 
+                    height="100%" 
+                    style={{ border: 0 }}
+                    allowFullScreen={true}
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="rounded-lg"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Redes sociales */}
+            <div className="border-t border-white/20 pt-8">
+              <p className="text-center text-sm mb-4">Síguenos en nuestras redes sociales</p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <a
+                  href="https://www.instagram.com/viviatescoffeeshop"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-all"
+                >
+                  <Instagram className="h-5 w-5" />
+                  <span className="text-sm">@viviatescoffeeshop</span>
+                </a>
+                
+                <a
+                  href="https://www.instagram.com/cafeviviates"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-all"
+                >
+                  <Instagram className="h-5 w-5" />
+                  <span className="text-sm">@cafeviviates</span>
+                </a>
+
+                <a
+                  href="https://www.instagram.com/hoteleudiq"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-all"
+                >
+                  <Instagram className="h-5 w-5" />
+                  <span className="text-sm">@hoteleudiq</span>
+                </a>
+              </div>
+              
+              <p className="text-center text-xs text-white/70 mt-6">
+                También disponible para llevar a través de tu delivery favorito
+              </p>
             </div>
           </div>
         </section>

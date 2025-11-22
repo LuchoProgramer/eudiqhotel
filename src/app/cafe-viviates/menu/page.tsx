@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react';
-import { Coffee, Croissant, IceCream, Wine, Beer, Martini, ChefHat, Clock, Phone, MapPin, UtensilsCrossed, Search, Filter } from 'lucide-react';
+import { Coffee, Croissant, IceCream, Wine, Beer, Martini, ChefHat, Clock, Phone, MapPin, UtensilsCrossed, Search, Filter, Instagram, Facebook, MessageCircle } from 'lucide-react';
 import { CTAButton } from '@/components/ConversionOptimizer';
 import Link from 'next/link';
 
@@ -345,50 +345,129 @@ export default function MenuPage() {
         </div>
       </section>
 
-      {/* CTAs */}
+      {/* CTAs y Contacto */}
       <section className="py-12 bg-gradient-to-r from-[#038C7F] to-[#026B61] text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            ¿Listo para disfrutar?
-          </h2>
-          <p className="text-lg mb-8 text-white/90">
-            Haz tu pedido o reserva tu mesa ahora
-          </p>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              ¿Listo para disfrutar?
+            </h2>
+            <p className="text-lg text-white/90">
+              Haz tu pedido, reserva tu mesa o visítanos
+            </p>
+          </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          {/* Botones principales */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
             <CTAButton
               variant="secondary"
               size="large"
               href="https://wa.me/593961712106?text=Hola, quiero hacer un pedido en Café Viviates"
-              section="menu_order"
-              className="bg-white text-[#038C7F] hover:bg-gray-100 flex items-center gap-2"
+              section="menu_order_whatsapp"
+              className="bg-white text-[#038C7F] hover:bg-gray-100 flex items-center gap-2 font-bold"
             >
-              <Phone className="h-5 w-5" />
-              Ordenar por WhatsApp
+              <MessageCircle className="h-5 w-5" />
+              Pedir por WhatsApp
             </CTAButton>
             
             <CTAButton
               variant="phone"
               size="large"
               href="tel:+593992354992"
-              section="menu_call"
-              className="flex items-center gap-2"
+              section="menu_call_primary"
+              className="flex items-center gap-2 bg-[#A9BF04] hover:bg-[#8A9C03] border-0 font-bold"
             >
               <Phone className="h-5 w-5" />
               Llamar: 0992354992
             </CTAButton>
-            
-            <Link
-              href="/cafe-viviates"
-              className="text-white hover:text-white/80 underline text-lg font-medium transition-colors"
+
+            <CTAButton
+              variant="secondary"
+              size="large"
+              href="https://wa.me/593961712106?text=Hola, quiero reservar una mesa en Café Viviates"
+              section="menu_reserve_whatsapp"
+              className="bg-white/10 hover:bg-white/20 text-white border-2 border-white flex items-center gap-2 font-bold"
             >
-              Volver al Café
-            </Link>
+              <MessageCircle className="h-5 w-5" />
+              Reservar Mesa
+            </CTAButton>
           </div>
 
-          <div className="mt-8 text-sm text-white/80">
-            <p className="mb-2">📱 También disponible en tu delivery favorito</p>
-            <p>Síguenos: @viviatescoffeeshop • @cafeviviates</p>
+          {/* Info adicional */}
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
+              <MapPin className="h-6 w-6 mx-auto mb-2" />
+              <p className="text-sm font-medium">Av. 8 de Diciembre</p>
+              <p className="text-xs text-white/80">Diagonal al Terminal Terrestre</p>
+              <p className="text-xs text-white/80 mt-1">En el bajo de Hotel Eudiq</p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
+              <Phone className="h-6 w-6 mx-auto mb-2" />
+              <p className="text-sm font-medium mb-2">Contacto</p>
+              <a href="tel:+593992354992" className="text-xs hover:underline block">
+                📞 0992354992
+              </a>
+              <a href="https://wa.me/593961712106" className="text-xs hover:underline block mt-1">
+                💬 WhatsApp: 0961712106
+              </a>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
+              <Clock className="h-6 w-6 mx-auto mb-2" />
+              <p className="text-sm font-medium">Horario</p>
+              <p className="text-xs text-white/80">Lunes a Domingo</p>
+              <p className="text-xs text-white/80 font-semibold">5:30 AM - 10:00 PM</p>
+            </div>
+          </div>
+
+          {/* Redes sociales */}
+          <div className="border-t border-white/20 pt-6">
+            <p className="text-center text-sm mb-4">Síguenos en nuestras redes sociales</p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a
+                href="https://www.instagram.com/viviatescoffeeshop"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-all"
+              >
+                <Instagram className="h-5 w-5" />
+                <span className="text-sm">@viviatescoffeeshop</span>
+              </a>
+              
+              <a
+                href="https://www.instagram.com/cafeviviates"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-all"
+              >
+                <Instagram className="h-5 w-5" />
+                <span className="text-sm">@cafeviviates</span>
+              </a>
+
+              <a
+                href="https://www.instagram.com/hoteleudiq"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-all"
+              >
+                <Instagram className="h-5 w-5" />
+                <span className="text-sm">@hoteleudiq</span>
+              </a>
+            </div>
+            
+            <p className="text-center text-xs text-white/70 mt-6">
+              También disponible para llevar a través de tu delivery favorito
+            </p>
+          </div>
+
+          <div className="text-center mt-8">
+            <Link
+              href="/cafe-viviates"
+              className="inline-flex items-center gap-2 text-white hover:text-white/80 underline text-sm font-medium transition-colors"
+            >
+              ← Volver a Café Viviates
+            </Link>
           </div>
         </div>
       </section>
