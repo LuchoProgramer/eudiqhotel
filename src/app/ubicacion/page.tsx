@@ -53,9 +53,9 @@ export default function UbicacionPage() {
         >
           <iframe
             title="Mapa Eudiq Hotel Loja"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.726964073019!2d-79.205123!3d-3.993123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cd131b2e2e2e2b%3A0x123456789abcdef!2sEudiq%20Hotel!5e0!3m2!1ses-419!2sec!4v1697840000000!5m2!1ses-419!2sec"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.2170636793585!2d-79.2044375!3d-3.9756875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cb4874ecd19be9%3A0xed2fb9939f45f4db!2sEUDIQ%20HOTEL!5e0!3m2!1sen!2sec!4v1760161127420!5m2!1sen!2sec"
             width="100%"
-            height="350"
+            height="450"
             style={{ border: 0, borderRadius: '12px' }}
             allowFullScreen
             loading="lazy"
