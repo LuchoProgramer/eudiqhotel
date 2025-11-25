@@ -8,10 +8,11 @@ module.exports = {
   darkMode: false, // Bloquea el modo oscuro
   theme: {
     extend: {
-      colors: {
-        primary: '#1E3A8A', // Azul profundo para botones
-        secondary: '#F59E0B', // Dorado para acentos
-        neutral: '#F3F4F6', // Gris claro para fondos
+        colors: {
+          primary: '#038C7F',
+          'primary-dark': '#027368',
+          secondary: '#F59E0B', // Dorado para acentos
+          neutral: '#F3F4F6', // Gris claro para fondos
       },
     },
   },

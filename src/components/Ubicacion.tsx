@@ -207,7 +207,7 @@ export default function Ubicacion() {
               href="https://maps.app.goo.gl/5dCMqMs8TNnuUAXU7"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#038C7F] text-white font-semibold rounded-full hover:bg-[#CBD95F] hover:text-[#222] hover:shadow-xl hover:scale-105 transition-all"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#038C7F] text-white font-semibold rounded-full border-2 border-[#038C7F] shadow-lg hover:bg-[#A9BF04] hover:text-[#222] hover:border-[#A9BF04] hover:shadow-xl hover:scale-105 transition-all"
             >
               <Navigation size={20} />
               Ver en Google Maps

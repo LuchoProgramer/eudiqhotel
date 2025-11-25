@@ -116,7 +116,7 @@ export default function Contacto() {
                 href="https://api.whatsapp.com/send?phone=593961712106&text=Hola,%20quiero%20reservar%20en%20EUDIQ%20HOTEL.%20Por%20favor%20ayúdame%20con%20la%20reserva."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full block py-4 bg-gradient-to-r from-[#038C7F] to-[#A9BF04] text-white font-semibold rounded-xl flex items-center justify-center gap-2 transition-all hover:shadow-xl hover:scale-105"
+                className="w-full block py-4 bg-[#038C7F] text-white font-semibold rounded-full border-2 border-[#038C7F] shadow-lg flex items-center justify-center gap-2 transition-all hover:bg-[#A9BF04] hover:text-[#222] hover:border-[#A9BF04] hover:shadow-xl hover:scale-105"
                 onClick={() => sendGAEvent('click_reserva_contacto', { section: 'contacto', method: 'whatsapp_estadia' })}
               >
                 <Send size={20} />Reserva tu estadía por WhatsApp

@@ -141,7 +141,7 @@ export default function ContactoPage() {
           
           <div className="rounded-xl overflow-hidden shadow-2xl">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d995.8482337816437!2d-79.20533803042295!3d-3.9755886249915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cb68474d0608cd%3A0x6e923768b0b022ce!2sEudiq%20Hotel!5e0!3m2!1sen!2sec!4v1635789844842!5m2!1sen!2sec"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.2170636793585!2d-79.2044375!3d-3.9756875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cb4874ecd19be9%3A0xed2fb9939f45f4db!2sEUDIQ%20HOTEL!5e0!3m2!1sen!2sec!4v1760161127420!5m2!1sen!2sec"
               width="100%"
               height="400"
               style={{ border: 0 }}

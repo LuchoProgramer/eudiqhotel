@@ -69,7 +69,8 @@ export default function ServiciosPage() {
           href="https://api.whatsapp.com/send?phone=593961712106"
           target="_blank"
           rel="noopener"
-          className="bg-[#038C7F] text-white px-6 py-3 rounded-lg text-lg font-bold hover:bg-[#027368] transition-colors"
+          className="bg-primary text-white px-6 py-3 rounded-lg text-lg font-bold hover:bg-primary-dark transition-colors"
+          style={{ backgroundColor: '#038C7F' }}
           onClick={() => sendGAEvent('click_reserva_servicios', { section: 'servicios', method: 'whatsapp' })}
         >
           Solicita tu reserva por WhatsApp

@@ -69,18 +69,18 @@ export default function Servicios() {
     <section id="servicios" ref={sectionRef} className="relative py-24 md:py-32 bg-[#F2F2F2] overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute inset-0 opacity-50">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#038C7F]/10 rounded-full blur-3xl" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#CBD95F]/10 rounded-full blur-3xl" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Header */}
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <span className="inline-block px-4 py-1 mb-4 text-sm font-semibold tracking-widest text-[#038C7F] bg-white rounded-full shadow-sm">
+          <span className="inline-block px-4 py-1 mb-4 text-sm font-semibold tracking-widest text-primary bg-white rounded-full shadow-sm">
             SERVICIOS
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6" style={{fontFamily: 'Playfair Display, serif'}}>
-            Todo lo que <span className="text-[#038C7F]">Necesitas</span>
+            Todo lo que <span className="text-primary">Necesitas</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Servicios pensados para hacer de tu estadía una experiencia completa y memorable. 
@@ -116,19 +116,19 @@ export default function Servicios() {
                 {/* Icon container */}
                 <div className={`relative mb-4 w-14 h-14 rounded-xl flex items-center justify-center transition-all duration-500 ${
                   isHovered 
-                    ? 'bg-gradient-to-br from-[#038C7F] to-[#A9BF04] scale-110' 
-                    : 'bg-[#038C7F]/10'
+                    ? 'bg-gradient-to-br from-primary to-[#A9BF04] scale-110' 
+                    : 'bg-primary/10'
                 }`}>
                   <Icon 
                     className={`transition-all duration-500 ${
-                      isHovered ? 'text-white' : 'text-[#038C7F]'
+                      isHovered ? 'text-white' : 'text-primary'
                     }`}
                     size={28}
                   />
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#038C7F] transition-colors">
+                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
                   {servicio.titulo}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
@@ -142,7 +142,7 @@ export default function Servicios() {
         </div>
 
         {/* Featured: Cafetería Viviates */}
-        <div className={`bg-gradient-to-r from-[#038C7F] to-[#A9BF04] rounded-3xl p-8 md:p-12 shadow-2xl transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+        <div className={`bg-gradient-to-r from-primary to-[#A9BF04] rounded-3xl p-8 md:p-12 shadow-2xl transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-4">
@@ -174,7 +174,7 @@ export default function Servicios() {
               </ul>
               <a
                 href="/cafe-viviates"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#038C7F] font-semibold rounded-full hover:bg-[#CBD95F] hover:text-gray-900 transition-all shadow-lg"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary font-semibold rounded-full hover:bg-[#CBD95F] hover:text-gray-900 transition-all shadow-lg"
               >
                 Pruébalo Ahora
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
