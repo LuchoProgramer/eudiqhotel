@@ -37,7 +37,7 @@ const FAQ_DATA: FAQItem[] = [
   },
   {
     question: "¿Está abierta Cafetería Viviates todos los días?",
-    answer: "Cafetería Viviates está abierta de lunes a sábado. Horarios: Mañana 7:00 AM - 11:00 AM | Tarde 4:00 PM - 9:00 PM. Domingos cerrado.",
+    answer: "Cafetería Viviates está abierta de lunes a sábado. Horarios: Mañana 7:00 AM - 11:00 AM | Tarde 16:00 - 21:00. Domingos cerrado.",
     category: "cafe"
   },
   {

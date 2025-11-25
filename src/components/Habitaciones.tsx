@@ -143,7 +143,9 @@ export default function Habitaciones() {
               que se ajuste a tus necesidades y presupuesto.
             </p>
             <a
-              href="#contacto"
+              href={`https://api.whatsapp.com/send?phone=593961712106&text=${encodeURIComponent('Hola, necesito ayuda para elegir una habitación en Eudiq Hotel.')}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-[#038C7F] text-white font-semibold rounded-full hover:bg-[#A9BF04] transition-all"
             >
               Contáctanos

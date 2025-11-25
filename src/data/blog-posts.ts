@@ -97,7 +97,7 @@ export const BLOG_POSTS = [
       </ul>
 
       <h3>Habitación Ejecutiva (2-3 personas)</h3>
-      <p>Con servicios premium:</p>
+      <p>Con servicios especiales:</p>
       <ul>
         <li>Cama king size</li>
         <li>Área de estar</li>
@@ -110,7 +110,7 @@ export const BLOG_POSTS = [
       
       <h3>Por WhatsApp (Recomendado):</h3>
       <ol>
-        <li><strong>Envía mensaje:</strong> +593 7 261-4151</li>
+        <li><strong>Envía mensaje:</strong> +593 96 171 2106</li>
         <li><strong>Indica:</strong> "Reserva graduación UTPL"</li>
         <li><strong>Especifica:</strong>
           <ul>
@@ -307,7 +307,7 @@ export const BLOG_POSTS = [
       <p><strong>Espectáculos:</strong> Teatro, danza contemporánea y ópera</p>
       
       <h3>Exposiciones de arte (Museo de la Cultura)</h3>
-      <p><strong>Horario:</strong> 9:00 AM - 9:00 PM todos los días</p>
+      <p><strong>Horario:</strong> 9:00 AM - 21:00PM todos los días</p>
       <p><strong>Entrada:</strong> Gratuita</p>
       <p><strong>Destacado:</strong> Muestra de arte contemporáneo ecuatoriano</p>
 
@@ -357,10 +357,10 @@ export const BLOG_POSTS = [
       </ul>
 
       <h3>Para artistas y productores</h3>
-      <p><strong>Habitación Ejecutiva:</strong> Servicios premium</p>
+      <p><strong>Habitación Ejecutiva:</strong> Servicios especiales</p>
       <ul>
         <li>Escritorio amplío para trabajo</li>
-        <li>WiFi premium</li>
+        <li>WiFi de alta velocidad</li>
         <li>Minibar incluido</li>
         <li>Atención 24/7</li>
       </ul>
@@ -413,7 +413,7 @@ export const BLOG_POSTS = [
       
       <h3>Proceso de reserva recomendado:</h3>
       <ol>
-        <li><strong>Contacta por WhatsApp:</strong> +593 7 261-4151</li>
+        <li><strong>Contacta por WhatsApp:</strong> +593 96 171 2106</li>
         <li><strong>Menciona:</strong> "Reserva Festival de las Artes 2025"</li>
         <li><strong>Especifica:</strong>
           <ul>
@@ -557,7 +557,7 @@ export const BLOG_POSTS = [
 
       <h3>Parque Nacional Podocarpus</h3>
       <p><strong>Distancia:</strong> 15 km de Loja (25 minutos en auto)</p>
-      <p><strong>Horario:</strong> 8:00 AM - 4:00 PM</p>
+      <p><strong>Horario:</strong> 8:00 AM - 16:00PM</p>
       <p><strong>Entrada:</strong> $10 extranjeros, $5 nacionales</p>
       <p>Uno de los parques con mayor biodiversidad del Ecuador, hogar de especies únicas como el oso de anteojos.</p>
 

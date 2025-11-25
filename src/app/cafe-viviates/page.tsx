@@ -86,7 +86,7 @@ export default function CafeViviatesLanding() {
                 </h1>
                 
                 <p className="text-xl mb-8 text-white/90">
-                  <strong>¡Desayuno desde las 7:00 AM!</strong> Café lojano premium, ambiente acogedor y la mejor ubicación del centro. Perfecto para viajeros, trabajadores y amantes del café.
+                  <strong>¡Desayuno desde las 7:00 AM!</strong> Café lojano, ambiente acogedor y la mejor ubicación del centro. Perfecto para viajeros, trabajadores y amantes del café.
                 </p>
 
                 {/* Beneficios clave */}
@@ -97,7 +97,7 @@ export default function CafeViviatesLanding() {
                   </div>
                   <div className="flex items-center gap-3 text-white/90">
                     <CheckCircle className="h-5 w-5 text-[#CBD95F]" />
-                    <span className="font-medium">WiFi Premium Gratuito</span>
+                    <span className="font-medium">WiFi Gratuito</span>
                   </div>
                   <div className="flex items-center gap-3 text-white/90">
                     <CheckCircle className="h-5 w-5 text-[#CBD95F]" />
@@ -113,7 +113,7 @@ export default function CafeViviatesLanding() {
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-white/90">
                   <p className="font-semibold mb-2 flex items-center gap-2"><Calendar className="h-4 w-4" /> Horarios:</p>
                   <p className="flex items-center gap-2"><Sunrise className="h-4 w-4" /> Mañana: 7:00 AM - 11:00 AM</p>
-                  <p className="flex items-center gap-2"><Sunset className="h-4 w-4" /> Tarde: 4:00 PM - 9:00 PM</p>
+                  <p className="flex items-center gap-2"><Sunset className="h-4 w-4" /> Tarde: 16:00PM - 21:00PM</p>
                   <p className="text-sm mt-2">Lunes a Sábado • Domingos cerrado</p>
                 </div>
               </div>
@@ -138,12 +138,12 @@ export default function CafeViviatesLanding() {
 
         {/* Ofertas dinámicas removidas según feedback cliente */}
 
-        {/* Menú Premium - Visual mejorado */}
+        {/* Menú - Visual mejorado */}
         <section className="py-16 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-3">
-                <Coffee className="h-8 w-8 text-[#038C7F]" /> Nuestro Menú Premium
+                <Coffee className="h-8 w-8 text-[#038C7F]" /> Nuestro Menú
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
                 Café lojano de especialidad y comida casera que conquista corazones
@@ -152,7 +152,7 @@ export default function CafeViviatesLanding() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
               {[
-                { Icon: Coffee, name: 'Café Lojano Premium', price: '$2.50', desc: 'Granos selectos de la región' },
+                { Icon: Coffee, name: 'Café Lojano', price: '$2.50', desc: 'Granos selectos de la región' },
                 { Icon: Utensils, name: 'Tamal Tradicional', price: '$2.00', desc: 'Receta familiar auténtica' },
                 { Icon: Cookie, name: 'Empanadas de Viento', price: '$1.50', desc: 'Crujientes y deliciosas' },
                 { Icon: Sandwich, name: 'Sándwich Artesanal', price: '$4.50', desc: 'Ingredientes frescos diarios' },
@@ -250,7 +250,7 @@ export default function CafeViviatesLanding() {
                 <Coffee className="h-8 w-8" /> Visítanos en Cafetería Viviates
               </h2>
               <p className="text-xl text-white/90 mb-2">
-                <strong>Lunes a Domingo</strong> • 5:30 AM - 10:00 PM
+                <strong>Lunes a Sábado</strong> • Mañana 7:00 AM - 11:00 AM | Tarde 16:00 - 21:00<br />Domingos cerrado
               </p>
               <p className="text-white/80 mb-6">
                 Av. 8 de Diciembre • Diagonal al Terminal Terrestre • En el bajo de Hotel Eudiq
@@ -279,7 +279,7 @@ export default function CafeViviatesLanding() {
                   className="flex items-center gap-2 bg-[#A9BF04] hover:bg-[#8A9C03] border-0 font-bold"
                 >
                   <Phone className="h-5 w-5" />
-                  Llamar: 0992354992
+                  Llamar: 0992499565
                 </CTAButton>
 
                 <Link
@@ -307,7 +307,7 @@ export default function CafeViviatesLanding() {
                       className="block hover:underline"
                       onClick={() => trackPhoneClick('contact_card')}
                     >
-                      📞 Reservas: 0992354992
+                      📞 Reservas: 0992499565
                     </a>
                     <a 
                       href="https://api.whatsapp.com/send?phone=593961712106" 
@@ -327,7 +327,7 @@ export default function CafeViviatesLanding() {
                   <div className="grid grid-cols-2 gap-3 text-sm">
                     <div className="flex items-center gap-2">
                       <Coffee className="h-4 w-4" />
-                      Café premium
+                      Café
                     </div>
                     <div className="flex items-center gap-2">
                       <Croissant className="h-4 w-4" />
@@ -335,7 +335,7 @@ export default function CafeViviatesLanding() {
                     </div>
                     <div className="flex items-center gap-2">
                       <Laptop className="h-4 w-4" />
-                      WiFi ultra rápido
+                      Wifi
                     </div>
                     <div className="flex items-center gap-2">
                       <Palette className="h-4 w-4" />

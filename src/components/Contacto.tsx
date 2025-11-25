@@ -54,8 +54,8 @@ export default function Contacto() {
     {
       icon: Phone,
       titulo: 'Teléfono',
-  info: '+593 7 261-4151',
-  link: 'tel:+59372614151',
+  info: '+593 96 171 2106',
+  link: 'tel:+593961712106',
     },
     {
       icon: Mail,
@@ -65,8 +65,8 @@ export default function Contacto() {
     },
     {
       icon: MapPin,
-      titulo: 'Dirección',
-  info: 'Avenida 8 de diciembre y Juan José Flores diagonal a la Terminal Terrestre',
+        titulo: 'Dirección',
+      info: 'Avenida 8 de diciembre y Juan José Flores, diagonal a la Terminal Terrestre. Ubicación marcada en el mapa.',
       link: 'https://maps.app.goo.gl/yZUqhkbKqHijRYVB8',
     },
     {
@@ -107,7 +107,7 @@ export default function Contacto() {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900">Solicita tu Reserva</h3>
-                  <p className="text-sm text-gray-600">Te responderemos en menos de 24 horas</p>
+                  <p className="text-sm text-[#A9BF04] font-semibold">Te responderemos en menos de 24 horas</p>
                 </div>
               </div>
 

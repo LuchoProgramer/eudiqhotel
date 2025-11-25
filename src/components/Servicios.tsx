@@ -8,7 +8,7 @@ const servicios = [
   {
     icon: Coffee,
     titulo: 'Cafetería Viviates',
-    descripcion: 'Nuestra marca propia de café premium. Disfruta de los mejores granos de la región en cada taza.',
+    descripcion: 'Nuestra marca propia de café. Disfruta de los mejores granos de la región en cada taza.',
     destacado: true,
   },
   {
@@ -20,13 +20,13 @@ const servicios = [
   {
     icon: Car,
     titulo: 'Estacionamiento',
-    descripcion: 'Parqueadero privado y seguro sin costo adicional. Vigilancia 24/7 para tu tranquilidad.',
+      descripcion: 'Parqueadero privado y seguro sin costo adicional.',
     destacado: false,
   },
   {
     icon: Sparkles,
     titulo: 'Servicio de Limpieza',
-    descripcion: 'Housekeeping diario con productos premium. Servicio de lavandería y planchado disponible.',
+    descripcion: 'Housekeeping diario con productos de calidad. Servicio de lavandería y planchado disponible.',
     destacado: false,
   },
   {
@@ -135,15 +135,7 @@ export default function Servicios() {
                   {servicio.descripcion}
                 </p>
 
-                {/* Hover indicator */}
-                <div className={`mt-4 flex items-center gap-2 text-[#038C7F] font-semibold text-sm transition-all duration-300 ${
-                  isHovered ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-2'
-                }`}>
-                  <span>Saber más</span>
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </div>
+                  {/* ...eliminado el indicador 'Saber más'... */}
               </div>
             );
           })}

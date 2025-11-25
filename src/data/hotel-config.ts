@@ -50,8 +50,8 @@ export const HOTEL_CONFIG = {
         end: '11:00 AM'
       },
       afternoon: {
-        start: '4:00 PM',
-        end: '9:00 PM'
+        start: '16:00PM',
+        end: '21:00PM'
       },
       closed: 'Domingo'
     }

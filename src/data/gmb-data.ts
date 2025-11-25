@@ -6,7 +6,7 @@ export const GMB_DATA = {
   
   // Contacto (formato exacto para GMB)
   phone: '+593726141151',
-  phoneFormatted: '+593 7 261-4151',
+  phoneFormatted: '+593 96 171 2106',
   email: 'info@hoteleudiq.com',
   website: 'https://www.hoteleudiq.com',
   

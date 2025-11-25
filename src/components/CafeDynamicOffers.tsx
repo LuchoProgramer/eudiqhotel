@@ -43,7 +43,7 @@ const TIME_BASED_OFFERS: TimeBasedOffer[] = [
     originalPrice: '$8.00',
     description: 'Café Premium + Sándwich + Mesa reservada 2h',
     whatsappMessage: 'Hola, quiero el Combo Profesional (7:00-10:00 AM) - mesa reservada',
-    benefits: ['Mesa reservada 2 horas', 'Cargador incluido', 'WiFi ultra rápido'],
+    benefits: ['Mesa reservada 2 horas', 'Cargador incluido', 'Wifi'],
     isActive: true
   },
   {

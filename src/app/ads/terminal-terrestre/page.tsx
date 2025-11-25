@@ -147,7 +147,7 @@ export default function TerminalTerrestreLandingPage() {
               },
               {
                 icon: <Wifi className="w-8 h-8 text-[#038C7F]" />,
-                title: 'WiFi Premium',
+                title: 'WiFi',
                 desc: 'Internet de alta velocidad en todo el hotel'
               },
               {
@@ -225,7 +225,7 @@ export default function TerminalTerrestreLandingPage() {
               onClick={handlePhoneClick}
               className="bg-white text-[#038C7F] px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all"
             >
-              📞 Llamar +593 7 261-4151
+              📞 Llamar +593 96 171 2106
             </button>
           </div>
           

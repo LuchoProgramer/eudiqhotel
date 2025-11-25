@@ -47,7 +47,7 @@ const MENU_DATA: MenuCategory[] = [
       { name: 'Tigrillo', description: 'Plátano verde majado y revuelto con queso y huevo', price: '$3.75' },
       { name: 'Tigrillo Mixto', description: 'Plátano verde majado revuelto con queso, chicharrón y huevo', price: '$4.00' },
       { name: 'Bolón de Verde o Maduro', description: 'Bolitas de plátano cocido y machacado', price: '$2.75' },
-      { name: 'Bolón con Queso', price: '$3.00' },
+      { name: 'Bolón con Queso', price: '$2.75' },
       { name: 'Bolón con Chicharrón', price: '$3.00' },
       { name: 'Bolón Mixto', price: '$3.25' },
       { name: 'Empanada de Verde', description: 'Masa de plátano verde con relleno de pollo (fritas)', price: '$2.00' },
@@ -55,7 +55,7 @@ const MENU_DATA: MenuCategory[] = [
       { name: 'Sango', description: 'Plato cremoso a base de maíz tostado y queso, con huevo frito', price: '$3.50' },
       { name: 'Tortilla de Maduro y Mozarella', description: 'Tortilla de plátano maduro frito rellena de queso mozarella, con huevo frito', price: '$3.00' },
       { name: 'Ensalada de Pollo', description: 'Pollo a la plancha, maíz, lechuga, tomate, aguacate y salsa', price: '$5.00' },
-      { name: 'Papas Fritas', price: '$1.00' },
+
     ]
   },
   {
@@ -68,9 +68,7 @@ const MENU_DATA: MenuCategory[] = [
       { name: 'Wrap de Pollo', description: 'Tortilla de trigo, pechuga a la plancha, lechuga, tomate, aguacate, salsa mayonesa y papas chips', price: '$4.00' },
       { name: 'Hamburguesa', description: 'Pan, carne, queso, tocino, tomate, lechuga y papas fritas', price: '$4.00' },
       { name: 'Sándwich de Pollo', description: 'Pan, pechuga de pollo, lechuga, tomate y salsa', price: '$3.75' },
-      { name: 'Sándwich Vegetal', description: 'Pan, atún, huevo cocido, lechuga, tomate y salsa', price: '$3.75' },
-      { name: 'Prensado de Queso', description: 'Queso y pan laminado', price: '$2.00' },
-      { name: 'Prensado Mixto', description: 'Jamón y queso', price: '$2.50' },
+      { name: 'Sándwich Vegetal', description: 'Pan, vegetales frescos, lechuga, tomate y salsa', price: '$3.75' },
     ]
   },
   {
@@ -226,11 +224,11 @@ export default function MenuPage() {
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                <a href="tel:+593992354992" className="hover:underline">0992354992</a>
+                <a href="tel:+593992499565" className="hover:underline">0992499565</a>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="h-4 w-4" />
-                <span>Lun-Dom 5:30 AM - 10:00 PM</span>
+                <span>Lunes a Sábado: Mañana 7:00 AM - 11:00 AM | Tarde 16:00 - 21:00. Domingos cerrado</span>
               </div>
             </div>
           </div>
@@ -409,7 +407,7 @@ export default function MenuPage() {
               onClick={() => trackPhoneClick('menu_cta_primary')}
             >
               <Phone className="h-5 w-5" />
-              Llamar: 0992354992
+              Llamar: 0992499565
             </CTAButton>
 
             <CTAButton
@@ -432,6 +430,18 @@ export default function MenuPage() {
               <p className="text-sm font-medium">Av. 8 de Diciembre</p>
               <p className="text-xs text-white/80">Diagonal al Terminal Terrestre</p>
               <p className="text-xs text-white/80 mt-1">En el bajo de Hotel Eudiq</p>
+              <div className="mt-3 rounded-lg overflow-hidden border border-[#038C7F]/30">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.803964836624!2d-79.2041236852327!3d-3.993857197098021!2m3!1f0!2f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM8KwNTknMzcuOSJTIDc5wrAxMicxNS4xIlc!5e0!3m2!1ses!2sec!4v1700000000000!5m2!1ses!2sec"
+                  width="100%"
+                  height="180"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Ubicación Cafetería Viviates"
+                />
+              </div>
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
@@ -442,7 +452,7 @@ export default function MenuPage() {
                 className="text-xs hover:underline block"
                 onClick={() => trackPhoneClick('menu_contact_card')}
               >
-                📞 0992354992
+                📞 0992499565
               </a>
               <a 
                 href="https://api.whatsapp.com/send?phone=593961712106" 
@@ -519,7 +529,7 @@ export default function MenuPage() {
       <section className="py-6 bg-gray-50 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <p className="text-sm text-gray-600">
-            * Todos los precios incluyen IVA. El menú puede variar según disponibilidad de productos.
+            * El menú puede variar según disponibilidad de productos.
           </p>
         </div>
       </section>
