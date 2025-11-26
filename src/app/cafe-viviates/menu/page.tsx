@@ -228,7 +228,7 @@ export default function MenuPage() {
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="h-4 w-4" />
-                <span>Lunes a Sábado: Mañana 7:00 AM - 11:00 AM | Tarde 16:00 - 21:00. Domingos cerrado</span>
+                <span>Lunes a Sábado: Mañana 7:00 AM - 11:00 AM | Tarde 16:00 PM - 21:00 PM. Domingos cerrado</span>
               </div>
             </div>
           </div>
@@ -432,7 +432,7 @@ export default function MenuPage() {
               <p className="text-xs text-white/80 mt-1">En el bajo de Hotel Eudiq</p>
               <div className="mt-3 rounded-lg overflow-hidden border border-[#038C7F]/30">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.803964836624!2d-79.2041236852327!3d-3.993857197098021!2m3!1f0!2f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM8KwNTknMzcuOSJTIDc5wrAxMicxNS4xIlc!5e0!3m2!1ses!2sec!4v1700000000000!5m2!1ses!2sec"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.2175373243026!2d-79.20703762477585!3d-3.9755893959981683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cb479d7e88d4cf%3A0x462ba8b8785c5d1!2sCafeter%C3%ADa%20Caf%C3%A9%20Viviates%3A%20Caf%C3%A9%20Lojano%20(Hotel%20EUDIQ)!5e0!3m2!1sen!2sec!4v1763848213974!5m2!1sen!2sec"
                   width="100%"
                   height="180"
                   style={{ border: 0 }}
@@ -466,8 +466,8 @@ export default function MenuPage() {
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
               <Clock className="h-6 w-6 mx-auto mb-2" />
               <p className="text-sm font-medium">Horario</p>
-              <p className="text-xs text-white/80">Lunes a Domingo</p>
-              <p className="text-xs text-white/80 font-semibold">5:30 AM - 10:00 PM</p>
+              <p className="text-xs text-white/80">Lunes a Sábado</p>
+              <p className="text-xs text-white/80 font-semibold">7:00 AM - 11:00 AM | 16:00 PM - 21:00 PM</p>
             </div>
           </div>
 

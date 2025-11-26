@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Clock, MapPin, Wifi, Coffee, Users, Star, Timer, CheckCircle, X, ChevronLeft, ChevronRight, Calendar, Sunrise, Sunset, Croissant, Laptop, Palette, Utensils, Cookie, Sandwich, Cake, Wine, Phone, MessageCircle, Instagram } from 'lucide-react';
+import { Clock, MapPin, Wifi, Coffee, Users, Star, Timer, CheckCircle, X, ChevronLeft, ChevronRight, Calendar, Sunrise, Sunset, Laptop, Palette, Utensils, Cookie, Sandwich, Cake, Wine, Phone, MessageCircle, Instagram } from 'lucide-react';
 import { galeriaCafeViviates } from '@/lib/data';
 import ConversionOptimizer, { CTAButton } from '@/components/ConversionOptimizer';
 import { DynamicOffersSection } from '@/components/CafeDynamicOffers';
@@ -76,7 +76,7 @@ export default function CafeViviatesLanding() {
                 {/* Badge urgencia */}
                 <div className="inline-flex items-center gap-2 bg-[#CBD95F] text-gray-900 px-4 py-2 rounded-full text-sm font-semibold mb-6 mt-2">
                   <Clock className="h-4 w-4" />
-                  ABIERTO • L-S: 7AM-11AM y 4PM-9PM
+                  ABIERTO • L-S: 7:00 AM - 11:00 AM y 16:00 PM - 21:00 PM
                 </div>
                 
                 <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 flex items-start gap-3">
@@ -113,7 +113,7 @@ export default function CafeViviatesLanding() {
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-white/90">
                   <p className="font-semibold mb-2 flex items-center gap-2"><Calendar className="h-4 w-4" /> Horarios:</p>
                   <p className="flex items-center gap-2"><Sunrise className="h-4 w-4" /> Mañana: 7:00 AM - 11:00 AM</p>
-                  <p className="flex items-center gap-2"><Sunset className="h-4 w-4" /> Tarde: 16:00PM - 21:00PM</p>
+                  <p className="flex items-center gap-2"><Sunset className="h-4 w-4" /> Tarde: 16:00 PM - 21:00 PM</p>
                   <p className="text-sm mt-2">Lunes a Sábado • Domingos cerrado</p>
                 </div>
               </div>
@@ -153,12 +153,12 @@ export default function CafeViviatesLanding() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
               {[
                 { Icon: Coffee, name: 'Café Lojano', price: '$2.50', desc: 'Granos selectos de la región' },
-                { Icon: Utensils, name: 'Tamal Tradicional', price: '$2.00', desc: 'Receta familiar auténtica' },
-                { Icon: Cookie, name: 'Empanadas de Viento', price: '$1.50', desc: 'Crujientes y deliciosas' },
-                { Icon: Sandwich, name: 'Sándwich Artesanal', price: '$4.50', desc: 'Ingredientes frescos diarios' },
+                { Icon: Utensils, name: 'Tamal Tradicional', price: '$1.75', desc: 'Receta familiar auténtica' },
+                { Icon: Cookie, name: 'Empanadas de Viento', price: '$1.25', desc: 'Crujientes y deliciosas' },
+                { Icon: Sandwich, name: 'Sándwich de Pollo', price: '$3.75', desc: 'Ingredientes frescos diarios' },
+                { Icon: Sandwich, name: 'Sándwich Vegetal', price: '$3.75', desc: 'Opción vegetariana' },
                 { Icon: Wine, name: 'Jugos Naturales', price: '$2.00', desc: 'Frutas de la región' },
                 { Icon: Cake, name: 'Postres Caseros', price: '$3.00', desc: 'Dulces tradicionales' },
-                { Icon: Croissant, name: 'Panadería Fresh', price: '$1.00', desc: 'Horneado cada mañana' },
                 { Icon: Coffee, name: 'Té e Infusiones', price: '$2.00', desc: 'Hierbas medicinales locales' }
               ].map((item, index) => {
                 const IconComponent = item.Icon;
@@ -176,7 +176,7 @@ export default function CafeViviatesLanding() {
             </div>
 
             <div className="text-center">
-              <p className="text-gray-600 mb-6">Menú actualizado diariamente • Precios incluyen IVA</p>
+              <p className="text-gray-600 mb-6">Menú actualizado diariamente</p>
               <Link
                 href="/cafe-viviates/menu"
                 className="inline-flex items-center gap-2 bg-[#038C7F] hover:bg-[#026B61] text-white px-6 py-3 rounded-lg font-semibold transition-all hover:scale-105 shadow-md"
@@ -250,7 +250,7 @@ export default function CafeViviatesLanding() {
                 <Coffee className="h-8 w-8" /> Visítanos en Cafetería Viviates
               </h2>
               <p className="text-xl text-white/90 mb-2">
-                <strong>Lunes a Sábado</strong> • Mañana 7:00 AM - 11:00 AM | Tarde 16:00 - 21:00<br />Domingos cerrado
+                <strong>Lunes a Sábado</strong> • Mañana 7:00 AM - 11:00 AM | Tarde 16:00 PM - 21:00 PM<br />Domingos cerrado
               </p>
               <p className="text-white/80 mb-6">
                 Av. 8 de Diciembre • Diagonal al Terminal Terrestre • En el bajo de Hotel Eudiq
@@ -330,7 +330,7 @@ export default function CafeViviatesLanding() {
                       Café
                     </div>
                     <div className="flex items-center gap-2">
-                      <Croissant className="h-4 w-4" />
+                      <Utensils className="h-4 w-4" />
                       Comida casera
                     </div>
                     <div className="flex items-center gap-2">
