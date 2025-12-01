@@ -142,7 +142,7 @@ export default function Servicios() {
         </div>
 
         {/* Featured: Cafetería Viviates */}
-        <div className={`bg-gradient-to-r from-primary to-[#A9BF04] rounded-3xl p-8 md:p-12 shadow-2xl transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+        <div className={`bg-gradient-to-r from-[#038C7F] to-[#026A5E] rounded-3xl p-8 md:p-12 shadow-2xl transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-4">

@@ -25,7 +25,7 @@ const MENU_DATA: MenuCategory[] = [
     id: 'desayunos',
     name: 'Desayunos',
     Icon: Croissant,
-    color: 'from-[#038C7F] to-[#026B61]',
+    color: 'from-white to-[#F2F2F2]',
     items: [
       { name: 'Desayuno Americano', description: 'Huevos revueltos, tostadas con mantequilla y mermelada, tocino, bebida caliente y jugo', price: '$4.50' },
       { name: 'Desayuno Continental', description: 'Huevos revueltos, prensado de queso, bebida caliente y jugo', price: '$3.75' },
@@ -62,7 +62,7 @@ const MENU_DATA: MenuCategory[] = [
     id: 'especial',
     name: 'Especiales',
     Icon: UtensilsCrossed,
-    color: 'from-[#038C7F] to-[#026B61]',
+    color: 'from-white to-[#F2F2F2]',
     items: [
       { name: 'Wafle Clásico', description: 'Acompañado de frutas y miel de maple', price: '$3.75' },
       { name: 'Wrap de Pollo', description: 'Tortilla de trigo, pechuga a la plancha, lechuga, tomate, aguacate, salsa mayonesa y papas chips', price: '$4.00' },
@@ -201,33 +201,33 @@ export default function MenuPage() {
   });
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-orange-50">
+    <main className="min-h-screen bg-gradient-to-br from-[#F2F2F2] via-white to-[#CBD95F]/10">
       {/* Hero Header */}
-      <section className="bg-gradient-to-r from-[#038C7F] to-[#026B61] text-white py-12 md:py-16">
+      <section className="bg-gradient-to-br from-[#F2F2F2] via-white to-[#CBD95F]/20 py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <Coffee className="h-10 w-10 md:h-12 md:w-12" />
-              <h1 className="text-3xl md:text-5xl font-bold">
+              <Coffee className="h-10 w-10 md:h-12 md:w-12 text-[#038C7F]" />
+              <h1 className="text-3xl md:text-5xl font-bold text-gray-900">
                 Menú Cafetería Viviates
               </h1>
             </div>
-            <p className="text-lg md:text-xl text-white/90 mb-6 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-700 mb-6 max-w-2xl mx-auto">
               Café de especialidad, comida tradicional lojana y sabores internacionales
             </p>
             
             {/* Información de contacto */}
-            <div className="flex flex-wrap items-center justify-center gap-4 text-sm md:text-base">
+            <div className="flex flex-wrap items-center justify-center gap-4 text-sm md:text-base text-gray-700">
               <div className="flex items-center gap-2">
-                <MapPin className="h-4 w-4" />
+                <MapPin className="h-4 w-4 text-[#038C7F]" />
                 <span>Av. 8 de Diciembre, diagonal al Terminal Terrestre</span>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="h-4 w-4" />
+                <Phone className="h-4 w-4 text-[#038C7F]" />
                 <a href="tel:+593992499565" className="hover:underline">0992499565</a>
               </div>
               <div className="flex items-center gap-2">
-                <Clock className="h-4 w-4" />
+                <Clock className="h-4 w-4 text-[#038C7F]" />
                 <span>Lunes a Sábado: Mañana 7:00 AM - 11:00 AM | Tarde 16:00 PM - 21:00 PM. Domingos cerrado</span>
               </div>
             </div>
@@ -265,7 +265,7 @@ export default function MenuPage() {
                 className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
                   selectedCategory === 'all'
                     ? 'bg-[#038C7F] text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
                 }`}
               >
                 Todo
@@ -283,7 +283,7 @@ export default function MenuPage() {
                   className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all flex items-center gap-2 ${
                     selectedCategory === category.id
                       ? 'bg-[#038C7F] text-white'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
                   }`}
                 >
                   <category.Icon className="h-4 w-4" />
@@ -373,13 +373,13 @@ export default function MenuPage() {
       </section>
 
       {/* CTAs y Contacto */}
-      <section className="py-12 bg-gradient-to-r from-[#038C7F] to-[#026B61] text-white">
+      <section className="py-12 bg-gradient-to-br from-[#F2F2F2] via-white to-[#CBD95F]/20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
               ¿Listo para disfrutar?
             </h2>
-            <p className="text-lg text-white/90">
+            <p className="text-lg text-gray-700">
               Haz tu pedido, reserva tu mesa o visítanos
             </p>
           </div>
@@ -391,7 +391,7 @@ export default function MenuPage() {
               size="large"
               href="https://api.whatsapp.com/send?phone=593961712106&text=Hola, quiero hacer un pedido en Cafeter%C3%ADa Viviates"
               section="menu_order_whatsapp"
-              className="bg-white text-[#038C7F] hover:bg-gray-100 flex items-center gap-2 font-bold"
+              className="bg-[#038C7F] text-white hover:bg-[#026B61] flex items-center gap-2 font-bold"
               onClick={() => trackWhatsAppClick('order', 'menu_cta_primary', 'Pedido desde menú')}
             >
               <MessageCircle className="h-5 w-5" />

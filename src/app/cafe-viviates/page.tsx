@@ -68,50 +68,50 @@ export default function CafeViviatesLanding() {
       <div className="min-h-screen bg-[#F2F2F2]">
         
         {/* Hero Section - Optimizado para conversión */}
-        <section className="relative py-16 bg-[#038C7F] text-white overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#A9BF04]/30"></div>
+        <section className="relative py-16 bg-gradient-to-br from-[#F2F2F2] via-white to-[#CBD95F]/20 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#CBD95F]/10"></div>
           <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 {/* Badge urgencia */}
-                <div className="inline-flex items-center gap-2 bg-[#CBD95F] text-gray-900 px-4 py-2 rounded-full text-sm font-semibold mb-6 mt-2">
+                <div className="inline-flex items-center gap-2 bg-[#038C7F] text-white px-4 py-2 rounded-full text-sm font-semibold mb-6 mt-2">
                   <Clock className="h-4 w-4" />
                   ABIERTO • L-S: 7:00 AM - 11:00 AM y 16:00 PM - 21:00 PM
                 </div>
                 
-                <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 flex items-start gap-3">
-                  <Coffee className="h-10 w-10 text-[#CBD95F] flex-shrink-0 mt-1" />
-                  <span><span className="text-[#CBD95F]">Cafetería Viviates</span><br/>
+                <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 flex items-start gap-3 text-gray-900">
+                  <Coffee className="h-10 w-10 text-[#038C7F] flex-shrink-0 mt-1" />
+                  <span><span className="text-[#038C7F]">Cafetería Viviates</span><br/>
                   El Mejor Café de Loja</span>
                 </h1>
                 
-                <p className="text-xl mb-8 text-white/90">
-                  <strong>¡Desayuno desde las 7:00 AM!</strong> Café lojano, ambiente acogedor y la mejor ubicación del centro. Perfecto para viajeros, trabajadores y amantes del café.
+                <p className="text-xl mb-8 text-gray-700">
+                  <strong>¡Desayuno desde las 7:00 AM!</strong> Café lojano, ambiente acogedor y la mejor atención. Perfecto para viajeros, trabajadores y amantes del café.
                 </p>
 
                 {/* Beneficios clave */}
                 <div className="grid md:grid-cols-2 gap-4 mb-8">
-                  <div className="flex items-center gap-3 text-white/90">
-                    <CheckCircle className="h-5 w-5 text-[#CBD95F]" />
+                  <div className="flex items-center gap-3 text-gray-700">
+                    <CheckCircle className="h-5 w-5 text-[#038C7F]" />
                     <span className="font-medium">Abierto desde 7:00 AM</span>
                   </div>
-                  <div className="flex items-center gap-3 text-white/90">
-                    <CheckCircle className="h-5 w-5 text-[#CBD95F]" />
+                  <div className="flex items-center gap-3 text-gray-700">
+                    <CheckCircle className="h-5 w-5 text-[#038C7F]" />
                     <span className="font-medium">WiFi Gratuito</span>
                   </div>
-                  <div className="flex items-center gap-3 text-white/90">
-                    <CheckCircle className="h-5 w-5 text-[#CBD95F]" />
-                    <span className="font-medium">Centro Histórico</span>
+                  <div className="flex items-center gap-3 text-gray-700">
+                    <CheckCircle className="h-5 w-5 text-[#038C7F]" />
+                    <span className="font-medium">Cerca del Terminal Terrestre</span>
                   </div>
-                  <div className="flex items-center gap-3 text-white/90">
-                    <CheckCircle className="h-5 w-5 text-[#CBD95F]" />
+                  <div className="flex items-center gap-3 text-gray-700">
+                    <CheckCircle className="h-5 w-5 text-[#038C7F]" />
                     <span className="font-medium">Café Lojano 100%</span>
                   </div>
                 </div>
 
                 {/* Horarios destacados */}
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-white/90">
-                  <p className="font-semibold mb-2 flex items-center gap-2"><Calendar className="h-4 w-4" /> Horarios:</p>
+                <div className="bg-white border border-gray-200 rounded-lg p-4 text-gray-700 shadow-sm">
+                  <p className="font-semibold mb-2 flex items-center gap-2 text-gray-900"><Calendar className="h-4 w-4" /> Horarios:</p>
                   <p className="flex items-center gap-2"><Sunrise className="h-4 w-4" /> Mañana: 7:00 AM - 11:00 AM</p>
                   <p className="flex items-center gap-2"><Sunset className="h-4 w-4" /> Tarde: 16:00 PM - 21:00 PM</p>
                   <p className="text-sm mt-2">Lunes a Sábado • Domingos cerrado</p>
@@ -179,7 +179,7 @@ export default function CafeViviatesLanding() {
               <p className="text-gray-600 mb-6">Menú actualizado diariamente</p>
               <Link
                 href="/cafe-viviates/menu"
-                className="inline-flex items-center gap-2 bg-[#038C7F] hover:bg-[#026B61] text-white px-6 py-3 rounded-lg font-semibold transition-all hover:scale-105 shadow-md"
+                className="inline-flex items-center gap-2 bg-white hover:bg-gray-50 text-[#038C7F] border-2 border-[#038C7F] px-6 py-3 rounded-lg font-semibold transition-all hover:scale-105 shadow-md"
               >
                 <Coffee className="h-5 w-5" />
                 Ver Menú Completo
@@ -243,16 +243,16 @@ export default function CafeViviatesLanding() {
         {/* Ubicación removida - no necesaria en sección de cafetería según cliente */}
 
         {/* CTA Final y Contacto */}
-        <section className="py-16 bg-gradient-to-r from-[#038C7F] to-[#026B61] text-white">
+        <section className="py-16 bg-gradient-to-br from-[#F2F2F2] via-white to-[#CBD95F]/20">
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
             <div className="text-center mb-10">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 flex items-center justify-center gap-3">
-                <Coffee className="h-8 w-8" /> Visítanos en Cafetería Viviates
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 flex items-center justify-center gap-3 text-gray-900">
+                <Coffee className="h-8 w-8 text-[#038C7F]" /> Visítanos en Cafetería Viviates
               </h2>
-              <p className="text-xl text-white/90 mb-2">
+              <p className="text-xl text-gray-700 mb-2">
                 <strong>Lunes a Sábado</strong> • Mañana 7:00 AM - 11:00 AM | Tarde 16:00 PM - 21:00 PM<br />Domingos cerrado
               </p>
-              <p className="text-white/80 mb-6">
+              <p className="text-gray-600 mb-6">
                 Av. 8 de Diciembre • Diagonal al Terminal Terrestre • En el bajo de Hotel Eudiq
               </p>
 
@@ -263,7 +263,7 @@ export default function CafeViviatesLanding() {
                   size="large"
                   href="https://api.whatsapp.com/send?phone=593961712106&text=Hola, quiero hacer un pedido en Cafeter%C3%ADa Viviates"
                   section="cafe_order_whatsapp"
-                  className="bg-white text-[#038C7F] hover:bg-gray-100 flex items-center gap-2 font-bold"
+                  className="bg-[#038C7F] text-white hover:bg-[#026B61] flex items-center gap-2 font-bold"
                   onClick={() => trackWhatsAppClick('order', 'cta_section', 'Pedido Cafetería Viviates')}
                 >
                   <MessageCircle className="h-5 w-5" />
@@ -284,7 +284,7 @@ export default function CafeViviatesLanding() {
 
                 <Link
                   href="/cafe-viviates/menu"
-                  className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white border-2 border-white px-6 py-3 rounded-lg font-bold transition-all"
+                  className="inline-flex items-center gap-2 bg-white hover:bg-gray-50 text-[#038C7F] border-2 border-[#038C7F] px-6 py-3 rounded-lg font-bold transition-all"
                 >
                   <Coffee className="h-5 w-5" />
                   Ver Menú Completo
@@ -296,8 +296,8 @@ export default function CafeViviatesLanding() {
             <div className="grid md:grid-cols-2 gap-8 mb-10">
               {/* Información de contacto */}
               <div className="space-y-4">
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                  <h3 className="font-bold text-lg mb-4 flex items-center gap-2">
+                <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                  <h3 className="font-bold text-lg mb-4 flex items-center gap-2 text-gray-900">
                     <Phone className="h-5 w-5" />
                     Contacto
                   </h3>
@@ -319,12 +319,12 @@ export default function CafeViviatesLanding() {
                   </div>
                 </div>
 
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                  <h3 className="font-bold text-lg mb-4 flex items-center gap-2">
-                    <Coffee className="h-5 w-5" />
+                <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                  <h3 className="font-bold text-lg mb-4 flex items-center gap-2 text-gray-900">
+                    <Coffee className="h-5 w-5 text-[#038C7F]" />
                     Características
                   </h3>
-                  <div className="grid grid-cols-2 gap-3 text-sm">
+                  <div className="grid grid-cols-2 gap-3 text-sm text-gray-700">
                     <div className="flex items-center gap-2">
                       <Coffee className="h-4 w-4" />
                       Café
@@ -346,8 +346,8 @@ export default function CafeViviatesLanding() {
               </div>
 
               {/* Mapa de Google */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <h3 className="font-bold text-lg mb-4 flex items-center gap-2">
+              <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                <h3 className="font-bold text-lg mb-4 flex items-center gap-2 text-gray-900">
                   <MapPin className="h-5 w-5" />
                   Encuéntranos
                 </h3>
@@ -367,14 +367,14 @@ export default function CafeViviatesLanding() {
             </div>
 
             {/* Redes sociales */}
-            <div className="border-t border-white/20 pt-8">
-              <p className="text-center text-sm mb-4">Síguenos en nuestras redes sociales</p>
+            <div className="border-t border-gray-200 pt-8">
+              <p className="text-center text-sm mb-4 text-gray-700">Síguenos en nuestras redes sociales</p>
               <div className="flex flex-wrap justify-center gap-4">
                 <a
                   href="https://www.instagram.com/viviatescoffeeshop"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-all"
+                  className="flex items-center gap-2 bg-white border border-gray-200 hover:bg-gray-50 px-4 py-2 rounded-lg transition-all text-gray-900"
                   onClick={() => trackSocialClick('instagram', '@viviatescoffeeshop', 'footer_social')}
                 >
                   <Instagram className="h-5 w-5" />
@@ -385,7 +385,7 @@ export default function CafeViviatesLanding() {
                   href="https://www.instagram.com/cafeviviates"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-all"
+                  className="flex items-center gap-2 bg-white border border-gray-200 hover:bg-gray-50 px-4 py-2 rounded-lg transition-all text-gray-900"
                   onClick={() => trackSocialClick('instagram', '@cafeviviates', 'footer_social')}
                 >
                   <Instagram className="h-5 w-5" />
@@ -396,7 +396,7 @@ export default function CafeViviatesLanding() {
                   href="https://www.instagram.com/hoteleudiq"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-all"
+                  className="flex items-center gap-2 bg-white border border-gray-200 hover:bg-gray-50 px-4 py-2 rounded-lg transition-all text-gray-900"
                   onClick={() => trackSocialClick('instagram', '@hoteleudiq', 'footer_social')}
                 >
                   <Instagram className="h-5 w-5" />
@@ -404,7 +404,7 @@ export default function CafeViviatesLanding() {
                 </a>
               </div>
               
-              <p className="text-center text-xs text-white/70 mt-6">
+              <p className="text-center text-xs text-gray-500 mt-6">
                 También disponible para llevar a través de tu delivery favorito
               </p>
             </div>
