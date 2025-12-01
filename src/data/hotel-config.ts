@@ -36,8 +36,8 @@ export const HOTEL_CONFIG = {
   // Horarios
   schedule: {
     reception: '24/7',
-    checkIn: '12:00 PM',
-    checkOut: '12:00 PM',
+    checkIn: '13:00',
+    checkOut: '00:00',
     breakfast: {
       start: '7:00 AM',
       end: '9:00 AM',

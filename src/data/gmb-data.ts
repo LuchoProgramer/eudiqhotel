@@ -3,13 +3,13 @@ export const GMB_DATA = {
   // Información básica del hotel
   name: 'Eudiq Hotel Loja',
   description: 'Hotel en Loja cerca del Terminal Terrestre. Habitaciones confortables, desayuno incluido, WiFi gratis, estacionamiento. Ideal para graduaciones UTPL y turismo.',
-  
+
   // Contacto (formato exacto para GMB)
   phone: '+593726141151',
   phoneFormatted: '+593 96 171 2106',
   email: 'info@hoteleudiq.com',
   website: 'https://www.hoteleudiq.com',
-  
+
   // Dirección (exacta para NAP consistency)
   address: {
     street: 'Avenida 8 de diciembre y Juan José Flores',
@@ -21,21 +21,21 @@ export const GMB_DATA = {
     countryCode: 'EC',
     full: 'Avenida 8 de diciembre y Juan José Flores diagonal a la Terminal Terrestre, Loja 110105, Ecuador'
   },
-  
+
   // Coordenadas GPS
   coordinates: {
     lat: -4.0039,
     lng: -79.2089
   },
-  
+
   // Horarios (formato GMB)
   hours: {
-    checkin: '12:00',
-    checkout: '12:00',
+    checkin: '13:00',
+    checkout: '00:00',
     reception: '24 horas',
     cafe: 'Mo-Su 06:00-12:00'
   },
-  
+
   // Servicios principales (para GMB attributes)
   services: [
     'WiFi gratuito',
@@ -48,7 +48,7 @@ export const GMB_DATA = {
     'Información turística',
     'Café especializado'
   ],
-  
+
   // Amenidades para Schema.org
   amenities: [
     {
@@ -57,7 +57,7 @@ export const GMB_DATA = {
       'value': true
     },
     {
-      '@type': 'LocationFeatureSpecification', 
+      '@type': 'LocationFeatureSpecification',
       'name': 'Breakfast',
       'value': true
     },
@@ -77,7 +77,7 @@ export const GMB_DATA = {
       'value': true
     }
   ],
-  
+
   // Keywords principales para GMB posts
   keywords: [
     'hotel loja',
@@ -91,7 +91,7 @@ export const GMB_DATA = {
     'cafeteria viviates',
     'turismo loja'
   ],
-  
+
   // Eventos/Temporadas para GMB posts
   events: [
     {
@@ -110,7 +110,7 @@ export const GMB_DATA = {
       description: 'Ubicación perfecta para disfrutar el festival'
     }
   ],
-  
+
   // Datos para rich snippets
   rating: {
     value: '4.2',
@@ -118,10 +118,10 @@ export const GMB_DATA = {
     bestRating: '5',
     worstRating: '1'
   },
-  
+
   // Precios aproximados (para Schema)
   priceRange: '$$',
-  
+
   // Categorías GMB
   categories: [
     'Hotel',
@@ -129,7 +129,7 @@ export const GMB_DATA = {
     'Hospedaje',
     'Cafetería'
   ],
-  
+
   // Social media
   social: {
     facebook: 'https://facebook.com/eudiqhotel',
@@ -154,7 +154,7 @@ export const GMB_POSTS_SUGGESTIONS = [
   },
   {
     type: 'update',
-    title: 'WiFi de Alta Velocidad',
+    title: 'WiFi Gratis',
     description: 'Internet gratuito en todas las habitaciones y áreas comunes. Perfecto para trabajo y estudios.',
     cta: 'Más información'
   },

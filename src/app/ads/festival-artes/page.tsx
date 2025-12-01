@@ -24,14 +24,14 @@ export default function FestivalArtesPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50">
+    <div className="min-h-screen bg-gradient-to-br from-teal-50 via-emerald-50 to-yellow-50">
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-20 pb-16">
         {/* Background artístico */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-purple-200 to-pink-200 rounded-full opacity-30 blur-3xl" />
-          <div className="absolute bottom-20 left-10 w-80 h-80 bg-gradient-to-br from-orange-200 to-yellow-200 rounded-full opacity-30 blur-3xl" />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-blue-200 to-purple-200 rounded-full opacity-20 blur-3xl" />
+          <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-teal-200 to-emerald-200 rounded-full opacity-30 blur-3xl" />
+          <div className="absolute bottom-20 left-10 w-80 h-80 bg-gradient-to-br from-yellow-200 to-amber-200 rounded-full opacity-30 blur-3xl" />
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-teal-200 to-cyan-200 rounded-full opacity-20 blur-3xl" />
         </div>
 
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
@@ -39,15 +39,15 @@ export default function FestivalArtesPage() {
             {/* Contenido principal */}
             <div className="text-center lg:text-left">
               {/* Badge del evento */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-full">
-                <Palette className="h-4 w-4 text-purple-600" />
-                <span className="text-purple-600 text-sm font-semibold">FESTIVAL INT. ARTES VIVAS • 13-23 NOV</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-gradient-to-r from-[#038C7F]/10 to-[#CBD95F]/10 rounded-full">
+                <Palette className="h-4 w-4 text-[#038C7F]" />
+                <span className="text-[#038C7F] text-sm font-semibold">FESTIVAL INT. ARTES VIVAS • 13-23 NOV</span>
               </div>
 
               {/* Headline principal */}
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                 Tu base perfecta para el<br />
-                <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#038C7F] to-[#CBD95F] bg-clip-text text-transparent">
                   Festival Int. de Artes Vivas
                 </span>
               </h1>
@@ -59,29 +59,29 @@ export default function FestivalArtesPage() {
 
               {/* Countdown del festival */}
               {eventDay > 0 && (
-                <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-lg mb-8 text-center">
+                <div className="bg-gradient-to-r from-[#038C7F] to-[#CBD95F] text-white p-4 rounded-lg mb-8 text-center">
                   <p className="text-sm font-medium">Festival Internacional Artes Vivas (Chile país invitado) comienza en:</p>
                   <p className="text-3xl font-bold">{eventDay} días</p>
                   <p className="text-sm">13-23 Noviembre • +300 actividades culturales</p>
                 </div>
               )})
-              
+
               {/* Stats del festival */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                 <div className="text-center p-3 bg-white/50 rounded-lg">
-                  <div className="text-2xl font-bold text-purple-600">116</div>
+                  <div className="text-2xl font-bold text-[#038C7F]">116</div>
                   <div className="text-xs text-gray-600">Elencos</div>
                 </div>
                 <div className="text-center p-3 bg-white/50 rounded-lg">
-                  <div className="text-2xl font-bold text-pink-600">17</div>
+                  <div className="text-2xl font-bold text-[#038C7F]">17</div>
                   <div className="text-xs text-gray-600">Países</div>
                 </div>
                 <div className="text-center p-3 bg-white/50 rounded-lg">
-                  <div className="text-2xl font-bold text-orange-600">125</div>
+                  <div className="text-2xl font-bold text-[#CBD95F]">125</div>
                   <div className="text-xs text-gray-600">Obras</div>
                 </div>
                 <div className="text-center p-3 bg-white/50 rounded-lg">
-                  <div className="text-2xl font-bold text-blue-600">4K</div>
+                  <div className="text-2xl font-bold text-[#CBD95F]">4K</div>
                   <div className="text-xs text-gray-600">Artistas</div>
                 </div>
               </div>
@@ -93,12 +93,12 @@ export default function FestivalArtesPage() {
                   size="large"
                   href="https://api.whatsapp.com/send?phone=593961712106&text=Hola,%20quiero%20reservar%20para%20el%20Festival%20de%20Artes%20en%20Eudiq%20Hotel"
                   section="festival_hero"
-                  className="flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600"
+                  className="flex items-center gap-2 bg-gradient-to-r from-[#038C7F] to-[#038C7F] hover:from-[#027066] hover:to-[#027066]"
                 >
                   <Palette className="h-5 w-5" />
                   Reservar para el Festival
                 </CTAButton>
-                
+
                 <CTAButton
                   variant="phone"
                   size="large"
@@ -120,7 +120,7 @@ export default function FestivalArtesPage() {
 
             {/* Imagen hero */}
             <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-purple-100 via-pink-100 to-orange-100 rounded-2xl overflow-hidden">
+              <div className="aspect-square bg-gradient-to-br from-teal-100 via-emerald-100 to-yellow-100 rounded-2xl overflow-hidden">
                 <Image
                   src="https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_600,c_fill,g_center,ar_1:1/v1760204999/IMG_4183-HDR_gs5who.webp"
                   alt="Habitación artística en Eudiq Hotel durante Festival de Artes Loja"
@@ -130,9 +130,9 @@ export default function FestivalArtesPage() {
                   priority
                 />
               </div>
-              
+
               {/* Badge flotante */}
-              <div className="absolute -bottom-4 -right-4 bg-white rounded-lg shadow-xl p-4 border-l-4 border-purple-500">
+              <div className="absolute -bottom-4 -right-4 bg-white rounded-lg shadow-xl p-4 border-l-4 border-[#038C7F]">
                 <p className="text-sm font-semibold text-gray-900">A 5 min</p>
                 <p className="text-xs text-gray-600">del Centro Histórico</p>
               </div>
@@ -173,7 +173,7 @@ export default function FestivalArtesPage() {
               {
                 Icon: Wifi,
                 title: 'WiFi Premium',
-                description: 'Internet de alta velocidad para compartir tu experiencia y trabajar en proyectos.'
+                description: 'Internet gratis para compartir tu experiencia y trabajar en proyectos.'
               },
               {
                 Icon: Music,
@@ -187,7 +187,7 @@ export default function FestivalArtesPage() {
               }
             ].map((benefit, index) => {
               const IconComponent = benefit.Icon;
-              return ( 
+              return (
                 <div key={index} className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border hover:shadow-lg transition-all hover:scale-105">
                   {typeof IconComponent === 'string' ? (
                     <span className="text-4xl mb-4 block">{IconComponent}</span>
@@ -204,7 +204,7 @@ export default function FestivalArtesPage() {
       </section>
 
       {/* Mapa de eventos cercanos */}
-      <section className="py-16 bg-gradient-to-r from-purple-50 to-pink-50">
+      <section className="py-16 bg-gradient-to-r from-teal-50 to-yellow-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -219,28 +219,28 @@ export default function FestivalArtesPage() {
                 venue: 'Teatro Benjamín Carrión',
                 distance: '2 min',
                 events: 'Obras principales, Chile invitado',
-                color: 'bg-purple-100 text-purple-700'
+                color: 'bg-teal-100 text-teal-700'
               },
               {
                 venue: 'Parque Jipiro',
-                distance: '5 min', 
+                distance: '5 min',
                 events: 'Espectáculos al aire libre',
-                color: 'bg-pink-100 text-pink-700'
+                color: 'bg-emerald-100 text-emerald-700'
               },
               {
                 venue: 'Centro Histórico',
                 distance: '1 min',
                 events: 'Arte urbano, performances',
-                color: 'bg-orange-100 text-orange-700'
+                color: 'bg-yellow-100 text-yellow-700'
               },
               {
                 venue: 'Casa de la Cultura',
                 distance: '3 min',
                 events: 'Talleres, encuentros artísticos',
-                color: 'bg-blue-100 text-blue-700'
+                color: 'bg-amber-100 text-amber-700'
               }
             ].map((venue, index) => (
-              <div key={index} className="bg-white p-4 rounded-lg shadow-sm border-l-4 border-purple-400">
+              <div key={index} className="bg-white p-4 rounded-lg shadow-sm border-l-4 border-[#038C7F]">
                 <h3 className="font-bold text-gray-900 mb-2">{venue.venue}</h3>
                 <p className={`text-sm font-medium mb-1 ${venue.color.split(' ')[1]} flex items-center gap-1`}>
                   <PersonStanding className="h-4 w-4" />
@@ -263,21 +263,21 @@ export default function FestivalArtesPage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl shadow-sm">
+            <div className="bg-gradient-to-br from-teal-50 to-white p-6 rounded-xl shadow-sm">
               <div className="flex text-yellow-400 mb-3">⭐⭐⭐⭐⭐</div>
               <p className="text-gray-700 mb-4 italic">
                 &ldquo;Perfecto para el festival. Pude caminar a todos los eventos, el café del hotel es espectacular y conocí otros artistas en el lobby.&rdquo;
               </p>
-              <p className="font-semibold text-purple-600">- Sandra Maldonado</p>
+              <p className="font-semibold text-[#038C7F]">- Sandra Maldonado</p>
               <p className="text-sm text-gray-500">Artista visual, Quito</p>
             </div>
-            
-            <div className="bg-gradient-to-br from-pink-50 to-white p-6 rounded-xl shadow-sm">
+
+            <div className="bg-gradient-to-br from-yellow-50 to-white p-6 rounded-xl shadow-sm">
               <div className="flex text-yellow-400 mb-3">⭐⭐⭐⭐⭐</div>
               <p className="text-gray-700 mb-4 italic">
                 &ldquo;La ubicación es inmejorable. Desde el hotel podíamos escuchar la música de la plaza y llegar caminando a todo. Excelente experiencia.&rdquo;
               </p>
-              <p className="font-semibold text-pink-600">- Miguel y Carmen Torres</p>
+              <p className="font-semibold text-[#038C7F]">- Miguel y Carmen Torres</p>
               <p className="text-sm text-gray-500">Visitantes culturales, Guayaquil</p>
             </div>
           </div>
@@ -285,7 +285,7 @@ export default function FestivalArtesPage() {
       </section>
 
       {/* Paquete especial Festival */}
-      <section className="py-16 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
+      <section className="py-16 bg-gradient-to-r from-[#038C7F] to-[#027066] text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -293,7 +293,7 @@ export default function FestivalArtesPage() {
                 <Palette className="h-8 w-8" />
                 Paquete Festival Internacional de Artes Vivas
               </h2>
-              
+
               <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="h-6 w-6 text-yellow-300" />
@@ -316,7 +316,7 @@ export default function FestivalArtesPage() {
                   <span>Late check-out gratuito</span>
                 </div>
               </div>
-              
+
               <div className="bg-white/10 p-4 rounded-lg mb-6">
                 <p className="font-bold text-yellow-300 mb-1">Precio especial:</p>
                 <p className="text-2xl font-bold">$45 USD/noche</p>
@@ -332,18 +332,18 @@ export default function FestivalArtesPage() {
                 <p className="mb-6 opacity-90">
                   Cupos limitados durante el festival. ¡No te quedes sin tu lugar!
                 </p>
-                
+
                 <CTAButton
                   variant="secondary"
                   size="large"
                   href="https://api.whatsapp.com/send?phone=593961712106&text=Hola,%20quiero%20informaci%C3%B3n%20del%20Paquete%20Festival%20Internacional%20de%20Artes%20Vivas%202025"
                   section="festival_package"
-                  className="w-full justify-center mb-4 bg-white text-purple-600 hover:bg-gray-100"
+                  className="w-full justify-center mb-4 bg-white text-[#038C7F] hover:bg-gray-100"
                 >
                   <Phone className="h-5 w-5" />
                   Reservar Paquete Festival
                 </CTAButton>
-                
+
                 <p className="text-sm opacity-75">
                   Respuesta inmediata por WhatsApp
                 </p>
@@ -362,7 +362,7 @@ export default function FestivalArtesPage() {
           <p className="text-xl text-gray-300 mb-8">
             <strong>116 elencos</strong> de <strong>17 países</strong> • <strong>Chile</strong> país invitado de honor • <strong>4,000 artistas</strong>
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <CTAButton
               variant="whatsapp"
@@ -373,7 +373,7 @@ export default function FestivalArtesPage() {
             >
               💬 Reservar por WhatsApp
             </CTAButton>
-            
+
             <CTAButton
               variant="phone"
               size="large"

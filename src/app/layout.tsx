@@ -25,9 +25,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="es">
+    <html lang="es" suppressHydrationWarning>
       <head>
-  {/* Google Analytics 4 */}
+        {/* Google Analytics 4 */}
         {/* Microsoft Clarity (mapas de calor) */}
         <Script id="ms-clarity" strategy="afterInteractive">
           {`
@@ -50,11 +50,11 @@ export default function RootLayout({
             gtag('config', 'G-BETH1DLM8W');
           `}
         </Script>
-  <meta property="fb:app_id" content="1327476752302916" />
-  <meta name="keywords" content="hotel loja, hotel terminal terrestre loja, hospedaje loja ecuador, graduacion utpl, hotel economico loja, desayuno incluido, wifi gratis, estacionamiento gratuito, cafeteria viviates, turismo loja, hotel cerca terminal" />
-  <meta name="author" content="Eudiq Hotel Loja" />
-  <meta name="publisher" content="Eudiq Hotel Loja" />
-  <meta name="robots" content="index, follow" />
+        <meta property="fb:app_id" content="1327476752302916" />
+        <meta name="keywords" content="hotel loja, hotel terminal terrestre loja, hospedaje loja ecuador, graduacion utpl, hotel economico loja, desayuno incluido, wifi gratis, estacionamiento gratuito, cafeteria viviates, turismo loja, hotel cerca terminal" />
+        <meta name="author" content="Eudiq Hotel Loja" />
+        <meta name="publisher" content="Eudiq Hotel Loja" />
+        <meta name="robots" content="index, follow" />
         {/* Canonical URL para evitar duplicados */}
         <link rel="canonical" href="https://www.hoteleudiq.com/" />
         {/* Favicons principales y compatibilidad máxima */}
@@ -66,20 +66,20 @@ export default function RootLayout({
         <link rel="icon" href="/android-chrome-192x192.svg" type="image/svg+xml" sizes="192x192" />
         <link rel="icon" href="/android-chrome-512x512.svg" type="image/svg+xml" sizes="512x512" />
         {/* Open Graph & Twitter Card para compartir en redes */}
-  <meta property="og:title" content="Eudiq Hotel Loja | Hotel Cerca del Terminal Terrestre" />
-  <meta property="og:description" content="Hotel en Loja cerca del Terminal Terrestre. Habitaciones confortables, desayuno incluido, WiFi gratis, estacionamiento. Ideal para graduaciones UTPL y turismo." />
-  <meta property="og:image" content="https://www.hoteleudiq.com/Eudiq.png" />
-  <meta property="og:image:alt" content="Fachada y habitaciones de Eudiq Hotel Loja, hotel cerca del terminal terrestre" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.hoteleudiq.com/" />
-  <meta property="og:site_name" content="Eudiq Hotel" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Eudiq Hotel Loja | Hotel Cerca del Terminal Terrestre" />
-  <meta name="twitter:description" content="Hotel en Loja cerca del Terminal Terrestre. Habitaciones confortables, desayuno incluido, WiFi gratis, estacionamiento. Ideal para graduaciones UTPL." />
-  <meta name="twitter:image" content="https://www.hoteleudiq.com/Eudiq.png" />
-  <meta name="twitter:image:alt" content="Fachada y habitaciones de Eudiq Hotel Loja, hotel cerca del terminal terrestre" />
+        <meta property="og:title" content="Eudiq Hotel Loja | Hotel Cerca del Terminal Terrestre" />
+        <meta property="og:description" content="Hotel en Loja cerca del Terminal Terrestre. Habitaciones confortables, desayuno incluido, WiFi gratis, estacionamiento. Ideal para graduaciones UTPL y turismo." />
+        <meta property="og:image" content="https://www.hoteleudiq.com/Eudiq.png" />
+        <meta property="og:image:alt" content="Fachada y habitaciones de Eudiq Hotel Loja, hotel cerca del terminal terrestre" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.hoteleudiq.com/" />
+        <meta property="og:site_name" content="Eudiq Hotel" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Eudiq Hotel Loja | Hotel Cerca del Terminal Terrestre" />
+        <meta name="twitter:description" content="Hotel en Loja cerca del Terminal Terrestre. Habitaciones confortables, desayuno incluido, WiFi gratis, estacionamiento. Ideal para graduaciones UTPL." />
+        <meta name="twitter:image" content="https://www.hoteleudiq.com/Eudiq.png" />
+        <meta name="twitter:image:alt" content="Fachada y habitaciones de Eudiq Hotel Loja, hotel cerca del terminal terrestre" />
         {/* Datos estructurados Schema.org para Hotel */}
         <script type="application/ld+json">
           {JSON.stringify({
@@ -112,8 +112,8 @@ export default function RootLayout({
               "@type": "Rating",
               "ratingValue": "4"
             },
-            "checkinTime": "12:00",
-            "checkoutTime": "12:00",
+            "checkinTime": "13:00",
+            "checkoutTime": "00:00",
             "amenityFeature": [
               {
                 "@type": "LocationFeatureSpecification",

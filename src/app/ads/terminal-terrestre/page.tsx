@@ -62,11 +62,11 @@ export default function TerminalTerrestreLandingPage() {
               <div className="bg-[#CBD95F]/20 text-[#038C7F] px-3 py-1 rounded-full text-sm font-semibold inline-block mb-4">
                 ⭐ HOTEL #1 CERCA DEL TERMINAL
               </div>
-              
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4" style={{fontFamily: 'Playfair Display, serif'}}>
+
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
                 Hotel Diagonal al <span className="text-[#038C7F]">Terminal Terrestre</span>
               </h1>
-              
+
               <p className="text-xl text-gray-700 mb-6">
                 Desayuno incluido • WiFi gratis • Estacionamiento • A 1 minuto caminando
               </p>
@@ -76,7 +76,7 @@ export default function TerminalTerrestreLandingPage() {
                 {[
                   '✅ A 1 minuto caminando del Terminal Terrestre',
                   '✅ Desayuno incluido',
-                  '✅ WiFi de alta velocidad gratuito',
+                  '✅ WiFi gratis',
                   '✅ Estacionamiento sin costo adicional',
                   '✅ Recepción 24 horas para tu comodidad',
                   '✅ Mejor precio garantizado reservando directo'
@@ -97,7 +97,7 @@ export default function TerminalTerrestreLandingPage() {
                   <MessageCircle className="w-5 h-5" />
                   Reservar por WhatsApp
                 </button>
-                
+
                 <button
                   onClick={handlePhoneClick}
                   className="flex items-center justify-center gap-2 border-2 border-[#038C7F] text-[#038C7F] px-6 py-4 rounded-full font-semibold hover:bg-[#038C7F] hover:text-white transition-all"
@@ -118,7 +118,7 @@ export default function TerminalTerrestreLandingPage() {
                 className="rounded-2xl shadow-2xl"
                 priority
               />
-              
+
               {/* Badge flotante */}
               <div className="absolute -bottom-4 -left-4 bg-white p-4 rounded-xl shadow-lg border border-gray-100">
                 <div className="flex items-center gap-2 text-sm">
@@ -134,10 +134,10 @@ export default function TerminalTerrestreLandingPage() {
       {/* Servicios destacados */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12" style={{fontFamily: 'Playfair Display, serif'}}>
+          <h2 className="text-3xl font-bold text-center mb-12" style={{ fontFamily: 'Playfair Display, serif' }}>
             Todo incluido para tu <span className="text-[#038C7F]">comodidad</span>
           </h2>
-          
+
           <div className="grid md:grid-cols-4 gap-8">
             {[
               {
@@ -148,7 +148,7 @@ export default function TerminalTerrestreLandingPage() {
               {
                 icon: <Wifi className="w-8 h-8 text-[#038C7F]" />,
                 title: 'WiFi',
-                desc: 'Internet de alta velocidad en todo el hotel'
+                desc: 'Internet gratis en todo el hotel'
               },
               {
                 icon: <Car className="w-8 h-8 text-[#A9BF04]" />,
@@ -179,7 +179,7 @@ export default function TerminalTerrestreLandingPage() {
               ⏰ Disponibilidad Limitada
             </h3>
             <p className="text-red-700">
-              Solo quedan <strong>3 habitaciones disponibles</strong> para las próximas fechas. 
+              Solo quedan <strong>3 habitaciones disponibles</strong> para las próximas fechas.
               Reserva ahora y asegura el mejor precio.
             </p>
           </div>
@@ -192,7 +192,7 @@ export default function TerminalTerrestreLandingPage() {
               </p>
               <p className="font-semibold text-[#038C7F]">- María González, Cuenca</p>
             </div>
-            
+
             <div className="bg-gray-50 p-6 rounded-xl">
               <p className="text-gray-700 mb-4 italic">
                 &ldquo;Hotel limpio, cómodo y súper conveniente. El WiFi excelente y el estacionamiento gratis fue un plus. Lo recomiendo 100%.&rdquo;
@@ -206,13 +206,13 @@ export default function TerminalTerrestreLandingPage() {
       {/* CTA final */}
       <section className="py-16 bg-[#038C7F] text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{fontFamily: 'Playfair Display, serif'}}>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
             ¿Listo para reservar la ubicación perfecta?
           </h2>
           <p className="text-xl mb-8 text-white/90">
             Mejor precio garantizado • Confirmación inmediata • Sin comisiones extra
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={handleWhatsAppClick}
@@ -220,7 +220,7 @@ export default function TerminalTerrestreLandingPage() {
             >
               💬 Reservar por WhatsApp
             </button>
-            
+
             <button
               onClick={handlePhoneClick}
               className="bg-white text-[#038C7F] px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all"
@@ -228,7 +228,7 @@ export default function TerminalTerrestreLandingPage() {
               📞 Llamar +593 96 171 2106
             </button>
           </div>
-          
+
           <p className="text-sm mt-4 text-white/80">
             🕒 Respuesta inmediata • Reserva en menos de 2 minutos
           </p>

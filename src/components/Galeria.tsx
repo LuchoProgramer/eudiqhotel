@@ -4,18 +4,28 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import Image from 'next/image';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
-const categorias = ['Todas', 'Habitaciones', 'Instalaciones'];
+const categorias = ['Todas', 'Habitaciones', 'Instalaciones', 'Cafetería'];
 
 const galeriaFotos = [
   { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1760204433/IMG_4194-HDR_xjuzwj.jpg', categoria: 'Instalaciones', alt: 'Sala Recepción' },
   { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761843579/Imagen_de_WhatsApp_2025-10-29_a_las_19.43.22_2904e769_vhu9hl.jpg', categoria: 'Habitaciones', alt: 'Habitación Doble' },
-  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1760204555/IMG_4600_q2teiy.jpg', categoria: 'Habitaciones', alt: 'Habitación Ejecutiva' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1764625179/WhatsApp_Image_2025-11-27_at_14.56.04_4_niz763.jpg', categoria: 'Habitaciones', alt: 'Habitación Doble' },
   { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/c_fill,g_center,z_0.8,h_900,w_506,q_auto,f_webp/v1760204829/IMG_4425-HDR_avmsry.webp', categoria: 'Instalaciones', alt: 'Fachada del Hotel' },
   { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1760204509/IMG_4605_q6bvol.jpg', categoria: 'Habitaciones', alt: 'Habitación Matrimonial' },
   { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1760204466/IMG_4616_xg9lrj.jpg', categoria: 'Habitaciones', alt: 'Habitación Individual' },
   { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1760204251/IMG_4163-HDR_ymaqov.webp', categoria: 'Habitaciones', alt: 'Habitación Familiar' },
   { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1760205152/IMG_4174-HDR_i429dy.webp', categoria: 'Habitaciones', alt: 'Habitación Familiar' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1760204555/IMG_4600_q2teiy.jpg', categoria: 'Habitaciones', alt: 'Habitación Triple' },
   { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1760204753/IMG_4445-HDR_syndid.webp', categoria: 'Instalaciones', alt: 'Estacionamiento Privado' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847783/WhatsApp_Image_2025-10-29_at_19.40.28_hf3ysb.jpg', categoria: 'Instalaciones', alt: 'Instalaciones del Hotel' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1764625179/WhatsApp_Image_2025-11-27_at_14.56.04_3_nsqxwv.jpg', categoria: 'Instalaciones', alt: 'Recepción del Hotel' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847748/WhatsApp_Image_2025-10-29_at_19.40.30_1_qshs8i.jpg', categoria: 'Cafetería', alt: 'Cafetería Viviates - barra y ambiente moderno' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847734/WhatsApp_Image_2025-10-29_at_19.40.30_2_vyyw9k.jpg', categoria: 'Cafetería', alt: 'Cafetería Viviates - vista de la cafetería' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847761/WhatsApp_Image_2025-10-29_at_19.40.29_1_hywgib.jpg', categoria: 'Cafetería', alt: 'Cafetería Viviates - café y postres' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847772/WhatsApp_Image_2025-10-29_at_19.40.28_2_vo2mtv.jpg', categoria: 'Cafetería', alt: 'Cafetería Viviates - decoración y detalles' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761847767/WhatsApp_Image_2025-10-29_at_19.40.29_dadbdl.jpg', categoria: 'Cafetería', alt: 'Cafetería Viviates - café servido' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1764625179/WhatsApp_Image_2025-11-27_at_14.56.04_1_nxu6qe.jpg', categoria: 'Cafetería', alt: 'Cafetería Viviates - ambiente y productos' },
+  { url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1764625179/WhatsApp_Image_2025-11-27_at_14.56.04_emumaa.jpg', categoria: 'Cafetería', alt: 'Cafetería Viviates - espacio interior' },
 ];
 
 export default function Galeria() {

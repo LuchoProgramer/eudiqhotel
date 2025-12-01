@@ -4,178 +4,112 @@ export const BLOG_POSTS = [
     title: 'Graduación UTPL 2025: Dónde hospedarse en Loja - Guía para familias',
     updatedAt: '2025-11-07',
     summary: 'Guía completa para familias que vienen a graduaciones UTPL. Mejores hoteles, ubicación, servicios y consejos para una estadía perfecta.',
+
     content: `
-      <h2>Graduación UTPL 2025: Una celebración que requiere planificación</h2>
-      <p>La graduación en la Universidad Técnica Particular de Loja (UTPL) es uno de los momentos más especiales para estudiantes y familias. Con ceremonias programadas para <strong>marzo, julio y noviembre de 2025</strong>, elegir el hospedaje correcto es crucial para que esta celebración sea perfecta.</p>
+      <h2>Graduación UTPL 2025: Celebra el Logro de tu Vida sin Preocupaciones</h2>
+      <p>La graduación no es solo una ceremonia; es la culminación de años de esfuerzo, noches de estudio y sueños compartidos. Cuando veas a tu hijo o hija recibir su título en la UTPL, querrás que nada empañe ese instante. <strong>Elegir el lugar correcto para descansar es el primer paso para garantizar que esta celebración sea inolvidable.</strong></p>
 
-      <h2>¿Por qué elegir hotel cerca del Terminal Terrestre para graduación UTPL?</h2>
-      <p>Muchas familias se preguntan dónde hospedarse durante la graduación. La ubicación estratégica cerca del Terminal Terrestre ofrece ventajas únicas:</p>
-      <ul>
-        <li><strong>Fácil llegada:</strong> La mayoría de familias llegan en bus desde otras provincias</li>
-        <li><strong>Acceso rápido a UTPL:</strong> 5 minutos al campus universitario</li>
-        <li><strong>Servicios completos:</strong> Cerca de bancos, restaurantes y farmacias</li>
-        <li><strong>Transporte:</strong> Taxis y buses disponibles las 24 horas</li>
-        <li><strong>Estacionamiento:</strong> Para familias que llegan en vehículo propio</li>
-      </ul>
-
-      <h2>Eudiq Hotel: La mejor opción para graduación UTPL</h2>
-      <p>Como la opción más recomendada por familias graduandas, <strong>Eudiq Hotel</strong> se ha especializado en brindar el mejor servicio durante estas fechas especiales.</p>
-
-      <h3>¿Qué incluye tu estadía durante la graduación?</h3>
-      <ul>
-        <li>✅ <strong>Habitaciones familiares:</strong> Espaciosas para hasta 4 personas</li>
-        <li>✅ <strong>Desayuno completo incluido:</strong> Para empezar el día especial con energía</li>
-        <li>✅ <strong>WiFi de alta velocidad:</strong> Para compartir los momentos en redes sociales</li>
-        <li>✅ <strong>Estacionamiento gratuito:</strong> Seguridad para tu vehículo</li>
-        <li>✅ <strong>Recepción 24 horas:</strong> Atención cuando la necesites</li>
-        <li>✅ <strong>Cafetería Viviates:</strong> El mejor café de Loja en el mismo hotel</li>
-      </ul>
-
-      <h2>Fechas importantes UTPL 2025</h2>
+      <h2>Tu Refugio Ideal: Comodidad y Cercanía para Toda la Familia</h2>
+      <p>Sabemos que viajas con lo más importante: tu familia. Por eso, en Eudiq Hotel hemos pensado en cada detalle para que se sientan como en casa desde el primer momento.</p>
       
-      <h3>Graduación Marzo 2025</h3>
-      <p><strong>Fechas aproximadas:</strong> 15-20 de marzo</p>
-      <p><strong>Recomendación:</strong> Reservar antes del 1 de marzo para garantizar disponibilidad</p>
+      <p>Imagina llegar a Loja después de un largo viaje y encontrar tu hotel <strong>justo al lado del Terminal Terrestre</strong>. Sin taxis costosos, sin perder tiempo buscando direcciones. Solo llegar, descansar y prepararte para el gran día.</p>
+
+      <h3>¿Por qué las familias nos eligen una y otra vez?</h3>
+      <ul>
+        <li><strong>Ubicación Estratégica:</strong> A solo 5 minutos del campus UTPL. Llegarás a la ceremonia puntual y relajado.</li>
+        <li><strong>Espacio para Todos:</strong> Nuestras habitaciones familiares son amplias, perfectas para compartir la emoción previa al evento.</li>
+        <li><strong>Todo a tu Alcance:</strong> Farmacias, bancos y restaurantes a pasos del hotel.</li>
+      </ul>
+
+      <h2>La Mañana de la Graduación: Empieza el Día con Energía</h2>
+      <p>El día de la ceremonia es ajetreado. Maquillaje, vestimenta, fotos... Lo último que necesitas es preocuparte por el desayuno. En Eudiq Hotel, tu estadía incluye un <strong>desayuno completo</strong> para que tú y tu familia tengan la energía necesaria para aplaudir, gritar y celebrar.</p>
       
-      <h3>Graduación Julio 2025</h3>
-      <p><strong>Fechas aproximadas:</strong> 20-25 de julio</p>
-      <p><strong>Recomendación:</strong> Reservar antes del 1 de julio</p>
+      <p>Y para los nervios, nada mejor que un café de especialidad en nuestra <strong>Cafetería Viviates</strong>, ubicada en el mismo hotel. Un momento de calma antes de la emoción.</p>
+
+      <h2>Fechas Clave para tu Agenda 2025</h2>
+      <p>Las habitaciones en Loja se agotan rápidamente durante las fechas de grado. ¡No dejes que te ganen el lugar!</p>
       
-      <h3>Graduación Noviembre 2025</h3>
-      <p><strong>Fechas aproximadas:</strong> 15-20 de noviembre</p>
-      <p><strong>Recomendación:</strong> Reservar antes del 1 de noviembre</p>
-
-      <h2>Servicios especiales para graduación</h2>
-      <p>Durante las fechas de graduación UTPL, Eudiq Hotel ofrece servicios adicionales:</p>
-      <ul>
-        <li><strong>Check-in temprano:</strong> Llegada desde las 10:00 AM sin costo extra</li>
-        <li><strong>Check-out tardío:</strong> Salida hasta las 2:00 PM (sujeto a disponibilidad)</li>
-        <li><strong>Información de transporte:</strong> Rutas y horarios hacia UTPL</li>
-        <li><strong>Recomendaciones locales:</strong> Restaurantes para celebrar</li>
-        <li><strong>Servicio de taxi:</strong> Coordinación de transporte hacia el campus</li>
-      </ul>
-
-      <h2>¿Qué hacer en Loja durante la graduación?</h2>
-      <p>Aprovecha tu estadía para conocer los atractivos cercanos:</p>
+      <h3>🎓 Graduación Marzo 2025</h3>
+      <p><strong>Fechas estimadas:</strong> 15-20 de marzo<br>
+      <em>Tip de experto: Reserva antes del 1 de marzo.</em></p>
       
-      <h3>A 3 minutos caminando:</h3>
-      <ul>
-        <li><strong>Parque Jipiro (200m):</strong> Perfecto para fotos familiares</li>
-        <li><strong>Terminal Terrestre:</strong> Fácil llegada y salida</li>
-      </ul>
-
-      <h3>A 5-10 minutos en taxi:</h3>
-      <ul>
-        <li><strong>Centro histórico de Loja:</strong> Catedral y Plaza Central</li>
-        <li><strong>Puerta de la Ciudad:</strong> Símbolo de Loja</li>
-        <li><strong>Restaurantes tradicionales:</strong> Para celebrar en familia</li>
-      </ul>
-
-      <h3>A 15 minutos:</h3>
-      <ul>
-        <li><strong>Campus UTPL:</strong> La ceremonia de graduación</li>
-        <li><strong>Zona Rosa:</strong> Centros comerciales y entretenimiento</li>
-      </ul>
-
-      <h2>Tipos de habitaciones disponibles</h2>
+      <h3>🎓 Graduación Julio 2025</h3>
+      <p><strong>Fechas estimadas:</strong> 20-25 de julio<br>
+      <em>Tip de experto: Reserva antes del 1 de julio.</em></p>
       
-      <h3>Habitación Familiar (4 personas)</h3>
-      <p>Perfecta para padres y hermanos que vienen a la graduación:</p>
+      <h3>🎓 Graduación Noviembre 2025</h3>
+      <p><strong>Fechas estimadas:</strong> 15-20 de noviembre<br>
+      <em>Tip de experto: Reserva antes del 1 de noviembre.</em></p>
+
+      <h2>Más que un Hotel, tu Aliado en la Celebración</h2>
+      <p>Sabemos que no eres de aquí, y queremos ayudarte a moverte como un local:</p>
       <ul>
-        <li>2 camas matrimoniales</li>
-        <li>Baño privado con agua caliente</li>
-        <li>TV cable</li>
-        <li>Desayuno incluido para todos</li>
+        <li><strong>Check-in Flexible:</strong> Entendemos los horarios de los buses. (Check-in a partir de las 13:00 / Check-out a partir de las 00:00)</li>
+        <li><strong>Asesoría de Transporte:</strong> Te explicamos cómo llegar a la UTPL en bus o te pedimos un taxi seguro.</li>
+        <li><strong>¿Dónde celebrar?</strong> Te recomendamos los mejores restaurantes para el almuerzo de graduación.</li>
       </ul>
 
-      <h3>Habitación Doble (2 personas)</h3>
-      <p>Ideal para padres o pareja:</p>
-      <ul>
-        <li>1 cama matrimonial</li>
-        <li>Escritorio</li>
-        <li>Todas las comodidades</li>
-      </ul>
-
-      <h3>Habitación Ejecutiva (2-3 personas)</h3>
-      <p>Con servicios especiales:</p>
-      <ul>
-        <li>Cama king size</li>
-        <li>Área de estar</li>
-        <li>Minibar</li>
-        <li>Atención personalizada</li>
-      </ul>
-
-      <h2>Cómo reservar para graduación UTPL</h2>
-      <p>El proceso de reserva es simple y rápido:</p>
+      <h2>Aprovecha tu Visita a Loja</h2>
+      <p>Ya que estás aquí, convierte el viaje de graduación en unas mini-vacaciones familiares:</p>
       
-      <h3>Por WhatsApp (Recomendado):</h3>
+      <h3>Momentos de Relax</h3>
+      <ul>
+        <li><strong>Parque Jipiro (a 3 min caminando):</strong> El escenario perfecto para una sesión de fotos familiar relajada antes o después de la ceremonia.</li>
+      </ul>
+
+      <h3>Turismo Express</h3>
+      <ul>
+        <li><strong>Puerta de la Ciudad:</strong> La foto obligatoria para recordar el viaje.</li>
+        <li><strong>Calle Lourdes:</strong> Un paseo colorido por la historia de Loja.</li>
+      </ul>
+
+      <h2>Elige tu Espacio Ideal</h2>
+      
+      <h3>👨‍👩‍👧‍👦 Habitación Familiar (4 personas)</h3>
+      <p>La favorita de los graduados. Espacio suficiente para que los padres y hermanos compartan la alegría sin estar apretados. <strong>Incluye 2 camas matrimoniales, TV cable y agua caliente.</strong></p>
+
+      <h3>💑 Habitación Doble (2 personas)</h3>
+      <p>Ideal para parejas o padres que viajan solos. Intimidad y confort con todas las comodidades.</p>
+
+      <h3>💼 Habitación Ejecutiva</h3>
+      <p>Si buscas un plus de confort, con cama King Size y minibar para brindar en privado.</p>
+
+      <h2>Reserva en 3 Pasos Sencillos (y sin estrés)</h2>
+      <p>Olvídate de formularios complicados. En Eudiq Hotel nos gusta lo simple:</p>
+      
       <ol>
-        <li><strong>Envía mensaje:</strong> +593 96 171 2106</li>
-        <li><strong>Indica:</strong> "Reserva graduación UTPL"</li>
-        <li><strong>Especifica:</strong>
-          <ul>
-            <li>Fechas de llegada y salida</li>
-            <li>Número de personas</li>
-            <li>Tipo de habitación preferida</li>
-          </ul>
-        </li>
-        <li><strong>Confirmación:</strong> Recibes confirmación inmediata</li>
+        <li><strong>Escríbenos al WhatsApp:</strong> <a href="https://wa.me/593961712106">+593 96 171 2106</a></li>
+        <li><strong>Dinos tu fecha:</strong> "Voy a la graduación de marzo/julio/noviembre"</li>
+        <li><strong>¡Listo!</strong> Recibe tu confirmación al instante.</li>
       </ol>
 
-      <h2>Consejos para una graduación perfecta</h2>
-      
-      <h3>Antes de llegar:</h3>
-      <ul>
-        <li><strong>Reserva con 2-4 semanas de anticipación</strong></li>
-        <li><strong>Confirma horarios de ceremonia</strong> con UTPL</li>
-        <li><strong>Pregunta por descuentos</strong> para grupos familiares</li>
-      </ul>
-
-      <h3>Durante tu estadía:</h3>
-      <ul>
-        <li><strong>Desayuna temprano:</strong> Las ceremonias suelen ser matutinas</li>
-        <li><strong>Usa el WiFi gratuito:</strong> Para compartir momentos en vivo</li>
-        <li><strong>Aprovecha el café:</strong> Cafetería Viviates para energizarte</li>
-        <li><strong>Pide recomendaciones:</strong> El personal conoce los mejores restaurantes</li>
-      </ul>
-
-      <h3>Para la celebración:</h3>
-      <ul>
-        <li><strong>Restaurantes recomendados cerca:</strong> Pregunta en recepción</li>
-        <li><strong>Fotos en Parque Jipiro:</strong> A solo 200 metros</li>
-        <li><strong>Transporte de regreso:</strong> Coordinamos taxis al terminal</li>
-      </ul>
-
-      <h2>Testimonios de familias graduandas</h2>
+      <h2>Lo que dicen otras familias orgullosas</h2>
       <blockquote>
-        <p>"Excelente ubicación para la graduación de mi hija. El desayuno incluido nos permitió empezar el día especial sin preocupaciones. El personal muy amable y el WiFi perfecto para transmitir en vivo."</p>
-        <cite>- María González, Guayaquil</cite>
+        <p>"Fue un alivio llegar del bus y estar en el hotel en 2 minutos. El día del grado, el personal nos ayudó a conseguir taxi rápido y llegamos a tiempo a la UTPL. ¡Gracias por ser parte de nuestra celebración!"</p>
+        <cite>- Familia González, Guayaquil</cite>
       </blockquote>
 
       <blockquote>
-        <p>"Llegamos en bus desde Cuenca y el hotel está literalmente al lado del terminal. Muy cómodo para nosotros que no conocíamos Loja. Las habitaciones familiares perfectas para los 4."</p>
-        <cite>- Carlos Vásquez, Cuenca</cite>
+        <p>"El desayuno estuvo delicioso y la habitación muy limpia. Nos sentimos muy cuidados. 100% recomendado para familias."</p>
+        <cite>- Carlos V., Cuenca</cite>
       </blockquote>
 
-      <h2>Preguntas frecuentes</h2>
+      <h2>Preguntas que quizás tengas</h2>
       
-      <h3>¿Hay descuentos para grupos familiares?</h3>
-      <p>Sí, ofrecemos descuentos especiales para familias que reservan múltiples habitaciones o estadías de más de 2 noches.</p>
+      <h3>¿Hacen descuentos para familias grandes?</h3>
+      <p>¡Claro que sí! Si reservan varias habitaciones o se quedan más de 2 noches, pregunten por nuestra tarifa especial para graduados.</p>
 
-      <h3>¿Incluye transporte al campus UTPL?</h3>
-      <p>No incluimos transporte, pero coordinamos taxis confiables y te damos las rutas de bus público.</p>
+      <h3>¿Está muy lejos la UTPL?</h3>
+      <p>Para nada. En taxi son 5 minutos (aprox $1.50 - $2.00). Es muy cerca y accesible.</p>
 
-      <h3>¿Puedo cancelar si cambian las fechas de graduación?</h3>
-      <p>Sí, entendemos que las fechas de graduación pueden cambiar. Ofrecemos flexibilidad en cambios de fecha.</p>
+      <div class="conclusion-box" style="background-color: #f0fdfa; padding: 20px; border-radius: 10px; border-left: 5px solid #038C7F; margin-top: 30px;">
+        <p style="margin: 0; font-size: 1.1em;"><strong>Conclusión:</strong><br>
+        La graduación es un hito irrepetible. No dejes el hospedaje al azar. En <strong>Eudiq Hotel</strong>, nos encargamos de tu descanso para que tú solo te encargues de celebrar. ¡Te esperamos para brindar contigo!</p>
+      </div>
 
-      <h3>¿Hay restaurantes cerca para celebrar?</h3>
-      <p>Absolutamente. Estamos cerca de excelentes restaurantes y nuestro personal te dará las mejores recomendaciones.</p>
-
-      <p><strong>Conclusión:</strong> La graduación UTPL 2025 será un momento inolvidable. Asegúrate de que tu familia tenga el mejor hospedaje eligiendo Eudiq Hotel, donde combinamos ubicación perfecta, servicios completos y atención personalizada para que este día especial sea perfecto.</p>
-
-      <p><strong>¡Reserva ahora y garantiza tu lugar para la graduación UTPL 2025!</strong></p>
+      <p style="text-align: center; margin-top: 30px;"><strong>¡Reserva hoy y asegura la tranquilidad de tu familia!</strong></p>
     `,
-    image: 'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1760204829/IMG_4425-HDR_avmsry.webp',
+    image: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1764625179/WhatsApp_Image_2025-11-27_at_14.56.04_3_nsqxwv.jpg',
     author: 'Eudiq Hotel Loja',
     tags: ['graduacion utpl', 'hotel loja', 'hospedaje familias', 'utpl 2025', 'terminal terrestre']
   },
@@ -200,7 +134,7 @@ export const BLOG_POSTS = [
       <h3>¿Qué incluye tu estadía?</h3>
       <ul>
         <li>✅ <strong>Desayuno incluido</strong></li>
-        <li>✅ <strong>WiFi gratuito:</strong> Internet de alta velocidad</li>
+        <li>✅ <strong>WiFi gratuito:</strong> Conexión a internet sin costo</li>
         <li>✅ <strong>Estacionamiento gratis:</strong> Seguridad para tu vehículo</li>
         <li>✅ <strong>Cafetería Viviates:</strong> Cafetería especializada en el mismo hotel</li>
       </ul>
@@ -249,7 +183,7 @@ export const BLOG_POSTS = [
 
       <p><strong>Conclusión:</strong> Si buscas un hotel cerca del Terminal Terrestre de Loja, Eudiq Hotel combina ubicación perfecta, servicios de calidad y precios justos. Ideal para turismo, graduaciones UTPL y viajes de negocios.</p>
     `,
-    image: 'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1761845419/EudiqHero_i4cxtc.webp',
+    image: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1764625179/WhatsApp_Image_2025-11-27_at_14.56.04_3_nsqxwv.jpg',
     author: 'Eudiq Hotel Loja',
     tags: ['hotel loja', 'terminal terrestre', 'graduacion utpl', 'turismo loja', 'hospedaje']
   },
@@ -288,7 +222,7 @@ export const BLOG_POSTS = [
       <ul>
         <li>✅ <strong>Check-in 24 horas:</strong> Llegada flexible para vuelos y buses nocturnos</li>
         <li>✅ <strong>Desayuno desde las 5:30 AM:</strong> Para eventos matutinos</li>
-        <li>✅ <strong>WiFi de alta velocidad:</strong> Para streaming y redes sociales</li>
+        <li>✅ <strong>WiFi gratis:</strong> Para streaming y redes sociales</li>
         <li>✅ <strong>Información actualizada:</strong> Programación diaria del festival</li>
         <li>✅ <strong>Coordinación de transporte:</strong> Taxis confiables al centro</li>
         <li>✅ <strong>Cafetería Viviates extendido:</strong> Servicio hasta medianoche</li>
@@ -360,7 +294,7 @@ export const BLOG_POSTS = [
       <p><strong>Habitación Ejecutiva:</strong> Servicios especiales</p>
       <ul>
         <li>Escritorio amplío para trabajo</li>
-        <li>WiFi de alta velocidad</li>
+        <li>WiFi gratis</li>
         <li>Minibar incluido</li>
         <li>Atención 24/7</li>
       </ul>
@@ -479,7 +413,7 @@ export const BLOG_POSTS = [
 
       <p><strong>¡No esperes más! Reserva ahora tu lugar para el Festival de las Artes Loja 2025.</strong></p>
     `,
-    image: 'https://res.cloudinary.com/dltfsttr7/image/upload/f_auto,q_auto,w_1200/v1760204999/IMG_4183-HDR_gs5who.webp',
+    image: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1764625179/WhatsApp_Image_2025-11-27_at_14.56.04_3_nsqxwv.jpg',
     author: 'Eudiq Hotel Loja',
     tags: ['festival artes loja', 'eventos loja 2025', 'hospedaje festival', 'turismo cultural', 'noviembre loja']
   },

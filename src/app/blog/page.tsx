@@ -6,7 +6,7 @@ export default function BlogIndex() {
   const publishedPosts = BLOG_POSTS.filter(post => !post.draft);
   
   return (
-    <main className="max-w-3xl mx-auto py-16 px-4">
+    <main className="mt-8 max-w-3xl mx-auto py-16 px-4">
       <h1 className="text-4xl font-bold mb-8">Blog de Eudiq Hotel</h1>
       <ul className="space-y-6">
         {publishedPosts.map(post => (

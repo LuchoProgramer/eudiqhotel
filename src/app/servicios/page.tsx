@@ -5,11 +5,11 @@ import { Wifi, UtensilsCrossed, Car, Coffee, Shirt, Handshake } from 'lucide-rea
 const servicios = [
   {
     nombre: 'Wi-Fi',
-    descripcion: 'Internet de alta velocidad en todas las áreas del hotel, ideal para trabajo y entretenimiento.',
+    descripcion: 'Internet gratis en todas las áreas del hotel, ideal para trabajo y entretenimiento.',
     Icono: Wifi,
   },
   {
-    nombre: 'Desayuno tipo buffet',
+    nombre: 'Desayuno incluido',
     descripcion: 'Incluido en tu estadía. Variedad de opciones frescas y café de especialidad cada mañana.',
     Icono: UtensilsCrossed,
   },
@@ -57,12 +57,13 @@ export default function ServiciosPage() {
         {servicios.map((serv) => {
           const IconoComponent = serv.Icono;
           return (
-          <div key={serv.nombre} className="rounded-lg shadow-lg bg-white p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300">
-            <IconoComponent className="w-12 h-12 mb-4 text-[#038C7F]" strokeWidth={1.5} />
-            <h2 className="text-2xl font-semibold mb-2">{serv.nombre}</h2>
-            <p className="text-gray-700 mb-2 text-center">{serv.descripcion}</p>
-          </div>
-        )})}
+            <div key={serv.nombre} className="rounded-lg shadow-lg bg-white p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300">
+              <IconoComponent className="w-12 h-12 mb-4 text-[#038C7F]" strokeWidth={1.5} />
+              <h2 className="text-2xl font-semibold mb-2">{serv.nombre}</h2>
+              <p className="text-gray-700 mb-2 text-center">{serv.descripcion}</p>
+            </div>
+          )
+        })}
       </div>
       <div className="mt-12 text-center">
         <a

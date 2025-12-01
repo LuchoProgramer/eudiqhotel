@@ -13,14 +13,14 @@ const servicios = [
   },
   {
     icon: Wifi,
-  titulo: 'Wi-Fi',
-    descripcion: 'Internet de alta velocidad en todas las áreas. Ideal para trabajo remoto y streaming sin interrupciones.',
+    titulo: 'Wi-Fi',
+    descripcion: 'Internet gratis en todas las áreas. Ideal para trabajo remoto y entretenimiento.',
     destacado: false,
   },
   {
     icon: Car,
     titulo: 'Estacionamiento',
-      descripcion: 'Parqueadero privado y seguro sin costo adicional.',
+    descripcion: 'Parqueadero privado y seguro sin costo adicional.',
     destacado: false,
   },
   {
@@ -79,17 +79,17 @@ export default function Servicios() {
           <span className="inline-block px-4 py-1 mb-4 text-sm font-semibold tracking-widest text-primary bg-white rounded-full shadow-sm">
             SERVICIOS
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6" style={{fontFamily: 'Playfair Display, serif'}}>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Playfair Display, serif' }}>
             Todo lo que <span className="text-primary">Necesitas</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Servicios pensados para hacer de tu estadía una experiencia completa y memorable. 
+            Servicios pensados para hacer de tu estadía una experiencia completa y memorable.
             Tu comodidad es nuestra prioridad.
           </p>
         </div>
 
-  {/* Services Grid */}
-  <div className="flex flex-wrap justify-center gap-6 mb-16">
+        {/* Services Grid */}
+        <div className="flex flex-wrap justify-center gap-6 mb-16">
           {servicios.map((servicio, idx) => {
             const Icon = servicio.icon;
             const isHovered = hoveredIndex === idx;
@@ -98,10 +98,9 @@ export default function Servicios() {
                 key={idx}
                 onMouseEnter={() => setHoveredIndex(idx)}
                 onMouseLeave={() => setHoveredIndex(null)}
-                className={`group relative bg-white rounded-2xl p-6 shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(25%-1.5rem)] max-w-xs ${
-                  servicio.destacado ? 'ring-2 ring-[#CBD95F]' : ''
-                } ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-                style={{ 
+                className={`group relative bg-white rounded-2xl p-6 shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(25%-1.5rem)] max-w-xs ${servicio.destacado ? 'ring-2 ring-[#CBD95F]' : ''
+                  } ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+                style={{
                   transitionDelay: `${idx * 80}ms`,
                   transform: isHovered ? 'translateY(-8px)' : 'translateY(0)'
                 }}
@@ -114,15 +113,13 @@ export default function Servicios() {
                 )}
 
                 {/* Icon container */}
-                <div className={`relative mb-4 w-14 h-14 rounded-xl flex items-center justify-center transition-all duration-500 ${
-                  isHovered 
-                    ? 'bg-gradient-to-br from-primary to-[#A9BF04] scale-110' 
+                <div className={`relative mb-4 w-14 h-14 rounded-xl flex items-center justify-center transition-all duration-500 ${isHovered
+                    ? 'bg-gradient-to-br from-primary to-[#A9BF04] scale-110'
                     : 'bg-primary/10'
-                }`}>
-                  <Icon 
-                    className={`transition-all duration-500 ${
-                      isHovered ? 'text-white' : 'text-primary'
-                    }`}
+                  }`}>
+                  <Icon
+                    className={`transition-all duration-500 ${isHovered ? 'text-white' : 'text-primary'
+                      }`}
                     size={28}
                   />
                 </div>
@@ -135,7 +132,7 @@ export default function Servicios() {
                   {servicio.descripcion}
                 </p>
 
-                  {/* ...eliminado el indicador 'Saber más'... */}
+                {/* ...eliminado el indicador 'Saber más'... */}
               </div>
             );
           })}
@@ -149,18 +146,15 @@ export default function Servicios() {
                 <Coffee className="text-white" size={20} />
                 <span className="text-white font-semibold text-sm">NUESTRA MARCA PROPIA</span>
               </div>
-              <h3 className="text-3xl md:text-4xl font-bold text-white mb-4" style={{fontFamily: 'Playfair Display, serif'}}>
+              <h3 className="text-3xl md:text-4xl font-bold text-white mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
                 Cafetería Viviates
               </h3>
               <p className="text-white/90 text-lg leading-relaxed mb-6">
-                Nos enorgullece presentar nuestra cafetería. <strong>Cafetería Viviates</strong> es el 
-                resultado de años de pasión por el café de altura ecuatoriano, seleccionando los mejores granos 
-                de la región para ofrecerte una experiencia única en cada taza.
+                Nos enorgullece presentar nuestra cafetería, resultado de años de pasión por el café de altura lojano, seleccionando los mejores granos de la región para ofrecerte una experiencia única en cada taza.
               </p>
               <ul className="space-y-3 mb-6">
                 {[
-                  'Granos 100% ecuatorianos de altura',
-                  'Tostado artesanal para realzar sabores',
+                  'Granos 100% lojanos de altura',
                   'Disponible en nuestro restaurante',
                   'También puedes llevarlo a casa',
                 ].map((item, i) => (
@@ -197,11 +191,11 @@ export default function Servicios() {
               <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                    <Image src="/Logocafe.svg" alt="Logo Café" width={32} height={32} className="h-8 w-auto" style={{height:32}} />
+                    <Image src="/Logocafe.svg" alt="Logo Café" width={32} height={32} className="h-8 w-auto" style={{ height: 32 }} />
                   </div>
                   <div>
                     <p className="text-xl font-bold text-gray-900">100%</p>
-                    <p className="text-sm text-gray-600">Ecuatoriano</p>
+                    <p className="text-sm text-gray-600">Lojano</p>
                   </div>
                 </div>
               </div>

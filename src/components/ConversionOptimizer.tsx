@@ -30,14 +30,21 @@ export function trackConversion(event: ConversionEvent) {
     });
   }
 
-    // Microsoft Clarity 
+  // Microsoft Clarity 
   if (typeof window !== 'undefined') {
-    const w = window as unknown as { clarity?: (...args: unknown[]) => void };
-    if (w.clarity) {
-      w.clarity('track', event.action, {
-        category: event.category,
-        label: event.label
-      });
+    try {
+      const w = window as unknown as { clarity?: (...args: unknown[]) => void };
+      if (typeof w.clarity === 'function') {
+        w.clarity('track', event.action, {
+          category: event.category,
+          label: event.label
+        });
+      }
+    } catch (error) {
+      // Silenciar errores de Clarity en desarrollo
+      if (process.env.NODE_ENV === 'development') {
+        console.debug('Clarity not ready:', error);
+      }
     }
   }
 

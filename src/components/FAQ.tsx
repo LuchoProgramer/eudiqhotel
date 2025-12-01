@@ -27,12 +27,12 @@ const FAQ_DATA: FAQItem[] = [
   },
   {
     question: "¿Tienen WiFi gratuito?",
-    answer: "Sí, ofrecemos WiFi de alta velocidad gratuito en todas las habitaciones y áreas comunes del hotel, perfecto para trabajo y entretenimiento.",
+    answer: "Sí, ofrecemos WiFi gratis en todas las habitaciones y áreas comunes del hotel, perfecto para trabajo y entretenimiento.",
     category: "servicios"
   },
   {
     question: "¿Cuál es el horario de check-in y check-out?",
-    answer: "Check-in y check-out: 12:00 PM (a la hora que ingresan). Ofrecemos flexibilidad en horarios especiales para graduaciones UTPL y eventos.",
+    answer: "Check-in a partir de las 13:00. Check-out a partir de las 00:00. Ofrecemos flexibilidad en horarios especiales para graduaciones UTPL y eventos.",
     category: "politicas"
   },
   {
@@ -66,8 +66,8 @@ export default function FAQ() {
   const [openItems, setOpenItems] = useState<number[]>([]);
 
   const toggleItem = (index: number) => {
-    setOpenItems(prev => 
-      prev.includes(index) 
+    setOpenItems(prev =>
+      prev.includes(index)
         ? prev.filter(i => i !== index)
         : [...prev, index]
     );
@@ -81,7 +81,7 @@ export default function FAQ() {
           <span className="inline-block px-4 py-1 mb-4 text-sm font-semibold tracking-widest text-[#038C7F] bg-[#CBD95F]/20 rounded-full">
             PREGUNTAS FRECUENTES
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6" style={{fontFamily: 'Playfair Display, serif'}}>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Playfair Display, serif' }}>
             ¿Tienes dudas sobre tu <span className="text-[#038C7F]">estadía</span>?
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -92,7 +92,7 @@ export default function FAQ() {
         {/* FAQ Items */}
         <div className="space-y-4">
           {FAQ_DATA.map((item, index) => (
-            <div 
+            <div
               key={index}
               className="border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all"
             >
@@ -109,7 +109,7 @@ export default function FAQ() {
                   <ChevronDown className="w-5 h-5 text-[#038C7F] flex-shrink-0" />
                 )}
               </button>
-              
+
               {openItems.includes(index) && (
                 <div className="px-6 pb-6">
                   <div className="pt-4 border-t border-gray-100">

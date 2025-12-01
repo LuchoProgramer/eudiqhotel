@@ -88,7 +88,7 @@ export const GOOGLE_ADS_CONFIG = {
       benefits: [
         '✅ A 1 minuto caminando del Terminal Terrestre',
         '✅ Desayuno incluido',
-        '✅ WiFi de alta velocidad gratuito',
+        '✅ WiFi gratis',
         '✅ Estacionamiento sin costo adicional',
         '✅ Recepción 24 horas para tu comodidad',
         '✅ Mejor precio garantizado reservando directo'
@@ -169,7 +169,7 @@ export const GOOGLE_ADS_CONFIG = {
     },
     phoneCall: {
       action: 'Phone Call',
-      category: 'Lead Generation', 
+      category: 'Lead Generation',
       value: 8
     },
     formSubmit: {

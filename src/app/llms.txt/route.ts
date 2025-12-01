@@ -14,9 +14,9 @@ export async function GET() {
 
   // Servicios principales
   const servicios = [
-  { nombre: 'Habitaciones', url: `${SITE_URL}/#habitaciones`, desc: 'Alojamiento cómodo y familiar.' },
+    { nombre: 'Habitaciones', url: `${SITE_URL}/#habitaciones`, desc: 'Alojamiento cómodo y familiar.' },
     { nombre: 'Cafetería Viviates', url: `${SITE_URL}/#servicios`, desc: 'Café de especialidad propio.' },
-  { nombre: 'Wi-Fi', url: `${SITE_URL}/#servicios`, desc: 'Internet de alta velocidad.' },
+    { nombre: 'Wi-Fi', url: `${SITE_URL}/#servicios`, desc: 'Internet gratis.' },
     { nombre: 'Desayuno incluido', url: `${SITE_URL}/#servicios`, desc: 'Desayuno buffet todos los días.' },
     { nombre: 'Estacionamiento', url: `${SITE_URL}/#servicios`, desc: 'Parqueadero privado y seguro.' },
     { nombre: 'Ubicación', url: `${SITE_URL}/#ubicacion`, desc: 'Diagonal a la terminal terrestre.' },
@@ -51,7 +51,7 @@ ${blog}
 
   return new NextResponse(markdown, {
     status: 200,
-    headers: { 
+    headers: {
       'Content-Type': 'text/markdown; charset=utf-8',  // ✅ Agregado charset=utf-8
     },
   });

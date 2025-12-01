@@ -69,11 +69,10 @@ export default function Ubicacion() {
             UBICACIÓN
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6" style={{fontFamily: 'Playfair Display, serif'}}>
-            Encuéntranos en <span className="text-[#038C7F]">Avenida 8 de diciembre y Juan José Flores diagonal a la Terminal Terrestre</span>
+            Encuéntranos en <span className="text-gray-900">Avenida 8 de diciembre y Juan José Flores diagonal a la Terminal Terrestre</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Estratégicamente ubicados en Avenida 8 de diciembre y Juan José Flores diagonal a la Terminal Terrestre, 
-            con acceso a los principales atractivos turísticos.
+            Estratégicamente ubicados cerca de puntos de interés, con acceso a los principales atractivos turísticos.
           </p>
         </div>
 

@@ -203,7 +203,7 @@ export default function MenuPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-[#F2F2F2] via-white to-[#CBD95F]/10">
       {/* Hero Header */}
-      <section className="bg-gradient-to-br from-[#F2F2F2] via-white to-[#CBD95F]/20 py-12 md:py-16">
+      <section className="bg-gradient-to-br from-[#F2F2F2] via-white to-[#CBD95F]/20 py-12 md:py-16 mt-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center">
             <div className="flex items-center justify-center gap-3 mb-4">
@@ -508,10 +508,6 @@ export default function MenuPage() {
                 <span className="text-sm">@hoteleudiq</span>
               </a>
             </div>
-            
-            <p className="text-center text-xs text-white/70 mt-6">
-              También disponible para llevar a través de tu delivery favorito
-            </p>
           </div>
 
           <div className="text-center mt-8">

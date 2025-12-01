@@ -403,10 +403,6 @@ export default function CafeViviatesLanding() {
                   <span className="text-sm">@hoteleudiq</span>
                 </a>
               </div>
-              
-              <p className="text-center text-xs text-gray-500 mt-6">
-                También disponible para llevar a través de tu delivery favorito
-              </p>
             </div>
           </div>
         </section>

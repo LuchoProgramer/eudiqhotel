@@ -127,7 +127,7 @@ export const habitaciones = [
     tamaño: '',
     imagenes: [
       {
-        url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761843579/Imagen_de_WhatsApp_2025-10-29_a_las_19.43.22_2904e769_vhu9hl.jpg',
+        url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1764625179/WhatsApp_Image_2025-11-27_at_14.56.04_4_niz763.jpg',
         alt: 'Habitación Doble en Eudiq Hotel Loja, dos camas individuales, ideal para amigos o familia',
       },
     ],
@@ -144,7 +144,7 @@ export const habitaciones = [
     tamaño: '',
     imagenes: [
       {
-        url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1760204999/IMG_4183-HDR_gs5who.webp',
+        url: 'https://res.cloudinary.com/dltfsttr7/image/upload/v1761843579/Imagen_de_WhatsApp_2025-10-29_a_las_19.43.22_2904e769_vhu9hl.jpg',
         alt: 'Habitación Triple en Eudiq Hotel Loja, tres camas individuales, espacio amplio',
       },
     ],

@@ -107,7 +107,7 @@ export default function ContactoPage() {
                   </div>
                   <div>
                     <div className="font-medium text-gray-900">Check-in / Check-out</div>
-                    <div className="text-gray-600 text-sm">Check-in y check-out: 12:00 PM</div>
+                    <div className="text-gray-600 text-sm">Check-in a partir de las 13:00 | Check-out a partir de las 00:00</div>
                     <div className="text-gray-600 text-sm">(a la hora que ingresan)</div>
                   </div>
                 </div>

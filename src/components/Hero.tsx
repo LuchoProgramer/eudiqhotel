@@ -74,10 +74,10 @@ export default function Hero({ images = defaultImages }: HeroProps) {
       </div>
 
       {/* Content */}
-      <div className="relative h-full flex flex-col items-center justify-center px-4 text-center z-10">
+      <div className="relative h-full flex flex-col items-center justify-center px-4 pt-20 pb-4 text-center z-10">
         <div className={`max-w-5xl transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-white/10 backdrop-blur-md rounded-full border border-white/20 mt-0">
+          <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
             <span className="text-white/90 text-sm font-medium tracking-wider">TU DESCANSO ES NUESTRA PRIORIDAD</span>
           </div>
 
@@ -141,7 +141,7 @@ export default function Hero({ images = defaultImages }: HeroProps) {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+        <div className="absolute bottom-18 md:bottom-2 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
           <span className="text-white/60 text-sm tracking-widest">DESCUBRE MÁS</span>
           <svg className="w-6 h-6 text-white/60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
@@ -171,7 +171,7 @@ export default function Hero({ images = defaultImages }: HeroProps) {
       </button>
 
       {/* Dots Indicator */}
-      <div className="absolute bottom-24 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+      <div className="absolute bottom-24 md:bottom-32 left-1/2 -translate-x-1/2 flex gap-2 z-20">
         {images.map((_, idx) => (
           <button
             key={idx}

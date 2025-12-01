@@ -17,9 +17,39 @@ const puntosInteres = [
     descripcion: 'Icono arquitectónico y punto turístico imperdible.',
   },
   {
-    nombre: 'Universidad Nacional de Loja',
+    nombre: 'Universidad Técnica Particular de Loja',
     distancia: '5 min en taxi',
     descripcion: 'Centro académico de referencia en la región.',
+  },
+  {
+    nombre: 'Universidad Internacional del Ecuador (UIDE)',
+    distancia: '3 min taxi',
+    descripcion: 'Institución educativa de excelencia.',
+  },
+  {
+    nombre: 'Teatro Benjamín Carrión',
+    distancia: '7 min pie',
+    descripcion: 'Centro cultural y de artes escénicas de Loja.',
+  },
+  {
+    nombre: 'Conservatorio de Música Salvador Bustamante Celi',
+    distancia: '5 min pie',
+    descripcion: 'Referente musical de la ciudad.',
+  },
+  {
+    nombre: 'Hospital de Solca',
+    distancia: '3 min taxi',
+    descripcion: 'Atención médica especializada.',
+  },
+  {
+    nombre: 'Sendero orillas del Zamora',
+    distancia: '10 min pie',
+    descripcion: 'Recorrido natural junto al río Zamora.',
+  },
+  {
+    nombre: 'Pista de karting',
+    distancia: '10 min taxi',
+    descripcion: 'Diversión y adrenalina para toda la familia.',
   },
   {
     nombre: 'Cafetería Viviates',
@@ -66,17 +96,6 @@ export default function UbicacionPage() {
       <section className="mb-10">
         <h2 className="text-2xl font-semibold mb-2">Puntos de interés cercanos</h2>
         <ul className="list-disc pl-6 text-gray-700 space-y-2">
-          <li>
-            <strong>Teléfono</strong>:{' '}
-            <a
-              href="tel:+593961712106"
-              className="text-primary underline hover:text-primary-dark"
-              onClick={() => sendGAEvent('click_telefono_ubicacion', { section: 'ubicacion', method: 'telefono' })}
-            >
-              +593 96 171 2106
-            </a>
-            {' '} (Llama para reservas o información)
-          </li>
           {puntosInteres.map((p) => (
             <li key={p.nombre}>
               <strong>{p.nombre}</strong> ({p.distancia}): {p.descripcion}
