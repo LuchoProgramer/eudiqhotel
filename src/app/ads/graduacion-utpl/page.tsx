@@ -20,10 +20,10 @@ export default function GraduacionUTPLPage() {
     const interval = setInterval(() => {
       const now = new Date().getTime();
       const distance = nextGraduation.getTime() - now;
-      
+
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
       const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      
+
       if (days > 0) {
         setTimeLeft(`${days} días ${hours} horas`);
       } else {
@@ -84,7 +84,7 @@ export default function GraduacionUTPLPage() {
                 >
                   📱 Reservar para Graduación
                 </CTAButton>
-                
+
                 <CTAButton
                   variant="secondary"
                   size="large"
@@ -115,7 +115,7 @@ export default function GraduacionUTPLPage() {
                   priority
                 />
               </div>
-              
+
               {/* Badge flotante */}
               <div className="absolute -bottom-4 -right-4 bg-white rounded-lg shadow-xl p-4 border-l-4 border-green-500">
                 <p className="text-sm font-semibold text-gray-900">A solo 5 min</p>
@@ -202,7 +202,7 @@ export default function GraduacionUTPLPage() {
               <p className="font-semibold text-blue-600">- María Elizalde, Cuenca</p>
               <p className="text-sm text-gray-500">Graduación Medicina UTPL 2024</p>
             </div>
-            
+
             <div className="bg-white p-6 rounded-xl shadow-sm">
               <div className="flex text-yellow-400 mb-2">⭐⭐⭐⭐⭐</div>
               <p className="text-gray-700 mb-4 italic">
@@ -223,7 +223,7 @@ export default function GraduacionUTPLPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
                 Información práctica para tu graduación
               </h2>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
@@ -234,17 +234,17 @@ export default function GraduacionUTPLPage() {
                     <p className="text-gray-600 text-sm">5 minutos en auto, bus directo cada 20 min, taxi $3-4 USD</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
                     <Clock className="h-5 w-5 text-green-600" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Horarios recomendados</h3>
-                    <p className="text-gray-600 text-sm">Check-in temprano disponible, desayuno desde 7:00 AM</p>
+                    <p className="text-gray-600 text-sm">Check-in temprano disponible, desayuno desde 07:00</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
                     <Users className="h-5 w-5 text-purple-600" />
@@ -279,7 +279,7 @@ export default function GraduacionUTPLPage() {
                   Estacionamiento sin límite de tiempo
                 </p>
               </div>
-              
+
               <CTAButton
                 variant="secondary"
                 size="large"
@@ -303,7 +303,7 @@ export default function GraduacionUTPLPage() {
           <p className="text-xl text-gray-300 mb-8">
             Las fechas de graduación se llenan rápido. Asegura tu lugar hoy mismo.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <CTAButton
               variant="primary"
@@ -314,7 +314,7 @@ export default function GraduacionUTPLPage() {
             >
               💬 Reservar por WhatsApp
             </CTAButton>
-            
+
             <CTAButton
               variant="secondary"
               size="large"

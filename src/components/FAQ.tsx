@@ -12,7 +12,7 @@ type FAQItem = {
 const FAQ_DATA: FAQItem[] = [
   {
     question: "¿Está incluido el desayuno en todas las habitaciones?",
-    answer: "Sí, todas nuestras habitaciones incluyen desayuno sin costo adicional. Se sirve de 7:00 AM a 9:00 AM.",
+    answer: "Sí, todas nuestras habitaciones incluyen desayuno sin costo adicional. Se sirve de 07:00 a 09:00.",
     category: "servicios"
   },
   {
@@ -37,7 +37,7 @@ const FAQ_DATA: FAQItem[] = [
   },
   {
     question: "¿Está abierta Cafetería Viviates todos los días?",
-    answer: "Cafetería Viviates está abierta de lunes a sábado. Horarios: Mañana 7:00 AM - 11:00 AM | Tarde 16:00 - 21:00. Domingos cerrado.",
+    answer: "Cafetería Viviates está abierta de lunes a sábado. Horarios: Mañana 07:00 - 11:00 | Tarde 16:00 - 21:00. Domingos cerrado.",
     category: "cafe"
   },
   {

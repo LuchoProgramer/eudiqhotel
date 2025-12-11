@@ -39,19 +39,19 @@ export const HOTEL_CONFIG = {
     checkIn: '13:00',
     checkOut: '00:00',
     breakfast: {
-      start: '7:00 AM',
-      end: '9:00 AM',
+      start: '07:00',
+      end: '09:00',
       included: true
     },
     cafeteria: {
       days: 'Lunes a Sábado',
       morning: {
-        start: '7:00 AM',
-        end: '11:00 AM'
+        start: '07:00',
+        end: '11:00'
       },
       afternoon: {
-        start: '16:00PM',
-        end: '21:00PM'
+        start: '16:00',
+        end: '21:00'
       },
       closed: 'Domingo'
     }

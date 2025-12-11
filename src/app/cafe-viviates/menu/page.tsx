@@ -172,7 +172,7 @@ const MENU_DATA: MenuCategory[] = [
 export default function MenuPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
-  
+
   // Analytics hook
   const {
     trackWhatsAppClick,
@@ -181,7 +181,7 @@ export default function MenuPage() {
     trackMenuInteraction,
     trackCafeEvent,
   } = useCafeAnalytics();
-  
+
   // Track menu view on mount
   React.useEffect(() => {
     trackCafeEvent('cafe_menu_view', {
@@ -192,7 +192,7 @@ export default function MenuPage() {
   const filteredCategories = MENU_DATA.filter(category => {
     if (selectedCategory !== 'all' && category.id !== selectedCategory) return false;
     if (searchTerm) {
-      return category.items.some(item => 
+      return category.items.some(item =>
         item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         item.description?.toLowerCase().includes(searchTerm.toLowerCase())
       );
@@ -215,7 +215,7 @@ export default function MenuPage() {
             <p className="text-lg md:text-xl text-gray-700 mb-6 max-w-2xl mx-auto">
               Café de especialidad, comida tradicional lojana y sabores internacionales
             </p>
-            
+
             {/* Información de contacto */}
             <div className="flex flex-wrap items-center justify-center gap-4 text-sm md:text-base text-gray-700">
               <div className="flex items-center gap-2">
@@ -228,7 +228,7 @@ export default function MenuPage() {
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="h-4 w-4 text-[#038C7F]" />
-                <span>Lunes a Sábado: Mañana 7:00 AM - 11:00 AM | Tarde 16:00 PM - 21:00 PM. Domingos cerrado</span>
+                <span>Lunes a Sábado: Mañana 07:00 - 11:00 | Tarde 16:00 - 21:00. Domingos cerrado</span>
               </div>
             </div>
           </div>
@@ -262,11 +262,10 @@ export default function MenuPage() {
               <Filter className="h-5 w-5 text-gray-500 flex-shrink-0 hidden md:block" />
               <button
                 onClick={() => setSelectedCategory('all')}
-                className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
-                  selectedCategory === 'all'
-                    ? 'bg-[#038C7F] text-white'
-                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
-                }`}
+                className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${selectedCategory === 'all'
+                  ? 'bg-[#038C7F] text-white'
+                  : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
+                  }`}
               >
                 Todo
               </button>
@@ -275,16 +274,15 @@ export default function MenuPage() {
                   key={category.id}
                   onClick={() => {
                     setSelectedCategory(category.id);
-                    trackMenuInteraction('filter', { 
+                    trackMenuInteraction('filter', {
                       category: category.name,
-                      filter: category.id 
+                      filter: category.id
                     });
                   }}
-                  className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all flex items-center gap-2 ${
-                    selectedCategory === category.id
-                      ? 'bg-[#038C7F] text-white'
-                      : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
-                  }`}
+                  className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all flex items-center gap-2 ${selectedCategory === category.id
+                    ? 'bg-[#038C7F] text-white'
+                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
+                    }`}
                 >
                   <category.Icon className="h-4 w-4" />
                   {category.name}
@@ -308,7 +306,7 @@ export default function MenuPage() {
               {filteredCategories.map((category) => (
                 <div key={category.id} id={category.id} className="scroll-mt-24">
                   {/* Título de categoría */}
-                  <div className={`bg-gradient-to-r ${category.color} text-white rounded-xl p-6 mb-6 shadow-lg`}>
+                  <div className={`bg-gradient-to-r ${category.color} ${['desayunos', 'especial'].includes(category.id) ? 'text-gray-900 border border-gray-100' : 'text-white'} rounded-xl p-6 mb-6 shadow-lg`}>
                     <div className="flex items-center gap-3">
                       <category.Icon className="h-8 w-8" />
                       <h2 className="text-2xl md:text-3xl font-bold">{category.name}</h2>
@@ -318,8 +316,8 @@ export default function MenuPage() {
                   {/* Items de la categoría */}
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {category.items
-                      .filter(item => 
-                        !searchTerm || 
+                      .filter(item =>
+                        !searchTerm ||
                         item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                         item.description?.toLowerCase().includes(searchTerm.toLowerCase())
                       )
@@ -383,7 +381,7 @@ export default function MenuPage() {
               Haz tu pedido, reserva tu mesa o visítanos
             </p>
           </div>
-          
+
           {/* Botones principales */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
             <CTAButton
@@ -397,7 +395,7 @@ export default function MenuPage() {
               <MessageCircle className="h-5 w-5" />
               Pedir por WhatsApp
             </CTAButton>
-            
+
             <CTAButton
               variant="phone"
               size="large"
@@ -416,7 +414,7 @@ export default function MenuPage() {
               href="https://api.whatsapp.com/send?phone=593961712106&text=Hola, quiero reservar una mesa en Cafeter%C3%ADa Viviates"
               onClick={() => trackWhatsAppClick('reservation', 'menu_cta_primary', 'Reserva desde menú')}
               section="menu_reserve_whatsapp"
-              className="bg-white/10 hover:bg-white/20 text-white border-2 border-white flex items-center gap-2 font-bold"
+              className="bg-white text-[#038C7F] border-2 border-[#038C7F] hover:bg-[#038C7F] hover:text-white flex items-center gap-2 font-bold"
             >
               <MessageCircle className="h-5 w-5" />
               Reservar Mesa
@@ -428,9 +426,9 @@ export default function MenuPage() {
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
               <MapPin className="h-6 w-6 mx-auto mb-2" />
               <p className="text-sm font-medium">Av. 8 de Diciembre</p>
-              <p className="text-xs text-white/80">Diagonal al Terminal Terrestre</p>
-              <p className="text-xs text-white/80 mt-1">En el bajo de Hotel Eudiq</p>
-              <div className="mt-3 rounded-lg overflow-hidden border border-[#038C7F]/30">
+              <p className="text-xs text-gray-600">Diagonal al Terminal Terrestre</p>
+              <p className="text-xs text-gray-600 mt-1">En el bajo de Hotel Eudiq</p>
+              <div className="mt-3 rounded-lg overflow-hidden border border-[#038C7F]/30 w-full">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.2175373243026!2d-79.20703762477585!3d-3.9755893959981683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cb479d7e88d4cf%3A0x462ba8b8785c5d1!2sCafeter%C3%ADa%20Caf%C3%A9%20Viviates%3A%20Caf%C3%A9%20Lojano%20(Hotel%20EUDIQ)!5e0!3m2!1sen!2sec!4v1763848213974!5m2!1sen!2sec"
                   width="100%"
@@ -444,18 +442,19 @@ export default function MenuPage() {
               </div>
             </div>
 
+            {/* Contacto */}
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
               <Phone className="h-6 w-6 mx-auto mb-2" />
-              <p className="text-sm font-medium mb-2">Contacto</p>
-              <a 
-                href="tel:+593992354992" 
+              <p className="text-sm font-medium mb-16">Contacto</p>
+              <a
+                href="tel:+593992354992"
                 className="text-xs hover:underline block"
                 onClick={() => trackPhoneClick('menu_contact_card')}
               >
                 📞 0992499565
               </a>
-              <a 
-                href="https://api.whatsapp.com/send?phone=593961712106" 
+              <a
+                href="https://api.whatsapp.com/send?phone=593961712106"
                 className="text-xs hover:underline block mt-1"
                 onClick={() => trackWhatsAppClick('info', 'menu_contact_card')}
               >
@@ -463,11 +462,15 @@ export default function MenuPage() {
               </a>
             </div>
 
+            {/* Horario */}
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
               <Clock className="h-6 w-6 mx-auto mb-2" />
-              <p className="text-sm font-medium">Horario</p>
-              <p className="text-xs text-white/80">Lunes a Sábado</p>
-              <p className="text-xs text-white/80 font-semibold">7:00 AM - 11:00 AM | 16:00 PM - 21:00 PM</p>
+              <p className="text-sm font-medium mb-16">Horario</p>
+              <p className="text-xs text-gray-600">Lunes a Sábado</p>
+              <p className="text-xs text-gray-700 font-bold text-center">
+                07:00 - 11:00<br />
+                16:00 - 21:00
+              </p>
             </div>
           </div>
 
@@ -485,7 +488,7 @@ export default function MenuPage() {
                 <Instagram className="h-5 w-5" />
                 <span className="text-sm">@viviatescoffeeshop</span>
               </a>
-              
+
               <a
                 href="https://www.instagram.com/cafeviviates"
                 target="_blank"
@@ -513,7 +516,7 @@ export default function MenuPage() {
           <div className="text-center mt-8">
             <Link
               href="/cafe-viviates"
-              className="inline-flex items-center gap-2 text-white hover:text-white/80 underline text-sm font-medium transition-colors"
+              className="inline-flex items-center gap-2 bg-white border border-gray-300 text-gray-700 hover:bg-gray-50 hover:text-[#038C7F] px-6 py-3 rounded-full text-sm font-medium transition-all shadow-sm"
             >
               ← Volver a Cafetería Viviates
             </Link>

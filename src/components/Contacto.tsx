@@ -54,8 +54,8 @@ export default function Contacto() {
     {
       icon: Phone,
       titulo: 'Teléfono',
-  info: '+593 96 171 2106',
-  link: 'tel:+593961712106',
+      info: '+593 96 171 2106',
+      link: 'tel:+593961712106',
     },
     {
       icon: Mail,
@@ -65,7 +65,7 @@ export default function Contacto() {
     },
     {
       icon: MapPin,
-        titulo: 'Dirección',
+      titulo: 'Dirección',
       info: 'Avenida 8 de diciembre y Juan José Flores, diagonal a la Terminal Terrestre. Ubicación marcada en el mapa.',
       link: 'https://maps.app.goo.gl/yZUqhkbKqHijRYVB8',
     },
@@ -89,11 +89,11 @@ export default function Contacto() {
           <span className="inline-block px-4 py-1 mb-4 text-sm font-semibold tracking-widest text-[#038C7F] bg-white rounded-full shadow-sm">
             CONTACTO
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6" style={{fontFamily: 'Playfair Display, serif'}}>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Playfair Display, serif' }}>
             Reserva tu <span className="text-[#038C7F]">Estadía</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Estamos aquí para ayudarte. Completa el formulario o contáctanos directamente. 
+            Estamos aquí para ayudarte. Completa el formulario o contáctanos directamente.
             Tu próxima experiencia inolvidable comienza aquí.
           </p>
         </div>
@@ -189,7 +189,7 @@ export default function Contacto() {
               <ul className="space-y-2 text-sm text-white/90">
                 <li className="flex items-start gap-2">
                   <span className="text-white mt-1">✓</span>
-                  <span>Check-in: 12:00 PM | Check-out: 12:00 PM</span>
+                  <span>Check-in: 13:00 | Check-out: 12:00</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-white mt-1">✓</span>

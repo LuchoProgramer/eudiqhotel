@@ -199,7 +199,7 @@ export const BLOG_POSTS = [
       <h2>¿Cuándo se celebra el Festival de las Artes 2025?</h2>
       <p><strong>Fechas confirmadas:</strong> Del 15 al 22 de noviembre de 2025</p>
       <p><strong>Duración:</strong> 8 días de eventos culturales continuos</p>
-      <p><strong>Horarios:</strong> Eventos desde las 10:00 AM hasta las 11:00 PM</p>
+      <p><strong>Horarios:</strong> Eventos desde las 10:00 hasta las 23:00</p>
 
       <p>Durante estos días, la ciudad de Loja recibe más de <strong>50,000 visitantes</strong> de todo Ecuador y países vecinos, por lo que reservar hospedaje con anticipación es crucial.</p>
 
@@ -221,7 +221,7 @@ export const BLOG_POSTS = [
       <h3>Servicios especiales durante el Festival:</h3>
       <ul>
         <li>✅ <strong>Check-in 24 horas:</strong> Llegada flexible para vuelos y buses nocturnos</li>
-        <li>✅ <strong>Desayuno desde las 5:30 AM:</strong> Para eventos matutinos</li>
+        <li>✅ <strong>Desayuno desde las 05:30:</strong> Para eventos matutinos</li>
         <li>✅ <strong>WiFi gratis:</strong> Para streaming y redes sociales</li>
         <li>✅ <strong>Información actualizada:</strong> Programación diaria del festival</li>
         <li>✅ <strong>Coordinación de transporte:</strong> Taxis confiables al centro</li>
@@ -232,22 +232,22 @@ export const BLOG_POSTS = [
       
       <h3>Conciertos al aire libre (Parque Central)</h3>
       <p><strong>Días:</strong> 15, 17, 19 y 21 de noviembre</p>
-      <p><strong>Horario:</strong> 7:00 PM - 11:00 PM</p>
+      <p><strong>Horario:</strong> 19:00 - 23:00</p>
       <p><strong>Artistas confirmados:</strong> Grupos nacionales e internacionales de música andina, rock y fusión</p>
       
       <h3>Teatro Benjamín Carrión</h3>
       <p><strong>Días:</strong> Todos los días del festival</p>
-      <p><strong>Funciones:</strong> 3:00 PM y 8:00 PM</p>
+      <p><strong>Funciones:</strong> 15:00 y 20:00</p>
       <p><strong>Espectáculos:</strong> Teatro, danza contemporánea y ópera</p>
       
       <h3>Exposiciones de arte (Museo de la Cultura)</h3>
-      <p><strong>Horario:</strong> 9:00 AM - 21:00PM todos los días</p>
+      <p><strong>Horario:</strong> 09:00 - 21:00 todos los días</p>
       <p><strong>Entrada:</strong> Gratuita</p>
       <p><strong>Destacado:</strong> Muestra de arte contemporáneo ecuatoriano</p>
 
       <h3>Festival gastronómico</h3>
       <p><strong>Ubicación:</strong> Plaza de la Independencia</p>
-      <p><strong>Horario:</strong> 10:00 AM - 10:00 PM</p>
+      <p><strong>Horario:</strong> 10:00 - 22:00</p>
       <p><strong>Especialidades:</strong> Comida típica lojana y cocina de autor</p>
 
       <h2>Cómo moverse durante el Festival desde Eudiq Hotel</h2>
@@ -452,12 +452,12 @@ export const BLOG_POSTS = [
       </ul>
 
       <h3>Puerta de la Ciudad</h3>
-      <p><strong>Horario:</strong> Lunes a domingo 8:00 AM - 8:00 PM</p>
+      <p><strong>Horario:</strong> Lunes a domingo 08:00 - 20:00</p>
       <p><strong>Entrada:</strong> Gratuita</p>
       <p>Símbolo emblemático de Loja, esta moderna construcción ofrece vistas panorámicas de la ciudad y alberga un museo sobre la historia lojana.</p>
 
       <h3>Parque Recreacional Jipiro</h3>
-      <p><strong>Horario:</strong> Martes a domingo 8:00 AM - 5:00 PM</p>
+      <p><strong>Horario:</strong> Martes a domingo 08:00 - 17:00</p>
       <p><strong>Entrada:</strong> $2 adultos, $1 niños</p>
       <p><strong>Distancia desde Eudiq Hotel:</strong> 200 metros (3 minutos caminando)</p>
       <p>El parque temático más famoso de Loja, con réplicas de monumentos mundiales, laguna, zoológico y áreas recreativas para toda la familia.</p>
@@ -475,12 +475,12 @@ export const BLOG_POSTS = [
       <h2>Museos y centros culturales</h2>
 
       <h3>Museo de las Madres Conceptas</h3>
-      <p><strong>Horario:</strong> Martes a viernes 9:00 AM - 1:00 PM, 2:00 PM - 5:00 PM</p>
+      <p><strong>Horario:</strong> Martes a viernes 09:00 - 13:00, 14:00 - 17:00</p>
       <p><strong>Entrada:</strong> $3 adultos</p>
       <p>Arte religioso colonial y republicano en un convento del siglo XVIII.</p>
 
       <h3>Museo de la Cultura Lojana</h3>
-      <p><strong>Horario:</strong> Lunes a viernes 8:00 AM - 12:00 PM, 2:00 PM - 6:00 PM</p>
+      <p><strong>Horario:</strong> Lunes a viernes 08:00 - 12:00, 14:00 - 18:00</p>
       <p><strong>Entrada:</strong> $2 adultos</p>
       <p>Historia, arqueología y etnografía de la región sur del Ecuador.</p>
 
@@ -491,7 +491,7 @@ export const BLOG_POSTS = [
 
       <h3>Parque Nacional Podocarpus</h3>
       <p><strong>Distancia:</strong> 15 km de Loja (25 minutos en auto)</p>
-      <p><strong>Horario:</strong> 8:00 AM - 16:00PM</p>
+      <p><strong>Horario:</strong> 08:00 - 16:00</p>
       <p><strong>Entrada:</strong> $10 extranjeros, $5 nacionales</p>
       <p>Uno de los parques con mayor biodiversidad del Ecuador, hogar de especies únicas como el oso de anteojos.</p>
 

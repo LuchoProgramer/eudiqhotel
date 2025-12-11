@@ -80,8 +80,8 @@ const AB_TESTS: ABTestConfig[] = [
     name: 'Mensaje principal café',
     description: 'Comparar diferentes propuestas de valor para café',
     variants: {
-      A: { name: 'Abierto desde 5:30 AM', weight: 50 },
-      B: { name: 'El mejor café de Loja desde las 5:30 AM', weight: 50 }
+      A: { name: 'Abierto desde 05:30', weight: 50 },
+      B: { name: 'El mejor café de Loja desde las 05:30', weight: 50 }
     },
     isActive: true
   },
@@ -132,7 +132,7 @@ export function useABTest(testId: string): ABTestVariant {
     // Asignar variante según peso
     const randomValue = Math.random() * 100;
     const selectedVariant = randomValue < testConfig.variants.A.weight ? 'A' : 'B';
-    
+
     // Guardar nuevo test
     const newTest: ABTest = {
       testId,
@@ -142,7 +142,7 @@ export function useABTest(testId: string): ABTestVariant {
 
     const updatedTests = [...storedTests, newTest];
     localStorage.setItem(AB_STORAGE_KEY, JSON.stringify(updatedTests));
-    
+
     setVariant(selectedVariant);
 
     // Trackear asignación de variante
@@ -163,7 +163,7 @@ export function useABTest(testId: string): ABTestVariant {
 
 function getStoredABTests(): ABTest[] {
   if (typeof window === 'undefined') return [];
-  
+
   try {
     const stored = localStorage.getItem(AB_STORAGE_KEY);
     return stored ? JSON.parse(stored) : [];
@@ -202,7 +202,7 @@ interface ABTestComponentProps {
 
 export function ABTestComponent({ testId, variantA, variantB }: ABTestComponentProps) {
   const variant = useABTest(testId);
-  
+
   return <>{variant === 'A' ? variantA : variantB}</>;
 }
 
@@ -226,8 +226,8 @@ export const AB_TEST_CONTENT = {
   },
   // Contenido específico para Cafetería Viviates
   cafe_hero_message: {
-    A: '¡Desayuno desde las 5:30 AM!',
-    B: 'El mejor café de Loja desde las 5:30 AM'
+    A: '¡Desayuno desde las 05:30!',
+    B: 'El mejor café de Loja desde las 05:30'
   },
   cafe_offer_urgency: {
     A: '⏰ Oferta válida solo HOY',

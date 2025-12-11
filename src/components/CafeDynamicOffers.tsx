@@ -24,12 +24,12 @@ const TIME_BASED_OFFERS: TimeBasedOffer[] = [
     id: 'madrugadores',
     name: 'Madrugadores VIP',
     Icon: Sunrise,
-    startHour: 5.5, // 5:30 AM
+    startHour: 5.5, // 05:30
     endHour: 7,
     price: '$3.50',
     originalPrice: '$4.50',
     description: 'Café + Empanada',
-    whatsappMessage: 'Hola, quiero la Oferta Madrugadores VIP (5:30-7:00 AM)',
+    whatsappMessage: 'Hola, quiero la Oferta Madrugadores VIP (05:30-07:00)',
     benefits: ['WiFi Premium incluido', 'Servicio express', 'Mesa garantizada'],
     isActive: true
   },
@@ -42,7 +42,7 @@ const TIME_BASED_OFFERS: TimeBasedOffer[] = [
     price: '$6.00',
     originalPrice: '$8.00',
     description: 'Café Premium + Sándwich + Mesa reservada 2h',
-    whatsappMessage: 'Hola, quiero el Combo Profesional (7:00-10:00 AM) - mesa reservada',
+    whatsappMessage: 'Hola, quiero el Combo Profesional (07:00-10:00) - mesa reservada',
     benefits: ['Mesa reservada 2 horas', 'Cargador incluido', 'Wifi'],
     isActive: true
   },
@@ -67,7 +67,7 @@ const TIME_BASED_OFFERS: TimeBasedOffer[] = [
     price: '$3.00',
     originalPrice: '$4.00',
     description: 'Café + Postre casero',
-    whatsappMessage: 'Hola, quiero el especial Café de Tarde (2:00-6:00 PM)',
+    whatsappMessage: 'Hola, quiero el especial Café de Tarde (14:00-18:00)',
     benefits: ['Postre casero incluido', 'Ambiente relajado', 'Música suave'],
     isActive: true
   }
@@ -81,21 +81,21 @@ export function useCurrentOffer(): TimeBasedOffer | null {
     function updateCurrentOffer() {
       const now = new Date();
       const currentHour = now.getHours() + now.getMinutes() / 60;
-      
-      const activeOffer = TIME_BASED_OFFERS.find(offer => 
-        offer.isActive && 
-        currentHour >= offer.startHour && 
+
+      const activeOffer = TIME_BASED_OFFERS.find(offer =>
+        offer.isActive &&
+        currentHour >= offer.startHour &&
         currentHour < offer.endHour
       );
-      
+
       setCurrentOffer(activeOffer || null);
     }
 
     updateCurrentOffer();
-    
+
     // Actualizar cada minuto
     const interval = setInterval(updateCurrentOffer, 60000);
-    
+
     return () => clearInterval(interval);
   }, []);
 
@@ -145,21 +145,21 @@ export function NextOfferCountdown() {
     function updateNextOffer() {
       const now = new Date();
       const currentHour = now.getHours() + now.getMinutes() / 60;
-      
+
       // Buscar próxima oferta del día
       const upcomingOffers = TIME_BASED_OFFERS
         .filter(offer => offer.isActive && offer.startHour > currentHour)
         .sort((a, b) => a.startHour - b.startHour);
-      
+
       const next = upcomingOffers[0] || null;
       setNextOffer(next);
-      
+
       if (next) {
         const nextStartTime = new Date();
         nextStartTime.setHours(Math.floor(next.startHour));
         nextStartTime.setMinutes((next.startHour % 1) * 60);
         nextStartTime.setSeconds(0);
-        
+
         const diff = nextStartTime.getTime() - now.getTime();
         if (diff > 0) {
           const hours = Math.floor(diff / (1000 * 60 * 60));
@@ -171,7 +171,7 @@ export function NextOfferCountdown() {
 
     updateNextOffer();
     const interval = setInterval(updateNextOffer, 60000);
-    
+
     return () => clearInterval(interval);
   }, []);
 
@@ -211,7 +211,7 @@ export function DynamicOffersSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Banner de oferta activa */}
         <ActiveOfferBanner />
-        
+
         <div className="text-center mb-12 mt-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-3">
             <Clock className="h-8 w-8 text-[#038C7F]" />
@@ -220,7 +220,7 @@ export function DynamicOffersSection() {
           <p className="text-gray-600 max-w-2xl mx-auto mb-6">
             Aprovecha nuestras promociones según tu horario de visita
           </p>
-          
+
           {/* Countdown para próxima oferta */}
           <NextOfferCountdown />
         </div>
@@ -229,28 +229,27 @@ export function DynamicOffersSection() {
           {allOffers.map((offer, index) => {
             const isActive = currentOffer?.id === offer.id;
             const timeRange = `${Math.floor(offer.startHour)}:${String((offer.startHour % 1) * 60).padStart(2, '0')} - ${Math.floor(offer.endHour)}:${String((offer.endHour % 1) * 60).padStart(2, '0')}`;
-            
+
             return (
-              <div 
-                key={offer.id} 
-                className={`relative p-6 rounded-xl border-2 transition-all ${
-                  isActive 
-                    ? 'border-orange-400 bg-gradient-to-br from-orange-50 to-amber-50 shadow-lg scale-105' 
+              <div
+                key={offer.id}
+                className={`relative p-6 rounded-xl border-2 transition-all ${isActive
+                    ? 'border-orange-400 bg-gradient-to-br from-orange-50 to-amber-50 shadow-lg scale-105'
                     : 'border-gray-200 bg-gradient-to-br from-gray-50 to-white hover:border-gray-300'
-                }`}
+                  }`}
               >
                 {isActive && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold animate-pulse">
                     ¡ACTIVA AHORA!
                   </div>
                 )}
-                
+
                 {index === 1 && !isActive && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold">
                     MÁS POPULAR
                   </div>
                 )}
-                
+
                 <div className="text-center mb-4 mt-2">
                   <div className="flex justify-center mb-2">
                     <offer.Icon className="h-10 w-10 text-[#038C7F]" />
@@ -260,7 +259,7 @@ export function DynamicOffersSection() {
                   </h3>
                   <p className="text-sm text-gray-600 font-medium">{timeRange}</p>
                 </div>
-                
+
                 <div className="mb-4">
                   <div className="text-center mb-3">
                     {offer.originalPrice && (

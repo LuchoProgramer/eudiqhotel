@@ -34,6 +34,8 @@ const GraduationDates = () => (
         <p className="text-sm text-gray-500 mb-4">Reservar antes: {fecha.limite}</p>
         <a
           href={`https://api.whatsapp.com/send?phone=593961712106&text=Hola,%20quiero%20reservar%20para%20graduación%20${fecha.mes}`}
+          target="_blank"
+          rel="noopener noreferrer"
           className="w-full bg-[#038C7F] text-white py-2 px-4 rounded-lg text-center block hover:bg-[#027066] transition-colors"
         >
           Ver disponibilidad
@@ -90,7 +92,7 @@ const RoomTypes = () => (
 
 // Componente de datos rápidos (sidebar info)
 const QuickInfo = () => (
-  <div className="bg-gradient-to-br from-[#038C7F]/5 to-[#CBD95F]/5 rounded-xl p-6 sticky top-8">
+  <div className="bg-white rounded-xl p-6 sticky top-8 shadow-lg border border-gray-100">
     <h3 className="text-lg font-bold text-gray-900 mb-4">📍 Datos rápidos</h3>
     <div className="space-y-3 text-sm">
       <div className="flex items-center gap-2">
@@ -112,6 +114,8 @@ const QuickInfo = () => (
       <hr className="my-4" />
       <a
         href="https://api.whatsapp.com/send?phone=593961712106&text=Hola,%20necesito%20información%20para%20graduación%20UTPL"
+        target="_blank"
+        rel="noopener noreferrer"
         className="flex items-center gap-2 bg-[#25D366] text-white px-4 py-3 rounded-lg font-medium hover:bg-[#1ea952] transition-colors w-full justify-center"
       >
         <Phone className="h-4 w-4" />
@@ -178,6 +182,8 @@ const InlineForm = ({ formData, setFormData }: InlineFormProps) => (
       </select>
       <a
         href={`https://api.whatsapp.com/send?phone=593961712106&text=Hola,%20soy%20${formData.nombre},%20necesito%20habitación%20para%20${formData.personas}%20personas%20el%20${formData.fecha}%20para%20graduación%20UTPL`}
+        target="_blank"
+        rel="noopener noreferrer"
         className="bg-[#038C7F] text-white px-6 py-2 rounded-lg font-medium hover:bg-[#027066] transition-colors text-center"
       >
         Consultar
@@ -232,6 +238,8 @@ export default function BlogContentWithWhatsApp({ post }: BlogContentWithWhatsAp
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="https://api.whatsapp.com/send?phone=593961712106&text=Hola,%20quiero%20reservar%20para%20graduación%20UTPL"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-[#25D366] hover:bg-[#1ea952] text-white px-8 py-4 rounded-lg font-bold text-lg flex items-center gap-2 justify-center transition-colors shadow-lg"
                 >
                   <Phone className="h-5 w-5" />
@@ -732,6 +740,8 @@ export default function BlogContentWithWhatsApp({ post }: BlogContentWithWhatsAp
           </div>
           <a
             href="https://api.whatsapp.com/send?phone=593961712106&text=Hola,%20quiero%20reservar%20para%20graduación%20UTPL"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-[#25D366] hover:bg-[#1ea952] text-white px-6 py-3 rounded-lg font-bold text-sm flex items-center gap-2 transition-colors"
           >
             <Phone className="h-4 w-4" />

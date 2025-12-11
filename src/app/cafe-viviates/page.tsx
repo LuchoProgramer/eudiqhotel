@@ -12,7 +12,7 @@ import { useCafeAnalytics } from '@/hooks/useCafeAnalytics';
 export default function CafeViviatesLanding() {
   const [lightboxOpen, setLightboxOpen] = React.useState(false);
   const [imagenActual, setImagenActual] = React.useState(0);
-  
+
   // Analytics hook
   const {
     trackWhatsAppClick,
@@ -33,7 +33,7 @@ export default function CafeViviatesLanding() {
     setImagenActual(index);
     setLightboxOpen(true);
     document.body.style.overflow = 'hidden';
-    
+
     // Track gallery interaction
     trackGalleryInteraction('lightbox', index, fotosCafeteria[index].alt);
   };
@@ -66,7 +66,7 @@ export default function CafeViviatesLanding() {
   return (
     <ConversionOptimizer>
       <div className="min-h-screen bg-[#F2F2F2]">
-        
+
         {/* Hero Section - Optimizado para conversión */}
         <section className="relative py-16 bg-gradient-to-br from-[#F2F2F2] via-white to-[#CBD95F]/20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#CBD95F]/10"></div>
@@ -76,24 +76,24 @@ export default function CafeViviatesLanding() {
                 {/* Badge urgencia */}
                 <div className="inline-flex items-center gap-2 bg-[#038C7F] text-white px-4 py-2 rounded-full text-sm font-semibold mb-6 mt-2">
                   <Clock className="h-4 w-4" />
-                  ABIERTO • L-S: 7:00 AM - 11:00 AM y 16:00 PM - 21:00 PM
+                  ABIERTO • L-S: 07:00 - 11:00 y 16:00 - 21:00
                 </div>
-                
+
                 <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 flex items-start gap-3 text-gray-900">
                   <Coffee className="h-10 w-10 text-[#038C7F] flex-shrink-0 mt-1" />
-                  <span><span className="text-[#038C7F]">Cafetería Viviates</span><br/>
-                  El Mejor Café de Loja</span>
+                  <span><span className="text-[#038C7F]">Cafetería Viviates</span><br />
+                    El Mejor Café de Loja</span>
                 </h1>
-                
+
                 <p className="text-xl mb-8 text-gray-700">
-                  <strong>¡Desayuno desde las 7:00 AM!</strong> Café lojano, ambiente acogedor y la mejor atención. Perfecto para viajeros, trabajadores y amantes del café.
+                  <strong>¡Desayuno desde las 07:00!</strong> Café lojano, ambiente acogedor y la mejor atención. Perfecto para viajeros, trabajadores y amantes del café.
                 </p>
 
                 {/* Beneficios clave */}
                 <div className="grid md:grid-cols-2 gap-4 mb-8">
                   <div className="flex items-center gap-3 text-gray-700">
                     <CheckCircle className="h-5 w-5 text-[#038C7F]" />
-                    <span className="font-medium">Abierto desde 7:00 AM</span>
+                    <span className="font-medium">Abierto desde 07:00</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-700">
                     <CheckCircle className="h-5 w-5 text-[#038C7F]" />
@@ -112,8 +112,8 @@ export default function CafeViviatesLanding() {
                 {/* Horarios destacados */}
                 <div className="bg-white border border-gray-200 rounded-lg p-4 text-gray-700 shadow-sm">
                   <p className="font-semibold mb-2 flex items-center gap-2 text-gray-900"><Calendar className="h-4 w-4" /> Horarios:</p>
-                  <p className="flex items-center gap-2"><Sunrise className="h-4 w-4" /> Mañana: 7:00 AM - 11:00 AM</p>
-                  <p className="flex items-center gap-2"><Sunset className="h-4 w-4" /> Tarde: 16:00 PM - 21:00 PM</p>
+                  <p className="flex items-center gap-2"><Sunrise className="h-4 w-4" /> Mañana: 07:00 - 11:00</p>
+                  <p className="flex items-center gap-2"><Sunset className="h-4 w-4" /> Tarde: 16:00 - 21:00</p>
                   <p className="text-sm mt-2">Lunes a Sábado • Domingos cerrado</p>
                 </div>
               </div>
@@ -250,7 +250,7 @@ export default function CafeViviatesLanding() {
                 <Coffee className="h-8 w-8 text-[#038C7F]" /> Visítanos en Cafetería Viviates
               </h2>
               <p className="text-xl text-gray-700 mb-2">
-                <strong>Lunes a Sábado</strong> • Mañana 7:00 AM - 11:00 AM | Tarde 16:00 PM - 21:00 PM<br />Domingos cerrado
+                <strong>Lunes a Sábado</strong> • Mañana 07:00 - 11:00 | Tarde 16:00 - 21:00<br />Domingos cerrado
               </p>
               <p className="text-gray-600 mb-6">
                 Av. 8 de Diciembre • Diagonal al Terminal Terrestre • En el bajo de Hotel Eudiq
@@ -261,15 +261,15 @@ export default function CafeViviatesLanding() {
                 <CTAButton
                   variant="secondary"
                   size="large"
-                  href="https://api.whatsapp.com/send?phone=593961712106&text=Hola, quiero hacer un pedido en Cafeter%C3%ADa Viviates"
+                  href="https://api.whatsapp.com/send?phone=593961712106&text=Hola, quiero reservar una mesa en Cafetería Viviates"
                   section="cafe_order_whatsapp"
                   className="bg-[#038C7F] text-white hover:bg-[#026B61] flex items-center gap-2 font-bold"
-                  onClick={() => trackWhatsAppClick('order', 'cta_section', 'Pedido Cafetería Viviates')}
+                  onClick={() => trackWhatsAppClick('order', 'cta_section', 'Reserva Cafetería Viviates')}
                 >
                   <MessageCircle className="h-5 w-5" />
-                  Pedir por WhatsApp
+                  Reservar por WhatsApp
                 </CTAButton>
-                
+
                 <CTAButton
                   variant="phone"
                   size="large"
@@ -302,15 +302,15 @@ export default function CafeViviatesLanding() {
                     Contacto
                   </h3>
                   <div className="space-y-2 text-sm">
-                    <a 
-                      href="tel:+593992354992" 
+                    <a
+                      href="tel:+593992354992"
                       className="block hover:underline"
                       onClick={() => trackPhoneClick('contact_card')}
                     >
                       📞 Reservas: 0992499565
                     </a>
-                    <a 
-                      href="https://api.whatsapp.com/send?phone=593961712106" 
+                    <a
+                      href="https://api.whatsapp.com/send?phone=593961712106"
                       className="block hover:underline"
                       onClick={() => trackWhatsAppClick('info', 'contact_card')}
                     >
@@ -352,13 +352,13 @@ export default function CafeViviatesLanding() {
                   Encuéntranos
                 </h3>
                 <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden">
-                  <iframe 
+                  <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.2175373243026!2d-79.20703762477585!3d-3.9755893959981683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cb479d7e88d4cf%3A0x462ba8b8785c5d1!2sCafeter%C3%ADa%20Caf%C3%A9%20Viviates%3A%20Caf%C3%A9%20Lojano%20(Hotel%20EUDIQ)!5e0!3m2!1sen!2sec!4v1763848213974!5m2!1sen!2sec"
-                    width="100%" 
-                    height="100%" 
+                    width="100%"
+                    height="100%"
                     style={{ border: 0 }}
                     allowFullScreen={true}
-                    loading="lazy" 
+                    loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     className="rounded-lg"
                   />
@@ -380,7 +380,7 @@ export default function CafeViviatesLanding() {
                   <Instagram className="h-5 w-5" />
                   <span className="text-sm">@viviatescoffeeshop</span>
                 </a>
-                
+
                 <a
                   href="https://www.instagram.com/cafeviviates"
                   target="_blank"
@@ -410,7 +410,7 @@ export default function CafeViviatesLanding() {
 
       {/* Lightbox Modal */}
       {lightboxOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4"
           onClick={cerrarLightbox}
         >
@@ -437,16 +437,12 @@ export default function CafeViviatesLanding() {
             <ChevronLeft className="text-white" size={28} />
           </button>
 
-          {/* Image */}
-          <div className="max-w-6xl max-h-[90vh] w-full" onClick={(e) => e.stopPropagation()}>
-            <Image
+          {/* Image Container with natural aspect ratio */}
+          <div className="relative flex flex-col items-center justify-center" onClick={(e) => e.stopPropagation()}>
+            <img
               src={fotosCafeteria[imagenActual]?.url}
               alt={fotosCafeteria[imagenActual]?.alt}
-              width={1200}
-              height={900}
-              className="w-full h-full object-contain rounded-lg"
-              sizes="(max-width: 768px) 100vw, 60vw"
-              loading="eager"
+              className="max-w-[90vw] max-h-[80vh] object-contain rounded-lg shadow-2xl"
             />
             <div className="text-center mt-4">
               <p className="text-white text-lg font-semibold">Cafetería Viviates</p>
