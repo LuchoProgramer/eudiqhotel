@@ -1,5 +1,7 @@
 'use client'
 
+import { trackWhatsappClick } from '../../components/ConversionOptimizer';
+
 const puntosInteres = [
   {
     nombre: 'Terminal Terrestre Loja',
@@ -62,7 +64,7 @@ const puntosInteres = [
 type GAEventParams = Record<string, unknown>;
 declare global {
   interface Window {
-  gtag?: (...args: unknown[]) => void;
+    gtag?: (...args: unknown[]) => void;
   }
 }
 function sendGAEvent(eventName: string, eventParams: GAEventParams = {}) {
@@ -110,7 +112,7 @@ export default function UbicacionPage() {
           rel="noopener"
           className="bg-primary text-white px-6 py-3 rounded-lg text-lg font-bold hover:bg-primary-dark transition-colors"
           style={{ backgroundColor: '#038C7F' }}
-          onClick={() => sendGAEvent('click_reserva_servicios', { section: 'servicios', method: 'whatsapp' })}
+          onClick={() => trackWhatsappClick('ubicacion_whatsapp')}
         >
           Solicita tu reserva por WhatsApp
         </a>

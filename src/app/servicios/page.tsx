@@ -1,6 +1,7 @@
 'use client'
 
 import { Wifi, UtensilsCrossed, Car, Coffee, Shirt, Handshake } from 'lucide-react';
+import { trackWhatsappClick } from '../../components/ConversionOptimizer';
 
 const servicios = [
   {
@@ -72,7 +73,7 @@ export default function ServiciosPage() {
           rel="noopener"
           className="bg-primary text-white px-6 py-3 rounded-lg text-lg font-bold hover:bg-primary-dark transition-colors"
           style={{ backgroundColor: '#038C7F' }}
-          onClick={() => sendGAEvent('click_reserva_servicios', { section: 'servicios', method: 'whatsapp' })}
+          onClick={() => trackWhatsappClick('servicios_whatsapp')}
         >
           Solicita tu reserva por WhatsApp
         </a>

@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useCallback } from 'react';
+import { trackWhatsappClick } from '../components/ConversionOptimizer';
 
 // Tipos de eventos para la cafetería
 export type CafeEventName =
@@ -9,38 +10,38 @@ export type CafeEventName =
   | 'cafe_menu_view'
   | 'cafe_menu_search'
   | 'cafe_category_filter'
-  
+
   // Interacciones con menú
   | 'cafe_item_view'
   | 'cafe_item_expand'
-  
+
   // CTAs y conversiones
   | 'cafe_whatsapp_click'
   | 'cafe_phone_click'
   | 'cafe_order_intent'
   | 'cafe_reservation_intent'
   | 'cafe_menu_download'
-  
+
   // Social Media
   | 'cafe_instagram_click'
   | 'cafe_facebook_click'
   | 'cafe_social_share'
-  
+
   // Ofertas y promociones
   | 'cafe_offer_view'
   | 'cafe_offer_click'
   | 'cafe_special_view'
-  
+
   // Galería
   | 'cafe_gallery_view'
   | 'cafe_image_click'
   | 'cafe_lightbox_open'
-  
+
   // Ubicación y mapas
   | 'cafe_map_view'
   | 'cafe_directions_click'
   | 'cafe_location_click'
-  
+
   // Tiempo en página
   | 'cafe_time_spent'
   | 'cafe_scroll_depth';
@@ -50,36 +51,36 @@ export interface CafeEventParams {
   cafe_section?: string;
   cafe_action?: string;
   cafe_value?: string | number;
-  
+
   // Menú específico
   menu_category?: string;
   menu_item?: string;
   menu_price?: string;
   search_query?: string;
   filter_applied?: string;
-  
+
   // Ofertas
   offer_name?: string;
   offer_time?: string;
   offer_type?: string;
-  
+
   // Conversión
   cta_type?: 'whatsapp' | 'phone' | 'reservation' | 'order';
   cta_location?: string;
   message_text?: string;
-  
+
   // Social
   social_platform?: 'instagram' | 'facebook' | 'whatsapp';
   social_account?: string;
-  
+
   // Galería
   image_index?: number;
   image_alt?: string;
-  
+
   // Engagement
   scroll_depth?: number;
   time_spent?: number;
-  
+
   // Metadata
   timestamp?: string;
   page_path?: string;
@@ -98,7 +99,7 @@ declare global {
  * Funciona con Google Analytics 4 y permite tracking personalizado
  */
 export function useCafeAnalytics() {
-  
+
   /**
    * Envía un evento de analytics específico de la cafetería
    */
@@ -133,7 +134,7 @@ export function useCafeAnalytics() {
 
       // Aquí puedes agregar más plataformas de analytics si necesitas
       // Ejemplo: Facebook Pixel, Hotjar, Mixpanel, etc.
-      
+
     } catch (error) {
       console.error('Error tracking cafe event:', error);
     }
@@ -156,10 +157,10 @@ export function useCafeAnalytics() {
     const handleScroll = () => {
       const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrollDepth = Math.round((window.scrollY / scrollHeight) * 100);
-      
+
       if (scrollDepth > maxScrollDepth) {
         maxScrollDepth = scrollDepth;
-        
+
         // Eventos en hitos de scroll (25%, 50%, 75%, 100%)
         if ([25, 50, 75, 100].includes(scrollDepth)) {
           trackCafeEvent('cafe_scroll_depth', {
@@ -175,7 +176,7 @@ export function useCafeAnalytics() {
     // Al salir de la página, enviar tiempo total
     const handleBeforeUnload = () => {
       const timeSpent = Math.round((Date.now() - startTime) / 1000); // en segundos
-      
+
       trackCafeEvent('cafe_time_spent', {
         time_spent: timeSpent,
         scroll_depth: maxScrollDepth,
@@ -199,12 +200,16 @@ export function useCafeAnalytics() {
     location: string,
     messageText?: string
   ) => {
+    // 1. Original Detail Tracking for Cafe Analytics
     trackCafeEvent('cafe_whatsapp_click', {
       cta_type: type === 'order' ? 'order' : type === 'reservation' ? 'reservation' : 'whatsapp',
       cta_location: location,
       message_text: messageText,
       cafe_section: 'cta',
     });
+
+    // 2. Unified Tracking for Google Ads Optimization
+    trackWhatsappClick(`cafe_${type}_${location}`);
   }, [trackCafeEvent]);
 
   const trackPhoneClick = useCallback((location: string) => {
@@ -287,7 +292,7 @@ export function useCafeAnalytics() {
   return {
     // Función general
     trackCafeEvent,
-    
+
     // Helpers específicos
     trackWhatsAppClick,
     trackPhoneClick,

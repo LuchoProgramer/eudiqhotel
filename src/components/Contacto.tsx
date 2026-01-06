@@ -27,6 +27,7 @@ function trackConversion(action: string, location: string, value?: number) {
 
 import { useState, useEffect, useRef } from 'react';
 import { Send, MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
+import { trackWhatsappClick } from './ConversionOptimizer';
 
 export default function Contacto() {
   const [isVisible, setIsVisible] = useState(false);
@@ -117,7 +118,7 @@ export default function Contacto() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full block py-4 bg-[#038C7F] text-white font-semibold rounded-full border-2 border-[#038C7F] shadow-lg flex items-center justify-center gap-2 transition-all hover:bg-[#A9BF04] hover:text-[#222] hover:border-[#A9BF04] hover:shadow-xl hover:scale-105"
-                onClick={() => sendGAEvent('click_reserva_contacto', { section: 'contacto', method: 'whatsapp_estadia' })}
+                onClick={() => trackWhatsappClick('contacto_whatsapp_estadia')}
               >
                 <Send size={20} />Reserva tu estadía por WhatsApp
               </a>
@@ -178,7 +179,7 @@ export default function Contacto() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#25D366] font-semibold rounded-full hover:bg-green-50 transition-all"
-                onClick={() => sendGAEvent('click_whatsapp_contacto', { section: 'contacto', method: 'whatsapp_secundario' })}
+                onClick={() => trackWhatsappClick('contacto_whatsapp_secundario')}
               >
                 <MessageCircle size={20} />Abrir WhatsApp
               </a>
