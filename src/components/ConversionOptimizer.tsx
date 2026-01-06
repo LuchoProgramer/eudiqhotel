@@ -64,10 +64,10 @@ export function trackWhatsappClick(source: string) {
     });
 
     // 2. Google Ads Conversion - Señal Fuerte para el Algoritmo
-    // ID Unificado: AW-11466632402/pXnKCLijp_oZENK92twq (Ejemplo real basado en historial, o placeholder si no existe)
+    // ID Unificado: AW-17854685604
     // NOTA: Reemplazar con el Label correcto si es diferente.
     window.gtag('event', 'conversion', {
-      'send_to': 'AW-11466632402/Label_Unica_Para_Todos'
+      'send_to': 'AW-17854685604/Label_Unica_Para_Todos'
     });
   }
 

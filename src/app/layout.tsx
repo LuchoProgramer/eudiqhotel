@@ -48,6 +48,7 @@ export default function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-BETH1DLM8W');
+            gtag('config', 'AW-17854685604');
           `}
         </Script>
         <meta property="fb:app_id" content="1327476752302916" />
