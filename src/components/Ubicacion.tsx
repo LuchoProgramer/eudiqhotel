@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { MapPin, Navigation, Clock, Phone, Mail, Car, Plane, Bus } from 'lucide-react';
+import { trackPhoneClick, trackConversion } from "@/components/ConversionOptimizer";
 
 import { Landmark, Church, Palette, TreePine, Castle, Mountain } from 'lucide-react';
 
@@ -68,7 +69,7 @@ export default function Ubicacion() {
           <span className="inline-block px-4 py-1 mb-4 text-sm font-semibold tracking-widest text-[#038C7F] bg-white rounded-full shadow-sm">
             UBICACIÓN
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6" style={{fontFamily: 'Playfair Display, serif'}}>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Playfair Display, serif' }}>
             Encuéntranos en <span className="text-gray-900">Avenida 8 de diciembre y Juan José Flores diagonal a la Terminal Terrestre</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -92,7 +93,7 @@ export default function Ubicacion() {
                 referrerPolicy="no-referrer-when-downgrade"
                 className="grayscale hover:grayscale-0 transition-all duration-500"
               ></iframe>
-              
+
               {/* Overlay badge */}
               <div className="absolute top-4 left-4 bg-white px-4 py-2 rounded-full shadow-lg flex items-center gap-2">
                 <MapPin className="text-[#038C7F]" size={20} />
@@ -111,7 +112,11 @@ export default function Ubicacion() {
                     <p className="text-sm text-gray-600">Avenida 8 de diciembre y Juan José Flores diagonal a la Terminal Terrestre</p>
                   </div>
                 </a>
-                <a href="tel:+593961712106" className="flex items-start gap-3 text-gray-700 hover:text-[#038C7F] transition-colors group">
+                <a
+                  href="tel:+593961712106"
+                  className="flex items-start gap-3 text-gray-700 hover:text-[#038C7F] transition-colors group"
+                  onClick={() => trackPhoneClick('location_phone')}
+                >
                   <Phone className="flex-shrink-0 mt-1 text-[#038C7F]" size={20} />
                   <div>
                     <p className="font-medium">Teléfono</p>
@@ -207,6 +212,7 @@ export default function Ubicacion() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#038C7F] text-white font-semibold rounded-full border-2 border-[#038C7F] shadow-lg hover:bg-[#A9BF04] hover:text-[#222] hover:border-[#A9BF04] hover:shadow-xl hover:scale-105 transition-all"
+              onClick={() => trackConversion({ action: 'map_click', category: 'interaction', section: 'ubicacion' })}
             >
               <Navigation size={20} />
               Ver en Google Maps

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 import { Phone } from 'lucide-react';
+import { trackWhatsappClick } from "@/components/ConversionOptimizer";
 
 const navLinks = [
   { label: "Inicio", href: "/" },
@@ -19,17 +20,17 @@ const navLinks = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
-  <nav className="fixed top-0 left-0 w-full z-40 bg-white/95 backdrop-blur-md border-b border-[#CBD95F]/30 shadow-lg">
+    <nav className="fixed top-0 left-0 w-full z-40 bg-white/95 backdrop-blur-md border-b border-[#CBD95F]/30 shadow-lg">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-3 md:py-4">
         {/* Logo */}
         <Link href="/" className="flex items-center flex-shrink-0" aria-label="Inicio">
-          <Image 
-            src="/Logo.svg" 
-            alt="Eudiq Hotel Logo" 
-            width={160} 
-            height={50} 
-            className="h-8 sm:h-10 w-auto" 
-            style={{display: 'block'}} 
+          <Image
+            src="/Logo.svg"
+            alt="Eudiq Hotel Logo"
+            width={160}
+            height={50}
+            className="h-8 sm:h-10 w-auto"
+            style={{ display: 'block' }}
           />
         </Link>
         {/* Desktop nav - Adaptable en diferentes breakpoints */}
@@ -43,11 +44,12 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          
+
           {/* Botón de reserva destacado */}
           <Link
             href="https://api.whatsapp.com/send?phone=593961712106&text=Hola,%20quiero%20reservar%20en%20Eudiq%20Hotel"
             className="bg-[#038C7F] hover:bg-[#A9BF04] text-white px-3 lg:px-4 py-2 rounded-full text-xs lg:text-sm font-semibold transition-all duration-200 hover:scale-105 hover:shadow-lg flex items-center gap-1 lg:gap-2 whitespace-nowrap flex-shrink-0"
+            onClick={() => trackWhatsappClick('navbar_desktop_reservation')}
           >
             <Phone className="h-4 w-4 hidden sm:inline" />
             <span className="hidden lg:inline">Reservar</span>
@@ -79,12 +81,15 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            
+
             {/* Botón de reserva en móvil */}
             <Link
               href="https://api.whatsapp.com/send?phone=593961712106&text=Hola,%20quiero%20reservar%20en%20Eudiq%20Hotel"
               className="bg-[#038C7F] hover:bg-[#A9BF04] text-white px-4 py-3 rounded-lg text-center font-semibold transition-all duration-200 mt-2 flex items-center justify-center gap-2"
-              onClick={() => setOpen(false)}
+              onClick={() => {
+                setOpen(false);
+                trackWhatsappClick('navbar_mobile_reservation');
+              }}
             >
               <Phone className="h-5 w-5" />
               Reservar por WhatsApp
