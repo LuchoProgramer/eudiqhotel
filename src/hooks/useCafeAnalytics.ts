@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useCallback } from 'react';
-import { trackWhatsappClick } from '../components/ConversionOptimizer';
+import { trackWhatsappClick, trackPhoneClick as trackPhoneClickUnified } from '../components/ConversionOptimizer';
 
 // Tipos de eventos para la cafetería
 export type CafeEventName =
@@ -216,8 +216,10 @@ export function useCafeAnalytics() {
     trackCafeEvent('cafe_phone_click', {
       cta_type: 'phone',
       cta_location: location,
-      cafe_section: 'cta',
     });
+
+    // 2. Unified Tracking
+    trackPhoneClickUnified(`cafe_${location}`);
   }, [trackCafeEvent]);
 
   const trackMenuInteraction = useCallback((
