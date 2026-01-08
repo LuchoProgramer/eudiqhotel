@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { User, BedDouble } from 'lucide-react'
 import { habitaciones } from '@/lib/data';
+import { CTAButton } from '@/components/ConversionOptimizer';
 
 export default function Habitaciones() {
   const [isVisible, setIsVisible] = useState(false);
@@ -41,11 +42,11 @@ export default function Habitaciones() {
           <span className="inline-block px-4 py-1 mb-4 text-sm font-semibold tracking-widest text-[#038C7F] bg-[#CBD95F]/20 rounded-full">
             ALOJAMIENTO
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6" style={{fontFamily: 'Playfair Display, serif'}}>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Playfair Display, serif' }}>
             Nuestras <span className="text-[#038C7F]">Habitaciones</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Espacios diseñados pensando en tu comodidad y descanso. 
+            Espacios diseñados pensando en tu comodidad y descanso.
             Cada habitación es un refugio de elegancia y confort.
           </p>
         </div>
@@ -56,9 +57,8 @@ export default function Habitaciones() {
             return (
               <div
                 key={hab.id}
-                className={`group bg-[#F2F2F2] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl border border-[#CBD95F] transition-all duration-500 hover:scale-[1.02] ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                }`}
+                className={`group bg-[#F2F2F2] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl border border-[#CBD95F] transition-all duration-500 hover:scale-[1.02] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                  }`}
                 style={{ transitionDelay: `${idx * 150}ms` }}
               >
                 {/* Image Gallery */}
@@ -80,7 +80,7 @@ export default function Habitaciones() {
                 {/* Content */}
                 <div className="p-6 lg:p-8">
                   <div className="mb-4">
-                    <h3 className="text-2xl lg:text-3xl font-bold text-gray-900" style={{fontFamily: 'Playfair Display, serif'}}>
+                    <h3 className="text-2xl lg:text-3xl font-bold text-gray-900" style={{ fontFamily: 'Playfair Display, serif' }}>
                       {hab.nombre}
                     </h3>
                   </div>
@@ -117,17 +117,20 @@ export default function Habitaciones() {
                   </div>
 
                   {/* CTA Button - WhatsApp */}
-                  <a
+                  <CTAButton
                     href={`https://api.whatsapp.com/send?phone=593961712106&text=${encodeURIComponent(`Hola, quiero consultar la disponibilidad de la ${hab.nombre}`)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full py-3 bg-[#038C7F] text-white font-semibold rounded-xl hover:bg-[#CBD95F] hover:text-[#222] hover:shadow-lg hover:scale-105 transition-all flex items-center justify-center gap-2 group text-center"
+                    variant="whatsapp"
+                    size="medium"
+                    section="habitaciones_list"
+                    className="w-full rounded-xl shadow-none hover:shadow-lg"
                   >
-                    Reservar Ahora
-                    <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </a>
+                    <span className="flex items-center gap-2">
+                      Reservar Ahora
+                      <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </span>
+                  </CTAButton>
                 </div>
               </div>
             );
@@ -139,20 +142,22 @@ export default function Habitaciones() {
           <div className="text-center max-w-3xl mx-auto">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">¿Necesitas ayuda para elegir?</h3>
             <p className="text-gray-700 mb-6">
-              Nuestro equipo está disponible 24/7 para ayudarte a encontrar la habitación perfecta 
+              Nuestro equipo está disponible 24/7 para ayudarte a encontrar la habitación perfecta
               que se ajuste a tus necesidades y presupuesto.
             </p>
-            <a
+            <CTAButton
               href={`https://api.whatsapp.com/send?phone=593961712106&text=${encodeURIComponent('Hola, necesito ayuda para elegir una habitación en Eudiq Hotel.')}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#038C7F] text-white font-semibold rounded-full hover:bg-[#A9BF04] transition-all"
+              variant="whatsapp"
+              size="large"
+              section="habitaciones_help"
             >
-              Contáctanos
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-            </a>
+              <span className="flex items-center gap-2">
+                Contáctanos
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </span>
+            </CTAButton>
           </div>
         </div>
       </div>
