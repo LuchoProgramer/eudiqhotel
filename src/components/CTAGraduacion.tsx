@@ -2,6 +2,7 @@
 
 import { Phone } from 'lucide-react';
 import { useEffect, useRef } from 'react';
+import { trackWhatsappClick } from '@/components/ConversionOptimizer';
 
 export default function CTAGraduacion() {
     const h3Ref = useRef<HTMLHeadingElement>(null);
@@ -33,7 +34,10 @@ export default function CTAGraduacion() {
             </p>
             <a
                 href="https://api.whatsapp.com/send?phone=593961712106&text=Hola,%20quiero%20reservar%20para%20graduación%20UTPL"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-white text-[#038C7F] hover:bg-[#CBD95F] hover:text-[#027066] px-10 py-5 rounded-xl font-bold text-xl inline-flex items-center gap-3 transition-all shadow-xl hover:shadow-2xl"
+                onClick={() => trackWhatsappClick('blog_cta_graduacion')}
             >
                 <Phone className="h-6 w-6" />
                 Reservar por WhatsApp

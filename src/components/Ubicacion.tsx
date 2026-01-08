@@ -212,7 +212,12 @@ export default function Ubicacion() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#038C7F] text-white font-semibold rounded-full border-2 border-[#038C7F] shadow-lg hover:bg-[#A9BF04] hover:text-[#222] hover:border-[#A9BF04] hover:shadow-xl hover:scale-105 transition-all"
-              onClick={() => trackConversion({ action: 'map_click', category: 'interaction', section: 'ubicacion' })}
+              onClick={() => trackConversion({
+                action: 'map_click',
+                category: 'interaction',
+                section: 'ubicacion',
+                label: 'google_maps_cta'
+              })}
             >
               <Navigation size={20} />
               Ver en Google Maps
