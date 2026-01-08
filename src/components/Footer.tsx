@@ -1,20 +1,7 @@
 'use client'
 
-// Función para enviar eventos a GA4
-type GAEventParams = Record<string, unknown>;
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void;
-  }
-}
-function sendGAEvent(eventName: string, eventParams: GAEventParams = {}) {
-  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
-    window.gtag('event', eventName, eventParams);
-  }
-}
-
 import Link from 'next/link';
-import { trackWhatsappClick } from './ConversionOptimizer';
+import { trackWhatsappClick, trackPhoneClick, trackConversion } from './ConversionOptimizer';
 
 export default function Footer() {
   return (
@@ -25,7 +12,7 @@ export default function Footer() {
           <p>
             <span
               className="cursor-pointer hover:text-green-300"
-              onClick={() => sendGAEvent('click_direccion_hotel', { section: 'footer', action: 'direccion' })}
+              onClick={() => trackConversion({ action: 'click_address', category: 'interaction', section: 'footer' })}
             >
               Avenida 8 de diciembre y Juan José Flores diagonal a la Terminal Terrestre, Loja, Ecuador
             </span>
@@ -34,7 +21,7 @@ export default function Footer() {
             Tel: <a
               href="tel:+593961712106"
               className="underline hover:text-green-300"
-              onClick={() => sendGAEvent('click_llamar_hotel', { section: 'footer', action: 'telefono' })}
+              onClick={() => trackPhoneClick('footer_phone')}
             >
               +593 96 171 2106
             </a>
@@ -43,7 +30,7 @@ export default function Footer() {
             Email: <a
               href="mailto:eudiqhotel@gmail.com"
               className="underline hover:text-green-300"
-              onClick={() => sendGAEvent('click_email_hotel', { section: 'footer', action: 'email' })}
+              onClick={() => trackConversion({ action: 'click_email', category: 'interaction', section: 'footer' })}
             >
               eudiqhotel@gmail.com
             </a>

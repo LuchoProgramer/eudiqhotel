@@ -74,6 +74,24 @@ export function trackWhatsappClick(source: string) {
   console.log('📱 WhatsApp Click Tracked [Unified]:', source);
 }
 
+// Función unificada para tracking de Llamadas
+export function trackPhoneClick(source: string) {
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    // 1. Google Analytics 4 - Evento Rico
+    window.gtag('event', 'phone_click', {
+      event_category: 'Contact',
+      event_label: source,
+      value: 1,
+      section: source
+    });
+
+    // 2. Google Ads Conversion - Señal Fuerte (opcional, configurar si se desea)
+    // Actualmente solo trackeamos WhatsApp como conversion principal en Ads
+  }
+
+  console.log('📞 Phone Click Tracked:', source);
+}
+
 // Hook para tracking automático de scroll
 export function useScrollTracking() {
   useEffect(() => {
@@ -164,6 +182,8 @@ export function CTAButton({
     // Logic unificada: Si es WhatsApp, usa el tracker unificado
     if (variant === 'whatsapp') {
       trackWhatsappClick(section || 'generic_cta');
+    } else if (variant === 'phone') {
+      trackPhoneClick(section || 'generic_cta');
     } else {
       // Para otros botones, usa el tracking genérico
       trackConversion({
@@ -496,9 +516,13 @@ export function TopContactBar() {
     <div className="fixed top-0 left-0 right-0 z-50 bg-[#038C7F] text-white py-2 text-center text-xs sm:text-sm">
       <div className="px-4 sm:px-6">
         <p className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-3">
-          <span className="flex items-center gap-1">
+          <a
+            href="tel:+593961712106"
+            onClick={() => trackPhoneClick('top_bar')}
+            className="flex items-center gap-1 hover:underline hover:text-white/90 transition-colors"
+          >
             📞 <strong>+593 96 171 2106</strong>
-          </span>
+          </a>
           <span className="hidden sm:inline">•</span>
           <span className="hidden md:flex items-center gap-1">
             📧 eudiqhotel@gmail.com
