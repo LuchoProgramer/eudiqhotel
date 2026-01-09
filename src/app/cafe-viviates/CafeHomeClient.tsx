@@ -341,7 +341,7 @@ export default function CafeHomeClient() {
                             </div>
 
                             {/* Mapa de Google */}
-                            <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                            <div id="ubicacion" className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                                 <h3 className="font-bold text-lg mb-4 flex items-center gap-2 text-gray-900">
                                     <MapPin className="h-5 w-5" />
                                     Encuéntranos
