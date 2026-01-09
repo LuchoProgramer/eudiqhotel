@@ -431,7 +431,7 @@ export default function MenuClient() {
                             </div>
                             <div className="mt-2">
                                 <a
-                                    href="https://maps.app.goo.gl/5dCMqMs8TNnuUAXU7"
+                                    href="https://maps.google.com/?cid=315998679412151009"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-xs text-[#038C7F] font-bold hover:underline flex items-center justify-center gap-1"
