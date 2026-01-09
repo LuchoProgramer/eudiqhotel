@@ -360,7 +360,7 @@ export default function CafeHomeClient() {
                                 </div>
                                 <div className="text-center">
                                     <a
-                                        href="https://maps.google.com/?cid=315998679412151009"
+                                        href="https://maps.app.goo.gl/6qhJzXk9R9c6agu1A"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="inline-flex items-center gap-2 text-[#038C7F] font-bold hover:underline"

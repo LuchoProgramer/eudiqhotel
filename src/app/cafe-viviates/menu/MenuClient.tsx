@@ -431,10 +431,10 @@ export default function MenuClient() {
                             </div>
                             <div className="mt-2">
                                 <a
-                                    href="https://maps.google.com/?cid=315998679412151009"
+                                    href="https://maps.app.goo.gl/6qhJzXk9R9c6agu1A"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-xs text-[#038C7F] font-bold hover:underline flex items-center justify-center gap-1"
+                                    className="inline-flex items-center gap-2 text-[#CBD95F] font-bold hover:underline"
                                     onClick={() => trackConversion({
                                         action: 'map_click',
                                         category: 'interaction',
