@@ -5,7 +5,8 @@
 
 import { Metadata } from 'next';
 import ContactFormOptimized from '@/components/ContactFormOptimized';
-import { CTAButton, trackConversion } from '@/components/ConversionOptimizer';
+import GoogleMapsCTA from '@/components/GoogleMapsCTA';
+import { CTAButton } from '@/components/ConversionOptimizer';
 
 export const metadata: Metadata = {
   title: 'Contacto y Reservas | Eudiq Hotel Loja | WhatsApp +593 96 171 2106',
@@ -153,23 +154,16 @@ export default function ContactoPage() {
           </div>
 
           <div className="flex justify-center mt-6">
-            <a
+            <GoogleMapsCTA
               href="https://maps.app.goo.gl/5dCMqMs8TNnuUAXU7"
-              target="_blank"
-              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-[#038C7F] text-white font-bold rounded-full shadow-md hover:bg-[#026B61] transition-transform hover:scale-105"
-              onClick={() => trackConversion({
-                action: 'map_click',
-                category: 'interaction',
-                section: 'contacto_page',
-                label: 'google_maps_cta'
-              })}
+              section="contacto_page"
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <polygon points="3 11 22 2 13 21 11 13 3 11" />
               </svg>
               Abrir en Google Maps
-            </a>
+            </GoogleMapsCTA>
           </div>
         </div>
       </div>
