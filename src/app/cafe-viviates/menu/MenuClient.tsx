@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Coffee, Croissant, IceCream, Wine, Beer, Martini, ChefHat, Clock, Phone, MapPin, UtensilsCrossed, Search, Filter, Instagram, Facebook, MessageCircle } from 'lucide-react';
-import { CTAButton } from '@/components/ConversionOptimizer';
+import { CTAButton, trackConversion } from '@/components/ConversionOptimizer';
 import Link from 'next/link';
 import { useCafeAnalytics } from '@/hooks/useCafeAnalytics';
 
@@ -428,6 +428,22 @@ export default function MenuClient() {
                                     referrerPolicy="no-referrer-when-downgrade"
                                     title="Ubicación Cafetería Viviates cerca Terminal Terrestre Loja"
                                 />
+                            </div>
+                            <div className="mt-2">
+                                <a
+                                    href="https://maps.app.goo.gl/5dCMqMs8TNnuUAXU7"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-xs text-[#038C7F] font-bold hover:underline flex items-center justify-center gap-1"
+                                    onClick={() => trackConversion({
+                                        action: 'map_click',
+                                        category: 'interaction',
+                                        section: 'cafe_menu',
+                                        label: 'google_maps_cta'
+                                    })}
+                                >
+                                    <MapPin className="h-3 w-3" /> Ver en Google Maps
+                                </a>
                             </div>
                         </div>
 

@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Clock, MapPin, Coffee, Users, Star, Timer, CheckCircle, X, ChevronLeft, ChevronRight, Calendar, Sunrise, Sunset, Laptop, Palette, Utensils, Cookie, Sandwich, Cake, Wine, Phone, MessageCircle, Instagram } from 'lucide-react';
 import { galeriaCafeViviates } from '@/lib/data';
-import ConversionOptimizer, { CTAButton } from '@/components/ConversionOptimizer';
+import ConversionOptimizer, { CTAButton, trackConversion } from '@/components/ConversionOptimizer';
 import { useCafeAnalytics } from '@/hooks/useCafeAnalytics';
 
 export default function CafeHomeClient() {
@@ -346,7 +346,7 @@ export default function CafeHomeClient() {
                                     <MapPin className="h-5 w-5" />
                                     Encuéntranos
                                 </h3>
-                                <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden">
+                                <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden mb-4">
                                     <iframe
                                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.2175373243026!2d-79.20703762477585!3d-3.9755893959981683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cb479d7e88d4cf%3A0x462ba8b8785c5d1!2sCafeter%C3%ADa%20Caf%C3%A9%20Viviates%3A%20Caf%C3%A9%20Lojano%20(Hotel%20EUDIQ)!5e0!3m2!1sen!2sec!4v1763848213974!5m2!1sen!2sec"
                                         width="100%"
@@ -357,6 +357,23 @@ export default function CafeHomeClient() {
                                         referrerPolicy="no-referrer-when-downgrade"
                                         className="rounded-lg"
                                     />
+                                </div>
+                                <div className="text-center">
+                                    <a
+                                        href="https://maps.app.goo.gl/5dCMqMs8TNnuUAXU7"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-2 text-[#038C7F] font-bold hover:underline"
+                                        onClick={() => trackConversion({
+                                            action: 'map_click',
+                                            category: 'interaction',
+                                            section: 'cafe_home',
+                                            label: 'google_maps_cta'
+                                        })}
+                                    >
+                                        <MapPin className="h-4 w-4" />
+                                        Abrir en Google Maps
+                                    </a>
                                 </div>
                             </div>
                         </div>

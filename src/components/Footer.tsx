@@ -10,12 +10,15 @@ export default function Footer() {
         <div>
           <h2 className="font-bold text-xl mb-2">Eudiq Hotel Loja</h2>
           <p>
-            <span
+            <a
+              href="https://maps.app.goo.gl/5dCMqMs8TNnuUAXU7"
+              target="_blank"
+              rel="noopener noreferrer"
               className="cursor-pointer hover:text-green-300"
-              onClick={() => trackConversion({ action: 'click_address', category: 'interaction', section: 'footer' })}
+              onClick={() => trackConversion({ action: 'map_click', category: 'interaction', section: 'footer', label: 'address_text' })}
             >
               Avenida 8 de diciembre y Juan José Flores diagonal a la Terminal Terrestre, Loja, Ecuador
-            </span>
+            </a>
           </p>
           <p>
             Tel: <a

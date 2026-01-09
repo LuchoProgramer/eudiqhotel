@@ -1,6 +1,6 @@
 'use client'
 
-import { trackWhatsappClick } from '../../components/ConversionOptimizer';
+import { trackWhatsappClick, trackConversion } from '../../components/ConversionOptimizer';
 
 const puntosInteres = [
   {
@@ -60,28 +60,15 @@ const puntosInteres = [
   },
 ];
 
-// Función para enviar eventos a GA4
-type GAEventParams = Record<string, unknown>;
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void;
-  }
-}
-function sendGAEvent(eventName: string, eventParams: GAEventParams = {}) {
-  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
-    window.gtag('event', eventName, eventParams);
-  }
-}
-
 export default function UbicacionPage() {
   return (
     <main className="max-w-3xl mx-auto py-16 px-4 mt-10">
       <h1 className="text-4xl font-bold mb-6 text-center">Ubicación</h1>
       <p className="mb-8 text-center text-lg text-gray-600">Estamos diagonal a la terminal terrestre de Loja, con acceso rápido a los principales atractivos turísticos y servicios de la ciudad.</p>
-      <div className="mb-10 flex justify-center">
+      <div className="mb-10 flex flex-col items-center justify-center gap-6">
         <div
           style={{ width: '100%' }}
-          onClick={() => sendGAEvent('click_mapa_ubicacion', { section: 'ubicacion', method: 'mapa_google' })}
+          className="rounded-xl overflow-hidden shadow-lg"
         >
           <iframe
             title="Mapa Eudiq Hotel Loja"
@@ -94,6 +81,24 @@ export default function UbicacionPage() {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
+
+        <a
+          href="https://maps.app.goo.gl/5dCMqMs8TNnuUAXU7"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-[#038C7F] text-white font-bold rounded-full shadow-md hover:bg-[#026B61] transition-transform hover:scale-105"
+          onClick={() => trackConversion({
+            action: 'map_click',
+            category: 'interaction',
+            section: 'ubicacion_page',
+            label: 'google_maps_cta'
+          })}
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polygon points="3 11 22 2 13 21 11 13 3 11" />
+          </svg>
+          Abrir en Google Maps
+        </a>
       </div>
       <section className="mb-10">
         <h2 className="text-2xl font-semibold mb-2">Puntos de interés cercanos</h2>
