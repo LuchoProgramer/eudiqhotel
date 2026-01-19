@@ -205,14 +205,6 @@ export default function MenuClient() {
                     category: validCategory.name,
                     filter: categoryParam
                 });
-
-                // Scroll to category after a short delay
-                setTimeout(() => {
-                    const element = document.getElementById(categoryParam);
-                    if (element) {
-                        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
-                }, 100);
             }
         }
     }, [trackMenuInteraction]);
