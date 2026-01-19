@@ -9,6 +9,7 @@ interface CMSBlock {
     src?: string;
     url?: string;
     alt?: string;
+    style?: string; // Agregar style para text blocks
 }
 
 interface CMSBlogPost {
@@ -40,16 +41,27 @@ interface CMSResponse {
 
 // Convertir bloques del CMS a HTML
 function convertBlocksToHTML(blocks: CMSBlock[]): string {
-    return blocks.map(block => {
+    return blocks.map((block: any) => {
         switch (block.type) {
             case 'text':
-                return `<div class="cms-text">${block.content || ''}</div>`;
+                // Manejar diferentes estilos de texto
+                const content = block.content || '';
+                switch (block.style) {
+                    case 'subheading':
+                        return `<h3>${content}</h3>`;
+                    case 'paragraph':
+                        return `<p>${content}</p>`;
+                    case 'list-bullet':
+                        // Convertir saltos de línea en items de lista
+                        const items = content.split('\n').filter((item: string) => item.trim());
+                        return `<ul>${items.map((item: string) => `<li>${item}</li>`).join('')}</ul>`;
+                    default:
+                        return `<p>${content}</p>`;
+                }
 
             case 'image':
                 const imgSrc = block.src || block.url;
-                return `<figure class="cms-image my-4">
-          <img src="${imgSrc}" alt="${block.alt || 'Imagen del blog'}" class="w-full rounded-lg" />
-        </figure>`;
+                return `<img src="${imgSrc}" alt="${block.alt || 'Imagen del blog'}" />`;
 
             case 'video':
                 const videoUrl = block.src || block.url;
