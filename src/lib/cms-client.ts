@@ -1,7 +1,7 @@
 // src/lib/cms-client.ts
 
 const CMS_API_URL = process.env.NEXT_PUBLIC_CMS_URL || 'https://pukapresscms.vercel.app';
-const CMS_API_KEY = process.env.NEXT_PUBLIC_CMS_API_KEY || '';
+const TENANT_ID = 'eudiqhotel';
 
 interface CMSBlock {
     type: 'text' | 'image' | 'video';
@@ -28,15 +28,14 @@ interface CMSBlogPost {
         name: string;
         uid: string;
     };
+    metaTitle?: string;
+    metaDescription?: string;
 }
 
 interface CMSResponse {
-    success: boolean;
-    data: CMSBlogPost[];
-    meta?: {
-        total: number;
-        limit: number;
-    };
+    blogs: CMSBlogPost[];
+    total: number;
+    tenant: string;
 }
 
 // Convertir bloques del CMS a HTML
@@ -81,7 +80,7 @@ function transformCMSPost(cmsPost: CMSBlogPost) {
         slug: cmsPost.slug,
         title: cmsPost.title,
         updatedAt: cmsPost.updatedAt || cmsPost.createdAt,
-        summary: cmsPost.excerpt || '',
+        summary: cmsPost.excerpt || cmsPost.metaDescription || '',
         content: convertBlocksToHTML(cmsPost.blocks),
         image: cmsPost.image || '',
         author: cmsPost.author.name,
@@ -92,18 +91,10 @@ function transformCMSPost(cmsPost: CMSBlogPost) {
 
 // Obtener todos los blogs del CMS
 export async function getCMSBlogs(limit = 20) {
-    if (!CMS_API_KEY) {
-        console.warn('CMS API Key not configured, skipping CMS blogs');
-        return [];
-    }
-
     try {
         const response = await fetch(
-            `${CMS_API_URL}/api/public/blogs?limit=${limit}&published=true`,
+            `${CMS_API_URL}/api/blogs?tenant=${TENANT_ID}&limit=${limit}`,
             {
-                headers: {
-                    'X-API-Key': CMS_API_KEY,
-                },
                 next: { revalidate: 300 } // Cache 5 minutos
             }
         );
@@ -115,11 +106,11 @@ export async function getCMSBlogs(limit = 20) {
 
         const data: CMSResponse = await response.json();
 
-        if (!data.success || !data.data) {
+        if (!data.blogs) {
             return [];
         }
 
-        return data.data.map(transformCMSPost);
+        return data.blogs.map(transformCMSPost);
     } catch (error) {
         console.error('Error fetching CMS blogs:', error);
         return [];
@@ -128,17 +119,11 @@ export async function getCMSBlogs(limit = 20) {
 
 // Obtener blog por slug del CMS
 export async function getCMSBlogBySlug(slug: string) {
-    if (!CMS_API_KEY) {
-        return null;
-    }
-
     try {
+        // Obtener todos los blogs y buscar por slug
         const response = await fetch(
-            `${CMS_API_URL}/api/public/blogs/${slug}`,
+            `${CMS_API_URL}/api/blogs?tenant=${TENANT_ID}&limit=100`,
             {
-                headers: {
-                    'X-API-Key': CMS_API_KEY,
-                },
                 next: { revalidate: 600 } // Cache 10 minutos
             }
         );
@@ -147,13 +132,20 @@ export async function getCMSBlogBySlug(slug: string) {
             return null;
         }
 
-        const data = await response.json();
+        const data: CMSResponse = await response.json();
 
-        if (!data.success || !data.data) {
+        if (!data.blogs) {
             return null;
         }
 
-        return transformCMSPost(data.data);
+        // Buscar el blog por slug
+        const blog = data.blogs.find((b: CMSBlogPost) => b.slug === slug);
+
+        if (!blog) {
+            return null;
+        }
+
+        return transformCMSPost(blog);
     } catch (error) {
         console.error('Error fetching CMS blog by slug:', error);
         return null;
