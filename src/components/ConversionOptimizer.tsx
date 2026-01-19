@@ -302,6 +302,18 @@ export function SocialProof() {
 
   const testimonials = [
     {
+      name: "Raul Ramirez Batioja",
+      date: "hace 3 semanas",
+      rating: 5,
+      text: "Muy cordial el personal, su ubicación es inmejorable.",
+      scores: {
+        rooms: 5.0,
+        service: 5.0,
+        location: 5.0
+      },
+      verified: true
+    },
+    {
       name: "Robert James Gilchrist",
       date: "hace 2 meses",
       rating: 5,

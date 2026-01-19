@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { Utensils, Wifi, Car, Coffee, Sparkles, Clock, MapPin } from 'lucide-react';
+import { Utensils, Wifi, Car, Coffee, Sparkles, Clock, MapPin, PawPrint } from 'lucide-react';
 
 const servicios = [
   {
@@ -22,6 +22,12 @@ const servicios = [
     titulo: 'Estacionamiento',
     descripcion: 'Parqueadero privado y seguro sin costo adicional.',
     destacado: false,
+  },
+  {
+    icon: PawPrint,
+    titulo: 'Pet Friendly',
+    descripcion: 'Tus mascotas son bienvenidas. Ofrecemos un ambiente cómodo para que viajes con tu compañero peludo.',
+    destacado: true,
   },
   {
     icon: Sparkles,
@@ -114,8 +120,8 @@ export default function Servicios() {
 
                 {/* Icon container */}
                 <div className={`relative mb-4 w-14 h-14 rounded-xl flex items-center justify-center transition-all duration-500 ${isHovered
-                    ? 'bg-gradient-to-br from-primary to-[#A9BF04] scale-110'
-                    : 'bg-primary/10'
+                  ? 'bg-gradient-to-br from-primary to-[#A9BF04] scale-110'
+                  : 'bg-primary/10'
                   }`}>
                   <Icon
                     className={`transition-all duration-500 ${isHovered ? 'text-white' : 'text-primary'
