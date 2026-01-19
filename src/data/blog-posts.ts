@@ -1,4 +1,7 @@
-export const BLOG_POSTS = [
+import { getCMSBlogs, getCMSBlogBySlug } from '@/lib/cms-client';
+
+// Posts estáticos existentes (renombrado para claridad)
+export const STATIC_BLOG_POSTS = [
   {
     slug: 'graduacion-utpl-donde-hospedarse-loja',
     title: 'Graduación UTPL 2025: Dónde hospedarse en Loja - Guía para familias',
@@ -757,3 +760,29 @@ export const BLOG_POSTS = [
     tags: ['café', 'historia', 'cultura', 'Loja']
   },
 ];
+
+// Función híbrida que combina CMS + estáticos
+export async function getAllBlogPosts() {
+  try {
+    const cmsBlogs = await getCMSBlogs(20);
+    
+    // Combinar: CMS primero (más recientes), luego estáticos
+    return [...cmsBlogs, ...STATIC_BLOG_POSTS];
+  } catch (error) {
+    console.error('Error fetching CMS blogs, using static only:', error);
+    return STATIC_BLOG_POSTS;
+  }
+}
+
+// Función para obtener un post por slug (híbrida)
+export async function getBlogPostBySlug(slug: string) {
+  // Intentar primero del CMS
+  const cmsPost = await getCMSBlogBySlug(slug);
+  if (cmsPost) return cmsPost;
+  
+  // Fallback a posts estáticos
+  return STATIC_BLOG_POSTS.find(post => post.slug === slug) || null;
+}
+
+// Mantener compatibilidad con código existente
+export const BLOG_POSTS = STATIC_BLOG_POSTS;

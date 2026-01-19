@@ -1,16 +1,21 @@
 
-import { BLOG_POSTS } from '@/data/blog-posts';
+import { getBlogPostBySlug, getAllBlogPosts } from '@/data/blog-posts';
 import { notFound } from 'next/navigation';
 import BlogContentWithWhatsApp from '../BlogContentWithWhatsApp';
+import TikTokLoader from '@/components/TikTokLoader';
 
 interface BlogPageProps {
   params: Promise<{ slug: string }>;
 }
 
+export async function generateStaticParams() {
+  const posts = await getAllBlogPosts();
+  return posts.map(post => ({ slug: post.slug }));
+}
 
 export async function generateMetadata({ params }: BlogPageProps) {
   const { slug } = await params;
-  const post = BLOG_POSTS.find(p => p.slug === slug);
+  const post = await getBlogPostBySlug(slug);
 
   if (!post) {
     return {
@@ -41,8 +46,14 @@ export async function generateMetadata({ params }: BlogPageProps) {
 
 export default async function BlogPage({ params }: BlogPageProps) {
   const { slug } = await params;
-  const post = BLOG_POSTS.find(p => p.slug === slug);
+  const post = await getBlogPostBySlug(slug);
+
   if (!post) return notFound();
 
-  return <BlogContentWithWhatsApp post={post} />;
+  return (
+    <>
+      <BlogContentWithWhatsApp post={post} />
+      <TikTokLoader />
+    </>
+  );
 }
