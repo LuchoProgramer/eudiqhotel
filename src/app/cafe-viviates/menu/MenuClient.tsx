@@ -189,6 +189,34 @@ export default function MenuClient() {
         });
     }, [trackCafeEvent]);
 
+    // Read category from URL parameter for Google Ads sitelinks
+    React.useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const categoryParam = params.get('categoria');
+
+        if (categoryParam) {
+            // Validate that the category exists
+            const validCategory = MENU_DATA.find(cat => cat.id === categoryParam);
+            if (validCategory) {
+                setSelectedCategory(categoryParam);
+
+                // Track sitelink usage
+                trackMenuInteraction('filter', {
+                    category: validCategory.name,
+                    filter: categoryParam
+                });
+
+                // Scroll to category after a short delay
+                setTimeout(() => {
+                    const element = document.getElementById(categoryParam);
+                    if (element) {
+                        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }, 100);
+            }
+        }
+    }, [trackMenuInteraction]);
+
     const filteredCategories = MENU_DATA.filter(category => {
         if (selectedCategory !== 'all' && category.id !== selectedCategory) return false;
         if (searchTerm) {
