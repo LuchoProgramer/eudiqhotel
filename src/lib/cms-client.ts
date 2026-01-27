@@ -107,7 +107,7 @@ export async function getCMSBlogs(limit = 20) {
         const response = await fetch(
             `${CMS_API_URL}/api/blogs?tenant=${TENANT_ID}&limit=${limit}`,
             {
-                next: { revalidate: 300 } // Cache 5 minutos
+                next: { revalidate: 60 } // Cache 60 segundos (match ISR)
             }
         );
 
@@ -136,7 +136,7 @@ export async function getCMSBlogBySlug(slug: string) {
         const response = await fetch(
             `${CMS_API_URL}/api/blogs?tenant=${TENANT_ID}&limit=100`,
             {
-                next: { revalidate: 600 } // Cache 10 minutos
+                next: { revalidate: 60 } // Cache 60 segundos (match ISR)
             }
         );
 
