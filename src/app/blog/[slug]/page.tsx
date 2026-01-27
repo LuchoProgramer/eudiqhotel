@@ -8,6 +8,8 @@ interface BlogPageProps {
   params: Promise<{ slug: string }>;
 }
 
+export const revalidate = 60; // Enable ISR
+
 export async function generateStaticParams() {
   const posts = await getAllBlogPosts();
   return posts.map(post => ({ slug: post.slug }));

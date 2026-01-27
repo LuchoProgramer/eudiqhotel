@@ -1,6 +1,12 @@
 import Link from 'next/link';
 import { getAllBlogPosts } from '@/data/blog-posts';
 
+export const revalidate = 60; // Enable ISR
+
+export const metadata = {
+  title: 'Blog | Eudiq Hotel | Turismo y Eventos en Loja',
+};
+
 export default async function BlogIndex() {
   // Obtener posts del CMS + estáticos
   const allPosts = await getAllBlogPosts();
